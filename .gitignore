@@ -1,0 +1,42 @@
+# Private project records / live runtime
+workspace/active/
+workspace/archive/
+private/
+data-private/
+runtime/
+backups/
+out/
+output/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Databases, snapshots, and temp artifacts
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.bak
+*.tmp
+*.log
+
+# Development dependencies
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+coverage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
