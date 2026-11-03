@@ -30,6 +30,10 @@ Master dibuat di folder Drive privat yang disetujui, dikelola sebagai dokumen Go
 - **Belum dilakukan:** uji copy-fill penuh memakai executor generik, ekspor/visual PDF, pemeriksaan hak edit khusus master, penilaian substansi laporan nyata, atau kelayakan untuk pengajuan resmi. Setiap salinan tetap `DRAFT` dan perlu review.
 - **Master berikutnya:** satu per satu mengikuti katalog; jangan mencatat baris `READY` untuk master yang belum dibuat.
 
+### Standar kualitas dokumen — dasar riset 2026
+
+Pedoman baru: [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md), [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md) dan [design-tokens.json](../../templates/google-native/design-tokens.json); dasar dan batasnya ada di [riset 2026](../research/google-native-document-design-2026.md). Desain dimulai dari kebutuhan pembaca/jenis dokumen; tabel bukan dekorasi. Kontras teks memiliki target terukur. QA **master kosong** tidak membuktikan QA **output berisi data**, terutama panjang paragraf, page breaks dan formula. Master 01 tetap versi sebelumnya sampai direview untuk migrasi; jangan mengklaim visual compliance baru tanpa QA. Format resmi yang diverifikasi mengesampingkan default internal.
+
 ### Standar visual wajib
 
 Setiap master internal harus mengikuti [Standar Mutu Visual](../../templates/google-native/QUALITY-STANDARD.md): struktur dan token diverifikasi dalam Google-native document, sedangkan layout Google Docs dicek melalui render PDF setiap halaman yang terpengaruh. Pemeriksaan metadata saja **bukan** review visual. Master 01 telah mengalami penyempurnaan hierarki, tabel native dan tipografi, serta render A4 telah diperiksa; pengisian otomatis dengan data panjang tetap memerlukan QA terpisah.

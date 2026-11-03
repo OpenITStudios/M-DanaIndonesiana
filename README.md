@@ -49,6 +49,10 @@ Validasi Review Queue kini menolak ID temuan yang tidak sesuai fingerprint, meme
 
 Pengguna memakai **Google Drive saja**: Google Docs untuk dokumen, Google Sheets untuk tabel/RAB dan Google Slides untuk presentasi bila diperlukan. PDF diekspor langsung dari Google-native file jika diminta. [Rancangan dan status T2](docs/integrations/google-native-templates.md) menyediakan katalog enam blueprint internal, pemetaan field dan planner deterministik. **Master Google Docs pertama** (`di.report.indicator@1.0.0`) sudah dibuat dan tercatat di tab `Template Masters` pada Registry privat yang sama. Pemeriksaan struktur dan metadata telah dilakukan; **belum ada executor generik, uji pengisian otomatis end-to-end, maupun approval format resmi**. Export XLSX lama dipertahankan hanya sebagai prototipe historis, bukan jalur aktif Google-only.
 
+## Pedoman struktur dan mutu dokumen (riset 2026)
+
+Untuk seluruh master Google-native, gunakan [Standar Mutu Dokumen Profesional](templates/google-native/QUALITY-STANDARD.md), [profil struktur berdasarkan jenis dokumen](templates/google-native/DOCUMENT-PROFILES.md), dan [token visual internal](templates/google-native/design-tokens.json). [Riset primer dan batas penerapan](docs/research/google-native-document-design-2026.md) mencakup ISO plain language, GOV.UK, W3C, Section508, Google Workspace API, EYD V dan regulasi tata naskah Indonesia. **Default desain bukan format resmi atau approval.** Master pertama belum diuji isi panjang dan tidak otomatis lulus profil baru.
+
 ## Mulai bekerja
 
 1. Baca [AGENTS.md](AGENTS.md) untuk mode, keselamatan dan aturan kerja.

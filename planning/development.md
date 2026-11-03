@@ -52,6 +52,14 @@
 - [ ] Menyiapkan executor Google Drive connector dengan preflight, copy-only, readback, bukti hasil dan status DRAFT.
 - [ ] Menghubungkan kalkulator Finance JSON ke master Google Sheets dengan formula + QA tanpa converter XLSX.
 - [ ] Menyusun jalur PDF ekspor native + layout/readback; mengerjakan kelayakan master format resmi per tahun/kategori.
+## Pedoman kualitas dokumen — riset 3 November 2026
+
+- [x] Membandingkan sumber primer ISO 24495, GOV.UK content design/accessibility, W3C WCAG/WAI, USWDS, Section508, Google Docs/Sheets API, EYD V, dan lingkup ANRI.
+- [x] Menyusun aturan wajib, profil Docs/Sheets/Slides, token visual berkontras cukup, pemisahan master QA dari filled-output QA dan kode temuan operasional.
+- [ ] Review keputusan desain bersama pengguna; aturan internal adalah default, bukan pengganti format resmi.
+- [ ] Lakukan revisi Master 01 **hanya setelah** keputusan versi dan pemeriksaan ulang master. Uji copy-fill teks pendek/normal/panjang, halaman, urutan baca dan keamanan.
+- [ ] Terapkan profil pada Master 02 satu per satu dengan sumber dan hasil render yang benar-benar diperiksa; jangan melakukan batch generator produksi yang belum tervalidasi.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.

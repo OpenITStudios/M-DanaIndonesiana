@@ -1,0 +1,110 @@
+{
+  "schema_version": "document-design-tokens-v1",
+  "authority": "INTERNAL_DEFAULT_NOT_OFFICIAL_FORMAT",
+  "date": "2026-11-03",
+  "use": "New Google-native templates only; override when verified official source or explicit user requirement applies",
+  "typography": {
+    "primary_family": "Arial",
+    "fallback": "sans-serif",
+    "google_docs_internal": {
+      "paper": "A4",
+      "orientation": "PORTRAIT",
+      "margin_mm": {
+        "top": 23,
+        "right": 25,
+        "bottom": 22,
+        "left": 25
+      },
+      "title_pt": 19,
+      "heading_1_pt": 14,
+      "heading_2_pt": 12,
+      "body_pt": 11.5,
+      "metadata_pt": 10.5,
+      "footer_pt": 9.5,
+      "line_spacing_percent": 120,
+      "paragraph_after_pt": 6,
+      "heading_before_pt": 14,
+      "heading_after_pt": 6,
+      "text_alignment": "START",
+      "body_bold": false,
+      "all_caps_blocks": false
+    },
+    "google_docs_public": {
+      "paper": "A4",
+      "orientation": "PORTRAIT",
+      "margin_mm": {
+        "top": 25,
+        "right": 25,
+        "bottom": 25,
+        "left": 25
+      },
+      "title_pt": 20,
+      "heading_1_pt": 15,
+      "heading_2_pt": 13,
+      "body_pt": 12,
+      "metadata_pt": 11,
+      "footer_pt": 10,
+      "line_spacing_percent": 130,
+      "paragraph_after_pt": 7,
+      "heading_before_pt": 16,
+      "heading_after_pt": 7,
+      "text_alignment": "START",
+      "body_bold": false,
+      "all_caps_blocks": false
+    },
+    "google_sheets": {
+      "header_pt": 11,
+      "body_pt": 11,
+      "compact_body_min_pt": 10.5,
+      "header_row_height_px": 32,
+      "data_row_height_px": 28,
+      "align_text": "LEFT",
+      "align_numbers": "RIGHT",
+      "freeze_data_header": true,
+      "wrap_long_text": true,
+      "merged_cells_in_data_range": false,
+      "locale": "id_ID",
+      "currency": "IDR"
+    },
+    "google_slides": {
+      "aspect_ratio": "16:9",
+      "title_pt": 32,
+      "section_title_pt": 28,
+      "body_pt": 20,
+      "caption_pt": 14,
+      "max_heading_levels": 2,
+      "one_primary_message_per_slide": true
+    }
+  },
+  "palette": {
+    "text": "#1B3043",
+    "secondary_text": "#465D6E",
+    "accent": "#286580",
+    "paper": "#FFFFFF",
+    "subtle_background": "#F2F6F8",
+    "border": "#D7E1E7",
+    "derived_contrast_on_white": {
+      "text": 13.54,
+      "secondary_text": 6.88,
+      "accent": 6.44
+    }
+  },
+  "accessibility_targets": {
+    "text_contrast_min_ratio": 4.5,
+    "contrast_metric": "WCAG 2.2 SC 1.4.3 adopted as internal target, not conformance certification",
+    "real_headings": true,
+    "descriptive_links": true,
+    "alt_text_if_meaningful_image": true,
+    "color_alone_never_conveys_status": true
+  },
+  "behavior": {
+    "preserve_existing_approved_forms": true,
+    "no_decorative_layout_tables": true,
+    "no_fake_logo_signature_reference": true,
+    "no_unsupported_source_claims": true,
+    "never_force_one_page": true,
+    "mandatory_long_content_qa_before_production": true,
+    "direct_google_native_editing": true,
+    "no_office_intermediate": true
+  }
+}

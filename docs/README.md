@@ -42,6 +42,13 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [Google-native Template Generation — T1](integrations/google-native-templates.md): satu Registry privat, katalog enam blueprint, planner read-only untuk Docs/Sheets, batas copy/edit/review/P5, serta pekerjaan yang belum diimplementasi.
 - [Master authoring guide](../templates/google-native/README.md): placeholder Google Docs, tab/cell Google Sheets dan aturan master privat.
+## Kualitas dokumen dan riset (2026)
+
+- [Standar Mutu Dokumen](../templates/google-native/QUALITY-STANDARD.md): aturan layout, arsitektur informasi, anti-generik, aksesibilitas dan QA dua tahap.
+- [Document Profiles](../templates/google-native/DOCUMENT-PROFILES.md): struktur berbeda untuk surat, laporan, keuangan, pengadaan, editorial, bukti dan presentasi.
+- [Design Tokens](../templates/google-native/design-tokens.json): default Google-native yang terukur dan dapat dibaca mesin, bukan format resmi.
+- [Riset primer dan batas penerapan](research/google-native-document-design-2026.md): referensi ISO, GOV.UK, W3C, Section508, Google API, EYD V, dan konteks ANRI.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

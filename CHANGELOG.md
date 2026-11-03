@@ -163,3 +163,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Melakukan pemeriksaan struktur Docs serta ekspor PDF untuk inspeksi visual: A4 satu halaman, tanpa clipping/overlap, sembilan placeholder tepat sekali. Menyelaraskan `observed_modified_time` dan status `READY` internal pada Registry privat.
 - Menambahkan standar mutu visual master Google-native berikut gate untuk Docs, Sheets, Slides serta larangan filler, ornamen dan klaim resmi palsu.
 - Belum menjalankan uji generator copy-and-fill berisi data panjang, QA dokumen proyek nyata, atau pemeriksaan formulir resmi. Tidak ada file ID/sumber privat dipublikasikan pada repository.
+
+## 1.8.3-dev — 2026-11-03 (evidence-based document design research)
+
+- Merangkum sumber primer untuk mutu dokumen Google-native: ISO 24495, GOV.UK, W3C, USWDS, Section508, Google Workspace API, EYD V dan lingkup aturan ANRI.
+- Menyusun aturan desain yang berbasis pembaca, tujuh profil fungsional, token internal machine-readable, batas aksesibilitas dan QA terpisah untuk master serta hasil terisi.
+- Mengubah fokus kualitas dari "template satu halaman tampak rapi" menjadi informasi relevan, struktur native, identitas/status jelas, layout siap konten nyata, dan sumber tertelusur.
+- Belum menjalankan uji master terisi, audit PDF/UA/screen reader, evaluasi dokumen resmi per kategori/tahun, atau pengembangan renderer/penulisan Drive baru. Master 01 tidak diubah pada fase riset ini.

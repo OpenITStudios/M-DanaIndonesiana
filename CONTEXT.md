@@ -15,4 +15,6 @@
 
 - **Template Google-native (T2 bertahap):** enam blueprint internal dan planner Docs/Sheets murni. Tab `Template Masters` sudah ditambahkan ke Registry privat yang sama dan master Google Docs pertama `di.report.indicator@1.0.0` dibuat dengan sembilan placeholder yang diperiksa serta metadata yang cocok; status `READY` hanya untuk master INTERNAL. Mutu visual Master 01 telah diperbaiki dan render PDF A4 diperiksa; kontrak QA visual kini terdokumentasi. Uji salinan dengan data panjang belum dilakukan. Master lain, executor konektor, adapter Finance-to-Sheets dan QA end-to-end Google masih belum dikerjakan. PDF hanya ekspor opsional; XLSX lama tidak menjadi jalur pengguna.
 
+- **Riset desain Google-native v2 (2026-11-03):** pedoman struktur/visual yang lebih ketat, profil menurut jenis dokumen, token mesin, matriks sumber primer dan QA dua tahap (master vs output terisi) disiapkan di GitHub. Ini standar **internal yang diusulkan**, bukan aturan hukum/format resmi. Master 01 tidak otomatis memenuhi baseline baru, belum ada uji copy-fill konten panjang dan belum ada validasi PDF/UA.
+
 **Batas pekerjaan berikut:** prioritaskan pemakaian praktis dan kejelasan owner. Tidak ada baseline proyek sebenarnya yang boleh ditebak dari dokumen contoh atau ingatan percakapan. Pengujian, promosi branch, ataupun tindakan eksternal memerlukan instruksi sesuai tugasnya.
