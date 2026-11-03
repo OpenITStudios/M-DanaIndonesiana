@@ -6,6 +6,7 @@ import process from "node:process";
 import {
   parseRegistryRows, resolveRecord, compareRemote, toSourcePointer
 } from "./drive-registry-core.mjs";
+import { parseSelections, selectWorkflowSources, buildWorkflowHandoff } from "./drive-workflow-bridge.mjs";
 
 const FOLDER_MIME = "application/vnd.google-apps.folder";
 const MAX_ROWS = 1000;
@@ -13,15 +14,15 @@ const DEFAULT_MAX_ITEMS = 1500;
 
 function parseArgs(args) {
   const command = args[0];
-  if (!["resolve", "audit", "discover"].includes(command))
-    throw new Error("USAGE: resolve|audit|discover --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--root-folder-id ID]");
+  if (!["resolve", "audit", "discover", "handoff"].includes(command))
+    throw new Error("USAGE: resolve|audit|discover|handoff --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
   const values = {};
   for (let i = 1; i < args.length; i += 2) {
     const flag = args[i];
     if (!flag?.startsWith("--") || !args[i + 1] || args[i + 1].startsWith("--"))
       throw new Error("INVALID_ARGUMENT_PAIR");
     const key = flag.slice(2);
-    if (!["sheet-id", "id", "type", "root-folder-id", "max-items"].includes(key) ||
+    if (!["sheet-id", "id", "type", "root-folder-id", "max-items", "workflow", "select"].includes(key) ||
         Object.hasOwn(values, key)) throw new Error("UNKNOWN_OR_DUPLICATE_FLAG: " + flag);
     values[key] = args[i + 1];
   }
@@ -30,6 +31,13 @@ function parseArgs(args) {
     throw new Error("RESOLVE_REQUIRES_ID_OR_TYPE");
   if (command === "discover" && !values["root-folder-id"])
     throw new Error("DISCOVER_REQUIRES_ROOT_FOLDER_ID");
+  if (command === "handoff") {
+    if (!values.workflow) throw new Error("HANDOFF_REQUIRES_WORKFLOW");
+    if (values.id || values.type || values["root-folder-id"] || values["max-items"])
+      throw new Error("HANDOFF_UNSUPPORTED_FLAG");
+  } else if (values.workflow || values.select) {
+    throw new Error("WORKFLOW_FLAGS_ONLY_FOR_HANDOFF");
+  }
   return { command, values };
 }
 
@@ -65,10 +73,16 @@ async function getJson(url, token, allow404 = false) {
 }
 
 async function loadRegistry(sheetId, token) {
-  const range = encodeURIComponent("Documents!A1:O" + MAX_ROWS);
-  const url = "https://sheets.googleapis.com/v4/spreadsheets/" +
-    encodeURIComponent(sheetId) + "/values/" + range +
-    "?valueRenderOption=UNFORMATTED_VALUE";
+  const base = "https://sheets.googleapis.com/v4/spreadsheets/" + encodeURIComponent(sheetId);
+  const meta = await getJson(base + "?fields=sheets(properties(title,gridProperties(rowCount)))", token);
+  const tab = (meta.sheets || []).find(s => s.properties?.title === "Documents");
+  if (!tab) throw new Error("DOCUMENTS_TAB_NOT_FOUND");
+  const capacity = tab.properties?.gridProperties?.rowCount;
+  // Fail closed rather than silently ignoring rows beyond our bounded read.
+  if (!Number.isInteger(capacity) || capacity < 1 || capacity > MAX_ROWS)
+    throw new Error("REGISTRY_ROW_CAPACITY_EXCEEDED");
+  const range = encodeURIComponent("Documents!A1:O" + capacity);
+  const url = base + "/values/" + range + "?valueRenderOption=UNFORMATTED_VALUE";
   const body = await getJson(url, token);
   return parseRegistryRows(body.values || []);
 }
@@ -137,6 +151,21 @@ async function main() {
   if (!token) throw new Error("GOOGLE_ACCESS_TOKEN_REQUIRED");
   const sheetId = googleId(values["sheet-id"], "SHEET");
   const records = await loadRegistry(sheetId, token);
+  if (command === "handoff") {
+    const plan = selectWorkflowSources(records, values.workflow, parseSelections(values.select || ""));
+    const checks = await mapLimit(plan.matched, 4, async item => {
+      try {
+        const remote = await fetchMetadata(item.record.drive_file_id, token);
+        return [item.record.document_id, compareRemote(item.record, remote)];
+      } catch {
+        return [item.record.document_id, "METADATA_CHECK_FAILED"];
+      }
+    });
+    const handoff = buildWorkflowHandoff(plan, Object.fromEntries(checks));
+    output(handoff);
+    if (handoff.status !== "POINTERS_READY_FOR_CONTENT_REVIEW") process.exitCode = 2;
+    return;
+  }
   if (command === "resolve") {
     const record = resolveRecord(records, { id: values.id, type: values.type });
     const remote = await fetchMetadata(record.drive_file_id, token);

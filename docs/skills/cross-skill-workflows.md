@@ -1,6 +1,6 @@
 # Cross-Skill Workflows — Jalur Terpendek
 
-Ini **panduan pemilihan owner**, bukan mesin orkestrasi yang berjalan otomatis. Pilih menurut hasil yang diminta dan hentikan bila data cukup. Gunakan [Reporting Workflow](reporting-workflow.md) untuk prosedur paket laporan yang lebih detail.
+Ini **panduan pemilihan owner**, bukan mesin orkestrasi tugas yang berjalan otomatis. Gunakan [P2 Drive Workflow Bridge](../integrations/google-drive.md) untuk memilih sumber privat yang sesuai, kemudian jalankan satu skill primer dan skill pendukung hanya jika perlu. Gunakan [Reporting Workflow](reporting-workflow.md) untuk prosedur paket laporan yang lebih detail.
 
 | Permintaan | Jalur jika diperlukan | Batas kesimpulan |
 |---|---|---|

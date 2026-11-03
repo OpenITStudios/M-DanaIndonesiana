@@ -31,6 +31,15 @@ Jangan menukar dengan status dokumen. `CHECKED_INTERNAL`, `SUBMITTED`, `EXTERNAL
 
 Catat secara aman sumber, kategori/tahun, versi, dokumen yang berwenang, klausul/halaman jika tersedia, tanggal efektif, dan ruang lingkup keputusan. Angka, tenggat, aturan pajak dan ambang pengadaan **tidak boleh ditebak** atau disalin dari contoh historis.
 
+## P2 — Source-pointer handoff dari Drive
+
+- Jika tugas memakai file privat dan pengguna mengizinkannya, pilih workflow di [Drive Integration](../../docs/integrations/google-drive.md) dan tentukan satu skill primer melalui router.
+- Baca Registry privat untuk menentukan **ID, peran, relasi dan versi sumber**, lalu cek metadata aktual. Resolver memberikan pointer; setiap klaim isi memerlukan **pembacaan sumber asli yang diizinkan**.
+- Sumber belum terdaftar = `NOT_INDEXED_IN_REGISTRY`, bukan dokumen pasti tidak ada. Lebih dari satu kandidat = `EXPLICIT_ID_REQUIRED`, bukan pilih yang terbaru. Metadata berubah = butuh review sebelum turunan dipakai.
+- Skill primer tidak boleh menerima status `APPROVED_BASELINE`, `SUBMITTED` atau `EXTERNAL_CONFIRMED` sebagai bukti mandiri. Perjanjian/keputusan, receipt portal dan verifikasi manusia tetap dibutuhkan menurut domain.
+- Handoff antarskill cukup menyebut ID sumber privat yang diizinkan, versi, fakta yang benar-benar diperiksa, tingkat pembuktian, dan kekurangan. Tidak membuat salinan sumber, register lintas domain, atau log publik yang membocorkan data proyek.
+- Akses ChatGPT melalui connector bersifat asistif per percakapan; CLI lokal memakai OAuth baca terpisah. Tidak ada sinkronisasi otomatis atau izin mutasi implisit.
+
 ## Handoff antarskill
 
 Berikan hanya ID aman/rujukan, fakta yang dibutuhkan, status sumber, gap dan output. Keuangan memegang angka; administrasi memegang checklist/submit; creative-writing memegang redaksi; evidence memegang tingkat pembuktian; regulatory memegang applicability; production memegang capaian teknis; dissemination memegang izin/atribusi. Jangan membuat tujuh registry.

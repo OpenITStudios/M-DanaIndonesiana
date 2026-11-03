@@ -11,8 +11,12 @@
 - [x] v1.1: router, konteks, pemilik data dan dokumentasi navigasi diringkas.
 
 - [x] P0/P1 kode Source Resolver read-only dan kontrak registry; satu indeks privat proyek dibuat di Google Drive. Status pengujian: NOT EXECUTED; tidak otomatis menyinkronkan metadata.
+- [x] P2 kode Workflow Bridge read-only: rute sumber ketujuh skill, selection ambiguity, status metadata dan handoff terstruktur; dokumentasi operasional serta tes sintetis ditulis tetapi belum dieksekusi.
 
 ## Belum dapat dinyatakan selesai
+
+- [ ] P2 penerapan langsung pada isi dokumen melalui connector/CLI, pengujian OAuth nyata dan review user terhadap output sumber pada satu tugas nyata. **QA ditunda**.
+- [ ] P3 pembaruan metadata private registry berbasis review manusia (belum dibuat); jangan menerapkan auto-sync mutasi tanpa izin.
 
 - [ ] Pengujian Node dan Python pada checkout yang sama; pemeriksaan workbook nyata dan kesesuaian format unggah e-RISPRO.
 - [ ] Evaluasi perilaku tujuh skill pada skenario sintetis, penilaian manusia atas tulisan dan ketepatan laporan.

@@ -99,3 +99,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menambahkan audit metadata dan penemuan file belum terindeks yang dibatasi folder serta batas item; tidak ada auto-sync atau modifikasi dokumen.
 - Menautkan instruksi penggunaan dan guardrail dari router, konteks, README, dan backlog.
 - Tes sintetis ditulis, tetapi **belum dijalankan** sesuai penundaan QA; integrasi autentikasi lokal memerlukan OAuth read-only dan belum dinyatakan lulus uji end-to-end.
+
+## 1.3.0 — 2026-11-03 (P2 Drive Workflow Bridge)
+
+- Menambahkan rute source-pointer untuk sembilan tugas operasional yang melibatkan ketujuh skill yang sudah ada; tidak menambah skill atau registry.
+- CLI read-only mendukung `handoff --workflow` dan `--select` untuk pilihan ID eksplisit. Sumber ambigu, belum terindeks, dan metadata yang berubah tidak dipaksa dianggap sah.
+- Handoff mempertahankan pemilik utama, sumber minimum dan pemeriksaan lintas domain kondisional; approval/isi dokumen tidak diinferensikan dari metadata.
+- Instruksi ChatGPT connector-assisted dan OAuth CLI lokal dipisahkan secara jelas; berkas privat tetap tidak masuk Git publik.
+- Tes sintetis ditulis dan integrasi source-pointer disusun, tetapi runtime/QA dan verifikasi end-to-end **NOT EXECUTED** sesuai penundaan saat ini.

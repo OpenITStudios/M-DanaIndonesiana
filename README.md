@@ -18,9 +18,9 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 **Procurement** merupakan modul dalam [pengelolaan kebutuhan dan penyedia](kits/dana-indonesiana/procurement/CONTRACT.md), **bukan** agen kedelapan. [Skill Router](docs/skills/README.md) menentukan pemilik utama dan handoff jika tugas melintasi domain.
 
-## Integrasi Google Drive — P0/P1 (implementasi read-only)
+## Integrasi Google Drive — P0/P1/P2 (implementasi read-only)
 
-[Source Resolver + Document Registry](docs/integrations/google-drive.md) menghubungkan kode GitHub dengan indeks privat Google Drive berdasarkan ID dan versi metadata, tanpa menyimpan berkas proyek asli di Git. CLI memerlukan OAuth token lokal read-only dan **belum diuji sebagai workflow end-to-end**; penggunaan dokumen dan bukti tetap tunduk pada izin proyek.
+[Source Resolver + Document Registry + Workflow Bridge](docs/integrations/google-drive.md) menghubungkan kode GitHub dengan indeks privat Google Drive berdasarkan ID, status metadata dan peran dokumen. P2 menambahkan 9 rute kebutuhan nyata yang dipetakan ke **7 skill existing**; ia menghasilkan handoff sumber yang terstruktur, bukan audit isi, auto-approval atau sinkronisasi dua arah. CLI lokal memerlukan OAuth baca, dan pengujian runtime/end-to-end **belum dijalankan**. Data sumber tetap di penyimpanan privat berizin.
 
 ## Status kemampuan
 

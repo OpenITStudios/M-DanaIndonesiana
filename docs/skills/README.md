@@ -14,6 +14,8 @@
 
 **Procurement** adalah [modul](../../kits/dana-indonesiana/procurement/CONTRACT.md) yang digunakan oleh Administration, Finance atau Evidence, **bukan skill kedelapan**.
 
+**Sumber dari Google Drive:** untuk dokumen proyek yang telah diizinkan, baca [P2 Workflow Bridge](../integrations/google-drive.md). Resolver memilih *source pointers*, bukan menjalankan otomatis tujuh skill atau memverifikasi isi/approval.
+
 ## Ketika tugas melintasi domain
 
 | Hasil yang diminta | Pemilik hasil | Input pendukung bila benar-benar perlu |

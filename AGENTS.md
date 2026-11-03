@@ -11,7 +11,7 @@
 
 ## Sumber proyek dari Drive (jika diizinkan)
 
-Saat pengguna mengizinkan penggunaan Document Registry privat, ikuti [Google Drive Integration](docs/integrations/google-drive.md) untuk menentukan ID dan versi dokumen sebelum analisis domain. Resolver hanya mengembalikan metadata/pointer; jangan menyimpulkan isi, keabsahan atau approval dari hasilnya. Jangan commit file ID, folder ID, link dokumen privat, metadata proyek, maupun token ke Git publik. Jika akses registry tidak ada, kembalikan kebutuhan sumber spesifik, bukan menebak.
+Untuk tugas yang menggunakan dokumen proyek, ikuti [Google Drive P0–P2 Integration](docs/integrations/google-drive.md). Pilih satu workflow P2 menurut **hasil yang diminta**; ambil sumber dari satu Registry privat, periksa metadata aktual, lalu baca isi **hanya bila tugas/izin memungkinkan**. Terapkan satu skill primer; skill lain hanya menerima fakta minimum ketika diperlukan. Jika pilihan RAB/versi ambigu atau sumber belum terindeks, keluarkan ketidakpastian spesifik; jangan menebak. Pointer yang ditemukan tidak membuktikan isi, penerimaan resmi, atau hak untuk menyimpan/memindahkan dokumen. Jangan commit ID/link privat, metadata proyek, isi berkas atau token ke Git publik.
 
 ## Mode kerja
 
