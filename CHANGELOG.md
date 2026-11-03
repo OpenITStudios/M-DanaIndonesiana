@@ -207,3 +207,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Mengikat gerbang penyuntingan human writer yang operasional: substansi spesifik, alur wajar, tanpa filler, repetisi, konektor mekanis, atau klaim yang melampaui sumber.
 - Memperbarui AGENTS router, owner creative-documentation, standar Google-native, design tokens, README, indeks dan roadmap; tanpa skill/agen kedelapan.
 - Master 01 v1.2.0 tetap READY INTERNAL. Belum ada audit isi laporan proyek nyata, klaim format pemerintah atau executor editorial otomatis.
+
+## 1.8.9-dev — 2026-11-03 (Google-native spreadsheet foundation)
+
+- Menetapkan [Standar Spreadsheet Profesional](templates/google-native/SPREADSHEET-STYLE.md) di bawah pedoman dasar yang sudah disetujui; fokus tabel rapi, angka asli, tanggal DATE, keterlacakan sumber dan tampilan sederhana tanpa dashboard AI.
+- Membuat Master Sheets 01 `di.procurement.price-comparison@1.0.0` native di Google Drive: tab `Perbandingan`, metadata B2:B4, tabel A8:E67 (60 baris), format harga Indonesia dan validasi nonnegatif/tanggal.
+- Menguji 4 penawaran sintetis pada salinan; nilai harga tersimpan numerik, tanggal 03 November 2026 adalah date serial 46329, dan input master tetap kosong. Master didaftarkan READY INTERNAL dalam Registry privat yang sama.
+- Memperbaiki planner Google-native agar date ISO diubah ke serial Sheets dan metadata salinan konektor `mime_type` diterima. 7 unit tests planner PASS melalui V8 harness, bukan runner Node.
+- Pemeriksaan browser/zoom Google Sheets, legalitas pengadaan, data harga/vendor asli, dan formula keuangan kompleks belum dilakukan. Tidak ada file XLSX atau data privat di GitHub.

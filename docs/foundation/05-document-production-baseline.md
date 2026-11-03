@@ -49,6 +49,11 @@ Gunakan [Profil Jenis Dokumen](../../templates/google-native/DOCUMENT-PROFILES.m
 
 **Huruf miring (italic)** mengikuti [Pedoman Redaksi Laporan Ilmiah](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md) dan EYD V: hanya untuk kata/ungkapan asing atau daerah yang belum diserap, judul karya tertentu, penegasan unsur bahasa yang memang dianalisis, atau aturan sitasi/gaya selingkung terverifikasi. Nama aplikasi, lembaga, merek, istilah serapan, subjudul, label, status draf, dan paragraf umum **tidak otomatis italic**. Bila tidak ada kebutuhan tersebut, nol italic adalah benar.
 
+### Penerapan khusus Google Sheets
+
+Untuk membuat atau mengedit tabel yang biasa disebut pengguna sebagai "Excel", gunakan **Google Sheets native** sesuai [Standar Spreadsheet Profesional](../../templates/google-native/SPREADSHEET-STYLE.md). Ikuti hierarki sumber, kualitas bahasa label/catatan, satu record per baris, angka asli, tanggal DATE, struktur header, rumus yang dapat diperiksa, dan QA pada salinan. Tidak mengimpor XLSX sebagai perantara. Jangan memaksakan gaya Times New Roman untuk laporan naratif pada seluruh spreadsheet; gunakan profil sederhana dan fungsional.
+
+
 ## 4. Alur wajib sebelum dokumen diserahkan
 
 1. **Brief** — tentukan pembaca, tugas, jenis dokumen, format resmi yang berlaku atau ketidakpastiannya, sumber dan tingkat kerahasiaan.

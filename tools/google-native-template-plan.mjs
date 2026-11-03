@@ -161,7 +161,14 @@ function cellCoordinates(cell) {
   for (const c of match[1]) col = col * 26 + c.charCodeAt(0) - 64;
   return {rowIndex: Number(match[2]) - 1, columnIndex: col - 1};
 }
+// Google Sheets stores dates as serial numbers (days since 1899-12-30).
+// The input is an ISO YYYY-MM-DD string already validated by prepareTemplate.
 function cellValue(value, type) {
+  if (value !== '' && type === 'date') {
+    const timestamp = Date.parse(value + 'T00:00:00Z');
+    if (!Number.isFinite(timestamp)) fail('INVALID_DATE');
+    return {userEnteredValue:{numberValue:(timestamp - Date.UTC(1899,11,30)) / 86400000}};
+  }
   return {userEnteredValue: (type === 'integer' || type === 'money') && value !== ''
     ? {numberValue:Number(value)} : {stringValue:value}};
 }
@@ -169,7 +176,7 @@ function cellValue(value, type) {
 export function buildGoogleWritePlan(prepared, {copyMetadata, sheetMetadata = []}) {
   if (!object(prepared) || prepared.status !== 'DRAFT_PREFLIGHT' || !object(copyMetadata) ||
       !remoteId(copyMetadata.id) || copyMetadata.id === prepared.master_file_id ||
-      copyMetadata.mimeType !== prepared.mime_type || copyMetadata.trashed)
+      (copyMetadata.mimeType ?? copyMetadata.mime_type) !== prepared.mime_type || copyMetadata.trashed)
     fail('COPY_NOT_VERIFIED');
   const spec = prepared.spec;
   if (prepared.kind === 'GOOGLE_DOCS' || prepared.kind === 'GOOGLE_SLIDES') {

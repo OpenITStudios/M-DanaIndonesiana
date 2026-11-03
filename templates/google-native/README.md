@@ -1,6 +1,6 @@
 # Google-native Master Templates — Public Blueprint Only
 
-This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. The other five distinct catalog entries are blueprints, not created masters. No private Drive ID is stored here.
+This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. Four other distinct catalog entries remain blueprints, not created masters. No private Drive ID is stored here.
 
 **Pedoman yang wajib dibaca lebih dahulu:** [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). Layout ditentukan fungsi dokumen, sedangkan setiap narasi baru menjalani human editorial pass. Profil formal berlaku untuk laporan naratif, bukan otomatis untuk Sheets atau Slides.
 
@@ -14,6 +14,8 @@ Catalog: [catalog.json](catalog.json). [Master 01 QA evidence](../../docs/qa/mas
 - `di.admin.package` — 7 placeholders; internal checklist and external approval status must remain distinct.
 
 Use readable A4 layout, consistent headings, proper page breaks, and protected master editing. Internal document style is optional and cannot override verified official layouts. Do not invent government markings, signatures, logos, or reviewer names. Read back token replacement counts.
+
+**Master Google Sheets pertama tersedia:** `di.procurement.price-comparison@1.0.0`, tab `Perbandingan`, READY INTERNAL dan diuji dengan empat contoh sintetis. Ini hanya pembanding harga referensi, bukan keputusan pengadaan. Baca [Standar Spreadsheet](SPREADSHEET-STYLE.md) serta [QA Master Sheets 01](../../docs/qa/master-sheets01-price-comparison-2026-11-03.md) sebelum membuat atau memakai salinan. Dua master Sheets lainnya masih blueprint.
 
 ## Google Sheets (3 designs)
 

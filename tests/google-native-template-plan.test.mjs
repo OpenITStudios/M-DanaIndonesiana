@@ -28,8 +28,8 @@ function indicator(valuesOverride={}) {
       ...valuesOverride}}});
 }
 
-test('six public template definitions validate',()=>{
-  assert.equal(validateTemplateCatalog(catalog).templates.length,6);
+test('eight versioned public catalog specifications validate',()=>{
+  assert.equal(validateTemplateCatalog(catalog).templates.length,8);
 });
 test('private master mapping rejects invalid headers and duplicates',()=>{
   assert.throws(()=>parseTemplateMasters([['template_id']]),{code:'INVALID_TEMPLATE_MASTER_HEADER'});
@@ -77,6 +77,22 @@ test('Google Sheets writes numerical money and formula-like text literally',()=>
     sheetMetadata:{sheets:[{properties:{title:'Perbandingan',sheetId:22,
       gridProperties:{rowCount:100,columnCount:12}}}]}});
   assert.deepEqual(nested.requests,out.requests);
+});
+test('Sheets date input writes true date serial and accepts connected copy mime shape',()=>{
+  const p=prepareTemplate({catalog,templateId:'di.procurement.price-comparison',version:'1.0.0',
+    masterRows:rows(sheetMime,'di.procurement.price-comparison'),projectScope:'SYNTHETIC',
+    masterMetadata:remote(sheetMime),values:{fields:{item_name:'Paper A4',
+      rab_reference:'RAB-SYN',research_date:'2026-11-03'},tables:{offers:[
+      {vendor:'Vendor A',specification:'80 gsm',price:'58000',evidence_ref:'EVD-SYN-1',notes:'=100+1'}
+    ]}}});
+  const plan=buildGoogleWritePlan(p,{copyMetadata:{id:copyId,mime_type:sheetMime},sheetMetadata:{
+    sheets:[{properties:{title:'Perbandingan',sheetId:35,gridProperties:{rowCount:72,columnCount:5}}}]}});
+  const date=plan.requests.find(x=>x.updateCells?.start?.rowIndex===3);
+  assert.deepEqual(date.updateCells.rows[0].values[0].userEnteredValue,{numberValue:46329});
+  const table=plan.requests.find(x=>x.updateCells?.start?.rowIndex===7);
+  assert.deepEqual(table.updateCells.rows[0].values[2].userEnteredValue,{numberValue:58000});
+  assert.deepEqual(table.updateCells.rows[0].values[4].userEnteredValue,{stringValue:'=100+1'});
+  assert.equal(plan.target_file_id,copyId);
 });
 test('no silent truncation; reject sheet capacity, precision and missing copy',()=>{
   const config={catalog,templateId:'di.procurement.price-comparison',version:'1.0.0',

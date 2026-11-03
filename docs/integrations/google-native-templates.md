@@ -9,6 +9,11 @@
 Sebelum semua pembuatan dan revisi Google-native, baca [Pedoman Dasar Produksi Dokumen](../foundation/05-document-production-baseline.md). Pemeriksaan sumber, redaksi alami yang disunting, EYD/italic, serta layout pada output terisi adalah bagian dari alur wajib. Master naratif internal terpilih `di.report.indicator@1.2.0` READY; v1.0/v1.1 RETIRED. Versi baca-manusia disimpan di Google Docs privat, sementara dokumen riset visual terdahulu menjadi referensi sejarah. Tidak ada klaim executor unattended.
 
 
+### T2 — Master Google Sheets 01 tersedia
+
+Sesuai prioritas Google-only, master `di.procurement.price-comparison@1.0.0` telah dibuat **langsung** sebagai Google Sheets native di folder master privat. Tab `Perbandingan` mempunyai tiga scalar input B2:B4 dan tabel input A8:E67, dengan harga numerik IDR dan tanggal DATE. [Pedoman Spreadsheet](../../templates/google-native/SPREADSHEET-STYLE.md) melarang dekorasi, angka rekaan, dan formula pemilihan harga tanpa syarat ekuivalensi. [QA contoh sintetis](../qa/master-sheets01-price-comparison-2026-11-03.md) memeriksa data, format, validasi, metadata, salinan terpisah, serta planner Google-native terbaru. Row baru pada Registry privat yang sama adalah `READY` INTERNAL; belum diverifikasi dengan screenshot native Google Sheets, aturan pengadaan resmi atau sumber harga nyata.
+
+
 ## Satu Registry privat, bukan database baru
 
 Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Tab **`Template Masters` sudah ditambahkan di Google Sheet privat yang sama** pada T2 untuk mendaftarkan master bertahap. Master pertama tersimpan sebagai baris internal yang terverifikasi metadata. Urutan kolom yang wajib:

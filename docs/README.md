@@ -47,6 +47,12 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [Google-native Template Generation — T1](integrations/google-native-templates.md): satu Registry privat, katalog enam blueprint, planner read-only untuk Docs/Sheets, batas copy/edit/review/P5, serta pekerjaan yang belum diimplementasi.
 - [Master authoring guide](../templates/google-native/README.md): placeholder Google Docs, tab/cell Google Sheets dan aturan master privat.
+## Pedoman dan QA Google Sheets
+
+- [Standar Spreadsheet Profesional](../templates/google-native/SPREADSHEET-STYLE.md): struktur, tipografi, tanggal/IDR, validasi, formula, keamanan teks, dan batas pengadaan.
+- [QA Master Sheets 01](qa/master-sheets01-price-comparison-2026-11-03.md): native Google Sheets dan contoh empat harga sintetis; tidak mengklaim verifikasi visual browser atau status pengadaan.
+
+
 ## Kualitas dokumen dan riset (2026)
 
 - [Standar Mutu Dokumen](../templates/google-native/QUALITY-STANDARD.md): aturan layout, arsitektur informasi, anti-generik, aksesibilitas dan QA dua tahap.

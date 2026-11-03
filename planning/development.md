@@ -47,7 +47,7 @@
 - [x] Membuat master Google Docs pertama untuk laporan indikator, memeriksa sembilan placeholder, struktur A4, metadata dan baris Registry.
 - [x] Memperbaiki mutu visual Master 01: struktur tabel native 3×2, heading dan tipografi konsisten, membuang instruksi berlebihan; PDF A4 satu halaman telah dirender dan diperiksa. Timestamp di Registry diselaraskan.
 - [x] Menetapkan [Standar Mutu Visual](../templates/google-native/QUALITY-STANDARD.md) sebagai gate wajib untuk master berikutnya; tidak mengklaim uji otomatis pengisian berdata panjang.
-- [ ] Membuat dan memeriksa **lima master lainnya** dari katalog, satu per satu; belum otomatis tersedia.
+- [ ] Membuat dan memeriksa **empat master jenis lain** dari katalog, satu per satu; dua jenis master sudah tersedia (Laporan Indikator dan Perbandingan Harga).
 - [ ] Memeriksa dan memperketat izin edit master sesuai kebutuhan pengguna tanpa memutus akses yang diperlukan.
 - [ ] Menyiapkan executor Google Drive connector dengan preflight, copy-only, readback, bukti hasil dan status DRAFT.
 - [ ] Menghubungkan kalkulator Finance JSON ke master Google Sheets dengan formula + QA tanpa converter XLSX.
@@ -73,6 +73,11 @@
 - [x] Dengan persetujuan pengguna, menyimpan [Pedoman Dasar Produksi Dokumen](../docs/foundation/05-document-production-baseline.md) sebagai aturan aktif semua dokumen Google-native; versi manusia tersimpan di Google Docs privat dan render 2 halaman A4 diperiksa.
 - [x] Menghubungkan baseline + human editorial pass ke router, domain penulisan, katalog/profil template, design tokens dan indeks dokumentasi.
 - [ ] Uji penerapan pada dokumen proyek nyata menggunakan sumber yang sah; tidak menyamakan kebijakan tertulis dengan bukti kelulusan semua hasil.
+
+- [x] Membuat Master Sheets 01 (Perbandingan Harga Referensi) langsung sebagai Google Sheets native, mengisi contoh sintetis pada salinan, memeriksa format tanggal/harga, metadata dan baris input; [QA](../docs/qa/master-sheets01-price-comparison-2026-11-03.md).
+- [x] Memperbaiki planner untuk nilai DATE serial Google Sheets dan metadata copy `mime_type`, serta menulis satu regresi tambahan; 7/7 tes lulus di V8 harness, belum di runner Node.
+- [x] Mendaftarkan master pada tab `Template Masters` dari Registry privat **yang sama** sebagai READY INTERNAL; dua master Sheets lainnya masih belum dibuat.
+- [ ] Lakukan pemeriksaan tampilan langsung di Google Sheets pada browser/zoom yang digunakan sebelum mengklaim final visual. Tidak menguji atau memakai Excel sebagai perantara.
 
 ## Prioritas desain berikutnya
 

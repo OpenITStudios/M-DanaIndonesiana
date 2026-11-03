@@ -26,4 +26,7 @@
 - **Pedoman dasar aktif (2026-11-03):** [Standar Produksi Dokumen](docs/foundation/05-document-production-baseline.md) menjadi kontrak kanonis untuk seluruh output Google-native. Versi baca-manusia tersimpan sebagai Google Docs di folder privat `90 - Pedoman dan Referensi` dan render 2 halaman A4 telah diperiksa. Prinsip bahasa: naratif faktual, alami, seolah telah melewati suntingan profesional, tidak formulaik/berlebihan, EYD termasuk italic. Laporan naratif internal menggunakan Master 01 v1.2.0 READY; pemeriksaan output proyek nyata belum dilakukan dan tidak ada executor editorial otomatis.
 
 
+- **Google Sheets Master 01 (2026-11-03):** template native `di.procurement.price-comparison@1.0.0` telah dibuat dan tercatat READY INTERNAL di Registry privat yang sama. Struktur `Perbandingan` B2:B4 dan tabel A8:E67 (60 baris), harga numerik IDR, tanggal DATE asli; diuji pada salinan sintetis empat penawaran. Planner diperbaiki untuk menulis tanggal sebagai serial Google Sheets dan menerima MIME konektor salinan. [Pedoman spreadsheet](templates/google-native/SPREADSHEET-STYLE.md), [QA](docs/qa/master-sheets01-price-comparison-2026-11-03.md). Screenshot UI Google Sheets dan kesesuaian format resmi **belum diverifikasi**. Masih ada empat jenis master berbeda yang belum dibuat.
+
+
 **Batas pekerjaan berikut:** prioritaskan pemakaian praktis dan kejelasan owner. Tidak ada baseline proyek sebenarnya yang boleh ditebak dari dokumen contoh atau ingatan percakapan. Pengujian, promosi branch, ataupun tindakan eksternal memerlukan instruksi sesuai tugasnya.
