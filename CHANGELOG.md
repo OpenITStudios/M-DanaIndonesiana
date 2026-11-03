@@ -215,3 +215,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menguji 4 penawaran sintetis pada salinan; nilai harga tersimpan numerik, tanggal 03 November 2026 adalah date serial 46329, dan input master tetap kosong. Master didaftarkan READY INTERNAL dalam Registry privat yang sama.
 - Memperbaiki planner Google-native agar date ISO diubah ke serial Sheets dan metadata salinan konektor `mime_type` diterima. 7 unit tests planner PASS melalui V8 harness, bukan runner Node.
 - Pemeriksaan browser/zoom Google Sheets, legalitas pengadaan, data harga/vendor asli, dan formula keuangan kompleks belum dilakukan. Tidak ada file XLSX atau data privat di GitHub.
+
+## 1.8.10-dev — 2026-11-03 (price comparison spreadsheet layout refinement)
+
+- Membuat salinan master Google Sheets `di.procurement.price-comparison@1.1.0` untuk desain yang lebih profesional; v1.0.0 tidak ditimpa dan tetap READY sementara.
+- Merapikan judul dan metadata di atas tabel menggunakan merge terbatas **di luar data A7:E67**; header navy tunggal, banding native pucat, filter, gridlines disembunyikan, kolom dan pemformatan ulang.
+- Menguji 8 penawaran sintetis (termasuk teks panjang dan literal `=100+1`) dengan format tanggal/harga asli, tanpa formula yang tidak diperlukan; menemukan autoResize dapat mengecilkan tinggi baris menjadi 21px dan memperbaikinya dengan ukuran terukur.
+- Registry privat menyimpan v1.1.0 sebagai `NEEDS_REVIEW`; v1.0.0 tetap `READY`. Screenshot native browser belum dapat diverifikasi; tidak ada klaim format resmi atau bukti harga asli. Detail [QA](docs/qa/master-sheets01-visual-refinement-2026-11-03.md).

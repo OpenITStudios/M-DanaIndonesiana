@@ -37,6 +37,10 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 
 `di.report.indicator@1.2.0` kini **READY** untuk laporan internal setelah persetujuan desain dan pemeriksaan italic; versi 1.1 dan 1.0 disimpan sebagai riwayat. Seluruh subjudul, metadata dan status menggunakan teks tegak; untuk pengecualian italic, baca [Pedoman Laporan Ilmiah](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md). Pemeriksa [italic](../../tools/google-native-typography-qa.mjs) menandai run yang belum beralasan, tetapi bukan pengganti pemeriksaan bahasa asli. [Bukti QA lanjutan](../../docs/qa/master01-scholarly-typography-2026-11-03.md).
 
+## Kandidat Master Sheets 01 v1.1.0
+
+[Redesain visual Perbandingan Harga](../../docs/qa/master-sheets01-visual-refinement-2026-11-03.md) kini tersedia sebagai Google Sheets native dengan tata letak yang lebih tertib: judul dan metadata tidak terpotong, header tunggal yang tegas, baris bergaris halus dan warna selang-seling, serta 60 baris input sesuai katalog. **Status v1.1.0 = NEEDS_REVIEW**, v1.0.0 tetap READY INTERNAL hingga review pengguna. Kontrak input tidak berubah. Jangan membuat laporan pengadaan resmi dari harga sintetis.
+
 ## Master maintenance
 
 For every change, retain a version and a reviewer trail. Actual Drive metadata must match the reviewed timestamp; otherwise planning halts. The public catalog does not carry Drive file IDs or actual project facts. The current planner requires an exact active master and deliberately blocks `OFFICIAL_FORMAT` until formal applicability review is implemented.

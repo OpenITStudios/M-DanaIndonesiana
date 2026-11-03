@@ -66,6 +66,19 @@ Template ID: \`di.procurement.price-comparison@1.0.0\`, native Google Sheets **I
 
 Katalog internal saat ini mempunyai lima kolom; format Markdown domain yang lebih luas juga meminta tipe bukti, ekuivalensi spesifikasi, ongkos/pajak, masa berlaku dan dasar pemilihan. **Kelima kolom tidak cukup untuk mengklaim kepatuhan proses pengadaan penuh**. Data yang tidak tercakup harus dicatat secara terpisah/di kolom keterbatasan; peningkatan skema hanya dilakukan bila ada kebutuhan nyata, bukan penambahan kolom spekulatif.
 
+### Kandidat layout v1.1.0 — matriks harga yang lebih rapi
+
+Pengguna menilai layout v1.0.0 belum layak sebagai standar visual. Kandidat native Google Sheets v1.1.0 mempertahankan input B2:B4 dan tabel A8:E67 yang sama, dengan perbaikan yang benar-benar dilakukan:
+
+- Baris judul A1:E1 **digabung khusus pada bagian judul** agar teks tidak terpotong; metadata B2:E5 digabung dalam setiap baris, dan label "DATA PENAWARAN" berada di A6:E6. **Tidak ada merge pada A7:E67**.
+- Judul Arial 15 pt gelap, baris label teratur, input metadata biru sangat muda. Hanya satu pita header navy kusam untuk tabel; data selebihnya putih dengan banding sangat lembut dan garis horizontal tipis. Warna memiliki **fungsi navigasi**, bukan dekorasi.
+- Lebar kolom A:E: 212 / 350 / 142 / 232 / 310 piksel, teks panjang di-wrap, nominal rata kanan, validasi dan format Indonesia dipertahankan.
+- Sheet memakai satu tab `Perbandingan`, freeze baris 1–7, filter header, gridlines dihilangkan. Pembungkus metadata memisahkan form input dari data harga.
+- Tinggi baris input master default 48 piksel, tetapi contoh uji menunjukkan **autoResizeDimensions dapat mengecilkan baris berisi teks panjang ke 21 piksel**. Karena itu hasil auto-resize wajib diperiksa pada rowMetadata/tampilan; salinan uji memakai tinggi 56–72 piksel pada baris berisi uraian panjang.
+- Tidak ada grafik, KPI, total semua vendor, atau pemilihan harga termurah otomatis karena komparabilitas vendor/spesifikasi belum dapat diasumsikan.
+
+[Bukti QA visual/teknis](../../docs/qa/master-sheets01-visual-refinement-2026-11-03.md) memverifikasi merge, banding, filter, nilai, format dan tinggi baris dalam Google Sheets API. **Screenshot native 100% masih belum dilihat**. Master v1.1.0 status `NEEDS_REVIEW`, sementara v1.0.0 tetap `READY` sampai keputusan desain.
+
 ## 6. Gerbang QA wajib
 
 | Gate | Pemeriksaan |

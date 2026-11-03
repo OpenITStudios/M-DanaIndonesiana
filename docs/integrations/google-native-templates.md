@@ -14,6 +14,10 @@ Sebelum semua pembuatan dan revisi Google-native, baca [Pedoman Dasar Produksi D
 Sesuai prioritas Google-only, master `di.procurement.price-comparison@1.0.0` telah dibuat **langsung** sebagai Google Sheets native di folder master privat. Tab `Perbandingan` mempunyai tiga scalar input B2:B4 dan tabel input A8:E67, dengan harga numerik IDR dan tanggal DATE. [Pedoman Spreadsheet](../../templates/google-native/SPREADSHEET-STYLE.md) melarang dekorasi, angka rekaan, dan formula pemilihan harga tanpa syarat ekuivalensi. [QA contoh sintetis](../qa/master-sheets01-price-comparison-2026-11-03.md) memeriksa data, format, validasi, metadata, salinan terpisah, serta planner Google-native terbaru. Row baru pada Registry privat yang sama adalah `READY` INTERNAL; belum diverifikasi dengan screenshot native Google Sheets, aturan pengadaan resmi atau sumber harga nyata.
 
 
+### Master Sheets 01 v1.1.0 — desain ulang kandidat
+
+Setelah pengguna menilai v1.0.0 belum cukup rapi, satu Google Sheets master baru v1.1.0 dibuat dengan judul dan metadata merged **di luar data**, header navy, filter, frozen row, alternating native banding dan ukuran kolom terukur. [QA](../qa/master-sheets01-visual-refinement-2026-11-03.md) mencatat pengujian delapan penawaran sintetis, harga dan tanggal numerik, serta temuan `autoResizeDimensions` yang mengecilkan baris panjang. Input schema **tetap** B2:B4 serta A8:E67. Registry privat menyimpan v1.1.0 sebagai `NEEDS_REVIEW` untuk desain, v1.0.0 tetap `READY`; tidak ada master yang ditimpa. Native screenshot belum diverifikasi.
+
 ## Satu Registry privat, bukan database baru
 
 Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Tab **`Template Masters` sudah ditambahkan di Google Sheet privat yang sama** pada T2 untuk mendaftarkan master bertahap. Master pertama tersimpan sebagai baris internal yang terverifikasi metadata. Urutan kolom yang wajib:

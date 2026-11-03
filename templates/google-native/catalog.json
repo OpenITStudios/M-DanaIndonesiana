@@ -334,6 +334,78 @@
       ]
     },
     {
+      "id": "di.procurement.price-comparison",
+      "version": "1.1.0",
+      "kind": "GOOGLE_SHEETS",
+      "owner_skill": "grant-administration",
+      "source_contract": "templates/procurement/price-comparison.md",
+      "workflow": "disbursement-readiness",
+      "fields": {
+        "item_name": {
+          "type": "text",
+          "required": true
+        },
+        "rab_reference": {
+          "type": "text",
+          "required": true
+        },
+        "research_date": {
+          "type": "date",
+          "required": true
+        }
+      },
+      "cell_bindings": {
+        "item_name": {
+          "sheet": "Perbandingan",
+          "cell": "B2"
+        },
+        "rab_reference": {
+          "sheet": "Perbandingan",
+          "cell": "B3"
+        },
+        "research_date": {
+          "sheet": "Perbandingan",
+          "cell": "B4"
+        }
+      },
+      "table_bindings": [
+        {
+          "key": "offers",
+          "sheet": "Perbandingan",
+          "start_cell": "A8",
+          "max_rows": 60,
+          "columns": [
+            {
+              "key": "vendor",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "specification",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "price",
+              "type": "money",
+              "required": true
+            },
+            {
+              "key": "evidence_ref",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "notes",
+              "type": "text",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "design_profile": "formal-price-comparison-v1"
+    },
+    {
       "id": "di.reporting.revision-matrix",
       "version": "1.0.0",
       "kind": "GOOGLE_SHEETS",

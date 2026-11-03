@@ -79,6 +79,10 @@
 - [x] Mendaftarkan master pada tab `Template Masters` dari Registry privat **yang sama** sebagai READY INTERNAL; dua master Sheets lainnya masih belum dibuat.
 - [ ] Lakukan pemeriksaan tampilan langsung di Google Sheets pada browser/zoom yang digunakan sebelum mengklaim final visual. Tidak menguji atau memakai Excel sebagai perantara.
 
+- [x] Memperbaiki Master Sheets 01 melalui versi native v1.1.0 (bukan menimpa master v1.0.0): judul/metadata, proporsi lebar kolom, header, banding, filter dan baris input yang lebih tertib.
+- [x] QA salinan dengan delapan penawaran sintetis, termasuk nama panjang, catatan panjang, nominal numerik dan string berawalan tanda sama dengan; koreksi tinggi baris setelah `autoResizeDimensions` terpantau menyusutkan konten. [QA](../docs/qa/master-sheets01-visual-refinement-2026-11-03.md).
+- [ ] Review tampilan native Google Sheets di browser dan keputusan penerimaan desain; v1.1.0 `NEEDS_REVIEW` dan v1.0.0 tetap `READY`.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.
