@@ -57,3 +57,7 @@ Angka kalkulator Finance v0.3 hanya boleh dijadikan draf yang masih perlu pemeri
 - [Reporting Structures](REPORTING-STRUCTURES.md) — isi laporan indikator publik/nonpublik, laporan kemajuan, kuratorial dan laporan akhir.
 
 Gunakan [template narasi](../../../templates/reporting/creative-narrative.md) atau [template indikator](../../../templates/reporting/indicator-report.md) seperlunya, tanpa mengaku telah mengikuti acara atau mengarang keberhasilan.
+
+## Narasi produksi dan kuratorial v0.8
+
+Gunakan [Curatorial Records](../production/CURATORIAL-RECORDS.md) untuk membedakan fakta sejarah/interpretasi dan [Indicator Mapping](../production/INDICATOR-MAPPING.md) untuk status capaian. Narasi alami tidak boleh mengubah rencana menjadi kegiatan yang telah berlangsung.

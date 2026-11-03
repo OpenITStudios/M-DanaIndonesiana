@@ -47,3 +47,7 @@ Format `SKILL.md` mencontoh standar Agent Skills dan root spesialis `M-PRD-Creat
 - Pertanyaan **bukti apa untuk jenis biaya ini?** → Evidence + [Expenditure Evidence](../../kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md); Regulatory hanya bila keberlakuan sumber belum pasti.
 - Pertanyaan **bagaimana membandingkan vendor dan menerima pekerjaan?** → [Procurement Contract](../../kits/dana-indonesiana/procurement/CONTRACT.md), sebagai **modul**, bukan skill kedelapan. Untuk harga baca [Price Comparison](../../kits/dana-indonesiana/procurement/PRICE-COMPARISON.md).
 - Permintaan hanya menyusun/menata dokumen → Administration; permintaan menghitung atau mengakui pembayaran → Finance; uji mutu karya digital → Production. Aktivasi skill lain hanya jika benar-benar diperlukan.
+
+## Aktivasi Creative Production v0.8
+
+Untuk tugas produksi, pilih satu owner: [Workflow](../../kits/dana-indonesiana/production/WORKFLOW.md) untuk pekerjaan, [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md) untuk capaian, [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) untuk isi museum, [Digital Deliverables](../../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md) untuk serah-terima, atau [Release & Archive](../../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md) untuk distribusi/preservasi. Tidak perlu memanggil semua skill.

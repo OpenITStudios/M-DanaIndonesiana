@@ -33,3 +33,11 @@ Jangan menyalin nomor identitas, jumlah atau isi kontrak pribadi ke daftar ini. 
 - [LPDP — Information Corner](https://erispro-indonesiana.kemenkeu.go.id/information-corner): format laporan dan dokumen pendukung; isi dapat berubah sehingga pilih versi yang sesuai program.
 - [ANRI — Arsip Dinamis](https://www.anri.go.id/sekitar-arsip/arsip-dinamis): prinsip penciptaan, pemeliharaan, klasifikasi, keamanan akses, dan ketersediaan rekod sebagai bukti; **inspirasi desain**.
 - [JDIH LKPP — Perpres 46/2025](https://jdih.lkpp.go.id/regulation/peraturan-presiden/peraturan-presiden-nomor-46-tahun-2025) dan [Peraturan LKPP 3/2026](https://jdih.lkpp.go.id/regulation/peraturan-lkpp/peraturan-lkpp-nomor-3-tahun-2026): cara dan ruang lingkup pengadaan pemerintah. **Jangan asumsikan prosedur formalnya otomatis mengikat penerima manfaat non-K/L**.
+
+## Riset museum digital v0.8
+
+- [Pedoman Administrasi Dana Indonesiana 2025](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf): ilustrasi tahapan dan laporan indikator; harus diperiksa terhadap lampiran proyek.
+- [Collections Trust Spectrum](https://collectionstrust.org.uk/spectrum/) dan [Canadian Heritage Information Network](https://www.canada.ca/en/heritage-information-network/services/collections-documentation-standards.html): dokumentasi museum sebagai **referensi desain**, bukan kepemilikan koleksi fisik.
+- [UNESCO Charter on Digital Heritage](https://www.unesco.org/en/legal-affairs/charter-preservation-digital-heritage): keberlanjutan konten dan dokumentasi digital sebagai referensi.
+- [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/): aksesibilitas web; bukan sertifikasi konformansi.
+- [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines): aturan platform dan brand menurut jenis pemanfaatan.

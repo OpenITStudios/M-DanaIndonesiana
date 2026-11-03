@@ -29,3 +29,7 @@ Jangan membuat folder kode atau skema untuk setiap baris tabel sampai ada kebutu
 ## Owner domain Procurement (v0.7)
 
 [Procurement Contract](../../kits/dana-indonesiana/procurement/CONTRACT.md) memegang prosedur kebutuhan, pembanding, pemilihan, komitmen, dan serah terima. [Evidence](../../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) memeriksa bukti, Finance memegang transaksi, Regulatory memegang applicability, dan Rights memegang izin karya. **Tidak** ada agen, database atau approval engine baru.
+
+## Produksi Karya Digital v0.8
+
+[Production Workflow](../../kits/dana-indonesiana/production/WORKFLOW.md) memegang aktivitas dan keluaran; [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md) mengaitkan indikator; [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) membedakan sumber sejarah dan representasi. Bukti, izin, angka, naskah, dan administrasi tetap dimiliki domain masing-masing. Tidak ada database museum baru.

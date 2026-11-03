@@ -19,3 +19,10 @@ Sampaikan minimum referensi sumber dan versi yang aman, output domain, metode ve
 ## Peta laporan v0.6
 
 Gunakan [Reporting Workflow](reporting-workflow.md) sebagai alur lengkap bila menghasilkan paket administrasi sekaligus naskah karya. Tidak seluruh skill harus diaktifkan. Fase pengembangan saat ini dokumenter; QA sengaja tidak dijalankan.
+
+## Jalur produksi museum digital v0.8
+
+- Riset sumber → [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) → Writing/Rights → Production.
+- Karya digital → [Digital Deliverables](../../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md) → Evidence → Administration.
+- Rilis/arsip → [Release](../../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md) → Rights → human review.
+- Laporan indikator → [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md); bukan hasil hitung tugas internal.

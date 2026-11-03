@@ -39,3 +39,7 @@ Pendalaman `grant-administration` dan `creative-documentation` ditambah sebagai 
 ## Evidence & procurement v0.7 (pedoman sistem)
 
 `evidence-audit` diperkuat untuk pembuktian klaim dan bukti belanja. Domain procurement ditambahkan sebagai [kontrak modul](kits/dana-indonesiana/procurement/CONTRACT.md), bukan skill terpisah. Alur dan template tidak mengubah tujuh skill maupun sistem fakta tunggal. Tidak ada data proyek rahasia, pengadaan nyata, atau tes runtime yang diproses pada commit ini.
+
+## Routing produksi v0.8
+
+Skill `creative-production` sekarang memiliki lima pedoman di `kits/dana-indonesiana/production/`. Data dokumen proyek privat tetap tidak diabadikan pada GitHub. Tahap ini pengembangan dokumenter; tes/QA sengaja ditunda.

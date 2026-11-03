@@ -39,3 +39,7 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Poster siap tetapi panduan logo tahun terkait belum dicek → NEEDS_REVIEW sebelum publikasi.
+
+## Hak atas konten museum virtual v0.8
+
+[Curatorial Records](../production/CURATORIAL-RECORDS.md) mengidentifikasi sumber dan izin yang diperlukan; [Release & Archive](../production/RELEASE-ARCHIVE.md) menandai distribusi. Rights tetap memegang keputusan clearance termasuk ketentuan [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines). Kredit bukan pengganti izin reproduksi.

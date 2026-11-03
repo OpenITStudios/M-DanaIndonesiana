@@ -48,3 +48,7 @@ Ada invoice tanpa transfer → nilai tagihan dapat dicatat, status paid tetap IN
 - [Procurement](../procurement/CONTRACT.md): persiapan dan pemilihan penyedia, kontrak, serah terima. Evidence hanya memeriksa bukti, bukan menentukan kewenangan belanja atau pembayaran.
 
 Pilih jalur terdekat dengan tugas. Satu klaim dapat memiliki beberapa sumber bukti berbeda; jangan menjadikan tersedianya kuitansi sebagai kesimpulan seluruh pekerjaan diterima dan sah.
+
+## Bukti karya digital v0.8
+
+Jika klaim menyatakan produksi selesai, rujuk [Digital Deliverables](../production/DIGITAL-DELIVERABLES.md) dan [Indicator Mapping](../production/INDICATOR-MAPPING.md). File world/screenshot hanya mendukung lingkup yang terlihat, tidak membuktikan seluruh mekanik telah diuji.
