@@ -1,0 +1,77 @@
+{
+  "project_id": "SYNTH-001",
+  "rab_ref": "SYN-RAB-001",
+  "rab_status": "APPROVED",
+  "rab_approval_evidence_ref": "SYN-DEC-01",
+  "currency": "IDR",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-01-31"
+  },
+  "budget_lines": [
+    {
+      "code": "A01",
+      "label": "Jasa desain (sintetis)",
+      "indicator_id": "IND-A",
+      "approved_amount": "1500000",
+      "prior_realized": "0"
+    },
+    {
+      "code": "A02",
+      "label": "Naskah (sintetis)",
+      "indicator_id": "IND-B",
+      "approved_amount": "1000000",
+      "prior_realized": "0"
+    }
+  ],
+  "funding_plan": [
+    {
+      "stage": "I",
+      "planned_amount": "1250000"
+    },
+    {
+      "stage": "II",
+      "planned_amount": "750000"
+    },
+    {
+      "stage": "III",
+      "planned_amount": "500000"
+    }
+  ],
+  "cash_opening": "0",
+  "cash_closing_observed": "800000",
+  "cash_closing_evidence_ref": "SYN-BANK-01",
+  "transactions": [
+    {
+      "id": "T01",
+      "date": "2026-01-05",
+      "kind": "RECEIPT",
+      "amount": "1250000",
+      "evidence_refs": [
+        "SYN-TRANSFER-01"
+      ]
+    },
+    {
+      "id": "T02",
+      "date": "2026-01-07",
+      "kind": "PAYMENT",
+      "amount": "450000",
+      "budget_code": "A01",
+      "indicator_id": "IND-A",
+      "recipient_ref": "SYN-PAYEE-01",
+      "evidence_refs": [
+        "SYN-TRANSFER-02"
+      ]
+    },
+    {
+      "id": "T03",
+      "date": "2026-01-08",
+      "kind": "INVOICE",
+      "amount": "300000",
+      "budget_code": "A02",
+      "evidence_refs": [
+        "SYN-INVOICE-01"
+      ]
+    }
+  ]
+}

@@ -39,3 +39,7 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Belum dilaksanakan lokakarya → tulis sebagai rencana kegiatan, bukan laporan hasil pelaksanaan.
+
+## Handoff laporan naratif
+
+Angka kalkulator Finance v0.3 hanya boleh dijadikan draf yang masih perlu pemeriksaan sumber. Jangan mengubah selisih atau menulis "sudah dicairkan", "sudah dibayar", atau "disetujui" berdasarkan rencana atau invoice.

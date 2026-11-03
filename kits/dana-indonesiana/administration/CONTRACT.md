@@ -39,3 +39,7 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Surat dan RAB ada tetapi bukti submit portal tidak ada → READY_TO_SUBMIT/UNKNOWN, bukan SUBMITTED.
+
+## Handoff finance v0.3
+
+Hasil perhitungan JSON adalah masukan DRAFT. Periksa masalah selisih, pos tak terpetakan, periode dan sumber bukti sebelum merancang checklist. Jangan menyimpulkan status e-RISPRO dari `status` kalkulator.

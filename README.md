@@ -46,3 +46,7 @@ Prinsip utama: **satu sumber fakta per domain, bukti dapat ditelusuri, status di
 ## Skills v0.2
 
 Paket tujuh [Agent Skills](.agents/skills/) tersedia dengan [routing](docs/skills/README.md), kontrak domain, kerahasiaan dan sumber fakta bersama. Skill bersifat prosedural: tidak mengimplementasikan akuntansi, pajak atau integrasi e-RISPRO otomatis. Jangan menyimpan dokumen proyek privat pada repo publik.
+
+## Finance reporting v0.3
+
+Kalkulator draft JSON dan uji sintetis tersedia di [Finance Validation Runbook](kits/dana-indonesiana/finance/VALIDATION-RUNBOOK.md); tanpa menyimpan kontrak, RAB privat, atau bukti proyek di GitHub publik.

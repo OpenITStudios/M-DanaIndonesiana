@@ -39,3 +39,7 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Dua angka berbeda pada LRA dan buku kas → laporkan selisih, transaksi yang perlu diperiksa, bukti yang hilang; jangan mengubah sumber.
+
+## Kalkulator deterministik v0.3
+
+Gunakan [Validation Runbook](VALIDATION-RUNBOOK.md) dan kalkulator JSON jika ada **data yang diizinkan**. Ini proyeksi DRAFT, bukan ekspor Excel resmi atau bukti persetujuan pemerintah. Realisasi kumulatif hanya dihitung dari prior yang diberikan eksplisit; tidak pernah disimpulkan sebagai nol.

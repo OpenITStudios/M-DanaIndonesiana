@@ -1,20 +1,20 @@
-# Synthetic Acceptance Cases — NOT_EXECUTED
+# Acceptance Matrix v0.3
 
-Ini rencana tes, bukan hasil tes. Gunakan dataset fiktif yang **jelas sintetis**; jangan ambil dokumen proyek rahasia sebagai fixture.
+Skenario keuangan A01–A03 dan A07 memiliki kasus unit-test berbasis data sintetis pada `tests/finance-report.test.mjs`. Pemeriksaan substantif, perilaku agen, dan seluruh kerja e-RISPRO **belum diuji**.
 
-| Case | Kondisi | Harapan |
+| Case | Situasi | Status cakupan |
 |---|---|---|
-| A01 Finance | jumlah laporan beda dari kas | tampilkan selisih dan nomor sumber, bukan paksa cocok |
-| A02 Finance | rencana termin tetapi belum menerima kas | `planned` dipisah dari `received` |
-| A03 Finance | nomor bukti mirip | dugaan duplikat, bukan auto-delete |
-| A04 Admin | dokumen ada tanpa receipt e-RISPRO | tidak mengklaim SUBMITTED |
-| A05 Regulatory | contoh dua tahap bertentangan dengan perjanjian tiga tahap | contoh tidak diaktifkan |
-| A06 Writing | pelaksanaan belum terjadi | gunakan kata rencana, tidak menciptakan hasil/peserta |
-| A07 Evidence | invoice tanpa bukti bayar | klaim telah dibayar tetap INCOMPLETE |
-| A08 Production | belum menjalankan QA | NOT_EXECUTED bukan PASS |
-| A09 Dissemination | logo historis tanpa clearance | NEEDS_REVIEW |
-| A10 Privacy | user mengatakan "pelajari saja" | tidak ada upload/commit/file output/PII terpapar |
-| A11 Spreadsheet | catatan input diawali formula Excel | diekspor sebagai teks aman, bukan dieksekusi |
-| A12 Cross-skill | jadwal/indikator berbeda tanpa addendum | tandai CONFLICT dan siapa pengambil keputusan |
+| A01 | beda saldo kas | UNIT TEST tersedia |
+| A02 | rencana termin belum diterima | UNIT TEST tersedia |
+| A03 | dugaan transaksi ganda | UNIT TEST tersedia |
+| A04 | berkas ada tanpa bukti submit e-RISPRO | NOT_EXECUTED |
+| A05 | contoh dua termin vs kontrak tiga termin | NOT_EXECUTED |
+| A06 | penulisan kegiatan yang belum dilaksanakan | NOT_EXECUTED |
+| A07 | invoice tanpa pembayaran | UNIT TEST tersedia untuk klasifikasi saja; bukti NOT_EXECUTED |
+| A08 | QA karya belum dijalankan | NOT_EXECUTED |
+| A09 | logo historis vs panduan terbaru | NOT_EXECUTED |
+| A10 | dokumen READ-ONLY | review proses, bukan tes otomatis kebocoran |
+| A11 | CSV formula injection | NOT_APPLICABLE: belum ada ekspor CSV/Excel |
+| A12 | jadwal/indikator berbeda | NOT_EXECUTED |
 
-Eksekusi uji baru boleh dilaporkan PASS setelah dilakukan sungguhan pada runtime yang jelas, dengan bukti lingkup dan hasil. Jangan membangun simulator approval eksternal.
+Skenario tambahan: angka besar tanpa kehilangan presisi, saldo awal tak diketahui, prior realization null, pembayaran tak terpetakan, kelebihan pagu, bukti kosong, transaksi di luar periode, jenis angka salah, ID ganda. Jalankan tes Node sebelum mengklaim PASS pada Node runtime.

@@ -24,3 +24,11 @@ Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otoris
 - [x] Router, batas kerahasiaan, natural writing, contoh uji sintetis.
 - [ ] Uji perilaku pada dataset sintetis (belum dieksekusi).
 - [ ] Helper kalkulasi deterministik dan export LRA/arus kas bila diminta setelah validasi kebutuhan.
+
+## Finance prototype v0.3
+
+- [x] Proyeksi JSON deterministik LRA dan arus kas, tanpa Excel/portal.
+- [x] Fixture dan pengujian sintetis dibuat.
+- [ ] Jalankan pengujian pada Node runtime dan catat hasilnya sesuai bukti.
+- [ ] Periksa perilaku admin dan penulisan secara manual dengan data sintetis.
+- [ ] Pertimbangkan Excel resmi hanya sesudah sumber format dan model data disetujui.

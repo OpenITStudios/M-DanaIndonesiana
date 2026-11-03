@@ -15,3 +15,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Tujuh skill modular untuk finance, administrasi, writing, evidence, regulatory, production, dissemination.
 - Kontrak sumber tunggal, privasi, gaya alami dan skenario uji sintetis.
 - Belum ada eksekusi runtime, integrasi e-RISPRO, atau hasil audit kepatuhan yang diklaim PASS.
+
+## 0.3.0 — 2026-11-03
+
+- Finance deterministic projection (BigInt IDR, LRA, arus kas, selisih dan gap).
+- Synthetic test fixture and Node regression suite; JSON only.
+- Finance handoff ke administrasi dan narasi diperjelas.
+- Belum ada export Excel, pajak otomatis atau submission eksternal.
