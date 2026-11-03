@@ -45,6 +45,8 @@
 - [x] Menulis tes sintetis T1; eksekusi lokal pada kandidat dilakukan, **bukan** QA Google API atau OAuth end-to-end.
 - [x] Dengan instruksi pengguna, membuat folder master di Drive proyek dan tab `Template Masters` **di Registry privat yang sama** tanpa memindahkan sumber asli.
 - [x] Membuat master Google Docs pertama untuk laporan indikator, memeriksa sembilan placeholder, struktur A4, metadata dan baris Registry.
+- [x] Memperbaiki mutu visual Master 01: struktur tabel native 3×2, heading dan tipografi konsisten, membuang instruksi berlebihan; PDF A4 satu halaman telah dirender dan diperiksa. Timestamp di Registry diselaraskan.
+- [x] Menetapkan [Standar Mutu Visual](../templates/google-native/QUALITY-STANDARD.md) sebagai gate wajib untuk master berikutnya; tidak mengklaim uji otomatis pengisian berdata panjang.
 - [ ] Membuat dan memeriksa **lima master lainnya** dari katalog, satu per satu; belum otomatis tersedia.
 - [ ] Memeriksa dan memperketat izin edit master sesuai kebutuhan pengguna tanpa memutus akses yang diperlukan.
 - [ ] Menyiapkan executor Google Drive connector dengan preflight, copy-only, readback, bukti hasil dan status DRAFT.

@@ -30,6 +30,10 @@ Master dibuat di folder Drive privat yang disetujui, dikelola sebagai dokumen Go
 - **Belum dilakukan:** uji copy-fill penuh memakai executor generik, ekspor/visual PDF, pemeriksaan hak edit khusus master, penilaian substansi laporan nyata, atau kelayakan untuk pengajuan resmi. Setiap salinan tetap `DRAFT` dan perlu review.
 - **Master berikutnya:** satu per satu mengikuti katalog; jangan mencatat baris `READY` untuk master yang belum dibuat.
 
+### Standar visual wajib
+
+Setiap master internal harus mengikuti [Standar Mutu Visual](../../templates/google-native/QUALITY-STANDARD.md): struktur dan token diverifikasi dalam Google-native document, sedangkan layout Google Docs dicek melalui render PDF setiap halaman yang terpengaruh. Pemeriksaan metadata saja **bukan** review visual. Master 01 telah mengalami penyempurnaan hierarki, tabel native dan tipografi, serta render A4 telah diperiksa; pengisian otomatis dengan data panjang tetap memerlukan QA terpisah.
+
 ## Alur AI ↔ Google Drive
 
 1. **Pilih kebutuhan.** Ikuti `AGENTS.md` untuk satu skill primer. Ambil pointer melalui P2 Source Resolver; baca isi dokumen proyek hanya sesuai instruksi/izin. Gunakan sumber berwenang, bukan hasil generasi AI sebagai sumber fakta.

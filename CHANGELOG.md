@@ -156,3 +156,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Membuat master Google Docs native `di.report.indicator@1.0.0` dengan format A4, heading dan sembilan placeholder tepat satu kali sesuai katalog.
 - Memeriksa pembacaan ulang Docs, parent/MIME/modifiedTime master, header dan data Registry serta dropdown status/authority. Status `READY` hanya berarti master **internal** tersedia untuk disalin; bukan approval dokumen atau format resmi.
 - Tanpa ID/file proyek privat di Git publik; tab lama tidak diubah, master lain belum dibuat. Uji copy-fill otomatis, PDF/visual dan pembatasan akses editor belum dijalankan.
+
+## 1.8.2-dev — 2026-11-03 (visual quality gate)
+
+- Merevisi master internal `di.report.indicator@1.0.0` langsung di Google Docs: hierarki tipografi, empat heading, tabel metadata native 3×2, garis dan border halus, serta menghapus instruksi internal berlebihan.
+- Melakukan pemeriksaan struktur Docs serta ekspor PDF untuk inspeksi visual: A4 satu halaman, tanpa clipping/overlap, sembilan placeholder tepat sekali. Menyelaraskan `observed_modified_time` dan status `READY` internal pada Registry privat.
+- Menambahkan standar mutu visual master Google-native berikut gate untuk Docs, Sheets, Slides serta larangan filler, ornamen dan klaim resmi palsu.
+- Belum menjalankan uji generator copy-and-fill berisi data panjang, QA dokumen proyek nyata, atau pemeriksaan formulir resmi. Tidak ada file ID/sumber privat dipublikasikan pada repository.
