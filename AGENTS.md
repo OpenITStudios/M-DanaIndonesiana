@@ -11,7 +11,11 @@
 
 ## Sumber proyek dari Drive (jika diizinkan)
 
-Untuk tugas yang menggunakan dokumen proyek, ikuti [Google Drive P0–P2 Integration](docs/integrations/google-drive.md). Pilih satu workflow P2 menurut **hasil yang diminta**; ambil sumber dari satu Registry privat, periksa metadata aktual, lalu baca isi **hanya bila tugas/izin memungkinkan**. Terapkan satu skill primer; skill lain hanya menerima fakta minimum ketika diperlukan. Jika pilihan RAB/versi ambigu atau sumber belum terindeks, keluarkan ketidakpastian spesifik; jangan menebak. Pointer yang ditemukan tidak membuktikan isi, penerimaan resmi, atau hak untuk menyimpan/memindahkan dokumen. Jangan commit ID/link privat, metadata proyek, isi berkas atau token ke Git publik.
+Untuk tugas yang menggunakan dokumen proyek, ikuti [Google Drive P0–P3 Integration](docs/integrations/google-drive.md). Pilih satu workflow P2 menurut **hasil yang diminta**; ambil sumber dari satu Registry privat, periksa metadata aktual, lalu baca isi **hanya bila tugas/izin memungkinkan**. Terapkan satu skill primer; skill lain hanya menerima fakta minimum ketika diperlukan. Jika pilihan RAB/versi ambigu atau sumber belum terindeks, keluarkan ketidakpastian spesifik; jangan menebak. Pointer yang ditemukan tidak membuktikan isi, penerimaan resmi, atau hak untuk menyimpan/memindahkan dokumen. Jangan commit ID/link privat, metadata proyek, isi berkas atau token ke Git publik.
+
+### Saat dokumen Drive berubah
+
+Untuk audit perubahan, ikuti [P3 Change Impact](docs/integrations/google-drive.md). Bedakan `METADATA_CHANGE_SIGNAL`, `METADATA_UNVERIFIED`, dan `METADATA_MATCH_ONLY`. Hanya `derived_from_ids` pada dokumen turunan yang menghasilkan *downstream review candidate*; `related_ids` adalah konteks, bukan bukti perubahan laporan. Jangan otomatis memperbarui RAB, laporan, penanda persetujuan atau waktu baseline.
 
 ## Mode kerja
 

@@ -1,4 +1,4 @@
-# Development Plan — Current State (v1.1)
+# Development Plan — Current State (v1.4)
 
 **Ini backlog kerja sistem, bukan izin otomatis untuk menjalankan semua item.** Riwayat implementasi v0.1–v1.0 berada di [CHANGELOG](../CHANGELOG.md).
 
@@ -12,11 +12,14 @@
 
 - [x] P0/P1 kode Source Resolver read-only dan kontrak registry; satu indeks privat proyek dibuat di Google Drive. Status pengujian: NOT EXECUTED; tidak otomatis menyinkronkan metadata.
 - [x] P2 kode Workflow Bridge read-only: rute sumber ketujuh skill, selection ambiguity, status metadata dan handoff terstruktur; dokumentasi operasional serta tes sintetis ditulis tetapi belum dieksekusi.
+- [x] P3 change-impact preview: membandingkan metadata, memeriksa ketidakpastian, dan memetakan kandidat review turunan dari dependensi eksplisit. Kolom `derived_from_ids` opsional ditambahkan ke Registry privat; belum ada laporan turunan yang didaftarkan.
 
 ## Belum dapat dinyatakan selesai
 
 - [ ] P2 penerapan langsung pada isi dokumen melalui connector/CLI, pengujian OAuth nyata dan review user terhadap output sumber pada satu tugas nyata. **QA ditunda**.
-- [ ] P3 pembaruan metadata private registry berbasis review manusia (belum dibuat); jangan menerapkan auto-sync mutasi tanpa izin.
+- [ ] Pembaruan metadata private registry pascareview manual atau secara terotorisasi (belum dibuat); jangan menerapkan auto-sync mutasi tanpa izin.
+- [ ] Registrasi dependensi untuk **laporan nyata** berdasarkan bukti produksi, dan pemeriksaan hasil impak dengan dokumen aktual (belum dilakukan).
+- [ ] Pemantauan terjadwal/change-feed hanya bila diperlukan dan diizinkan; saat ini `impact` adalah command on-demand.
 
 - [ ] Pengujian Node dan Python pada checkout yang sama; pemeriksaan workbook nyata dan kesesuaian format unggah e-RISPRO.
 - [ ] Evaluasi perilaku tujuh skill pada skenario sintetis, penilaian manusia atas tulisan dan ketepatan laporan.

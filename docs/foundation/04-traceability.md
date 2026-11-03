@@ -34,6 +34,10 @@ Ini **konvensi ID**, bukan instruksi untuk membuat sepuluh database/registry. Gu
 - Nilai uang disimpan dengan nominal tepat dan mata uang eksplisit; pembulatan/tarif hanya mengikuti aturan yang telah dipastikan.
 - Versi RAB/perjanjian sebelumnya tidak ditimpa; koreksi mencatat sebelum, sesudah, alasan, dan otorisasi.
 
+## Ketergantungan hasil turunan (P3)
+
+Dalam satu Registry privat, `derived_from_ids` boleh mencantumkan ID sumber yang benar-benar dipakai untuk menghasilkan dokumen `DERIVED_OUTPUT`. Arah hubungan adalah `OUTPUT → SOURCE`, dapat bertingkat, dan harus diperiksa integritasnya. `related_ids` sekadar navigasi, bukan hubungan derivasi. Perubahan metadata sumber memicu **kandidat pemeriksaan ulang** untuk keluaran terkait; tidak otomatis mengubah angka, versi, penerimaan eksternal atau status legal. Periksa isi dan otorisasi sebelum memperbarui fakta kanonis.
+
 ## Integritas
 
 Tidak membuat record sukses tanpa bukti. Data hilang = UNKNOWN/INCOMPLETE; angka 0 hanya bila benar-benar nol. Hindari duplikasi transaksi dan nomor kuitansi. Untuk data personal, simpan pointer referensi privat/ID aman alih-alih isi dokumen pada laporan publik.

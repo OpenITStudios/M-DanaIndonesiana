@@ -22,6 +22,10 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 [Source Resolver + Document Registry + Workflow Bridge](docs/integrations/google-drive.md) menghubungkan kode GitHub dengan indeks privat Google Drive berdasarkan ID, status metadata dan peran dokumen. P2 menambahkan 9 rute kebutuhan nyata yang dipetakan ke **7 skill existing**; ia menghasilkan handoff sumber yang terstruktur, bukan audit isi, auto-approval atau sinkronisasi dua arah. CLI lokal memerlukan OAuth baca, dan pengujian runtime/end-to-end **belum dijalankan**. Data sumber tetap di penyimpanan privat berizin.
 
+## Pemeriksaan perubahan Drive — P3 (read-only)
+
+[Change Detection & Impact Analysis](docs/integrations/google-drive.md) memeriksa timestamp/nama file dan memetakan **kandidat review** untuk laporan yang memiliki ketergantungan sumber eksplisit. CLI: `node tools/drive-source-resolver.mjs impact --sheet-id PRIVATE_SHEET_ID`. Perubahan isi, validitas keputusan, auto-update Registry, jadwal pemantauan dan end-to-end QA **belum diverifikasi/diterapkan**.
+
 ## Status kemampuan
 
 - **Pedoman:** tujuh skill dengan kontrak rinci dan template, belum dinyatakan lulus uji penggunaan nyata.

@@ -5,10 +5,13 @@ export const REGISTRY_COLUMNS = [
   "source_version", "related_ids", "access_class", "usage_policy",
   "observed_modified_time", "last_reviewed_at", "notes"
 ];
+// Optional schema extension; older registry sheets (15 columns) remain readable.
+export const REGISTRY_OPTIONAL_COLUMNS = ["derived_from_ids"];
 
 const ROLES = new Set([
   "PROPOSED", "APPROVED_BASELINE", "CANDIDATE_REFERENCE",
-  "COMPARATOR", "HISTORICAL", "INTERNAL_INDEX", "EVIDENCE"
+  "COMPARATOR", "HISTORICAL", "INTERNAL_INDEX", "EVIDENCE",
+  "DERIVED_OUTPUT"
 ]);
 const INTERNAL = new Set([
   "UNVERIFIED", "DRAFT", "IN_REVIEW", "READY_TO_SUBMIT", "SUPERSEDED"
@@ -44,7 +47,7 @@ export function parseRegistryRows(matrix) {
   for (let row = 1; row < matrix.length; row += 1) {
     const cells = matrix[row] || [];
     if (cells.every(cell => string(cell) === "")) continue;
-    const entry = Object.fromEntries(REGISTRY_COLUMNS.map(col => [
+    const entry = Object.fromEntries([...REGISTRY_COLUMNS, ...REGISTRY_OPTIONAL_COLUMNS].map(col => [
       col, string(cells[headers.indexOf(col)])
     ]));
     const label = "row " + (row + 1);
@@ -75,6 +78,12 @@ export function parseRegistryRows(matrix) {
       ? entry.related_ids.split(";").map(string).filter(Boolean) : [];
     check(new Set(entry.related).size === entry.related.length,
       "DUPLICATE_RELATION", label);
+    entry.derived_from = entry.derived_from_ids
+      ? entry.derived_from_ids.split(";").map(string).filter(Boolean) : [];
+    check(new Set(entry.derived_from).size === entry.derived_from.length,
+      "DUPLICATE_DERIVATION", label);
+    check(!entry.derived_from.length || entry.source_role === "DERIVED_OUTPUT",
+      "DERIVATION_REQUIRES_OUTPUT_ROLE", label);
     records.push(Object.freeze(entry));
   }
   const ids = new Set(), driveIds = new Set();
@@ -89,7 +98,23 @@ export function parseRegistryRows(matrix) {
       check(related !== record.document_id, "SELF_RELATION", record.document_id);
       check(ids.has(related), "BROKEN_RELATION", record.document_id + " -> " + related);
     }
+    for (const sourceId of record.derived_from) {
+      check(sourceId !== record.document_id, "SELF_DERIVATION", record.document_id);
+      check(ids.has(sourceId), "BROKEN_DERIVATION", record.document_id + " -> " + sourceId);
+    }
   }
+  // Fail on cycles, which would otherwise make downstream impact ambiguous.
+  const byId = new Map(records.map(record => [record.document_id, record]));
+  const colors = new Map();
+  function inspect(id) {
+    const color = colors.get(id) || 0;
+    check(color !== 1, "CYCLIC_DERIVATION", id);
+    if (color === 2) return;
+    colors.set(id, 1);
+    for (const dependency of byId.get(id).derived_from) inspect(dependency);
+    colors.set(id, 2);
+  }
+  for (const id of ids) inspect(id);
   return Object.freeze(records);
 }
 
@@ -128,6 +153,7 @@ export function toSourcePointer(record, metadataState) {
     internal_status: record.internal_status,
     external_status: record.external_status,
     related_ids: record.related,
+    derived_from_ids: record.derived_from || [],
     access_class: record.access_class,
     usage_policy: record.usage_policy,
     metadata_state: metadataState,

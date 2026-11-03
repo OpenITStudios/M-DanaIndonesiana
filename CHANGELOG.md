@@ -107,3 +107,12 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Handoff mempertahankan pemilik utama, sumber minimum dan pemeriksaan lintas domain kondisional; approval/isi dokumen tidak diinferensikan dari metadata.
 - Instruksi ChatGPT connector-assisted dan OAuth CLI lokal dipisahkan secara jelas; berkas privat tetap tidak masuk Git publik.
 - Tes sintetis ditulis dan integrasi source-pointer disusun, tetapi runtime/QA dan verifikasi end-to-end **NOT EXECUTED** sesuai penundaan saat ini.
+
+## 1.4.0 — 2026-11-03 (P3 Drive change impact preview)
+
+- Menambahkan `impact` command read-only untuk membandingkan nama/tanggal modifikasi metadata dokumen Drive dengan baseline Registry privat.
+- Membedakan `METADATA_CHANGE_SIGNAL`, `METADATA_UNVERIFIED`, dan `METADATA_MATCH_ONLY`; perubahan metadata bukan pembuktian perubahan isi.
+- Menambahkan satu kolom opsional `derived_from_ids` ke Registry privat untuk menelusuri keluaran `DERIVED_OUTPUT` yang benar-benar bergantung pada sumber tertentu. Tidak menduplikasi registri proyek dan tidak mengubah sembilan entri lama.
+- Dampak report ditandai sebagai kandidat review dan propagasi transitif berbasis dependensi eksplisit, tanpa mengasumsikan `related_ids` sebagai hubungan derivasi.
+- Mengeluarkan kandidat workflow terpengaruh dan opsional penemuan file tidak terindeks; tidak menulis ke Drive, GitHub publik, laporan, persetujuan, atau e-RISPRO.
+- Tes sintetis ditulis tetapi **NOT EXECUTED**; autentikasi OAuth lokal dan QA end-to-end tetap belum dilaksanakan sesuai status fase ini.

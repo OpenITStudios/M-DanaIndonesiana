@@ -7,6 +7,7 @@ import {
   parseRegistryRows, resolveRecord, compareRemote, toSourcePointer
 } from "./drive-registry-core.mjs";
 import { parseSelections, selectWorkflowSources, buildWorkflowHandoff } from "./drive-workflow-bridge.mjs";
+import { assessChangeImpact } from "./drive-change-impact.mjs";
 
 const FOLDER_MIME = "application/vnd.google-apps.folder";
 const MAX_ROWS = 1000;
@@ -14,8 +15,8 @@ const DEFAULT_MAX_ITEMS = 1500;
 
 function parseArgs(args) {
   const command = args[0];
-  if (!["resolve", "audit", "discover", "handoff"].includes(command))
-    throw new Error("USAGE: resolve|audit|discover|handoff --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
+  if (!["resolve", "audit", "discover", "handoff", "impact"].includes(command))
+    throw new Error("USAGE: resolve|audit|discover|handoff|impact --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
   const values = {};
   for (let i = 1; i < args.length; i += 2) {
     const flag = args[i];
@@ -38,6 +39,10 @@ function parseArgs(args) {
   } else if (values.workflow || values.select) {
     throw new Error("WORKFLOW_FLAGS_ONLY_FOR_HANDOFF");
   }
+  if (command === "impact" && (values.id || values.type))
+    throw new Error("IMPACT_DOES_NOT_ACCEPT_ID_OR_TYPE");
+  if (values["max-items"] && !values["root-folder-id"])
+    throw new Error("MAX_ITEMS_REQUIRES_ROOT_FOLDER_ID");
   return { command, values };
 }
 
@@ -81,7 +86,7 @@ async function loadRegistry(sheetId, token) {
   // Fail closed rather than silently ignoring rows beyond our bounded read.
   if (!Number.isInteger(capacity) || capacity < 1 || capacity > MAX_ROWS)
     throw new Error("REGISTRY_ROW_CAPACITY_EXCEEDED");
-  const range = encodeURIComponent("Documents!A1:O" + capacity);
+  const range = encodeURIComponent("Documents!A1:P" + capacity);
   const url = base + "/values/" + range + "?valueRenderOption=UNFORMATTED_VALUE";
   const body = await getJson(url, token);
   return parseRegistryRows(body.values || []);
@@ -151,6 +156,41 @@ async function main() {
   if (!token) throw new Error("GOOGLE_ACCESS_TOKEN_REQUIRED");
   const sheetId = googleId(values["sheet-id"], "SHEET");
   const records = await loadRegistry(sheetId, token);
+  if (command === "impact") {
+    // Metadata-only impact preview. Never changes registry fields or original files.
+    const observedPairs = await mapLimit(records, 4, async record => {
+      try {
+        const remote = await fetchMetadata(record.drive_file_id, token);
+        return [record.document_id, remote];
+      } catch {
+        return [record.document_id, { error: "METADATA_CHECK_FAILED" }];
+      }
+    });
+    const report = assessChangeImpact(records, Object.fromEntries(observedPairs));
+    let unindexed = null;
+    if (values["root-folder-id"]) {
+      const rootId = googleId(values["root-folder-id"], "FOLDER");
+      const maxItems = values["max-items"] === undefined
+        ? DEFAULT_MAX_ITEMS : Number(values["max-items"]);
+      if (!Number.isInteger(maxItems) || maxItems < 1 || maxItems > 5000)
+        throw new Error("INVALID_MAX_ITEMS");
+      const known = new Set(records.map(r => r.drive_file_id));
+      known.add(sheetId);
+      const observed = await inventory(rootId, token, maxItems);
+      unindexed = observed.filter(file => !known.has(file.id)).map(file => ({
+        drive_file_id: file.id, name: file.name,
+        state: "NOT_REGISTERED_REVIEW_REQUIRED"
+      }));
+    }
+    report.operation = "impact";
+    report.unindexed_files = unindexed;
+    report.inventory_performed = unindexed !== null;
+    if (unindexed?.length && report.check_status === "NO_METADATA_CHANGE_SIGNAL")
+      report.check_status = "REVIEW_REQUIRED";
+    output(report);
+    if (report.check_status !== "NO_METADATA_CHANGE_SIGNAL") process.exitCode = 2;
+    return;
+  }
   if (command === "handoff") {
     const plan = selectWorkflowSources(records, values.workflow, parseSelections(values.select || ""));
     const checks = await mapLimit(plan.matched, 4, async item => {
@@ -181,10 +221,16 @@ async function main() {
   }
 
   const checks = await mapLimit(records, 4, async record => {
-    const remote = await fetchMetadata(record.drive_file_id, token);
-    return { document_id: record.document_id, state: compareRemote(record, remote) };
+    try {
+      const remote = await fetchMetadata(record.drive_file_id, token);
+      return { document_id: record.document_id, state: compareRemote(record, remote) };
+    } catch {
+      // Keep identity of every failed check; never silently omit the document.
+      return { document_id: record.document_id, state: "METADATA_CHECK_FAILED" };
+    }
   });
-  const findings = checks.filter(item => item.error || item.state !== "METADATA_MATCH_ONLY");
+  const findings = checks.filter(item => item.state !== "METADATA_MATCH_ONLY");
+  const incomplete = findings.some(item => item.state === "METADATA_CHECK_FAILED");
   let unindexed = null;
   if (values["root-folder-id"]) {
     const rootId = googleId(values["root-folder-id"], "FOLDER");
@@ -201,7 +247,8 @@ async function main() {
     }));
   }
   output({
-    operation: command, status: findings.length || unindexed?.length ? "NEEDS_REVIEW" : "METADATA_ONLY_CLEAN",
+    operation: command, status: incomplete ? "INCOMPLETE_METADATA_CHECK" :
+      findings.length || unindexed?.length ? "NEEDS_REVIEW" : "METADATA_ONLY_CLEAN",
     indexed_documents: records.length, matched_metadata: checks.length - findings.length,
     findings, unindexed_files: unindexed, inventory_performed: unindexed !== null,
     note: "Inventory does not imply completeness of documents outside the selected root. No content or approval audit."

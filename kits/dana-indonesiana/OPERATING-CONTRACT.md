@@ -40,6 +40,13 @@ Catat secara aman sumber, kategori/tahun, versi, dokumen yang berwenang, klausul
 - Handoff antarskill cukup menyebut ID sumber privat yang diizinkan, versi, fakta yang benar-benar diperiksa, tingkat pembuktian, dan kekurangan. Tidak membuat salinan sumber, register lintas domain, atau log publik yang membocorkan data proyek.
 - Akses ChatGPT melalui connector bersifat asistif per percakapan; CLI lokal memakai OAuth baca terpisah. Tidak ada sinkronisasi otomatis atau izin mutasi implisit.
 
+## Pemeriksaan perubahan sumber (P3)
+
+- Ketika versi/metadata dokumen proyek di Drive berubah, baca [P3 Change Impact](../../docs/integrations/google-drive.md) sebelum menggunakan lagi keluaran turunannya.
+- `derived_from_ids` mencatat sumber faktual untuk keluaran nyata; `related_ids` tidak berarti pengaruh otomatis. Hanya turunan yang memiliki dependensi terdaftar yang dapat ditandai *review candidate*.
+- Timestamp berubah bukan bukti isi/dana berubah. Timestamp tidak terverifikasi atau akses API gagal = `INCOMPLETE_METADATA_CHECK`, bukan status bersih.
+- Review berkas asli, periode dan keputusan resmi melalui pemilik domain sebelum pembaruan baseline atau laporan. Tidak mengedit dokumen, metadata, maupun status resmi secara otomatis.
+
 ## Handoff antarskill
 
 Berikan hanya ID aman/rujukan, fakta yang dibutuhkan, status sumber, gap dan output. Keuangan memegang angka; administrasi memegang checklist/submit; creative-writing memegang redaksi; evidence memegang tingkat pembuktian; regulatory memegang applicability; production memegang capaian teknis; dissemination memegang izin/atribusi. Jangan membuat tujuh registry.
