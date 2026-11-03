@@ -39,3 +39,7 @@ Uji: `python -m unittest discover -s tests -p 'test_finance_xlsx.py'` dalam ling
  `transactions[]` dapat berisi `indicator_id`, `voucher_no`, `recipient_name`, `description`, dan `support_url` untuk menyusun kolom Arus Kas. Semua itu data input yang belum terotentikasi; jangan masukkan PII atau bukti rahasia ke repo/fixture publik.
 
  Handoff ke administrasi dan penulisan diberikan oleh `tools/finance-handoff.mjs`, yang menandai status selalu DRAFT dan memisahkan termin direncanakan dari dana diterima.
+
+## Semantik yang tidak disimpulkan
+
+`invoiced_period` menunjukkan nilai invoice dicatat dalam periode, **bukan saldo piutang/utang yang belum lunas**. Arus kas dan LRA hanya memuat transaksi sesuai input. Status pelunasan memerlukan pencocokan invoice dan bukti pembayaran yang berada di luar engine sekarang.

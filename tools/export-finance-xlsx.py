@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draft 2025 LPDP-style XLSX export from finance-report v0.3 JSON.
+"""Draft 2025 LPDP-style XLSX export from finance-report v0.5 JSON.
 
 Only with explicitly authorized input. Never a government-approved report.
 Requires artifact_tool in the Python runtime.
