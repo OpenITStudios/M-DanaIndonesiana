@@ -18,3 +18,8 @@ Bantu administrasi program Dana Indonesiana: pemeriksaan dokumen pencairan, peng
 5. STOP setelah tugas cukup selesai. Tidak membuat bukti, status, folder, atau data fiktif.
 
 Skill ini berupa prosedur, **belum engine otomatis** dan tidak memiliki kewenangan menyetujui laporan pemerintah.
+
+
+## Rujukan ketika diminta produksi paket
+
+Gunakan [Package Workflow](../../../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) hanya untuk tugas pencairan/pelaporan atau perubahan yang nyata. Jika persoalannya penataan folder, versi atau surat yang telah diajukan, baca [Document Control](../../../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md). Jangan membuat folder kosong, mengubah sumber, atau menaikkan status dokumen tanpa bukti.

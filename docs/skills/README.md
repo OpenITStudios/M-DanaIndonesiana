@@ -32,3 +32,10 @@ Jika satu tugas mempunyai beberapa bagian, pilih satu pemilik utama lalu alihkan
 - [Keputusan arsitektur](../knowledge/decisions/0002-modular-skills.md)
 
 Format `SKILL.md` mencontoh standar Agent Skills dan root spesialis `M-PRD-Creator`; detail besar ditaruh di kontrak domain untuk mengurangi konsumsi konteks.
+
+
+## Aktivasi lanjutan v0.6
+
+- **Administrasi lebih dalam:** `grant-administration` → [Package Workflow](../../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) dan [Document Control](../../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md).
+- **Tulisan lebih dalam:** `creative-documentation` → [Editorial Workflow](../../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) dan [Reporting Structures](../../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md).
+- **Laporan lintas skill:** [Reporting Workflow](reporting-workflow.md). Jangan menyalin angka dan status dari interpretasi skill lain; ikuti owner.

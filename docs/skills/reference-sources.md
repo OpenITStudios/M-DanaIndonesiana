@@ -18,3 +18,10 @@ Sumber ini **referensi desain**, bukan daftar otomatis aturan yang mengikat kont
 | [OWASP CSV Injection](https://wstg.owasp.org/latest/4-Web_Application_Security_Testing/07-Injection/21-CSV_Injection/) | ekspor spreadsheet aman | SECURITY |
 
 Jangan menyalin nomor identitas, jumlah atau isi kontrak pribadi ke daftar ini. Sumber hukum yang berubah perlu dicek versi/tanggal sebelum diaktifkan.
+
+
+## Referensi tata naskah dan pelaporan (tambahan desain v0.6)
+
+- [LPDP — Information Corner](https://erispro-indonesiana.kemenkeu.go.id/information-corner): format terpisah laporan indikator publik/nonpublik, laporan kemajuan, penggunaan dana dan rencana penggunaan dana dua/tiga tahap. Pilih format berdasarkan kontrak yang berlaku; daftar portal bukan bukti penerimaan.
+- [ANRI — Arsip Dinamis](https://www.anri.go.id/sekitar-arsip/arsip-dinamis): klasifikasi, arsip aktif/inaktif, tata naskah, dan keamanan/akses. Digunakan sebagai **inspirasi desain**, bukan ketentuan kontrak pendanaan.
+- [ANRI — Layanan Jasa Kearsipan](https://anri.go.id/layanan-publik/jasa-kearsipan): komponen pedoman kearsipan berupa kebijakan, prosedur, tata naskah, klasifikasi, retensi serta akses. Retensi yang berlaku tidak boleh diinventariskan sendiri.

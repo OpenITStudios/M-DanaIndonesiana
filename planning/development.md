@@ -56,3 +56,16 @@ Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otoris
 - [x] Naikkan kontrak laporan JSON ke `v0.5-json` dan selaraskan eksportir, handoff, serta pengujian.
 - [x] Perbarui status root yang sebelumnya tertinggal pada Foundation v0.1.
 - [ ] Jalankan Node dan Python artifact_tool pada checkout branch `develop` dan pemeriksaan visual output.
+
+
+## v0.6 — Pengembangan skill administrasi dan penulisan, tanpa tes
+
+- [x] Menetapkan kontrak paket pencairan, laporan indikator, perubahan dokumen, dan penutupan.
+- [x] Memisahkan fungsi folder dari status internal serta status resmi eksternal.
+- [x] Membuat editorial workflow untuk tulisan administratif, kuratorial dan publikasi yang alami.
+- [x] Menyediakan struktur dan template kosong yang dipanggil hanya saat relevan.
+- [x] Memperjelas alur Finance / Evidence / Production → Writing → Administration.
+- [ ] Implementasi alat dokumen lebih lanjut berdasarkan kebutuhan nyata.
+- [ ] **Pengujian ditunda sesuai arahan pengguna**, termasuk Node, Python, acceptance dan penilaian naskah.
+
+Jangan menandai prosedur atau template sebagai PASS; pemeriksaan kualitas baru dilakukan saat fase QA diminta.

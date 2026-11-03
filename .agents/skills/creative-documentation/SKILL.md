@@ -18,3 +18,8 @@ Tulis dan perbaiki dokumen karya kebudayaan dengan bahasa Indonesia alami yang a
 5. STOP setelah tugas cukup selesai. Tidak membuat bukti, status, folder, atau data fiktif.
 
 Skill ini berupa prosedur, **belum engine otomatis** dan tidak memiliki kewenangan menyetujui laporan pemerintah.
+
+
+## Rujukan ketika diminta menyusun tulisan
+
+Baca [Editorial Workflow](../../../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) untuk kualitas bahasa dan [Reporting Structures](../../../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md) hanya ketika format laporan memerlukannya. Gunakan fakta kegiatan dan sumber kuratorial yang tersedia. Hasil alami bukan alasan untuk menambah detail fiktif.

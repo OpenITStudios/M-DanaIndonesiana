@@ -75,3 +75,8 @@ Gunakan HEAD aktual, perubahan owner terkait, dan [CONTEXT.md](CONTEXT.md). Cata
 ## Skill modular
 
 Pilih satu spesialis dari [Skill Router](docs/skills/README.md). Baca [Shared Contract](kits/dana-indonesiana/OPERATING-CONTRACT.md). Dokumen dengan instruksi "pelajari saja" tidak pernah di-upload/disimpan. Domain kedua hanya diaktifkan jika tugas memerlukan.
+
+
+## Pengendalian pelaporan dan penulisan v0.6
+
+Untuk pekerjaan paket pencairan atau laporan, mulai dari [Package Workflow](kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md); untuk kendali versi lihat [Document Control](kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md). Untuk naskah karya dan laporan, gunakan [Editorial Workflow](kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md). Ini **pendalaman skill yang sudah ada**, bukan agen baru. Jangan jalankan pengujian pada fase pengembangan yang secara eksplisit ditunda pengguna.

@@ -47,3 +47,11 @@ Hasil perhitungan JSON adalah masukan DRAFT. Periksa masalah selisih, pos tak te
  ## Finance handoff v0.5
 
  Gunakan `tools/finance-handoff.mjs` untuk menerima ringkasan kuantitatif berlabel DRAFT. Kolom `calculation_consistent` berarti perhitungan internal tidak mempunyai temuan tingkat ERROR, **bukan** bukti laporan telah disetujui. Status pencairan dan penerimaan harus tetap dibuktikan sendiri melalui sumber portal/bank.
+
+
+## Cara kerja rinci v0.6
+
+- [Package Workflow](PACKAGE-WORKFLOW.md) — pelaksanaan satu paket pencairan, laporan indikator, perubahan, atau penutupan.
+- [Document Control](DOCUMENT-CONTROL.md) — folder fungsi, identitas versi dan pemisahan status internal/eksternal.
+
+Dua dokumen tersebut merupakan detail kerja dari skill **yang sama**, bukan database, tracker, atau agen kedua. Gunakan template kosong [Administrative Package](../../../templates/reporting/administrative-package.md) bila benar-benar diminta membuat dokumen.

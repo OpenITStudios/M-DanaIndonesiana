@@ -32,3 +32,12 @@ Aturan GitHub ada di [GITHUB_RULES.md](../GITHUB_RULES.md); pedoman keamanan di 
 - [Alur kerja lintas skill](skills/cross-skill-workflows.md)
 - [Sumber riset publik](skills/reference-sources.md)
 - [Kontrak bersama](../kits/dana-indonesiana/OPERATING-CONTRACT.md)
+
+
+## Pelaporan dan naskah karya
+
+- [Reporting Workflow](skills/reporting-workflow.md) — urutan transfer antarskill sesuai tugas.
+- [Paket Administrasi](../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) — satu paket dan satu tujuan.
+- [Document Control](../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md) — metadata, versi dan status.
+- [Editorial Workflow](../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) — mutu tulisan manusiawi.
+- [Reporting Structures](../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md) — susunan isi tiap laporan.

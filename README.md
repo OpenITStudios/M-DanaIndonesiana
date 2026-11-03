@@ -58,3 +58,14 @@ Kalkulator draft JSON dan uji sintetis tersedia di [Finance Validation Runbook](
 ## Koreksi invoice v0.5.1
 
 `invoiced_period` hanya total invoice dalam satu periode; tidak membuktikan invoice belum dilunasi. Status pelunasan membutuhkan pencocokan dengan pembayaran dan bukti yang sah.
+
+
+## Pelaporan administrasi dan tulisan karya v0.6
+
+- [Alur paket administratif](kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md): checklist pencairan/kemajuan/penutupan berbasis sumber, bukan contoh universal.
+- [Kendali dokumen](kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md): fungsi, versi dan status internal/eksternal dipisahkan.
+- [Editorial Workflow](kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md): tulisan Indonesia natural, spesifik, dan berdasarkan fakta.
+- [Struktur Laporan Karya](kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md): narasi indikator publik/nonpublik, kemajuan dan kuratorial.
+- [Template kosong pelaporan](templates/reporting/administrative-package.md): draft administrasi, indikator, narasi karya dan revisi.
+
+Dokumen proyek rahasia tidak dimasukkan ke repo; pengujian sengaja ditunda pada fase ini. Prosedur belum membuktikan status penerimaan e-RISPRO atau kesesuaian dokumen secara hukum.

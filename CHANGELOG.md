@@ -42,3 +42,12 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Koreksi arti nilai invoice: tercatat tidak berarti belum dilunasi.
 - Bump schema ke `v0.5-json` agar perubahan semantik eksplisit.
 - Perbarui dokumentasi status dan konvensi data privat.
+
+
+## 0.6.0 — 2026-11-03 (reporting workflow development)
+
+- Pendalaman `grant-administration`: paket dokumen, kesiapan pencairan, perubahan dan document control.
+- Pendalaman `creative-documentation`: editorial workflow, struktur laporan dan kualitas narasi natural.
+- Empat template kosong, satu peta pelaporan lintas skill, dan keputusan arsitektur.
+- Tetap tujuh skill; tidak ada agen atau database baru.
+- Tidak ada tes yang dijalankan pada tahap ini; tidak ada dokumen privat yang direplikasi.

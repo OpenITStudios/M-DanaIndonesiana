@@ -29,3 +29,8 @@ Buka [README.md](README.md) untuk navigasi dan [AGENTS.md](AGENTS.md) untuk rout
 ## Skill system v0.2
 
 Skill tersedia di `.agents/skills/`, kontrak pada `kits/dana-indonesiana/`, rute di `docs/skills/README.md`. Detail kontrak dan data pribadi proyek tertentu tetap sengaja tidak dicatat di repo, meskipun telah diketahui dalam percakapan rahasia.
+
+
+## Skill pengelolaan pelaporan v0.6 (dokumenter)
+
+Pendalaman `grant-administration` dan `creative-documentation` ditambah sebagai kontrak dan template reusable. Router mengacu [docs/skills/README.md](docs/skills/README.md); tidak ada skill kedelapan, aplikasi submission, basis data baru, maupun pengujian yang dijalankan dalam tahap ini. Status spesifik proyek tetap tidak dipersistenkan.

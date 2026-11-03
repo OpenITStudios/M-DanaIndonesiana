@@ -49,3 +49,11 @@ Angka kalkulator Finance v0.3 hanya boleh dijadikan draf yang masih perlu pemeri
  Uraian laporan keuangan harus menggunakan klaim berlabel pada `finance_handoff_v0.5`, tanpa menghapus label `PLANNED_NOT_RECEIVED` atau `NOT_CASH_PAID`. Penulisan natural tidak berarti menghilangkan masalah atau menggunakan bahasa pencairan yang sudah pasti sebelum ada bukti.
 
 **Batas invoice:** jumlah invoice yang tercatat tidak membuktikan tagihan belum dibayar ataupun telah lunas. Gunakan redaksi netral sampai ada rekonsiliasi.
+
+
+## Cara kerja rinci v0.6
+
+- [Editorial Workflow](EDITORIAL-WORKFLOW.md) — pemilihan suara naskah, pemetaan fakta, revisi redaksional dan pemeliharaan makna.
+- [Reporting Structures](REPORTING-STRUCTURES.md) — isi laporan indikator publik/nonpublik, laporan kemajuan, kuratorial dan laporan akhir.
+
+Gunakan [template narasi](../../../templates/reporting/creative-narrative.md) atau [template indikator](../../../templates/reporting/indicator-report.md) seperlunya, tanpa mengaku telah mengikuti acara atau mengarang keberhasilan.

@@ -14,3 +14,8 @@ Urutan berikut bersifat *conditional*, tidak otomatis menjalankan semua skill. T
 ## Handoff
 
 Sampaikan minimum referensi sumber dan versi yang aman, output domain, metode verifikasi, UNKNOWN, dan pemilik keputusan. Output turunan tidak mengubah sumber kanonis. Tidak ada registry tambahan di setiap perpindahan.
+
+
+## Peta laporan v0.6
+
+Gunakan [Reporting Workflow](reporting-workflow.md) sebagai alur lengkap bila menghasilkan paket administrasi sekaligus naskah karya. Tidak seluruh skill harus diaktifkan. Fase pengembangan saat ini dokumenter; QA sengaja tidak dijalankan.
