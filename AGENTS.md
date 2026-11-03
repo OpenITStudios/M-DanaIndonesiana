@@ -21,6 +21,10 @@ Untuk audit perubahan, ikuti [P3 Change Impact](docs/integrations/google-drive.m
 
 Jika pengguna meminta review berulang, gunakan satu tab `Review Queue` pada Registry privat dan [P4 Review Workflow](docs/integrations/google-drive.md). `review --mode summary` dapat dijalankan ulang tanpa menambahkan baris secara otomatis. Temuan dengan fingerprint sama yang sudah diperiksa manusia tidak boleh dibuka ulang tanpa perubahan baru. Penutupan memerlukan reviewer dan referensi bukti. Tidak pernah mengubah RAB, laporan, atau status eksternal dari hasil metadata. Aktivasi jadwal dan token OAuth lokal memerlukan konfigurasi terpisah.
 
+### P5 — Onboarding laporan nyata
+
+Untuk menyambungkan laporan dengan sumbernya, ikuti [P5 Report Onboarding](docs/integrations/report-onboarding.md). Periksa folder laporan benar-benar berada di root proyek, ID belum terdaftar, isi laporan sesuai tugas yang diizinkan dan dependensi `derived_from_ids` adalah sumber yang benar-benar dipakai. Preview CLI `onboard-output` bukan izin menyimpan atau persetujuan; hanya reviewer terotorisasi yang dapat memasukkan baris ke Registry privat. Jika folder belum memiliki laporan asli, keluarkan `NO_CONFIRMED_PROJECT_REPORT` dan hentikan pendaftaran.
+
 ## Mode kerja
 
 | Mode | Tujuan | Batas |

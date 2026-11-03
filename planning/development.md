@@ -1,4 +1,4 @@
-# Development Plan — Current State (v1.5)
+# Development Plan — Current State (v1.6)
 
 **Ini backlog kerja sistem, bukan izin otomatis untuk menjalankan semua item.** Riwayat implementasi v0.1–v1.0 berada di [CHANGELOG](../CHANGELOG.md).
 
@@ -17,11 +17,14 @@
 - [x] P4 Review Queue: tab privat pada Registry yang sama, deduplikasi event metadata, status manual dan CLI review read-only; wrapper PowerShell untuk pemakaian terjadwal bila disetujui. Tes sintetis ditulis tetapi belum dijalankan.
 - [x] Pemeriksaan kandidat laporan proyek: folder pelaporan proyek kosong; contoh format dan KOL di folder terpisah tidak otomatis ditetapkan sebagai laporan turunan resmi.
 
+- [x] P5 `onboard-output` preview untuk laporan nyata: scope folder+root diperiksa, duplikasi dicegah, dependensi hanya dari ID eksplisit, hasil tetap `UNVERIFIED` sampai review. Petunjuk Registry privat dilengkapi.
+- [x] Pencarian laporan ulang di folder pelaporan: masih kosong; **tidak** membuat artefak atau hubungan sumber fiktif.
+
 ## Belum dapat dinyatakan selesai
 
 - [ ] P2 penerapan langsung pada isi dokumen melalui connector/CLI, pengujian OAuth nyata dan review user terhadap output sumber pada satu tugas nyata. **QA ditunda**.
 - [ ] Pembaruan metadata private registry pascareview manual atau secara terotorisasi (belum dibuat); jangan menerapkan auto-sync mutasi tanpa izin.
-- [ ] Registrasi dependensi untuk **laporan nyata** berdasarkan bukti produksi, dan pemeriksaan hasil impak dengan dokumen aktual (belum dilakukan).
+- [ ] Registrasi laporan dan dependensi untuk **laporan nyata** setelah file tersedia dan substansi diperiksa. P5 baru preview, bukan registrasi final.
 - [ ] Konfigurasi OAuth lokal yang aman dan jadwal pemeriksaan aktif hanya jika disetujui; `review` tersedia on-demand tetapi belum otomatis berjalan.
 - [ ] Pembaruan status/queue secara eksplisit melalui operator yang berwenang; auto-write dan auto-close tetap tidak ada.
 

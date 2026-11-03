@@ -34,6 +34,10 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [Google Drive — Source Resolver & Document Registry](integrations/google-drive.md): pemetaan ID dokumen dan deteksi perubahan metadata secara read-only. Tidak menyimpan sumber privat di Git.
 
+## Registrasi laporan proyek
+
+- [P5 Report Onboarding](integrations/report-onboarding.md): cara aman menghubungkan laporan nyata dari folder proyek dengan dokumen sumber yang telah direview, tanpa auto-register.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

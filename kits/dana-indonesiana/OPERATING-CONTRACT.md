@@ -55,6 +55,12 @@ Catat secara aman sumber, kategori/tahun, versi, dokumen yang berwenang, klausul
 - Semua eksekusi lokal dan penjadwalan memakai token privat terpisah. Output rekap untuk scheduler tidak menampilkan ID dokumen. Tidak ada pengiriman ke e-RISPRO, penambahan bukti palsu atau penulisan status eksternal.
 - Lihat [P4 Review Queue](../../docs/integrations/google-drive.md) untuk langkah operator. Jangan membuat registry kedua, memperlakukan contoh format sebagai laporan proyek, atau mengunggah antrean privat ke GitHub.
 
+## P5 — Registrasi keluaran nyata
+
+- Modul [P5 Report Onboarding](../../docs/integrations/report-onboarding.md) memeriksa metadata file dan batas folder sebelum mengusulkan `DERIVED_OUTPUT`. Tidak boleh menganggap contoh format/historis atau file dari folder lain sebagai laporan proyek.
+- Referensi `derived_from_ids` hanya dari sumber yang benar-benar dipakai. Preview berstatus `UNVERIFIED` dan `UNKNOWN` meskipun semua link metadata ditemukan.
+- Laporan harus ditinjau secara substantif oleh pemilik utama dan operator sebelum dicatat di Registry privat; tidak ada auto-approval, auto-copy, auto-archive atau pengiriman ke portal.
+
 ## Handoff antarskill
 
 Berikan hanya ID aman/rujukan, fakta yang dibutuhkan, status sumber, gap dan output. Keuangan memegang angka; administrasi memegang checklist/submit; creative-writing memegang redaksi; evidence memegang tingkat pembuktian; regulatory memegang applicability; production memegang capaian teknis; dissemination memegang izin/atribusi. Jangan membuat tujuh registry.

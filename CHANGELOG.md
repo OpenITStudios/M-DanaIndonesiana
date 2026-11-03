@@ -125,3 +125,12 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Wrapper Windows `tools/run-drive-review.ps1` disiapkan untuk pemanggilan operator/scheduler privat. Tidak mengaktifkan jadwal atau menyimpan token.
 - Pencarian sumber proyek menunjukkan folder pelaporan utama kosong; format contoh dan file KOL di luar folder tidak otomatis didaftarkan sebagai laporan turunan.
 - Skenario tes sintetis ditambahkan, tetapi **NOT EXECUTED** karena penundaan QA. OAuth lokal, runtime end-to-end dan penjadwalan sesungguhnya belum diverifikasi.
+
+## 1.6.0 — 2026-11-03 (P5 report onboarding preview)
+
+- Menambahkan `tools/drive-output-onboarding.mjs` dan CLI `onboard-output` untuk mengusulkan satu entri `DERIVED_OUTPUT` dari file asli yang sudah ada, **tanpa registrasi otomatis**.
+- Memvalidasi lokasi di bawah folder pelaporan yang ditentukan di dalam root proyek melalui rantai parent Google Drive, mengecek tipe berkas, URL, duplikasi ID/file, dan sumber `derived_from_ids` yang dipilih eksplisit.
+- Menampilkan rekap tanpa ID privat secara default dan draf baris 16 kolom hanya dengan `--mode details`; status tetap `UNVERIFIED` dan `UNKNOWN` sampai review isi serta otorisasi pencatatan.
+- Menambah [panduan P5](docs/integrations/report-onboarding.md) dan petunjuk pada Sheet privat yang sama, tanpa membuat database baru.
+- Folder pelaporan utama proyek masih kosong saat diperiksa; contoh laporan dan KOL di luar folder **tidak diimpor** atau diberi relasi yang tidak terbukti.
+- Skenario uji sintetis tersedia tetapi QA runtime dan OAuth CLI end-to-end **NOT EXECUTED** sesuai fase pengembangan. Branch `develop` saja; tidak mempromosikan ke `Local` atau `main`.

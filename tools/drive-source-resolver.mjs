@@ -9,6 +9,7 @@ import {
 import { parseSelections, selectWorkflowSources, buildWorkflowHandoff } from "./drive-workflow-bridge.mjs";
 import { assessChangeImpact } from "./drive-change-impact.mjs";
 import { reconcileReviewQueue } from "./drive-review-queue.mjs";
+import { parseOutputSourceIds, prepareOutputIntake } from "./drive-output-onboarding.mjs";
 
 const FOLDER_MIME = "application/vnd.google-apps.folder";
 const MAX_ROWS = 1000;
@@ -16,15 +17,15 @@ const DEFAULT_MAX_ITEMS = 1500;
 
 function parseArgs(args) {
   const command = args[0];
-  if (!["resolve", "audit", "discover", "handoff", "impact", "review"].includes(command))
-    throw new Error("USAGE: resolve|audit|discover|handoff|impact|review --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
+  if (!["resolve", "audit", "discover", "handoff", "impact", "review", "onboard-output"].includes(command))
+    throw new Error("USAGE: resolve|audit|discover|handoff|impact|review|onboard-output --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
   const values = {};
   for (let i = 1; i < args.length; i += 2) {
     const flag = args[i];
     if (!flag?.startsWith("--") || !args[i + 1] || args[i + 1].startsWith("--"))
       throw new Error("INVALID_ARGUMENT_PAIR");
     const key = flag.slice(2);
-    if (!["sheet-id", "id", "type", "root-folder-id", "max-items", "workflow", "select", "mode"].includes(key) ||
+    if (!["sheet-id", "id", "type", "root-folder-id", "max-items", "workflow", "select", "mode", "file-id", "document-id", "output-type", "allowed-folder-id", "source-ids"].includes(key) ||
         Object.hasOwn(values, key)) throw new Error("UNKNOWN_OR_DUPLICATE_FLAG: " + flag);
     values[key] = args[i + 1];
   }
@@ -42,9 +43,19 @@ function parseArgs(args) {
   }
   if (["impact", "review"].includes(command) && (values.id || values.type))
     throw new Error("IMPACT_OR_REVIEW_DOES_NOT_ACCEPT_ID_OR_TYPE");
-  if (values.mode && (command !== "review" || !["summary", "details"].includes(values.mode)))
-    throw new Error("REVIEW_MODE_MUST_BE_SUMMARY_OR_DETAILS");
-  if (!["impact","review","audit","discover"].includes(command) &&
+  if (values.mode && (!["review", "onboard-output"].includes(command) ||
+      !["summary", "details"].includes(values.mode)))
+    throw new Error("MODE_MUST_BE_SUMMARY_OR_DETAILS");
+  if (command === "onboard-output") {
+    if (!values["file-id"] || !values["document-id"] ||
+        !values["root-folder-id"] || !values["allowed-folder-id"])
+      throw new Error("ONBOARD_OUTPUT_REQUIRED_FIELDS");
+    if (values.id || values.type || values.workflow || values.select || values["max-items"])
+      throw new Error("ONBOARD_OUTPUT_UNSUPPORTED_FLAGS");
+  } else if (values["file-id"] || values["document-id"] ||
+      values["output-type"] || values["allowed-folder-id"] || values["source-ids"])
+    throw new Error("ONBOARD_FLAGS_ONLY_FOR_ONBOARD_OUTPUT");
+  if (!["impact","review","audit","discover","onboard-output"].includes(command) &&
       (values["root-folder-id"] || values["max-items"]))
     throw new Error("FOLDER_FLAGS_NOT_SUPPORTED");
   if (values["max-items"] && !values["root-folder-id"])
@@ -120,6 +131,29 @@ async function fetchMetadata(fileId, token) {
   return getJson(url.toString(), token, true);
 }
 
+async function verifyOutputAncestry(remote, projectRootId, token) {
+  // Traverse actual Drive parents, not filename or client-supplied folder paths.
+  // The report folder and project root are independently checked by the pure
+  // prepareOutputIntake gate; shortcuts and ambiguous parent chains are rejected.
+  const ids = [];
+  const seen = new Set([remote.id]);
+  let current = remote;
+  for (let depth = 0; depth < 32; depth++) {
+    if (!Array.isArray(current.parents) || current.parents.length !== 1)
+      throw new Error("OUTPUT_PARENT_CHAIN_MISSING_OR_AMBIGUOUS");
+    const parentId = current.parents[0];
+    if (seen.has(parentId)) throw new Error("CYCLIC_PARENT_CHAIN");
+    seen.add(parentId);
+    ids.push(parentId);
+    if (parentId === projectRootId) return ids;
+    const parent = await fetchMetadata(parentId, token);
+    if (!parent || parent.trashed || parent.mimeType !== FOLDER_MIME)
+      throw new Error("OUTPUT_PARENT_FOLDER_UNVERIFIED");
+    current = parent;
+  }
+  throw new Error("OUTPUT_NOT_WITHIN_SCOPED_PROJECT_ROOT");
+}
+
 async function mapLimit(list, concurrency, callback) {
   const result = Array(list.length);
   let next = 0;
@@ -176,6 +210,37 @@ async function main() {
   if (!token) throw new Error("GOOGLE_ACCESS_TOKEN_REQUIRED");
   const sheetId = googleId(values["sheet-id"], "SHEET");
   const records = await loadRegistry(sheetId, token);
+  if (command === "onboard-output") {
+    const fileId = values["file-id"];
+    const projectRootId = googleId(values["root-folder-id"], "FOLDER");
+    const allowedFolderId = googleId(values["allowed-folder-id"], "FOLDER");
+    if (!/^[A-Za-z0-9_-]{15,}$/.test(fileId))
+      throw new Error("INVALID_ONBOARD_FILE_ID");
+    const remote = await fetchMetadata(fileId, token);
+    if (!remote || remote.trashed) throw new Error("ONBOARD_FILE_UNAVAILABLE");
+    const ancestry = await verifyOutputAncestry(remote, projectRootId, token);
+    const candidate = prepareOutputIntake(records, remote, {
+      documentId: values["document-id"],
+      outputType: values["output-type"] || "REPORT",
+      sourceIds: parseOutputSourceIds(values["source-ids"] || ""),
+      projectRootId, allowedFolderId, ancestorIds: ancestry
+    });
+    if ((values.mode || "summary") === "summary") {
+      output({
+        operation: "onboard-output", status: candidate.status,
+        metadata_and_folder_scope_validated: true,
+        proposed_source_count: candidate.source_ids.length,
+        registry_write_performed: false,
+        content_reviewed: false,
+        detail_available_with_mode: "details",
+        message: "Candidate only. Human review required before private Registry insertion."
+      });
+    } else {
+      output(candidate);
+    }
+    process.exitCode = 2; // Content review and source lineage remain outstanding.
+    return;
+  }
   if (command === "impact" || command === "review") {
     // Metadata-only change check: no edits or automatic review decisions.
     const observedPairs = await mapLimit(records, 4, async record => {

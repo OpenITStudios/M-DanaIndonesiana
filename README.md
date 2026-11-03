@@ -30,6 +30,10 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 [P4 Controlled Review Queue](docs/integrations/google-drive.md) memakai tab `Review Queue` pada Registry Google Drive privat yang sama, mendeteksi temuan berulang tanpa duplikasi dan memerlukan pemeriksa serta referensi keputusan untuk penutupan. CLI: `node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode summary`. Wrapper Windows: `tools/run-drive-review.ps1`. Belum ada pemantauan terjadwal yang diaktifkan, pembaruan otomatis antrean, QA runtime, atau perubahan dokumen privat.
 
+## Onboarding laporan proyek — P5 (read-only)
+
+[P5 Report Onboarding](docs/integrations/report-onboarding.md) menyiapkan calon entri Registry dari file yang benar-benar ada **di dalam folder pelaporan proyek**, dengan pemeriksaan parent Drive, duplikasi file/ID, dan ID sumber yang dinyatakan eksplisit. Perintah `onboard-output` hanya membuat preview; tidak memasukkan laporan, tidak menentukan status persetujuan, dan tidak memakai contoh/arsip sebagai laporan nyata.
+
 ## Status kemampuan
 
 - **Pedoman:** tujuh skill dengan kontrak rinci dan template, belum dinyatakan lulus uji penggunaan nyata.

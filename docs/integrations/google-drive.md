@@ -1,12 +1,12 @@
-# Google Drive Integration — P0/P1 Registry + P2 Workflow Bridge + P3 Change Impact + P4 Review Queue
+# Google Drive Integration — P0/P1 Registry + P2 Workflow + P3 Impact + P4 Review Queue + P5 Intake
 
-**Status:** P0–P4 code authored on `develop`; the existing private Google Sheet hosts `Documents`, `Petunjuk`, and `Review Queue`. Local OAuth CLI runtime, unattended scheduling and end-to-end/QA acceptance have **not** been executed.
+**Status:** P0–P5 read-only code authored on `develop`; the existing private Google Sheet hosts `Documents`, `Petunjuk`, and `Review Queue`. The P5 intake command does **not** add rows. Local OAuth runtime, unattended scheduling and end-to-end/QA acceptance have **not** been executed.
 
 ## Boundaries
 
 - GitHub PUBLIC: resolver code, generic schema, instructions and synthetic tests only.
 - Private Google Drive: source documents and one Document Registry Google Sheet in the authorized project folder.
-- All CLI commands (`resolve`, `audit`, `discover`, `handoff`, `impact`, `review`) are **READ-ONLY**. They do not fetch document bodies, edit Google files, update registry status, or transmit project data to GitHub.
+- All CLI commands (`resolve`, `audit`, `discover`, `handoff`, `impact`, `review`, `onboard-output`) are **READ-ONLY**. They do not fetch document bodies, edit Google files, update registry status, or transmit project data to GitHub.
 - A ChatGPT Google Drive connection allows supervised document discovery in chat; it does **not** automatically provide the OAuth token needed by a local Node process.
 - Do not persist files marked *pelajari saja / jangan simpan* in the registry. Review storage permissions before adding any sensitive document metadata.
 
@@ -190,6 +190,12 @@ Before connecting any report, verify the report file actually belongs to this pr
 
 **Current project reality (inspected 3 November 2026):** the primary `04 - Pelaporan dan Pertanggungjawaban` folder had no files. Available examples in `90 - Pedoman dan Referensi` include sample report formats that are **not real project reports**. A separately located KOL sheet was not confirmed as a deliverable derived from the current project. Consequently, no report or invented dependency was registered and the initial Review Queue has only headers.
 
+## P5 — Report onboarding without duplicate storage
+
+See [P5 Report Onboarding](report-onboarding.md) for the canonical workflow. The `onboard-output` command checks the actual parent chain of a selected Drive file, confirms it belongs to the designated reporting folder under the project root, validates duplicate IDs and referenced source IDs, and proposes a row compatible with the existing 16-column private Registry. It does **not** inspect content, confirm source lineage, write a row, approve a report, or put any private ID in GitHub.
+
+A file from a historical/template/reference folder or unrelated Drive workspace cannot be onboarded by this command as a project report. If the folder is empty, report `NO_CONFIRMED_PROJECT_REPORT` instead of fabricating an output.
+
 ## Relationship to the seven skills
 
 - Administration owns document status, version/decision references and changes to the controlled baseline.
@@ -202,7 +208,7 @@ Before connecting any report, verify the report file actually belongs to this pr
 
 - No unattended sync, automatic review-queue writes, bidirectional editing, auto-approval, e-RISPRO submission, private-data push to GitHub or automatic Sheet updates.
 - Do not derive `SUBMITTED` or `EXTERNAL_CONFIRMED` from a filename, modified date, folder or receipt count; review official supporting evidence.
-- P2 builds source-pointer handoffs; P3 builds metadata impact previews; P4 builds a **read-only reconciled queue preview and opt-in local scheduler wrapper**. Private registry writes, real document-content comparison and unattended scheduling are not part of this phase.
-- Synthetic-only unit tests for P0–P4 are authored but deliberately not run while project QA remains deferred.
+- P2 builds source-pointer handoffs, P3 shows impact candidates, P4 previews the review queue, and P5 proposes project-scoped report rows. None is a content-approval engine or an automatic private Registry writer.
+- Synthetic-only unit tests for P0–P5 are authored but deliberately not run while project QA remains deferred.
 
 Related: `AGENTS.md`, `SECURITY.md`, `docs/foundation/02-source-authority.md`, `docs/foundation/04-traceability.md`, `kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md`.
