@@ -39,3 +39,15 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Batas pelaporan aset tertentu ditemukan dalam pedoman → tidak berarti izin membeli aset telah terbit.
+
+## Regulatory Intelligence v1.0 — Prosedur domain
+
+Pemilik prinsip dan kelas sumber tetap [Source Authority](../../../docs/foundation/02-source-authority.md). Untuk satu tugas, baca hanya prosedur terkecil yang diperlukan:
+
+- [Source Intake](SOURCE-INTAKE.md): identitas sumber, versi, bukti metadata, dan keterbacaan.
+- [Applicability Matrix](APPLICABILITY-MATRIX.md): enam gerbang sebelum aturan dapat dinyatakan berlaku pada kasus tertentu.
+- [Temporal & Contract Scope](TEMPORAL-CONTRACT.md): tahun program, tahun anggaran, tanggal transaksi, masa perjanjian dan tanggal mulai berlaku.
+- [Conflict & Clarification](CONFLICT-ESCALATION.md): perbedaan sumber, pengambil keputusan, pertanyaan resmi yang belum terjawab.
+- [Compliance Handoff](COMPLIANCE-HANDOFF.md): aturan yang terpilih dibagikan ke Finance/Administration/Procurement/Evidence/Production/Writing/Rights tanpa duplikasi.
+
+Jangan membuat `compliant=true` atau menerapkan angka/tarif/izin dari referensi sebelum ketentuan dan keberlakuannya terbukti. Pengujian ditunda sesuai arahan pengguna.

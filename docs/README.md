@@ -61,3 +61,12 @@ Aturan GitHub ada di [GITHUB_RULES.md](../GITHUB_RULES.md); pedoman keamanan di 
 - [Minecraft Platform](../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) — kebijakan brand, event, publikasi dan world.
 - [Branding & Publication](../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) — logo pendanaan, materi publikasi, clearance.
 - [DJKI Recordation](../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) — kesiapan pencatatan ciptaan dan pembuktian status.
+
+## Regulatory Intelligence v1.0
+
+- [Source Intake](../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md) — asal, versi dan metadata sumber.
+- [Applicability Matrix](../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) — enam gerbang keberlakuan.
+- [Temporal & Contract Scope](../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md) — tahun dan masa yang berbeda.
+- [Conflict Escalation](../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md) — penyelesaian dan permintaan klarifikasi.
+- [Compliance Handoff](../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md) — pengiriman aturan ke tujuh skill.
+- [Source Register](regulations/source-register.md) — daftar referensi publik, bukan keputusan kepatuhan.

@@ -89,3 +89,7 @@ Saat diminta memeriksa bukti, pilih [Claim-to-Evidence](kits/dana-indonesiana/ev
 ## Dissemination & Rights v0.9
 
 Untuk pameran dan lokakarya, gunakan [Event & Dissemination](kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md); untuk izin materi, [Rights Clearance](kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md); untuk merek atau event Minecraft, [Minecraft Platform](kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md); untuk logo pemerintah dan publikasi, [Branding & Publication](kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md); untuk pencatatan ciptaan, [DJKI Recordation](kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Tetap satu skill dan tidak ada publikasi/pengajuan otomatis.
+
+## Regulatory Intelligence v1.0
+
+Saat ada pertanyaan aturan, tentukan sumber/lingkup menggunakan [Applicability Matrix](kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) dan pilih [Temporal](kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md) atau [Conflict](kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md) bila relevan. Jangan membuat putusan kepatuhan final atau menjadikan dokumen terbaru sebagai pengganti perjanjian tanpa sumber. Tidak ada QA pada fase ini.

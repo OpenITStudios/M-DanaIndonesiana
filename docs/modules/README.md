@@ -37,3 +37,7 @@ Jangan membuat folder kode atau skema untuk setiap baris tabel sampai ada kebutu
 ## Rights & Dissemination Owner v0.9
 
 [Event](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) memegang kebutuhan perizinan/dokumentasi publik, [Rights Clearance](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) memegang penggunaan konten, [Minecraft Platform](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) memegang penilaian kebijakan platform, [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) memegang identitas publikasi, dan [DJKI](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) memegang persiapan pencatatan. Seluruhnya **satu skill**, bukan modul data terpisah; Evidence/Administration/Production tetap memegang fakta asalnya.
+
+## Regulatory Owner v1.0
+
+[Source Intake](../../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md) dan [Applicability Matrix](../../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) memegang identifikasi dan kecocokan aturan; [Temporal](../../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md) menangani masa/tahun; [Conflict](../../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md) menangani eskalasi. [Handoff](../../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md) meneruskan butir berlaku beserta batasnya ke pemilik domain yang relevan. Tidak ada basis hukum paralel di Finance atau Administration.

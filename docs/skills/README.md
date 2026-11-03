@@ -55,3 +55,9 @@ Untuk tugas produksi, pilih satu owner: [Workflow](../../kits/dana-indonesiana/p
 ## Aktivasi Dissemination & Rights v0.9
 
 Pilih satu prosedur pada `dissemination-rights` sesuai tugas, **bukan lima agen terpisah**: [Event](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md), [Rights](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md), [Minecraft](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md), [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md), atau [DJKI](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Izin pihak ketiga dan merek/platform tidak otomatis diberikan oleh status penerima pendanaan.
+
+## Aktivasi Regulatory Intelligence v1.0
+
+`regulatory-applicability` menangani satu persoalan sempit per panggilan: [Source Intake](../../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md), [Applicability Matrix](../../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md), [Temporal & Contract Scope](../../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md), [Conflict Escalation](../../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md), atau [Compliance Handoff](../../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md).
+
+APPLICABLE harus dapat dijelaskan berdasarkan sumber, subjek, waktu, perjanjian dan pengecualian. Bila belum, keluarkan UNKNOWN/CONFLICT dan pertanyaan yang perlu diklarifikasi, bukan skor kepatuhan.
