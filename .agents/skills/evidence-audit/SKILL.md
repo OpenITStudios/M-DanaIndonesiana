@@ -1,6 +1,6 @@
 ---
 name: evidence-audit
-description: Periksa bukti dokumenter dan jejak audit Dana Indonesiana: kecocokan dokumen, transaksi, output karya, pengadaan, versi, dan status pengajuan tanpa menyatakan audit resmi.
+description: "Periksa bukti dokumenter dan jejak audit Dana Indonesiana: kecocokan dokumen, transaksi, output karya, pengadaan, versi, dan status pengajuan tanpa menyatakan audit resmi."
 ---
 
 # evidence-audit

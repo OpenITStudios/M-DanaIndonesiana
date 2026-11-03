@@ -1,6 +1,6 @@
 ---
 name: finance-reporting
-description: Buat dan audit pelaporan keuangan Dana Indonesiana: RAB, realisasi anggaran, laporan arus kas, alokasi termin, bukti pembayaran, dan rekonsiliasi. Gunakan bila tugas utama mengolah angka atau laporan dana.
+description: "Buat dan audit pelaporan keuangan Dana Indonesiana: RAB, realisasi anggaran, laporan arus kas, alokasi termin, bukti pembayaran, dan rekonsiliasi. Gunakan bila tugas utama mengolah angka atau laporan dana."
 ---
 
 # finance-reporting

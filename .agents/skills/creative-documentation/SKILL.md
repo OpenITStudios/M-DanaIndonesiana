@@ -1,6 +1,6 @@
 ---
 name: creative-documentation
-description: Tulis dan perbaiki dokumen karya kebudayaan dengan bahasa Indonesia alami yang akurat: kuratorial, proposal, laporan indikator, kemajuan, dokumentasi, notula, publikasi dan laporan akhir.
+description: "Tulis dan perbaiki dokumen karya kebudayaan dengan bahasa Indonesia alami yang akurat: kuratorial, proposal, laporan indikator, kemajuan, dokumentasi, notula, publikasi dan laporan akhir."
 ---
 
 # creative-documentation

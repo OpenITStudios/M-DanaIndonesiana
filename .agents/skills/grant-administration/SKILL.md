@@ -1,6 +1,6 @@
 ---
 name: grant-administration
-description: Bantu administrasi program Dana Indonesiana: pemeriksaan dokumen pencairan, pengajuan dan perbaikan e-RISPRO, surat, perubahan RAB, termin, laporan dan kendali versi.
+description: "Bantu administrasi program Dana Indonesiana: pemeriksaan dokumen pencairan, pengajuan dan perbaikan e-RISPRO, surat, perubahan RAB, termin, laporan dan kendali versi."
 ---
 
 # grant-administration
