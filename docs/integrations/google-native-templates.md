@@ -72,3 +72,7 @@ Sumber API: [Drive files.copy](https://developers.google.com/workspace/drive/api
 ### Bentuk metadata konektor
 
 Planner menerima baik metadata API mentah (`mimeType`, `modifiedTime`) maupun metadata konektor Google Drive (`mime_type`, `modified_time`). Untuk Sheets, argumen `sheetMetadata` menerima objek lengkap hasil `get_spreadsheet_metadata` (`sheets[].properties`) dari **salinan**, atau matriks flat sintetis dalam pengujian. Jangan menggunakan `sheetId` master untuk menulis ke salinan tanpa readback.
+
+### Pedoman baca manusia di Google Drive
+
+Ringkasan standar dalam Google Docs native tersedia di folder privat proyek `90 - Pedoman dan Referensi` dengan judul `Pedoman Mutu Dokumen Google-native — Riset & Standar v2.0 [DRAF]`. Ini **bukan** master untuk disalin menjadi laporan maupun Registry `DERIVED_OUTPUT`, dan belum ada sinkronisasi dua arah GitHub–Google Docs. Definisi kanonis bagi AI tetap [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md) dan [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md); perubahan substantif harus menjaga keduanya konsisten. PDF yang diekspor hanya digunakan untuk memeriksa tampilan dokumen riset (3 halaman A4 setelah perbaikan orphan/blank page), bukan klaim PDF/UA atau aksesibilitas penuh.

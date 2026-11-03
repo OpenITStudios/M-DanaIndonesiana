@@ -170,3 +170,9 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menyusun aturan desain yang berbasis pembaca, tujuh profil fungsional, token internal machine-readable, batas aksesibilitas dan QA terpisah untuk master serta hasil terisi.
 - Mengubah fokus kualitas dari "template satu halaman tampak rapi" menjadi informasi relevan, struktur native, identitas/status jelas, layout siap konten nyata, dan sumber tertelusur.
 - Belum menjalankan uji master terisi, audit PDF/UA/screen reader, evaluasi dokumen resmi per kategori/tahun, atau pengembangan renderer/penulisan Drive baru. Master 01 tidak diubah pada fase riset ini.
+
+## 1.8.4-dev — 2026-11-03 (human-readable Google Docs guide)
+
+- Membuat ringkasan pedoman v2.0 sebagai **Google Docs native DRAF** dalam folder privat pedoman proyek (bukan master laporan dan bukan format resmi).
+- Memeriksa heading semantik, tautan sumber dan lokasi folder; melakukan ekspor PDF untuk inspeksi layout. Temuan halaman keempat yang hanya berisi tautan dihapus; hasil akhir 3 halaman A4 tanpa halaman kosong ekstra.
+- Detail machine-readable dan sumber rujukan tetap di GitHub. Tidak membuat sinkronisasi otomatis, tidak menyalin dokumen proyek, tidak menjalankan QA output proyek nyata atau audit PDF/UA.
