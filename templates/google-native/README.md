@@ -41,6 +41,10 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 
 [Redesain visual Perbandingan Harga](../../docs/qa/master-sheets01-visual-refinement-2026-11-03.md) kini tersedia sebagai Google Sheets native dengan tata letak yang lebih tertib: judul dan metadata tidak terpotong, header tunggal yang tegas, baris bergaris halus dan warna selang-seling, serta 60 baris input sesuai katalog. **Status v1.1.0 = NEEDS_REVIEW**, v1.0.0 tetap READY INTERNAL hingga review pengguna. Kontrak input tidak berubah. Jangan membuat laporan pengadaan resmi dari harga sintetis.
 
+## Kandidat Master Sheets 01 v1.2.0
+
+[QA dan perbandingan v1.2.0](../../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md): lembar **minimal administratif** tanpa merged cells, lima kolom berukuran lebih proporsional, warna header sangat ringan, harga/tanggal native, baris ringkas, dan pengujian delapan contoh sintetis termasuk catatan sangat panjang. Kontrak input tetap B2:B4 dan A8:E67; tidak ada migrasi skema atau perubahan master lama. **v1.2.0 = NEEDS_REVIEW** (belum ada screenshot browser), **v1.1.0 = RETIRED**, **v1.0.0 = READY** (fallback lama).
+
 ## Master maintenance
 
 For every change, retain a version and a reviewer trail. Actual Drive metadata must match the reviewed timestamp; otherwise planning halts. The public catalog does not carry Drive file IDs or actual project facts. The current planner requires an exact active master and deliberately blocks `OFFICIAL_FORMAT` until formal applicability review is implemented.

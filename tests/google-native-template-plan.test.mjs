@@ -28,8 +28,8 @@ function indicator(valuesOverride={}) {
       ...valuesOverride}}});
 }
 
-test('nine versioned public catalog specifications validate',()=>{
-  assert.equal(validateTemplateCatalog(catalog).templates.length,9);
+test('ten versioned public catalog specifications validate',()=>{
+  assert.equal(validateTemplateCatalog(catalog).templates.length,10);
 });
 test('private master mapping rejects invalid headers and duplicates',()=>{
   assert.throws(()=>parseTemplateMasters([['template_id']]),{code:'INVALID_TEMPLATE_MASTER_HEADER'});

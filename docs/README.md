@@ -70,6 +70,8 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 - [Pedoman penulisan laporan ilmiah & italic](../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md): ketentuan EYD V, struktur argumentasi, format sitasi bersyarat, dan review sumber.
 - [Bukti QA tipografi Master 01 v1.2.0](qa/master01-scholarly-typography-2026-11-03.md): pemeriksaan Google Docs/PDF dengan contoh sintetis, font dan italic.
 
+- [QA redesain profesional Master Sheets 01 v1.2.0](qa/master-sheets01-professional-v1.2-2026-11-03.md): audit struktur/format dan 8 penawaran sintetis, berikut batas visual browser/cetak.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

@@ -51,6 +51,8 @@ Validasi Review Queue kini menolak ID temuan yang tidak sesuai fingerprint, meme
 
 **Kandidat pembanding harga yang lebih rapi:** Master Sheets `di.procurement.price-comparison@1.1.0` dibuat terpisah dari v1.0.0 dan dites pada 8 contoh sintetis. [Laporan QA](docs/qa/master-sheets01-visual-refinement-2026-11-03.md) mencatat struktur metadata yang tidak terpotong, header fungsional, tipe data, banding native dan temuan tinggi baris. Kandidat ini masih `NEEDS_REVIEW`; v1.0.0 tetap `READY` sampai tampilan native disetujui.
 
+**Versi minimal administratif v1.2.0:** template `di.procurement.price-comparison` memiliki kandidat desain baru yang lebih sempit, tanpa merged cells, warna ringan, dan data harga/tanggal asli. [QA](docs/qa/master-sheets01-professional-v1.2-2026-11-03.md) merekam perubahan dan batas pemeriksaan. Status belum `READY`: inspeksi UI Google Sheets dan cetak belum dilakukan; master v1.0.0 tetap fallback.
+
 ## Standar tabel dan spreadsheet
 
 [Standar Spreadsheet Profesional](templates/google-native/SPREADSHEET-STYLE.md) menjadi pedoman Google Sheets native: layout putih–hitam yang terbaca, header bermakna, angka dan tanggal asli, sumber/rumus dapat diperiksa, tanpa kartu AI atau dekorasi. Master Sheets pertama, **Perbandingan Harga Referensi 1.0.0**, sudah diuji dengan 4 penawaran sintetis dan tercatat `READY` INTERNAL di Document Registry privat yang sama. Ini bukan keputusan belanja atau bukti kesesuaian prosedur pengadaan. [QA aktual](docs/qa/master-sheets01-price-comparison-2026-11-03.md).

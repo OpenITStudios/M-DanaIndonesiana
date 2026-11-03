@@ -18,6 +18,10 @@ Sesuai prioritas Google-only, master `di.procurement.price-comparison@1.0.0` tel
 
 Setelah pengguna menilai v1.0.0 belum cukup rapi, satu Google Sheets master baru v1.1.0 dibuat dengan judul dan metadata merged **di luar data**, header navy, filter, frozen row, alternating native banding dan ukuran kolom terukur. [QA](../qa/master-sheets01-visual-refinement-2026-11-03.md) mencatat pengujian delapan penawaran sintetis, harga dan tanggal numerik, serta temuan `autoResizeDimensions` yang mengecilkan baris panjang. Input schema **tetap** B2:B4 serta A8:E67. Registry privat menyimpan v1.1.0 sebagai `NEEDS_REVIEW` untuk desain, v1.0.0 tetap `READY`; tidak ada master yang ditimpa. Native screenshot belum diverifikasi.
 
+### Master Sheets 01 v1.2.0 — layout administratif minimal
+
+Kandidat v1.2.0 dibuat pada file Google Sheets native baru (tanpa Office/perantara), dengan **nol merge**, header abu-biru ringan, tabel satu tingkat, lebar total 1.032 px, row height default 36 px, filter dan frozen header. [QA](../qa/master-sheets01-professional-v1.2-2026-11-03.md) memeriksa delapan harga numerik, tanggal serial, validasi, formula-injection literal, banding, lebar kolom dan tinggi baris contoh yang disesuaikan. Formulir internal ini **tidak** menggantikan format resmi peraturan dan tidak membuktikan perbandingan vendor sudah sah. Registry privat pada tab `Template Masters`: versi v1.2.0 `NEEDS_REVIEW`, v1.1.0 `RETIRED`, v1.0.0 `READY` hingga review UI.
+
 ## Satu Registry privat, bukan database baru
 
 Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Tab **`Template Masters` sudah ditambahkan di Google Sheet privat yang sama** pada T2 untuk mendaftarkan master bertahap. Master pertama tersimpan sebagai baris internal yang terverifikasi metadata. Urutan kolom yang wajib:

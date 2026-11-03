@@ -222,3 +222,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Merapikan judul dan metadata di atas tabel menggunakan merge terbatas **di luar data A7:E67**; header navy tunggal, banding native pucat, filter, gridlines disembunyikan, kolom dan pemformatan ulang.
 - Menguji 8 penawaran sintetis (termasuk teks panjang dan literal `=100+1`) dengan format tanggal/harga asli, tanpa formula yang tidak diperlukan; menemukan autoResize dapat mengecilkan tinggi baris menjadi 21px dan memperbaikinya dengan ukuran terukur.
 - Registry privat menyimpan v1.1.0 sebagai `NEEDS_REVIEW`; v1.0.0 tetap `READY`. Screenshot native browser belum dapat diverifikasi; tidak ada klaim format resmi atau bukti harga asli. Detail [QA](docs/qa/master-sheets01-visual-refinement-2026-11-03.md).
+
+## 1.8.11-dev — 2026-11-03 (professional minimalist Sheets candidate v1.2.0)
+
+- Mengganti pendekatan v1.1.0 yang terlalu lebar/berwarna/banyak merge dengan **v1.2.0 tanpa merge** pada salinan native Google Sheets baru. Tata letak lebih kompak (1.032 px), header terang, teks gelap, tinggi baris lebih wajar, data tabel tetap A8:E67.
+- Menguji 8 penawaran sintetis di copy terpisah: semua harga numberValue dan tanggal DATE, literal berawalan `=` bukan formula, 0 error sel. Tinggi baris contoh diukur dan dibaca ulang dari rowMetadata.
+- Memeriksa dokumen publik 2025 untuk konteks survei/perbandingan harga; keberlakuan terhadap proyek tiap tahun tetap belum dipastikan.
+- Registry tetap tunggal: v1.2.0 `NEEDS_REVIEW`, v1.1.0 `RETIRED`, v1.0.0 `READY` lama. Screenshot native Sheets dan pengaturan print belum diuji, tidak ada klaim format resmi.

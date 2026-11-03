@@ -79,6 +79,21 @@ Pengguna menilai layout v1.0.0 belum layak sebagai standar visual. Kandidat nati
 
 [Bukti QA visual/teknis](../../docs/qa/master-sheets01-visual-refinement-2026-11-03.md) memverifikasi merge, banding, filter, nilai, format dan tinggi baris dalam Google Sheets API. **Screenshot native 100% masih belum dilihat**. Master v1.1.0 status `NEEDS_REVIEW`, sementara v1.0.0 tetap `READY` sampai keputusan desain.
 
+### Perbaikan profesional v1.2.0 — referensi harga
+
+Setelah review lanjutan, kandidat v1.2.0 memperbaiki masalah v1.1.0 yang terlalu lebar, berwarna berat, dan banyak sel digabung. [Bukti QA](../../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md).
+
+- **Nol merge**, termasuk judul/metadata; area A7:E67 tetap data tanpa sel gabung. Lebar lima kolom 178 / 310 / 128 / 178 / 238 px (total 1.032 px), turun dari 1.246 px pada v1.1.0.
+- Tata letak putih, teks hitam/charcoal, header tabel abu-biru sangat muda. Data memakai satu garis bawah ringan per baris dan selang-seling hampir putih, **tanpa kotak KPI/dekorasi**.
+- A1 judul polos; A2:A4 label dan B2:B4 sel input; A5 catatan singkat overflow ke sel kosong; A6 judul bagian; A7:E7 header; A8:E67 60 record. Frozen header dan filter tetap dipertahankan.
+- 36 px sebagai tinggi dasar input, **bukan** 48 px untuk semua baris kosong. Setelah data diisi, tinggi baris penjelasan panjang perlu dihitung/diukur dengan padding dan diperiksa; autoResize saja sebelumnya terbukti dapat menghasilkan 21 px dan memotong teks.
+- Tanggal B4 DATE asli; harga C8:C67 NUMBER angka rupiah dan validasi nonnegatif; referensi sumber disimpan sebagai teks/tautan asli, bukan penanda transaksi.
+- Dukungan cetak: pertimbangkan A4 **landscape** dan pengulangan baris header saat mencetak; pengaturan dicheck di menu Google Sheets, bukan dianggap tersimpan otomatis oleh API.
+
+**Catatan sumber resmi:** [Pedoman Administrasi Dana Indonesiana 2025](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf) memuat kondisi survei/perbandingan harga untuk pengadaan di atas Rp50 juta dengan sekurangnya dua sumber. **Keberlakuannya harus diverifikasi terhadap tahun dan perjanjian proyek**. Ini tidak menjadikan template internal sebuah formulir resmi. Panduan [Section508 tentang spreadsheet](https://www.section508.gov/blog/accessibility-bytes/accessible-spreadsheets/) juga menekankan header, kontinuitas tabel, dan menghindari merged cells; merupakan rujukan struktur, bukan sertifikasi aksesibilitas.
+
+**Status:** v1.2.0 kandidat `NEEDS_REVIEW` karena UI Sheets 100% dan cetak A4 belum diperiksa. v1.1.0 `RETIRED` setelah penolakan desain; v1.0.0 `READY` sebagai fallback teknis yang lebih lama sampai v1.2 diterima.
+
 ## 6. Gerbang QA wajib
 
 | Gate | Pemeriksaan |

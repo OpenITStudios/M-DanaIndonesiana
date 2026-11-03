@@ -83,6 +83,10 @@
 - [x] QA salinan dengan delapan penawaran sintetis, termasuk nama panjang, catatan panjang, nominal numerik dan string berawalan tanda sama dengan; koreksi tinggi baris setelah `autoResizeDimensions` terpantau menyusutkan konten. [QA](../docs/qa/master-sheets01-visual-refinement-2026-11-03.md).
 - [ ] Review tampilan native Google Sheets di browser dan keputusan penerimaan desain; v1.1.0 `NEEDS_REVIEW` dan v1.0.0 tetap `READY`.
 
+- [x] Merevisi master Perbandingan Harga sebagai v1.2.0 Google Sheets native: 0 merge, 5 kolom lebih ringkas, header minimal, baris tidak berlebihan, 60 input tetap kompatibel. [QA](../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md).
+- [x] Menguji salinan dengan 8 penawaran sintetis: tanggal/angka sebagai tipe asli, catatan `=...` literal, pembungkusan teks dan row heights terukur; master tetap kosong.
+- [ ] Review tampilan native Sheets pada zoom 100%, dan uji cetak A4 landscape; sebelum itu v1.2.0 tetap `NEEDS_REVIEW`, v1.0.0 fallback.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.
