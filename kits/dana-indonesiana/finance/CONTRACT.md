@@ -43,3 +43,7 @@ Dua angka berbeda pada LRA dan buku kas → laporkan selisih, transaksi yang per
 ## Kalkulator deterministik v0.3
 
 Gunakan [Validation Runbook](VALIDATION-RUNBOOK.md) dan kalkulator JSON jika ada **data yang diizinkan**. Ini proyeksi DRAFT, bukan ekspor Excel resmi atau bukti persetujuan pemerintah. Realisasi kumulatif hanya dihitung dari prior yang diberikan eksplisit; tidak pernah disimpulkan sebagai nol.
+
+## Excel v0.4
+
+Untuk menghasilkan dua lembar Excel draf dari output JSON Finance v0.3, gunakan [Excel Output Contract](EXCEL-OUTPUT.md). Kalkulasi tetap milik finance engine; exporter tidak boleh menciptakan transaksi, satuan RAB, status disetujui, atau bukti.

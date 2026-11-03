@@ -32,3 +32,12 @@ Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otoris
 - [ ] Jalankan pengujian pada Node runtime dan catat hasilnya sesuai bukti.
 - [ ] Periksa perilaku admin dan penulisan secara manual dengan data sintetis.
 - [ ] Pertimbangkan Excel resmi hanya sesudah sumber format dan model data disetujui.
+
+## Finance export v0.4
+
+- [x] Ekspor draft XLSX dengan dua sheet LRA dan Arus Kas sesuai susunan kolom pedoman 2025.
+- [x] Kontrak data hilang, rumus sisa/saldo, penolakan laporan inkonsisten.
+- [x] Tes sintetis Python untuk artefak Excel tersedia; hasil eksekusi harus dilaporkan sesuai runtime sebenarnya.
+- [ ] Melengkapi metadata RAB resmi (satuan, volume, harga, data dukung) melalui input yang disetujui.
+- [ ] Review manual ekspor terhadap berkas contoh resmi yang masih mengandung sample, tanpa menyalinnya.
+- [ ] Uji kesiapan administrasi dan gaya naratif berdasarkan sumber yang berwenang.

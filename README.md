@@ -50,3 +50,7 @@ Paket tujuh [Agent Skills](.agents/skills/) tersedia dengan [routing](docs/skill
 ## Finance reporting v0.3
 
 Kalkulator draft JSON dan uji sintetis tersedia di [Finance Validation Runbook](kits/dana-indonesiana/finance/VALIDATION-RUNBOOK.md); tanpa menyimpan kontrak, RAB privat, atau bukti proyek di GitHub publik.
+
+## Finance Excel v0.4
+
+[Excel Output Contract](kits/dana-indonesiana/finance/EXCEL-OUTPUT.md) mendokumentasikan ekspor dua sheet LRA dan Arus Kas dari JSON draft (menggunakan Python artifact_tool). Hanya untuk data yang diizinkan, bukan integrasi bank/e-RISPRO ataupun laporan resmi yang sudah disahkan.

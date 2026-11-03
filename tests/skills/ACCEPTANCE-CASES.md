@@ -18,3 +18,7 @@ Skenario keuangan A01–A03 dan A07 memiliki kasus unit-test berbasis data sinte
 | A12 | jadwal/indikator berbeda | NOT_EXECUTED |
 
 Skenario tambahan: angka besar tanpa kehilangan presisi, saldo awal tak diketahui, prior realization null, pembayaran tak terpetakan, kelebihan pagu, bukti kosong, transaksi di luar periode, jenis angka salah, ID ganda. Jalankan tes Node sebelum mengklaim PASS pada Node runtime.
+
+## XLSX synthetic tests v0.4
+
+`tests/test_finance_xlsx.py` memeriksa rumus zero-realization, saldo unknown, anti-overwrite, penolakan total salah, serta input mirip formula dengan data sintetis. Ini uji workbook mekanis, bukan validasi format unggah LPDP/e-RISPRO atau pemeriksaan keaslian bukti.

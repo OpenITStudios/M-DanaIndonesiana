@@ -22,3 +22,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Synthetic test fixture and Node regression suite; JSON only.
 - Finance handoff ke administrasi dan narasi diperjelas.
 - Belum ada export Excel, pajak otomatis atau submission eksternal.
+
+## 0.4.0 — 2026-11-03
+
+- Menambah exporter Excel draft LRA/Arus Kas dengan 16/11 kolom rujukan LPDP 2025.
+- Menolak laporan yang tidak konsisten dan mengosongkan data yang belum diketahui.
+- Menambah tes sintetis artifact_tool, menjaga tidak ada data privat di repo.
+- Bukan template pemerintah resmi, bukan penentuan pajak/approval e-RISPRO.

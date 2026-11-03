@@ -24,3 +24,7 @@ Keluaran berisi `lra`, `cash_flow`, `totals`, `issues`, dan keterbatasan. Invoic
 - Saat eksportir spreadsheet dibuat, lakukan uji risiko formula injection menurut [OWASP](https://owasp.github.io/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Injection/21-CSV_Injection). Tanpa Excel writer, jangan klaim telah menguji keamanan file Excel.
 
 Hanya data sintetis boleh berada di Git publik. Hindari hasil aktual pada stdout CI/log publik. Tinjauan manusia dibutuhkan sebelum memakai laporan apa pun.
+
+## Export dua lembar (v0.4)
+
+Lihat [Excel Output](EXCEL-OUTPUT.md). Jalankan tes Python dengan artifact_tool pada fixture sintetis. Excel hanyalah proyeksi dari JSON terverifikasi secara mekanis dan tetap perlu validasi administrasi dan bukti asli.
