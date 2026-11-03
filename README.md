@@ -6,7 +6,7 @@ Repository ini menyiapkan aturan kerja, struktur pengetahuan, prosedur produksi 
 
 ## Status saat ini
 
-- Tahap: **Skill System v0.9 di `develop`** — tujuh skill, kalkulator JSON deterministik, dan ekspor XLSX draf dua lembar; belum ada aplikasi produksi, integrasi e-RISPRO, kalkulator pajak, atau pengesahan otomatis.
+- Tahap: **Skill System v1.0 di `develop`** — tujuh skill, kalkulator JSON deterministik, dan ekspor XLSX draf dua lembar; belum ada aplikasi produksi, integrasi e-RISPRO, kalkulator pajak, atau pengesahan otomatis.
 - RAB, indikator, aturan keberlakuan, termin, dan identitas proyek **tidak dipersistenkan dalam repo publik**; pemeriksaan spesifik menggunakan sumber yang diizinkan.
 - Repository bersifat **publik**. Simpan kontrak, rekening, identitas, bukti bayar, dan data proyek nyata hanya di ruang privat yang disetujui; lihat [SECURITY.md](SECURITY.md).
 - Sistem ini **membantu persiapan, pemeriksaan, dan pelaporan internal**; bukan pemberi persetujuan resmi, konsultan hukum, atau pengganti e-RISPRO.
@@ -88,3 +88,9 @@ Terdapat lima kontrak produksi di [Production Workflow](kits/dana-indonesiana/pr
 ## Dissemination & Rights v0.9
 
 Tersedia pedoman [Event & Dissemination](kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md), [Rights Clearance](kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md), [Minecraft Platform](kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md), [Branding & Publication](kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md), dan [DJKI Recordation](kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Empat template kosong mendukung catatan kegiatan, matriks izin, review publikasi dan persiapan pencatatan. Skill tetap prosedural; tidak ada tes, pengiriman, publikasi atau berkas rahasia yang dipindahkan.
+
+## Regulatory Intelligence v1.0
+
+Skill [Regulatory Applicability](.agents/skills/regulatory-applicability/SKILL.md) sekarang memiliki [Source Intake](kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md), [Applicability Matrix](kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md), [Temporal & Contract Scope](kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md), [Conflict Escalation](kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md), dan [Compliance Handoff](kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md).
+
+Aturan baru **tidak otomatis** mengganti syarat perjanjian lama. Status `APPLICABLE` harus didukung sumber, subjek, tahun/tanggal, dasar kewenangan, kontrak dan pengecualian. Ini bukan *legal approval*, pengesahan LPDP/PMO, atau engine kepatuhan otomatis. Tes/QA tetap ditunda.

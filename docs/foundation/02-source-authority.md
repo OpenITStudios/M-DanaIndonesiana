@@ -43,3 +43,7 @@ Hindari membuat satu ranking kaku untuk seluruh kemungkinan konflik hukum. Perik
 Dokumen asli dan keputusan resmi tetap utuh. Baseline dan daftar kewajiban merupakan ekstraksi yang direview; laporan ekspor adalah turunan. Koreksi dilakukan pada pemilik fakta yang pertama, lalu turunan dihasilkan kembali.
 
 Daftar penemuan awal terpisah: [source-register.md](../regulations/source-register.md).
+
+## Prosedur pemilihan aturan (v1.0)
+
+Definisi kelas sumber dan batas legalitas **tetap dikendalikan oleh halaman ini**. Prosedur khusus yang mengimplementasikannya terdapat pada [Source Intake](../../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md), [Applicability Matrix](../../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md), [Temporal & Contract Scope](../../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md), dan [Conflict Escalation](../../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md). Dokumen-dokumen tersebut tidak mengubah hierarki hukum atau memberi otorisasi pengeluaran.

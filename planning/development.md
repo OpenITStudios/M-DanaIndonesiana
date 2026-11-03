@@ -101,3 +101,14 @@ Jangan menandai prosedur atau template sebagai PASS; pemeriksaan kualitas baru d
 - [x] Empat template kosong, tanpa data proyek asli dan tanpa skill kedelapan.
 - [ ] Penilaian penerapan pada penggunaan nyata oleh pemilik/penasihat yang sesuai.
 - [ ] **Tes, QA, publikasi dan submission ditunda** sesuai arahan pengguna.
+
+## v1.0 — Regulatory Intelligence & Compliance Matrix (tanpa tes)
+
+- [x] Intake sumber publik/privat berizin, provenance, tanggal/versi/ruang lingkup.
+- [x] Matriks keberlakuan bersyarat dengan status UNKNOWN/CONFLICT dan enam gerbang.
+- [x] Perbedaan tahun program, tahun anggaran, tanggal transaksi, masa perjanjian, dan tanggal berlakunya ketentuan.
+- [x] Alur konflik/eskalasi dan daftar butir yang memerlukan keputusan berwenang.
+- [x] Handoff ke tujuh skill dari satu owner Regulatory, tanpa duplikasi interpretasi.
+- [x] Empat template kosong, sumber publik dan keputusan arsitektur; tidak ada data kontrak rahasia.
+- [ ] Penerapan pada kasus proyek nyata hanya jika sumbernya berizin dan pemeriksaan diminta.
+- [ ] **Tes, QA, legal review nyata dan e-RISPRO submission ditunda** sesuai instruksi pengguna.

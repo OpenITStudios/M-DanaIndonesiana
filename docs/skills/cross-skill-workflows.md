@@ -35,3 +35,10 @@ Gunakan [Reporting Workflow](reporting-workflow.md) sebagai alur lengkap bila me
 - Pencatatan ciptaan: [DJKI Recordation](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) → Administration untuk dokumen → Evidence untuk surat pencatatan bila benar ada.
 
 Jangan menafsirkan dokumen `DRAFT` sebagai `PUBLISHED`, atau surat pencatatan sebagai izin untuk material pihak ketiga.
+
+## Regulatory routing v1.0
+
+- Bila syarat **berlaku atau tidak** belum jelas: [Source Intake](../../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md) → [Applicability Matrix](../../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) → domain yang terdampak.
+- Bila ada **tahun/masa berbeda**: tambahkan [Temporal & Contract Scope](../../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md); jangan mengubah aturan historis dari tanggal unggah.
+- Bila sumber **bertentangan**: [Conflict Escalation](../../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md), hentikan hanya keputusan yang tergantung konflik, lalu dapatkan klarifikasi sah jika diperlukan.
+- Hasil yang diteruskan memakai [Compliance Handoff](../../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md), bukan status "lulus kepatuhan" universal. Output administratif dan narasi tetap DRAFT sampai sumber/otoritas memastikan klaimnya.

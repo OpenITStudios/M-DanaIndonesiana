@@ -53,3 +53,13 @@ Jangan menyalin nomor identitas, jumlah atau isi kontrak pribadi ke daftar ini. 
 - [UU No. 27 Tahun 2022 PDP](https://peraturan.bpk.go.id/Home/Download/224884/UU%20Nomor%2027%20Tahun%202022.pdf): pertimbangan pemrosesan data pribadi, terutama anak pada Pasal 25.
 
 Daftar ini tidak berarti semua sumber otomatis mengikat satu kegiatan; pilih yang relevan terhadap perjanjian, kategori, status penyelenggara, media dan waktu publikasi.
+
+## Regulatory Intelligence v1.0 — sumber hukum dan tahun
+
+- [LPDP Pedoman Administrasi Dana Indonesiana 2025](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf): administrasi perubahan RAB (maksimal dua kali, batas 60 hari sebelum akhir perjanjian menurut pedoman 2025), laporan indikator dan penggunaan dana. **Periksa keberlakuan proyek** sebelum menerapkan.
+- [LPDP Information Corner](https://erispro-indonesiana.kemenkeu.go.id/information-corner): versi pedoman, manual, format pelaporan dan rencana pencairan; template portal bukan keputusan kontrak.
+- [Informasi Umum Kategori Penciptaan Karya Kreatif Inovatif 2025](https://danaindonesiana.kemenbud.go.id/backend/storage/files/2025/ando/11_iu_penciptaan_karya_kreatif_inovatif.pdf): kategori, keluaran dan batas umum; indikator final tetap mengikuti sumber sah.
+- [JDIH PMK 39/2024](https://jdih.kemenkeu.go.id/dok/pmk-39-tahun-2024), [PMK 32/2025](https://jdih.kemenkeu.go.id/dok/pmk-32-tahun-2025), [PMK 54/2026](https://jdih.kemenkeu.go.id/dok/pmk-54-tahun-2026): SBM TA 2025, TA 2026, dan aturan penyusunan anggaran mulai TA 2027. Tahun publikasi, tanggal efektif dan tahun anggaran adalah **tiga atribut yang berbeda**.
+- [UU 12/2011](https://peraturan.bpk.go.id/Details/39188/uu-no-12-tahun%3D2011) sebagaimana diubah [UU 13/2022](https://peraturan.go.id/files/uu13-2022.pdf): referensi jenis dan hierarki peraturan; jangan buat ranking sederhana antara segala jenis surat/perjanjian dan hukum.
+
+Semua tautan untuk riset. Untuk penerapan nyata, dokumentasikan halaman/pasal yang diperiksa, ketentuan peralihan, kategori penerima dan tanggal kejadian. Jangan menulis `COMPLIANT` dari daftar sumber saja.

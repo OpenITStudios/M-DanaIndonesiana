@@ -74,3 +74,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Memisahkan hak cipta otomatis, pemegang hak, surat pencatatan serta izin pihak ketiga.
 - Menambahkan pemeriksaan risiko promosi oleh organisasi melalui Minecraft tanpa menyatakan izin otomatis.
 - Tetap tujuh skill; tidak ada data rahasia, uji runtime, QA, atau pengiriman eksternal.
+
+## 1.0.0 — 2026-11-03 (regulatory design)
+
+- Lima prosedur Regulatory Intelligence: Source Intake, Applicability, Temporal/Contract, Conflict Escalation, Compliance Handoff.
+- Empat template kosong dan satu keputusan arsitektur untuk aturan bersyarat.
+- Perluasan source discovery: Kategori 2025, SBM 2025/2026/2027, dan kerangka hierarki hukum.
+- Handoff ke Finance, Administration, Procurement, Evidence, Production, Rights dan Writing.
+- Tidak menambah skill kedelapan, automatic compliance engine, data privat, atau hasil QA.
