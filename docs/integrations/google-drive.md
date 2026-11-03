@@ -1,12 +1,12 @@
-# Google Drive Integration — P0/P1 Registry + P2 Workflow Bridge + P3 Change Impact
+# Google Drive Integration — P0/P1 Registry + P2 Workflow Bridge + P3 Change Impact + P4 Review Queue
 
-**Status:** P0–P3 read-only code added to `develop`; a private Google Sheet stores the document registry. Google OAuth CLI runtime, scheduled monitoring and end-to-end/QA acceptance have **not** been executed.
+**Status:** P0–P4 code authored on `develop`; the existing private Google Sheet hosts `Documents`, `Petunjuk`, and `Review Queue`. Local OAuth CLI runtime, unattended scheduling and end-to-end/QA acceptance have **not** been executed.
 
 ## Boundaries
 
 - GitHub PUBLIC: resolver code, generic schema, instructions and synthetic tests only.
 - Private Google Drive: source documents and one Document Registry Google Sheet in the authorized project folder.
-- All CLI commands (`resolve`, `audit`, `discover`, `handoff`, `impact`) are **READ-ONLY**. They do not fetch document bodies, edit Google files, update registry status, or transmit project data to GitHub.
+- All CLI commands (`resolve`, `audit`, `discover`, `handoff`, `impact`, `review`) are **READ-ONLY**. They do not fetch document bodies, edit Google files, update registry status, or transmit project data to GitHub.
 - A ChatGPT Google Drive connection allows supervised document discovery in chat; it does **not** automatically provide the OAuth token needed by a local Node process.
 - Do not persist files marked *pelajari saja / jangan simpan* in the registry. Review storage permissions before adding any sensitive document metadata.
 
@@ -41,6 +41,8 @@ Prerequisites: an OAuth access token from your authorized Google account with `s
     node tools/drive-source-resolver.mjs handoff --sheet-id PRIVATE_SHEET_ID --workflow rab-review --select RAB=DOC-EXAMPLE-01
     node tools/drive-source-resolver.mjs impact --sheet-id PRIVATE_SHEET_ID
     node tools/drive-source-resolver.mjs impact --sheet-id PRIVATE_SHEET_ID --root-folder-id PRIVATE_FOLDER_ID
+    node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode summary
+    node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode details --root-folder-id PRIVATE_FOLDER_ID
 
 The sheet ID/folder ID must come from your *private* Drive, not a committed config file. Both raw IDs and standard URLs are accepted.
 
@@ -149,6 +151,45 @@ Expected `handoff` shape: `kind=drive_workflow_handoff_v1`, `workflow_id`, `prim
 
 **ChatGPT workflow:** when the user requests a change audit, read the private Registry through connected Drive, obtain current metadata for the indexed files, distinguish changed/inaccessible/unchanged, map only explicit `derived_from_ids`, and report gaps. ChatGPT cannot run the local OAuth CLI simply by reading its GitHub source. Do not promise background checks or automatic updates.
 
+## P4 — Review Queue and repeatable checks (operator-controlled)
+
+P4 adds **one tab in the same authorized private Google Sheet**, not another data store:
+`Review Queue` (column headers `review_id,finding_type,document_id,fingerprint,source_ids,workflow_ids,status,owner_skill,first_seen_at,last_seen_at,reviewer,decision_ref,notes`). Existing documents and other tabs are not overwritten. Initially, the queue contains no findings or reports, because no real project's derived reports were verified as registered.
+
+**Run manually with local Node 22+ and authorized Google OAuth read-only token**:
+
+```bash
+node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode summary
+node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode details --root-folder-id PRIVATE_FOLDER_ID
+```
+
+- `summary` is the **default**. It prints safe aggregate counts only, suitable for private OS scheduler logs. `details` prints review IDs, private document IDs and candidate rows; never direct this into GitHub public artifacts or Actions logs.
+- `review` reads the registered documents, Drive metadata, optional bounded folder inventory and the same Sheet's `Review Queue` tab. Its calculations are in [tools/drive-review-queue.mjs](../../tools/drive-review-queue.mjs). It **does not write** queue rows or statuses.
+- Source signals have types `SOURCE_METADATA_CHANGE` and `SOURCE_METADATA_UNVERIFIED`. Registered derived documents can generate `DERIVED_OUTPUT_REVIEW`, and optional folder discovery can generate `UNINDEXED_FILE`.
+- Every review candidate is keyed deterministically by finding type + affected document ID + **metadata fingerprint** (SHA-256 of metadata attributes, not of file content). Repeated checks produce the same review ID; a subsequent distinct metadata version produces another ID.
+- Reconciliation compares candidate IDs with human-maintained rows in the private Review Queue: `new_candidates`, `pending_existing`, `reviewed_existing`, and `no_longer_detected`. A finding that disappears does **not** auto-close a task.
+- Status values: `OPEN`, `IN_REVIEW`, `RESOLVED`, `DISMISSED`. To close, a reviewer must record `reviewer` and actual `decision_ref` after inspecting evidence. A self-reported status/decision reference is not by itself official external approval.
+- The permitted process is: preview finding → review source content/metadata + decision evidence → **authorized human** records the queue row/status → review baseline if applicable. Never auto-change RAB, source file, report, registry approval status or e-RISPRO.
+- Invalid queue headers, IDs, duplicate rows, statuses or closed rows without reviewer and decision reference **fail closed**. Missing metadata access returns `INCOMPLETE_SOURCE_CHECK`.
+- A change in file modified-time/name and the metadata fingerprint is not proof a report actually changed. Only explicit `derived_from_ids` can indicate possible impact, and only for registered outputs.
+- The on-demand P4 command needs a real authorized Google token with `spreadsheets.readonly` and `drive.metadata.readonly`. A ChatGPT Drive connection is **not** an automatic OAuth token for a local program.
+
+### Periodic use without enabling an uncontrolled automation
+
+P4 provides a repeatable **single-command** check that an operator can call from their own private scheduler (Windows Task Scheduler or cron), after an approved schedule and a secure OAuth renewal mechanism are configured. No schedule has been created or activated by this repository commit.
+
+- On a private Windows host, run `powershell -File tools/run-drive-review.ps1 -SheetId PRIVATE_SHEET_ID` from the repository directory after providing `GOOGLE_ACCESS_TOKEN` through the trusted runtime environment.
+- The wrapper runs `review --mode summary`; it does not embed tokens, store Drive content, change statuses or open browser sessions.
+- Tokens may expire; repeat runs require a valid access token provided by the authorized operator or a separate secure token-refresh mechanism. The wrapper does not pretend to maintain a perpetual Google session.
+- Review exit code 0 means no **new or pending queue candidates** based on the checked metadata/queue, not a clean financial, compliance or contents audit. Exit code 2 means review needed/incomplete; exit code 1 indicates an operational failure.
+- Do not log detailed source IDs on public CI or write output snapshots to GitHub. Do not make a new "periodic report" if no review tasks exist.
+
+### Registering a real derived report
+
+Before connecting any report, verify the report file actually belongs to this project; it must be an authentic output, not a sample template, historic format, or unrelated KOL sheet. A reviewable registry row should then have a unique Drive file ID, `source_role=DERIVED_OUTPUT`, and `derived_from_ids` referring **only to the actual source documents used**. Without evidence, leave this field empty and return `UNKNOWN`, not an invented RAB/indicator dependency.
+
+**Current project reality (inspected 3 November 2026):** the primary `04 - Pelaporan dan Pertanggungjawaban` folder had no files. Available examples in `90 - Pedoman dan Referensi` include sample report formats that are **not real project reports**. A separately located KOL sheet was not confirmed as a deliverable derived from the current project. Consequently, no report or invented dependency was registered and the initial Review Queue has only headers.
+
 ## Relationship to the seven skills
 
 - Administration owns document status, version/decision references and changes to the controlled baseline.
@@ -159,9 +200,9 @@ Expected `handoff` shape: `kind=drive_workflow_handoff_v1`, `workflow_id`, `prim
 
 ## Non-features and handoff
 
-- No unattended sync, bidirectional editing, auto-approval, e-RISPRO submission, private-data push to GitHub or automatic Sheet updates.
+- No unattended sync, automatic review-queue writes, bidirectional editing, auto-approval, e-RISPRO submission, private-data push to GitHub or automatic Sheet updates.
 - Do not derive `SUBMITTED` or `EXTERNAL_CONFIRMED` from a filename, modified date, folder or receipt count; review official supporting evidence.
-- P2 builds source-pointer handoffs; P3 builds **read-only metadata and dependency impact previews**. Private registry writes, real document-content comparison and unattended scheduling are not part of this phase.
-- Synthetic-only unit tests for P0–P3 are authored but deliberately not run while project QA remains deferred.
+- P2 builds source-pointer handoffs; P3 builds metadata impact previews; P4 builds a **read-only reconciled queue preview and opt-in local scheduler wrapper**. Private registry writes, real document-content comparison and unattended scheduling are not part of this phase.
+- Synthetic-only unit tests for P0–P4 are authored but deliberately not run while project QA remains deferred.
 
 Related: `AGENTS.md`, `SECURITY.md`, `docs/foundation/02-source-authority.md`, `docs/foundation/04-traceability.md`, `kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md`.

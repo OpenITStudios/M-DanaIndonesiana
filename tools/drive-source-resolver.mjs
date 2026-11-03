@@ -8,6 +8,7 @@ import {
 } from "./drive-registry-core.mjs";
 import { parseSelections, selectWorkflowSources, buildWorkflowHandoff } from "./drive-workflow-bridge.mjs";
 import { assessChangeImpact } from "./drive-change-impact.mjs";
+import { reconcileReviewQueue } from "./drive-review-queue.mjs";
 
 const FOLDER_MIME = "application/vnd.google-apps.folder";
 const MAX_ROWS = 1000;
@@ -15,15 +16,15 @@ const DEFAULT_MAX_ITEMS = 1500;
 
 function parseArgs(args) {
   const command = args[0];
-  if (!["resolve", "audit", "discover", "handoff", "impact"].includes(command))
-    throw new Error("USAGE: resolve|audit|discover|handoff|impact --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
+  if (!["resolve", "audit", "discover", "handoff", "impact", "review"].includes(command))
+    throw new Error("USAGE: resolve|audit|discover|handoff|impact|review --sheet-id ID [--id DOCUMENT_ID | --type TYPE] [--workflow WORKFLOW_ID] [--select TYPE=DOCUMENT_ID]");
   const values = {};
   for (let i = 1; i < args.length; i += 2) {
     const flag = args[i];
     if (!flag?.startsWith("--") || !args[i + 1] || args[i + 1].startsWith("--"))
       throw new Error("INVALID_ARGUMENT_PAIR");
     const key = flag.slice(2);
-    if (!["sheet-id", "id", "type", "root-folder-id", "max-items", "workflow", "select"].includes(key) ||
+    if (!["sheet-id", "id", "type", "root-folder-id", "max-items", "workflow", "select", "mode"].includes(key) ||
         Object.hasOwn(values, key)) throw new Error("UNKNOWN_OR_DUPLICATE_FLAG: " + flag);
     values[key] = args[i + 1];
   }
@@ -39,8 +40,13 @@ function parseArgs(args) {
   } else if (values.workflow || values.select) {
     throw new Error("WORKFLOW_FLAGS_ONLY_FOR_HANDOFF");
   }
-  if (command === "impact" && (values.id || values.type))
-    throw new Error("IMPACT_DOES_NOT_ACCEPT_ID_OR_TYPE");
+  if (["impact", "review"].includes(command) && (values.id || values.type))
+    throw new Error("IMPACT_OR_REVIEW_DOES_NOT_ACCEPT_ID_OR_TYPE");
+  if (values.mode && (command !== "review" || !["summary", "details"].includes(values.mode)))
+    throw new Error("REVIEW_MODE_MUST_BE_SUMMARY_OR_DETAILS");
+  if (!["impact","review","audit","discover"].includes(command) &&
+      (values["root-folder-id"] || values["max-items"]))
+    throw new Error("FOLDER_FLAGS_NOT_SUPPORTED");
   if (values["max-items"] && !values["root-folder-id"])
     throw new Error("MAX_ITEMS_REQUIRES_ROOT_FOLDER_ID");
   return { command, values };
@@ -90,6 +96,20 @@ async function loadRegistry(sheetId, token) {
   const url = base + "/values/" + range + "?valueRenderOption=UNFORMATTED_VALUE";
   const body = await getJson(url, token);
   return parseRegistryRows(body.values || []);
+}
+
+async function loadReviewQueue(sheetId, token) {
+  const base = "https://sheets.googleapis.com/v4/spreadsheets/" + encodeURIComponent(sheetId);
+  const meta = await getJson(base + "?fields=sheets(properties(title,gridProperties(rowCount)))", token);
+  const tab = (meta.sheets || []).find(s => s.properties?.title === "Review Queue");
+  if (!tab) throw new Error("REVIEW_QUEUE_TAB_NOT_FOUND");
+  const capacity = tab.properties?.gridProperties?.rowCount;
+  if (!Number.isInteger(capacity) || capacity < 1 || capacity > MAX_ROWS)
+    throw new Error("REVIEW_QUEUE_ROW_CAPACITY_EXCEEDED");
+  const range = encodeURIComponent("Review Queue!A1:M" + capacity);
+  const body = await getJson(base + "/values/" + range +
+    "?valueRenderOption=UNFORMATTED_VALUE", token);
+  return body.values || [];
 }
 
 async function fetchMetadata(fileId, token) {
@@ -156,8 +176,8 @@ async function main() {
   if (!token) throw new Error("GOOGLE_ACCESS_TOKEN_REQUIRED");
   const sheetId = googleId(values["sheet-id"], "SHEET");
   const records = await loadRegistry(sheetId, token);
-  if (command === "impact") {
-    // Metadata-only impact preview. Never changes registry fields or original files.
+  if (command === "impact" || command === "review") {
+    // Metadata-only change check: no edits or automatic review decisions.
     const observedPairs = await mapLimit(records, 4, async record => {
       try {
         const remote = await fetchMetadata(record.drive_file_id, token);
@@ -182,13 +202,31 @@ async function main() {
         state: "NOT_REGISTERED_REVIEW_REQUIRED"
       }));
     }
-    report.operation = "impact";
+    report.operation = command;
     report.unindexed_files = unindexed;
     report.inventory_performed = unindexed !== null;
     if (unindexed?.length && report.check_status === "NO_METADATA_CHANGE_SIGNAL")
       report.check_status = "REVIEW_REQUIRED";
-    output(report);
-    if (report.check_status !== "NO_METADATA_CHANGE_SIGNAL") process.exitCode = 2;
+    if (command === "impact") {
+      output(report);
+      if (report.check_status !== "NO_METADATA_CHANGE_SIGNAL") process.exitCode = 2;
+      return;
+    }
+    // Review queue is the only review state. This command generates a
+    // read-only preview; no queue row, status or source is ever written.
+    const queueRows = await loadReviewQueue(sheetId, token);
+    const preview = reconcileReviewQueue(report, queueRows, new Date().toISOString());
+    if ((values.mode || "summary") === "summary") {
+      output({
+        operation: "review", status: preview.status, summary: preview.summary,
+        queue_write_performed: false, document_write_performed: false,
+        private_detail_available_with_mode: "details",
+        message: "Summary only; review candidates and private file IDs are not printed."
+      });
+    } else {
+      output(preview);
+    }
+    if (preview.status !== "NO_NEW_REVIEW_ITEMS") process.exitCode = 2;
     return;
   }
   if (command === "handoff") {

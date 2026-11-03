@@ -17,6 +17,10 @@ Untuk tugas yang menggunakan dokumen proyek, ikuti [Google Drive P0–P3 Integra
 
 Untuk audit perubahan, ikuti [P3 Change Impact](docs/integrations/google-drive.md). Bedakan `METADATA_CHANGE_SIGNAL`, `METADATA_UNVERIFIED`, dan `METADATA_MATCH_ONLY`. Hanya `derived_from_ids` pada dokumen turunan yang menghasilkan *downstream review candidate*; `related_ids` adalah konteks, bukan bukti perubahan laporan. Jangan otomatis memperbarui RAB, laporan, penanda persetujuan atau waktu baseline.
 
+### P4 — antrean review terkendali
+
+Jika pengguna meminta review berulang, gunakan satu tab `Review Queue` pada Registry privat dan [P4 Review Workflow](docs/integrations/google-drive.md). `review --mode summary` dapat dijalankan ulang tanpa menambahkan baris secara otomatis. Temuan dengan fingerprint sama yang sudah diperiksa manusia tidak boleh dibuka ulang tanpa perubahan baru. Penutupan memerlukan reviewer dan referensi bukti. Tidak pernah mengubah RAB, laporan, atau status eksternal dari hasil metadata. Aktivasi jadwal dan token OAuth lokal memerlukan konfigurasi terpisah.
+
 ## Mode kerja
 
 | Mode | Tujuan | Batas |

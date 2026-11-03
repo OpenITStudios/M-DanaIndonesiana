@@ -1,6 +1,7 @@
 // P3 change-impact assessment from metadata and explicit source dependencies.
 // Pure functions only: no network, state updates, approvals, file writes or external submit.
 import { RegistryError } from "./drive-registry-core.mjs";
+import { createHash } from "node:crypto";
 import { WORKFLOWS } from "./drive-workflow-bridge.mjs";
 
 const CHANGE_SIGNALS = new Set([
@@ -29,6 +30,14 @@ export function classifyDriveObservation(record, observation) {
         flags.push("MODIFIED_TIME_CHANGED");
     }
   }
+  // Signature is metadata-only and contains no original file title/content.
+  // A new Drive version/name/time yields a new review fingerprint.
+  const metadata_fingerprint = createHash("sha256").update(JSON.stringify([
+    record.document_id, record.drive_file_id,
+    observation?.id || null, observation?.name || null,
+    observation?.modifiedTime || null, observation?.version || null,
+    observation?.trashed || false, observation?.error || null, flags
+  ])).digest("hex");
   const change_signal = flags.some(flag => CHANGE_SIGNALS.has(flag));
   const uncertain = flags.some(flag => UNCERTAIN_SIGNALS.has(flag));
   return {
@@ -38,6 +47,7 @@ export function classifyDriveObservation(record, observation) {
     state: change_signal ? "METADATA_CHANGE_SIGNAL" : uncertain
       ? "METADATA_UNVERIFIED" : "METADATA_MATCH_ONLY",
     flags,
+    metadata_fingerprint,
     content_checked: false,
     approval_checked: false
   };

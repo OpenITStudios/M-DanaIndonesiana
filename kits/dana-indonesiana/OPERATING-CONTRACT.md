@@ -47,6 +47,14 @@ Catat secara aman sumber, kategori/tahun, versi, dokumen yang berwenang, klausul
 - Timestamp berubah bukan bukti isi/dana berubah. Timestamp tidak terverifikasi atau akses API gagal = `INCOMPLETE_METADATA_CHECK`, bukan status bersih.
 - Review berkas asli, periode dan keputusan resmi melalui pemilik domain sebelum pembaruan baseline atau laporan. Tidak mengedit dokumen, metadata, maupun status resmi secara otomatis.
 
+## P4 — Review berkala dan penutupan manual
+
+- Temuan sumber dari P3 dicocokkan dengan satu tab `Review Queue` privat menurut ID temuan dan sidik metadata. Fingerprint adalah metadata-only, bukan checksum konten atau bukti legalitas.
+- Deduplikasi harus mempertahankan temuan yang sudah `OPEN`/`IN_REVIEW`; `RESOLVED`/`DISMISSED` hanya valid bila ada reviewer dan referensi keputusan yang benar-benar ditinjau. Tidak menutup temuan secara otomatis ketika sinyal metadata hilang.
+- Saat file berubah lagi setelah sebuah temuan ditutup, event yang memiliki fingerprint baru diperlakukan sebagai review baru. Skill owner memeriksa sumber dan laporan terdampak sesuai kontraknya.
+- Semua eksekusi lokal dan penjadwalan memakai token privat terpisah. Output rekap untuk scheduler tidak menampilkan ID dokumen. Tidak ada pengiriman ke e-RISPRO, penambahan bukti palsu atau penulisan status eksternal.
+- Lihat [P4 Review Queue](../../docs/integrations/google-drive.md) untuk langkah operator. Jangan membuat registry kedua, memperlakukan contoh format sebagai laporan proyek, atau mengunggah antrean privat ke GitHub.
+
 ## Handoff antarskill
 
 Berikan hanya ID aman/rujukan, fakta yang dibutuhkan, status sumber, gap dan output. Keuangan memegang angka; administrasi memegang checklist/submit; creative-writing memegang redaksi; evidence memegang tingkat pembuktian; regulatory memegang applicability; production memegang capaian teknis; dissemination memegang izin/atribusi. Jangan membuat tujuh registry.

@@ -38,6 +38,10 @@ Ini **konvensi ID**, bukan instruksi untuk membuat sepuluh database/registry. Gu
 
 Dalam satu Registry privat, `derived_from_ids` boleh mencantumkan ID sumber yang benar-benar dipakai untuk menghasilkan dokumen `DERIVED_OUTPUT`. Arah hubungan adalah `OUTPUT → SOURCE`, dapat bertingkat, dan harus diperiksa integritasnya. `related_ids` sekadar navigasi, bukan hubungan derivasi. Perubahan metadata sumber memicu **kandidat pemeriksaan ulang** untuk keluaran terkait; tidak otomatis mengubah angka, versi, penerimaan eksternal atau status legal. Periksa isi dan otorisasi sebelum memperbarui fakta kanonis.
 
+## P4 — Jejak review
+
+Temuan P3 dapat diarahkan ke antrean review tunggal di Drive privat: ID review unik berbasis sidik metadata dan sumber, status internal, reviewer, waktu, serta keputusan pendukung. Antrean tidak menggantikan bukti asli maupun keputusan resmi. Kecocokan fingerprint meminimalkan duplikasi; hanya perubahan metadata baru yang membuat isu baru. Penutupan atau perubahan baseline tetap tindakan manusia berwenang, bukan konsekuensi otomatis pemeriksaan tanggal file.
+
 ## Integritas
 
 Tidak membuat record sukses tanpa bukti. Data hilang = UNKNOWN/INCOMPLETE; angka 0 hanya bila benar-benar nol. Hindari duplikasi transaksi dan nomor kuitansi. Untuk data personal, simpan pointer referensi privat/ID aman alih-alih isi dokumen pada laporan publik.

@@ -26,6 +26,10 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 [Change Detection & Impact Analysis](docs/integrations/google-drive.md) memeriksa timestamp/nama file dan memetakan **kandidat review** untuk laporan yang memiliki ketergantungan sumber eksplisit. CLI: `node tools/drive-source-resolver.mjs impact --sheet-id PRIVATE_SHEET_ID`. Perubahan isi, validitas keputusan, auto-update Registry, jadwal pemantauan dan end-to-end QA **belum diverifikasi/diterapkan**.
 
+## Review Queue — P4 (read-only)
+
+[P4 Controlled Review Queue](docs/integrations/google-drive.md) memakai tab `Review Queue` pada Registry Google Drive privat yang sama, mendeteksi temuan berulang tanpa duplikasi dan memerlukan pemeriksa serta referensi keputusan untuk penutupan. CLI: `node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode summary`. Wrapper Windows: `tools/run-drive-review.ps1`. Belum ada pemantauan terjadwal yang diaktifkan, pembaruan otomatis antrean, QA runtime, atau perubahan dokumen privat.
+
 ## Status kemampuan
 
 - **Pedoman:** tujuh skill dengan kontrak rinci dan template, belum dinyatakan lulus uji penggunaan nyata.

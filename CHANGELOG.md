@@ -116,3 +116,12 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Dampak report ditandai sebagai kandidat review dan propagasi transitif berbasis dependensi eksplisit, tanpa mengasumsikan `related_ids` sebagai hubungan derivasi.
 - Mengeluarkan kandidat workflow terpengaruh dan opsional penemuan file tidak terindeks; tidak menulis ke Drive, GitHub publik, laporan, persetujuan, atau e-RISPRO.
 - Tes sintetis ditulis tetapi **NOT EXECUTED**; autentikasi OAuth lokal dan QA end-to-end tetap belum dilaksanakan sesuai status fase ini.
+
+## 1.5.0 — 2026-11-03 (P4 controlled review queue)
+
+- Menambahkan satu tab `Review Queue` pada Document Registry privat; tidak membuat database kedua dan tidak memasukkan data proyek nyata ke Git publik.
+- P4 membuat kandidat review deterministik berdasarkan fingerprint metadata P3, mendeteksi temuan baru, sedang ditinjau, sudah diperiksa manusia dan yang tidak lagi terdeteksi tanpa auto-close.
+- CLI `review --mode summary|details` membaca Google Sheets + Drive dengan OAuth read-only, tanpa menulis antrean, sumber, status eksternal, atau e-RISPRO. Mode summary menghindari paparan ID dokumen di keluaran terjadwal.
+- Wrapper Windows `tools/run-drive-review.ps1` disiapkan untuk pemanggilan operator/scheduler privat. Tidak mengaktifkan jadwal atau menyimpan token.
+- Pencarian sumber proyek menunjukkan folder pelaporan utama kosong; format contoh dan file KOL di luar folder tidak otomatis didaftarkan sebagai laporan turunan.
+- Skenario tes sintetis ditambahkan, tetapi **NOT EXECUTED** karena penundaan QA. OAuth lokal, runtime end-to-end dan penjadwalan sesungguhnya belum diverifikasi.

@@ -1,4 +1,4 @@
-# Development Plan — Current State (v1.4)
+# Development Plan — Current State (v1.5)
 
 **Ini backlog kerja sistem, bukan izin otomatis untuk menjalankan semua item.** Riwayat implementasi v0.1–v1.0 berada di [CHANGELOG](../CHANGELOG.md).
 
@@ -14,12 +14,16 @@
 - [x] P2 kode Workflow Bridge read-only: rute sumber ketujuh skill, selection ambiguity, status metadata dan handoff terstruktur; dokumentasi operasional serta tes sintetis ditulis tetapi belum dieksekusi.
 - [x] P3 change-impact preview: membandingkan metadata, memeriksa ketidakpastian, dan memetakan kandidat review turunan dari dependensi eksplisit. Kolom `derived_from_ids` opsional ditambahkan ke Registry privat; belum ada laporan turunan yang didaftarkan.
 
+- [x] P4 Review Queue: tab privat pada Registry yang sama, deduplikasi event metadata, status manual dan CLI review read-only; wrapper PowerShell untuk pemakaian terjadwal bila disetujui. Tes sintetis ditulis tetapi belum dijalankan.
+- [x] Pemeriksaan kandidat laporan proyek: folder pelaporan proyek kosong; contoh format dan KOL di folder terpisah tidak otomatis ditetapkan sebagai laporan turunan resmi.
+
 ## Belum dapat dinyatakan selesai
 
 - [ ] P2 penerapan langsung pada isi dokumen melalui connector/CLI, pengujian OAuth nyata dan review user terhadap output sumber pada satu tugas nyata. **QA ditunda**.
 - [ ] Pembaruan metadata private registry pascareview manual atau secara terotorisasi (belum dibuat); jangan menerapkan auto-sync mutasi tanpa izin.
 - [ ] Registrasi dependensi untuk **laporan nyata** berdasarkan bukti produksi, dan pemeriksaan hasil impak dengan dokumen aktual (belum dilakukan).
-- [ ] Pemantauan terjadwal/change-feed hanya bila diperlukan dan diizinkan; saat ini `impact` adalah command on-demand.
+- [ ] Konfigurasi OAuth lokal yang aman dan jadwal pemeriksaan aktif hanya jika disetujui; `review` tersedia on-demand tetapi belum otomatis berjalan.
+- [ ] Pembaruan status/queue secara eksplisit melalui operator yang berwenang; auto-write dan auto-close tetap tidak ada.
 
 - [ ] Pengujian Node dan Python pada checkout yang sama; pemeriksaan workbook nyata dan kesesuaian format unggah e-RISPRO.
 - [ ] Evaluasi perilaku tujuh skill pada skenario sintetis, penilaian manusia atas tulisan dan ketepatan laporan.
