@@ -74,6 +74,29 @@
       "caption_pt": 14,
       "max_heading_levels": 2,
       "one_primary_message_per_slide": true
+    },
+    "google_docs_formal_scholarly": {
+      "paper": "A4",
+      "orientation": "PORTRAIT",
+      "margin_pt": {
+        "top": 67,
+        "bottom": 65,
+        "left": 71,
+        "right": 71
+      },
+      "font_family": "Times New Roman",
+      "title_pt": 15,
+      "heading_1_pt": 11.75,
+      "heading_2_pt": 11.5,
+      "body_pt": 11.5,
+      "line_spacing_percent": 126,
+      "body_alignment": "START",
+      "heading_style": "bold_upright",
+      "metadata_style": "bold_label_upright",
+      "status_style": "upright_small",
+      "italic_default": false,
+      "italics_require_explicit_reason": true,
+      "source_format_override_if_verified": true
     }
   },
   "palette": {
@@ -106,5 +129,19 @@
     "mandatory_long_content_qa_before_production": true,
     "direct_google_native_editing": true,
     "no_office_intermediate": true
+  },
+  "italic_policy": {
+    "authority": "EYD_V_WITH_OPTIONAL_VERIFIED_STYLE_EXCEPTION",
+    "always_italic_subheadings": false,
+    "never_italic_for_decoration": true,
+    "approved_reasons": [
+      "EYD_FOREIGN_OR_REGIONAL",
+      "EYD_WORK_TITLE",
+      "EYD_LINGUISTIC_EMPHASIS",
+      "APA_STYLE_STATISTICAL_SYMBOL",
+      "VERIFIED_OFFICIAL_FORMAT"
+    ],
+    "require_checked_source_ref": true,
+    "automatic_detection_is_not_a_proof": true
   }
 }

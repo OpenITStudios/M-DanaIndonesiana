@@ -30,7 +30,9 @@ Profil menentukan **blok yang boleh digunakan**, bukan memaksa semua bagian sela
 
 **Master aktif yang diusulkan:** `di.report.indicator@1.1.0`. Sembilan placeholder tetap sama. Salinan sintetis pendek/normal/panjang telah diuji menggunakan Google Docs dan render PDF; untuk isi normal, page break disesuaikan pada output agar konten tersebar lebih baik. Master v1.0.0 disimpan sebagai riwayat, bukan pilihan rutin. QA tiap output nyata tetap wajib.
 
-**Alternatif B — Formal Indonesia (review):** Master `di.report.indicator@1.2.0` memakai [profil visual tersendiri](FORMAL-REPORT-STYLE.md); sederhana dan hitam-putih tanpa tabel metadata dekoratif. Saat ini tetap kandidat `NEEDS_REVIEW`, bukan pengganti aktif v1.1.0.
+**Alternatif B — Formal Indonesia (aktif untuk internal):** Master `di.report.indicator@1.2.0` memakai [profil visual tersendiri](FORMAL-REPORT-STYLE.md); sederhana dan hitam-putih tanpa tabel metadata dekoratif. Statusnya `READY` INTERNAL setelah syarat italic EYD V dilaksanakan. v1.1.0 dan v1.0.0 merupakan arsip `RETIRED`.
+
+**Pembaruan status:** alternatif formal `di.report.indicator@1.2.0` telah disetujui sebagai master **INTERNAL READY** setelah perbaikan huruf miring dan pemeriksaan font, sementara versi 1.1.0/1.0.0 menjadi riwayat. Struktur ilmiah dan aturan ejaan mengikuti [pedoman khusus](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md); isi laporan dan format resmi masih perlu review tiap pekerjaan.
 
 ## 3. C — Finance / RAB / cash (Google Sheets)
 

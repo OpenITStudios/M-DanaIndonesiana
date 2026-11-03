@@ -26,7 +26,11 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 
 ## Kandidat desain laporan formal (review)
 
-[Profil Laporan Kerja Formal](FORMAL-REPORT-STYLE.md) mendefinisikan v1.2.0: Times New Roman monokrom, judul tengah, metadata tanpa tabel, empat bagian naratif. [QA sintetis v1.2.0](../../docs/qa/master01-human-layout-2026-11-03.md) mencakup isi pendek/normal/panjang dan contoh fiktif yang lebih natural. **v1.2.0 = NEEDS_REVIEW**, sedangkan **v1.1.0 tetap READY** di Registry privat sampai disetujui pengguna.
+[Profil Laporan Kerja Formal](FORMAL-REPORT-STYLE.md) mendefinisikan v1.2.0: Times New Roman monokrom, judul tengah, metadata tanpa tabel, empat bagian naratif. [QA sintetis v1.2.0](../../docs/qa/master01-human-layout-2026-11-03.md) mencakup isi pendek/normal/panjang dan contoh fiktif yang lebih natural. **Status terkini:** v1.2.0 `READY` INTERNAL, v1.1.0/v1.0.0 `RETIRED` setelah persetujuan dan QA tipografi.
+
+## Master 01 aktif dan aturan redaksi
+
+`di.report.indicator@1.2.0` kini **READY** untuk laporan internal setelah persetujuan desain dan pemeriksaan italic; versi 1.1 dan 1.0 disimpan sebagai riwayat. Seluruh subjudul, metadata dan status menggunakan teks tegak; untuk pengecualian italic, baca [Pedoman Laporan Ilmiah](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md). Pemeriksa [italic](../../tools/google-native-typography-qa.mjs) menandai run yang belum beralasan, tetapi bukan pengganti pemeriksaan bahasa asli. [Bukti QA lanjutan](../../docs/qa/master01-scholarly-typography-2026-11-03.md).
 
 ## Master maintenance
 

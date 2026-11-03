@@ -53,7 +53,9 @@ Pengguna memakai **Google Drive saja**: Google Docs untuk dokumen, Google Sheets
 
 Untuk seluruh master Google-native, gunakan [Standar Mutu Dokumen Profesional](templates/google-native/QUALITY-STANDARD.md), [profil struktur berdasarkan jenis dokumen](templates/google-native/DOCUMENT-PROFILES.md), dan [token visual internal](templates/google-native/design-tokens.json). [Riset primer dan batas penerapan](docs/research/google-native-document-design-2026.md) mencakup ISO plain language, GOV.UK, W3C, Section508, Google Workspace API, EYD V dan regulasi tata naskah Indonesia. **Default desain bukan format resmi atau approval.** Master pertama v1.1.0 sudah diuji dengan isi pendek, normal dan panjang memakai sumber sintetis, tetapi **output proyek nyata dan kepatuhan format resmi tetap belum diuji**. [Bukti QA](docs/qa/master01-fill-layout-2026-11-03.md).
 
-**Alternatif laporan formal v1.2.0:** [profil desain](templates/google-native/FORMAL-REPORT-STYLE.md) dan [uji render](docs/qa/master01-human-layout-2026-11-03.md) tersedia setelah masukan pengguna mengenai kesan desain AI. Kandidat masih `NEEDS_REVIEW` di Drive privat, bukan master aktif.
+**Alternatif laporan formal v1.2.0:** [profil desain](templates/google-native/FORMAL-REPORT-STYLE.md) dan [uji render](docs/qa/master01-human-layout-2026-11-03.md) tersedia setelah masukan pengguna mengenai kesan desain AI. Setelah persetujuan desain dan koreksi italic, v1.2.0 menjadi `READY` **INTERNAL**; v1.1.0/v1.0.0 kini `RETIRED` (riwayat).
+
+**Gaya ilmiah Master 01:** setelah penyempurnaan italic, master `di.report.indicator@1.2.0` sudah `READY` untuk **internal**. Subjudul dan status tegak, Times New Roman konsisten; istilah asing atau judul karya dimiringkan hanya berdasarkan aturan [EYD V dan pedoman editorial](kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md). [Bukti QA](docs/qa/master01-scholarly-typography-2026-11-03.md) menyatakan pengujian dengan data sintetis, bukan kepatuhan format resmi atau validasi laporan nyata.
 
 ## Mulai bekerja
 

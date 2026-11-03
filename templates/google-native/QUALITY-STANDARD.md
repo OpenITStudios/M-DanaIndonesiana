@@ -175,6 +175,10 @@ Jumlah di atas **desain kasus uji internal**, bukan ketentuan ISO/Google. QA har
 
 **Hard block**: sumber/versi resmi salah, bukti atau nominal dikarang, formula inti rusak, placeholder tertinggal di hasil, data RESTRICTED bocor, tab/file master ditimpa, atau klaim external-approval tanpa bukti. Untuk soal estetika minor, kembalikan `NEEDS_DESIGN_REVIEW`; jangan menyembunyikan isu hanya agar PASS.
 
+### Aturan italic yang eksplisit
+
+Laporan internal yang menyerupai karya tulis ilmiah menggunakan [Pedoman Redaksi Laporan Ilmiah](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md). **Subjudul/label/status harus tegak**; heading disusun dengan `HEADING_1`/`HEADING_2` bold. Huruf miring hanya berlaku pada istilah asing/daerah yang belum diserap, judul buku/karya tertentu, atau penegasan unsur bahasa ketika benar-benar dibutuhkan menurut [EYD V](https://ejaan.kemendikdasmen.go.id/eyd/penggunaan-huruf/huruf-miring/). Nama aplikasi/merek asing dan serapan baku tidak otomatis italic. Untuk laporan, defaultnya 0 italic jika tidak ada istilah/karya yang memerlukan. Gunakan [pemeriksa italic](../../tools/google-native-typography-qa.mjs) sebagai preflight, disertai pembacaan PDF untuk memastikan font tidak berubah karena named style.
+
 ## 9. Kaidah redaksi anti-AI-slop
 
 - **Berbasis tindakan dan bukti.** Hindari kata semacam "sangat strategis", "memberikan dampak luar biasa", "optimal", "inovatif", "berjalan lancar" bila hanya untuk mengisi ruang.

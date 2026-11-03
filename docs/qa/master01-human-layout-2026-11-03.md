@@ -46,3 +46,7 @@ Contoh uji stres lama masih menggunakan prosa sintetis berulang; itu berguna unt
 **Tindak lanjut yang penting:** model generator perlu sanitasi paragraf kosong, pemeriksaan isi lengkap setelah replace, perhitungan geometri sebagai *sinyal* dan page break berbasis section **hanya di salinan**. Tidak boleh menyatakan "human-written" berdasarkan font saja: redaksi tetap memerlukan sumber yang benar dan suntingan editorial.
 
 **Belum diperiksa:** dokumen laporan asli, kewajiban format resmi dan lampiran program, keabsahan evidence, output dengan gambar/table yang kompleks, screen reader/PDF/UA, dan otomasi tanpa supervisi.
+
+## Addendum setelah persetujuan gaya dan koreksi italic
+
+Gaya formal v1.2.0 diterima pengguna dengan syarat tidak memakai italic dekoratif. Status master di Registry privat telah dinaikkan dari `NEEDS_REVIEW` menjadi `READY` **INTERNAL** setelah memperbaiki 3 subjudul dan status menjadi tegak serta memeriksa PDF. Versi 1.1.0 kemudian `RETIRED`. Catatan versi awal di atas tetap merupakan riwayat saat kandidat masih review; hasil pemeriksaan terbaru berada di [QA tipografi](master01-scholarly-typography-2026-11-03.md).

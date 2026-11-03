@@ -16,6 +16,10 @@
 
 Tidak semua tulisan memerlukan judul "Latar Belakang", "Metode", dan "Kesimpulan". Pakai susunan yang benar-benar dituntut format resmi atau membantu pembaca.
 
+## Laporan ilmiah dan aturan italic
+
+Untuk laporan yang perlu tampak seperti karya tulis ilmiah, terapkan [Pedoman Redaksi Laporan Ilmiah](ACADEMIC-REPORT-STYLE.md) sebagai aturan domain. Bentuk tulisan ditentukan tujuan dan bukti kegiatan: latar/tujuan yang benar-benar relevan, proses/metode yang dilakukan, hasil terverifikasi, analisis batas/kendala, tindak lanjut, dan sumber. **Tidak otomatis menyerupai artikel penelitian** atau menambahkan daftar pustaka jika tidak ada rujukan teoretis yang dipakai. Heading/label/status adalah tebal-tegak, bukan italic; istilah asing/judul karya memakai italic hanya bila layak menurut EYD V atau format sitasi yang diberlakukan. Redaksi ilmiah harus objektif dan runtut, tidak harus seluruhnya pasif atau penuh istilah teknis.
+
 ## Metode satu sumber fakta
 
 1. **Ambil tujuan naskah.** Tentukan audiens, konteks, urutan pembahasan, tingkat formalitas, dan format yang diwajibkan.

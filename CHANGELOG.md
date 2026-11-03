@@ -191,3 +191,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menguji 3 salinan sintetis dan 1 contoh narasi fiktif yang disunting; QA hasil render menemukan page break perlu diterapkan pada output normal/panjang saja. Contoh fiktif selesai satu halaman A4.
 - Kandidat `NEEDS_REVIEW` pada Registry privat; v1.1.0 tetap `READY`, v1.0.0 `RETIRED`.
 - Tidak ada ID Google Drive privat, data proyek asli, atau bukti palsu di GitHub publik. Tidak ada klaim kepatuhan format resmi ataupun executor end-to-end otomatis.
+
+## 1.8.7-dev — 2026-11-03 (scholarly report typography, EYD italic)
+
+- Menetapkan pedoman redaksi ilmiah dan huruf miring bersumber EYD V, membedakan laporan kegiatan dari artikel ilmiah dan sitasi APA 7 yang hanya diterapkan bila relevan/diwajibkan.
+- Master Google Docs `di.report.indicator@1.2.0` diperbaiki: 3 subjudul menjadi `HEADING_2` tebal-tegak, status draf tegak, dan font Times New Roman diterapkan eksplisit hingga text run tanpa pewarisan Arial yang terlihat.
+- Satu salinan laporan ilmiah fiktif 1 halaman dan satu salinan konten panjang 3 halaman telah diisi serta diperiksa render PDF; sembilan placeholder terganti, tanpa italic dekoratif. Page break untuk konten panjang hanya pada salinan.
+- Membuat `tools/google-native-typography-qa.mjs` dan lima tes sintetis yang lulus dalam V8 test harness; Node runner belum dijalankan.
+- Registry privat kini memilih v1.2.0 = `READY` INTERNAL, v1.1.0/v1.0.0 = `RETIRED`; metadata Drive telah cocok saat diperiksa. Belum ada QA substantif laporan proyek, PDF/UA, atau persetujuan format resmi.

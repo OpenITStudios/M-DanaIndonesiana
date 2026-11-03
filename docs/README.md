@@ -56,6 +56,9 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [Profil desain laporan formal](../templates/google-native/FORMAL-REPORT-STYLE.md) dan [uji render Master 01 v1.2.0](qa/master01-human-layout-2026-11-03.md): alternatif lebih sederhana yang masih menunggu review pengguna.
 
+- [Pedoman penulisan laporan ilmiah & italic](../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md): ketentuan EYD V, struktur argumentasi, format sitasi bersyarat, dan review sumber.
+- [Bukti QA tipografi Master 01 v1.2.0](qa/master01-scholarly-typography-2026-11-03.md): pemeriksaan Google Docs/PDF dengan contoh sintetis, font dan italic.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

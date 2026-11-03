@@ -63,7 +63,12 @@
 - [ ] Terapkan profil pada Master 02 satu per satu dengan sumber dan hasil render yang benar-benar diperiksa; jangan melakukan batch generator produksi yang belum tervalidasi.
 
 - [x] Membuat master kandidat v1.2.0 untuk layout laporan formal Indonesia (Times New Roman, monokrom, identitas tiga baris); menguji salinan sintetis pendek/normal/panjang dan contoh narasi fiktif, memeriksa PDF dan mengatur page break pada salinan.
-- [ ] Pengguna memeriksa kandidat desain v1.2.0. Sampai ada keputusan, status `NEEDS_REVIEW` dan v1.1.0 tetap master `READY`.
+- [x] Pengguna menyetujui layout v1.2.0 dengan syarat italic sesuai kaidah; syarat tersebut diperbaiki dan diperiksa, sehingga v1.2.0 `READY` INTERNAL dan v1.1.0 `RETIRED`.
+
+- [x] Menyusun dan menerapkan aturan italic EYD V dengan pengecualian gaya selingkung terverifikasi; subjudul/status tegak dan heading native Google Docs. [Pedoman ilmiah](../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md).
+- [x] Meninjau master v1.2.0, memperbaiki Arial fallback text runs, dan memeriksa satu contoh ilmiah sintetis (A4 1 halaman) serta long-content (3 halaman dengan page break pada copy saja); [QA](../docs/qa/master01-scholarly-typography-2026-11-03.md).
+- [x] Mengaktifkan `di.report.indicator@1.2.0` sebagai `READY` INTERNAL dalam Registry privat, mengarsipkan v1.1.0 dan v1.0.0 sebagai `RETIRED`.
+- [ ] Validasi pengisian laporan proyek nyata beserta sumber/format resmi, dan lakukan audit aksesibilitas jika diperlukan.
 
 ## Prioritas desain berikutnya
 
