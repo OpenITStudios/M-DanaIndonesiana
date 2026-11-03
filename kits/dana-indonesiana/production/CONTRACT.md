@@ -39,3 +39,7 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Game bisa dibuka belum membuktikan QA stabilitas multiuser; status hanya pada skenario yang sudah diuji.
+
+## Rute rinci v0.8
+
+[Workflow](WORKFLOW.md) untuk kerja; [Indicator Mapping](INDICATOR-MAPPING.md) untuk indikator; [Curatorial Records](CURATORIAL-RECORDS.md) untuk sumber konten; [Digital Deliverables](DIGITAL-DELIVERABLES.md) untuk handoff; [Release & Archive](RELEASE-ARCHIVE.md) untuk preservasi. Semua milik satu skill tanpa QA yang dijalankan saat ini.

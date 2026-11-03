@@ -60,3 +60,9 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menyediakan empat template kosong untuk bukti, pengadaan, pembanding, dan penerimaan hasil.
 - Membedakan aturan LPDP dan rujukan metode LKPP berdasarkan ruang lingkup serta keberlakuan.
 - Tidak menjalankan tes, tidak menambah fitur runtime, tidak mengunggah data proyek rahasia.
+
+## 0.8.0 — 2026-11-03
+
+- Creative Production memperoleh lima kontrak domain, empat template dan keputusan desain.
+- Tidak menambah skill/agen, database museum, atau integrasi eksternal.
+- Data privat tidak disalin, tes tidak dijalankan.

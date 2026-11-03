@@ -80,3 +80,13 @@ Jangan menandai prosedur atau template sebagai PASS; pemeriksaan kualitas baru d
 - [x] Empat template kosong; tanpa data privat, vendor fiktif, atau pembuatan folder kosong.
 - [ ] Review kebutuhan automasi ketika pekerjaan nyata dan data berizin tersedia.
 - [ ] **Pengujian tetap ditunda sesuai instruksi pengguna.** Tidak ada klaim PASS/QA end-to-end pada tahap ini.
+
+## Creative Production v0.8 — belum diuji
+
+- [x] Work package dan tahap pekerjaan yang dapat ditelusuri.
+- [x] Pemisahan progress internal, indikator resmi dan realisasi uang.
+- [x] Metadata sumber kuratorial dan representasi digital.
+- [x] Handoff Minecraft, 3D, website dan media.
+- [x] Rilis dan arsip dengan lisensi/platform sebagai review.
+- [x] Empat template kosong.
+- [ ] QA dan penerapan pada proyek nyata ditunda sesuai instruksi pengguna.

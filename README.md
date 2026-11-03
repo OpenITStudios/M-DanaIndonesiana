@@ -80,3 +80,7 @@ Dokumen proyek rahasia tidak dimasukkan ke repo; pengujian sengaja ditunda pada 
 - Template kosong tersedia untuk [telaah bukti](templates/evidence/evidence-review.md), [permintaan pengadaan](templates/procurement/requirement-and-selection.md), [perbandingan harga](templates/procurement/price-comparison.md), dan [penerimaan hasil](templates/procurement/deliverable-acceptance.md).
 
 Tetap tujuh skill; procurement adalah **modul prosedural**, bukan agen kedelapan. Tidak ada tes/QA yang dijalankan pada fase pengembangan ini. Semua dokumen proyek privat tetap di luar Git.
+
+## Creative Production v0.8
+
+Terdapat lima kontrak produksi di [Production Workflow](kits/dana-indonesiana/production/WORKFLOW.md), mencakup indikator, kuratorial, serah-terima digital dan preservasi. Template kosong hanya digunakan saat diperlukan. **Tes dan QA ditunda.**
