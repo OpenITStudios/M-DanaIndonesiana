@@ -25,3 +25,7 @@ Setelah pemilik menjelaskan proyek atau memberikan dokumen sah, lakukan Project 
 - **planning/**: pengembangan sistem yang masih relevan, bukan daftar otomatis yang harus dieksekusi.
 
 Buka [README.md](README.md) untuk navigasi dan [AGENTS.md](AGENTS.md) untuk routing.
+
+## Skill system v0.2
+
+Skill tersedia di `.agents/skills/`, kontrak pada `kits/dana-indonesiana/`, rute di `docs/skills/README.md`. Detail kontrak dan data pribadi proyek tertentu tetap sengaja tidak dicatat di repo, meskipun telah diketahui dalam percakapan rahasia.

@@ -17,3 +17,10 @@ Item checklist di atas berarti **dokumen didesain**, bukan status CI atau implem
 4. Untuk setiap implementasi, definisikan metrik sukses dan proof yang bisa benar-benar dijalankan.
 
 Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otorisasi mengerjakan backlog tanpa perintah pengguna. Riwayat Git dan sumber aktif menjadi rujukan progres implementasi.
+
+## v0.2 — Skill design
+
+- [x] Tujuh skill dan kontrak domain dengan input/output/gates.
+- [x] Router, batas kerahasiaan, natural writing, contoh uji sintetis.
+- [ ] Uji perilaku pada dataset sintetis (belum dieksekusi).
+- [ ] Helper kalkulasi deterministik dan export LRA/arus kas bila diminta setelah validasi kebutuhan.

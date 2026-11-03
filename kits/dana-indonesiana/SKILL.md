@@ -1,7 +1,7 @@
 ---
 name: dana-indonesiana
-description: Router prosedur pengelolaan dokumen proyek pendanaan kebudayaan; non-executable pada Foundation v0.1.
-version: 0.1.0
+description: Router prosedur pengelolaan dokumen proyek pendanaan kebudayaan; panduan prosedural untuk program.
+version: 0.2.0
 ---
 
 # Dana Indonesiana Production Kit
@@ -43,3 +43,7 @@ Tulis hanya template, daftar dokumen yang dibutuhkan, atau rancangan alternatif 
 6. Tandai jelas **DRAFT / INTERNAL REVIEW / SUBMITTED / EXTERNALLY CONFIRMED** hanya bila kondisi terbukti.
 
 Jangan membuat schema dan registri paralel; isi spesialis finance, hukum, produksi, atau pelaporan diaktifkan sesuai kebutuhan nyata. Status mesin dan status penerimaan eksternal tidak boleh dicampur.
+
+## Skill yang tersedia
+
+Lihat [Skill Router](../../docs/skills/README.md) dan [Shared Operating Contract](OPERATING-CONTRACT.md). Gunakan satu skill primer, jangan melahirkan registry paralel; semua output tetap memiliki batas validasi yang jelas.

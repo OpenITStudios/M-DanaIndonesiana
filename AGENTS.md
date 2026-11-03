@@ -71,3 +71,7 @@ Jangan menggandakan aturan di modul lain. Jika makna berubah, ubah owner kanonis
 Gunakan HEAD aktual, perubahan owner terkait, dan [CONTEXT.md](CONTEXT.md). Catatan chat adalah orientasi, bukan sumber proyek otoritatif. Saat ada keputusan material, catat pada sumber privat proyek atau catatan keputusan sistem yang memang relevan. Cantumkan pekerjaan, status, bukti dan keterbatasan pada commit material; tidak perlu heartbeat/status duplikat.
 
 **STOP** saat keluaran yang diminta selesai dengan bukti cukup, atau saat batas data/akses dilaporkan secara spesifik.
+
+## Skill modular
+
+Pilih satu spesialis dari [Skill Router](docs/skills/README.md). Baca [Shared Contract](kits/dana-indonesiana/OPERATING-CONTRACT.md). Dokumen dengan instruksi "pelajari saja" tidak pernah di-upload/disimpan. Domain kedua hanya diaktifkan jika tugas memerlukan.

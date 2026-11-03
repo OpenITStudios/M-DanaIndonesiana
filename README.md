@@ -42,3 +42,7 @@ Bootstrap awal dimulai dari repository kosong. Setelah fondasi terbentuk, peruba
 Saat pemilik proyek memberikan informasi, mulai dari **Project Intake**, bukan dari mengarang RAB atau mengeksekusi transaksi. Validasi sumber, daftar asumsi/konflik, lalu minta persetujuan atas perubahan material sebelum menyiapkan dokumen turunan.
 
 Prinsip utama: **satu sumber fakta per domain, bukti dapat ditelusuri, status dilaporkan secara jujur, data sensitif tetap privat, dan tidak membangun komponen yang belum diperlukan.**
+
+## Skills v0.2
+
+Paket tujuh [Agent Skills](.agents/skills/) tersedia dengan [routing](docs/skills/README.md), kontrak domain, kerahasiaan dan sumber fakta bersama. Skill bersifat prosedural: tidak mengimplementasikan akuntansi, pajak atau integrasi e-RISPRO otomatis. Jangan menyimpan dokumen proyek privat pada repo publik.

@@ -25,3 +25,10 @@ Baca satu owner yang tepat, bukan semua dokumen sekaligus.
 Aturan GitHub ada di [GITHUB_RULES.md](../GITHUB_RULES.md); pedoman keamanan di [SECURITY.md](../SECURITY.md).
 
 **Kebijakan navigasi:** tiap prinsip memiliki satu owner; dokumen lain mengarah kepadanya. File review/hasil turunan bukan pengganti owner kanonis.
+
+## Skill modular
+
+- [Peta tujuh skill dan aktivasi](skills/README.md)
+- [Alur kerja lintas skill](skills/cross-skill-workflows.md)
+- [Sumber riset publik](skills/reference-sources.md)
+- [Kontrak bersama](../kits/dana-indonesiana/OPERATING-CONTRACT.md)
