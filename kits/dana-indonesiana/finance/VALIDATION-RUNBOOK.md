@@ -1,4 +1,4 @@
-# Finance Validation Runbook v0.3
+# Finance Validation Runbook v0.5
 
 Status: **prototype deterministik JSON**, bukan aplikasi akuntansi, kalkulator pajak atau pengajuan e-RISPRO. Tidak boleh memakai berkas yang pengguna minta "pelajari saja" sebagai input tersimpan atau fixture.
 
@@ -19,12 +19,16 @@ Keluaran berisi `lra`, `cash_flow`, `totals`, `issues`, dan keterbatasan. Invoic
 
 - `rab_status=APPROVED` dan referensinya merupakan **klaim input**, bukan pembuktian otomatis otentisitas dokumen atau status PMO.
 - Entri bukti ID adalah pointer, bukan verifikasi isi dokumen. Perhitungan kas belum memverifikasi rekening koran atau dokumen asli.
-- Tidak ada ekspor Excel/CSV. Pedoman administrasi 2025 meminta Laporan Realisasi Anggaran pada Sheet 1 dan Laporan Arus Kas pada Sheet 2, lihat [pedoman resmi](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf). Hasil JSON **bukan** berkas unggah resmi.
+- Ekspor XLSX dua sheet tersedia sebagai DRAFT prototype di [Excel Output](EXCEL-OUTPUT.md). Pedoman 2025 meminta LRA pada Sheet 1 dan Arus Kas pada Sheet 2, tetapi hasil ini **bukan** berkas yang otomatis diterima e-RISPRO.
 - Tidak ada penentuan pajak, mutasi bank atau pengajuan otomatis.
-- Saat eksportir spreadsheet dibuat, lakukan uji risiko formula injection menurut [OWASP](https://owasp.github.io/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Injection/21-CSV_Injection). Tanpa Excel writer, jangan klaim telah menguji keamanan file Excel.
+- Ekspor spreadsheet sudah tersedia, namun cakupan uji formula injection masih sintetis. Lihat [OWASP](https://owasp.github.io/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Injection/21-CSV_Injection).
 
 Hanya data sintetis boleh berada di Git publik. Hindari hasil aktual pada stdout CI/log publik. Tinjauan manusia dibutuhkan sebelum memakai laporan apa pun.
 
 ## Export dua lembar (v0.4)
 
 Lihat [Excel Output](EXCEL-OUTPUT.md). Jalankan tes Python dengan artifact_tool pada fixture sintetis. Excel hanyalah proyeksi dari JSON terverifikasi secara mekanis dan tetap perlu validasi administrasi dan bukti asli.
+
+## Status invoice
+
+`invoiced_period` menunjukkan jumlah nilai invoice pada periode, **bukan saldo invoice belum dilunasi**. Menentukan outstanding memerlukan pencocokan tagihan, pembayaran dan bukti.

@@ -36,3 +36,9 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
  - Tampilkan selisih perkalian rincian dan pagu sebagai temuan, bukan koreksi diam-diam.
  - Bawa metadata transaksi ke Arus Kas dan buat handoff berlabel DRAFT untuk administrasi dan penulisan.
  - Tambahkan regresi sintetis untuk metadata serta batas klaim.
+
+## 0.5.1 — 2026-11-03
+
+- Koreksi arti nilai invoice: tercatat tidak berarti belum dilunasi.
+- Bump schema ke `v0.5-json` agar perubahan semantik eksplisit.
+- Perbarui dokumentasi status dan konvensi data privat.

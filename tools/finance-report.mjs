@@ -49,14 +49,14 @@ export function buildFinanceReport(input){
  for(const p of plans){S(p.stage,"funding.stage");planned+=M(p.planned_amount,"funding.planned_amount");}
  if(plans.length&&planned!==approved)issue("FUNDING_PLAN_MISMATCH","WARNING",rab_ref);
  const records=A(input.transactions,"transactions"),ids=new Set(),fingerprints=new Set(),cash=[];
- let received=0n,paid=0n,unpaidInvoice=0n,unmapped=0n;
+ let received=0n,paid=0n,invoiced=0n,unmapped=0n;
  for(const [index,t]of records.entries()){
    const id=S(t.id,"txn.id");if(ids.has(id))die("DUPLICATE_TRANSACTION_ID:"+id);ids.add(id);
    const date=D(t.date,"txn.date");if(date<start||date>end)die("TRANSACTION_OUTSIDE_PERIOD:"+id);
    const kind=t.kind;if(!["RECEIPT","PAYMENT","INVOICE"].includes(kind))die("INVALID_KIND:"+id);
    const value=M(t.amount,"txn.amount",true),proof=A(t.evidence_refs??[],"txn.evidence_refs");
    if(proof.some(p=>typeof p!=="string"||!p.trim()))die("INVALID_EVIDENCE_REF:"+id);
-   if(kind==="INVOICE"){unpaidInvoice+=value;continue;}
+   if(kind==="INVOICE"){invoiced+=value;continue;}
    if(!proof.length)issue("MISSING_PAYMENT_EVIDENCE","WARNING",id);
    const optionalCashText=(v,key)=>{if(v==null)return null;if(typeof v!=="string"||v.length>2048||/[\u0000-\u001f]/.test(v))die("INVALID_CASH_TEXT:"+key);return v.trim()||null;};
    cash.push({id,date,kind,value,index,evidence_refs:proof,
@@ -119,5 +119,5 @@ export function buildFinanceReport(input){
  const variance=observed===null||running===null?null:running-observed;
  if(variance!==null&&variance!==0n)issue("CASH_MISMATCH","ERROR","cash_closing_observed");
  const lraPaid=[...spend.values()].reduce((x,y)=>x+y,0n);
- return {schema_version:"v0.3-json",status:"DRAFT_CALCULATED_NOT_APPROVED",project_id,rab_ref,rab_status:status,currency:"IDR",period:{start,end},totals:{approved_budget:approved.toString(),planned_funding:plans.length?planned.toString():null,cash_received:received.toString(),cash_paid:paid.toString(),mapped_lra_paid:lraPaid.toString(),unmapped_paid:unmapped.toString(),invoices_not_paid:unpaidInvoice.toString(),opening_cash:opening===null?null:opening.toString(),calculated_closing_cash:running===null?null:running.toString(),observed_closing_cash:observed===null?null:observed.toString(),cash_difference:variance===null?null:variance.toString()},lra,cash_flow,issues,limitations:["Input documents and approval evidence are not authenticated.","Invoice is not cash; planned installment is not receipt.","Unknown previous realization and opening balances remain null.","Not an official Excel e-RISPRO report, tax computation, or external approval."]};
+ return {schema_version:"v0.5-json",status:"DRAFT_CALCULATED_NOT_APPROVED",project_id,rab_ref,rab_status:status,currency:"IDR",period:{start,end},totals:{approved_budget:approved.toString(),planned_funding:plans.length?planned.toString():null,cash_received:received.toString(),cash_paid:paid.toString(),mapped_lra_paid:lraPaid.toString(),unmapped_paid:unmapped.toString(),invoiced_period:invoiced.toString(),opening_cash:opening===null?null:opening.toString(),calculated_closing_cash:running===null?null:running.toString(),observed_closing_cash:observed===null?null:observed.toString(),cash_difference:variance===null?null:variance.toString()},lra,cash_flow,issues,limitations:["Input documents and approval evidence are not authenticated.","Invoice is not cash; payment status of invoices cannot be determined without matching transactions; planned installment is not receipt.","Unknown previous realization and opening balances remain null.","Not an official Excel e-RISPRO report, tax computation, or external approval."]};
 }

@@ -47,3 +47,5 @@ Angka kalkulator Finance v0.3 hanya boleh dijadikan draf yang masih perlu pemeri
  ## Finance narrative handoff v0.5
 
  Uraian laporan keuangan harus menggunakan klaim berlabel pada `finance_handoff_v0.5`, tanpa menghapus label `PLANNED_NOT_RECEIVED` atau `NOT_CASH_PAID`. Penulisan natural tidak berarti menghilangkan masalah atau menggunakan bahasa pencairan yang sudah pasti sebelum ada bukti.
+
+**Batas invoice:** jumlah invoice yang tercatat tidak membuktikan tagihan belum dibayar ataupun telah lunas. Gunakan redaksi netral sampai ada rekonsiliasi.

@@ -48,7 +48,7 @@ def date_cell(value):
     return date.fromisoformat(value)
 
 def verify(report):
-    if not isinstance(report, dict) or report.get("schema_version") != "v0.3-json":
+    if not isinstance(report, dict) or report.get("schema_version") != "v0.5-json":
         raise ValueError("UNSUPPORTED_REPORT_SCHEMA")
     if report.get("status") != "DRAFT_CALCULATED_NOT_APPROVED" or report.get("currency") != "IDR":
         raise ValueError("DRAFT_IDR_ONLY")

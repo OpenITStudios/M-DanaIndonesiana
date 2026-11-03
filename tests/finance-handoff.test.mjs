@@ -14,7 +14,7 @@ test("handoff keeps all financial claims marked unverified",()=>{
 });
 test("invoice not treated as paid in writing handoff",()=>{
  const r=buildFinanceHandoff(buildFinanceReport(clone()));
- assert.equal(r.writing.facts.find(x=>x.key==="invoices_not_paid").value,"300000");
+ assert.equal(r.writing.facts.find(x=>x.key==="invoiced_period").value,"300000");
  assert.ok(r.writing.forbidden_claims.some(x=>x.includes("invoice")));
 });
 test("cash variance becomes blocking issue",()=>{
@@ -29,5 +29,12 @@ test("unknown cash opening not assumed reconciled",()=>{
  assert.ok(r.unknowns.some(x=>x.includes("OPENING_BALANCE_UNKNOWN")));
 });
 test("handoff rejects unapproved document type",()=>{
- assert.throws(()=>buildFinanceHandoff({status:"EXTERNAL_CONFIRMED",schema_version:"v0.3-json"}),/UNSUPPORTED_FINANCE_REPORT/);
+ assert.throws(()=>buildFinanceHandoff({status:"EXTERNAL_CONFIRMED",schema_version:"v0.5-json"}),/UNSUPPORTED_FINANCE_REPORT/);
+});
+
+test("handoff does not assert unpaid balance from invoice records",()=>{
+ const h=buildFinanceHandoff(buildFinanceReport(clone()));
+ const item=h.writing.facts.find(x=>x.key==="invoiced_period");
+ assert.equal(item.classification,"INVOICE_PAYMENT_STATUS_UNDETERMINED");
+ assert.equal(h.writing.facts.some(x=>x.key==="outstanding_invoice_balance"),false);
 });

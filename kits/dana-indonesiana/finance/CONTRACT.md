@@ -51,3 +51,7 @@ Untuk menghasilkan dua lembar Excel draf dari output JSON Finance v0.3, gunakan 
  ## Metadata RAB v0.5
 
  Kolom rincian hanya boleh diisi dari data RAB yang memang tersedia dan memiliki status/versi jelas. Perbedaan `frekuensi × kuantitas × harga` terhadap nominal pos harus menjadi temuan, bukan koreksi otomatis. Gunakan [Excel Output](EXCEL-OUTPUT.md) untuk jalur penulisan terpisah.
+
+## Perbedaan invoice dan hutang
+
+`invoiced_period` tidak boleh diartikan sebagai saldo belum dibayar. Tanpa relasi invoice–payment yang didukung bukti, status pelunasannya UNKNOWN.

@@ -14,7 +14,7 @@ module=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
 BASE = {
-    "schema_version":"v0.3-json","status":"DRAFT_CALCULATED_NOT_APPROVED",
+    "schema_version":"v0.5-json","status":"DRAFT_CALCULATED_NOT_APPROVED",
     "project_id":"SYNTH-001","rab_ref":"SYN-RAB-001","rab_status":"APPROVED",
     "currency":"IDR","period":{"start":"2026-01-01","end":"2026-01-31"},
     "totals":{"approved_budget":"2500000","cash_received":"1250000","cash_paid":"450000",

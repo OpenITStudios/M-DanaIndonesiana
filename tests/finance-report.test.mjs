@@ -5,7 +5,7 @@ import {buildFinanceReport} from "../tools/finance-report.mjs";
 const fixture=JSON.parse(readFileSync(new URL("./fixtures/finance-synthetic.json",import.meta.url),"utf8"));
 const clone=()=>structuredClone(fixture),has=(r,k)=>r.issues.some(x=>x.code===k);
 test("cash and LRA are distinct",()=>{const r=buildFinanceReport(clone());assert.equal(r.totals.approved_budget,"2500000");assert.equal(r.totals.cash_received,"1250000");assert.equal(r.totals.cash_paid,"450000");assert.equal(r.totals.cash_difference,"0");assert.equal(r.lra[0].remaining,"1050000");assert.equal(r.status,"DRAFT_CALCULATED_NOT_APPROVED")});
-test("invoice is not cash",()=>{const r=buildFinanceReport(clone());assert.equal(r.totals.invoices_not_paid,"300000");assert.equal(r.lra[1].realized_period,"0")});
+test("invoice is not cash",()=>{const r=buildFinanceReport(clone());assert.equal(r.totals.invoiced_period,"300000");assert.equal(r.lra[1].realized_period,"0")});
 test("planned installment is not received",()=>{const x=clone();x.transactions=x.transactions.filter(t=>t.kind!=="RECEIPT");assert.equal(buildFinanceReport(x).totals.cash_received,"0")});
 test("unknown opening balance stays null",()=>{const x=clone();delete x.cash_opening;assert.equal(buildFinanceReport(x).totals.calculated_closing_cash,null)});
 test("unknown prior does not become zero",()=>{const x=clone();delete x.budget_lines[0].prior_realized;assert.equal(buildFinanceReport(x).lra[0].remaining,null)});
@@ -38,4 +38,12 @@ test("cash memo and voucher are retained, not invented",()=>{
 });
 test("invalid RAB metadata rejects negative factors",()=>{
  const x=clone();x.budget_lines[0].details={quantity:"-1"};assert.throws(()=>buildFinanceReport(x),/INVALID_IDR/);
+});
+
+test("invoice total is not an unpaid liability",()=>{
+ const x=clone();x.transactions.push({id:"T04",date:"2026-01-10",kind:"PAYMENT",amount:"300000",budget_code:"A02",evidence_refs:["SYN-OUT-04"]});
+ const r=buildFinanceReport(x);
+ assert.equal(r.totals.invoiced_period,"300000");
+ assert.equal(r.totals.cash_paid,"750000");
+ assert.equal("invoices_not_paid" in r.totals,false);
 });

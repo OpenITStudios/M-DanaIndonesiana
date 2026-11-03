@@ -49,3 +49,10 @@ Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otoris
  - [x] Handoff JSON finance → administration/writing mempertahankan status DRAFT.
  - [ ] Uji pada Node dan artifact_tool dari checkout hasil commit; pemeriksaan V8 terpisah tidak menggantikan kedua runtime tersebut.
  - [ ] Uji penerimaan manusia atas layout Excel dan kualitas naskah laporan sintetis.
+
+## v0.5.1 Semantic Audit
+
+- [x] Hapus inferensi invoice belum dibayar tanpa rekonsiliasi.
+- [x] Naikkan kontrak laporan JSON ke `v0.5-json` dan selaraskan eksportir, handoff, serta pengujian.
+- [x] Perbarui status root yang sebelumnya tertinggal pada Foundation v0.1.
+- [ ] Jalankan Node dan Python artifact_tool pada checkout branch `develop` dan pemeriksaan visual output.

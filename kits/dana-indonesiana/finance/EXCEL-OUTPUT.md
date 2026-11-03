@@ -1,10 +1,10 @@
-# Finance Excel Export v0.4
+# Finance Excel Export v0.5
 
 Status: **DRAFT prototype**. Hanya data JSON yang diizinkan pengguna. JANGAN gunakan dokumen yang ditandai "pelajari saja" sebagai input atau fixture tersimpan. Output harus menuju lokasi privat yang dipilih secara eksplisit; output dilarang di-commit ke GitHub publik.
 
 ## Rute dan sumber
 
-Input: hasil `node tools/run-finance-report.mjs < input.json` dari kalkulator v0.3.
+Input: hasil `node tools/run-finance-report.mjs < input.json` dari kalkulator v0.5.
 Output: file XLSX dua sheet: (1) `Realisasi RAB`, (2) `Arus Kas`. Judul kolom mengacu pada lampiran Pedoman Administrasi 2025 dan [contoh format LPDP](https://erispro-indonesiana.kemenkeu.go.id/information-corner). **Ini bukan salinan/template resmi dan belum otomatis siap unggah.** Tidak ada penggunaan logo pemerintah, nama proyek, atau contoh transaksi dari template.
 
 Perintah lokal di runtime Python yang menyediakan `artifact_tool`:
@@ -19,7 +19,7 @@ Pastikan lingkungan mempunyai Node 22+ dan paket `artifact_tool`. Skrip Python m
 
 - Nominal rupiah dari JSON adalah string integer. Nilai lebih dari 15 digit ditolak untuk mencegah kehilangan presisi Excel.
 - Hasil awal dengan saldo kas/realisasi periode sebelumnya UNKNOWN akan tetap kosong, tidak berubah menjadi nol.
-- Rincian RAB tambahan yang tidak tersedia pada model v0.3 dibiarkan kosong. Jangan mengarang satuan, frekuensi, harga atau spesifikasi.
+- Rincian RAB tambahan yang tidak diberikan dalam input yang benar-benar ada dibiarkan kosong. Jangan mengarang satuan, frekuensi, harga atau spesifikasi.
 - Hasil formula `Sisa RAB` dihitung sebagai `Jumlah - Realisasi`; pengeluaran Rp0 tetap memberi sisa penuh.
 - Saldo arus kas direkonstruksi dengan formula dari saldo awal + penerimaan - pengeluaran.
 - Sebelum ekspor, skrip menolak jumlah yang tidak konsisten antara baris dan total, serta nomor transaksi/pos ganda.

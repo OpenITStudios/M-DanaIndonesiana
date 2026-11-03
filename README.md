@@ -1,13 +1,13 @@
 # M-DanaIndonesiana
 
-**Sistem pedoman dan pengelolaan proyek pendanaan kebudayaan (fondasi awal).**
+**Sistem pedoman modular dan prototipe pelaporan pendanaan kebudayaan.**
 
 Repository ini menyiapkan aturan kerja, struktur pengetahuan, prosedur produksi karya, pencatatan administrasi-keuangan, dan batas pembuktian untuk proyek Dana Indonesiana periode 2025–2026. **Belum ada data perjanjian, RAB, indikator, atau profil skema pendanaan proyek yang ditetapkan di repository ini.**
 
 ## Status saat ini
 
-- Tahap: **Foundation v0.1** — pedoman dan routing; belum ada aplikasi, integrasi e-RISPRO, kalkulator pajak, atau validator otomatis yang dapat diklaim berjalan.
-- Kategori pendanaan, kewajiban, tahun aturan yang berlaku, dan termin proyek: **BELUM DIVERIFIKASI** sampai dokumen proyek yang sah diperiksa.
+- Tahap: **Skill System v0.5.1 di `develop`** — tujuh skill, kalkulator JSON deterministik, dan ekspor XLSX draf dua lembar; belum ada aplikasi produksi, integrasi e-RISPRO, kalkulator pajak, atau pengesahan otomatis.
+- RAB, indikator, aturan keberlakuan, termin, dan identitas proyek **tidak dipersistenkan dalam repo publik**; pemeriksaan spesifik menggunakan sumber yang diizinkan.
 - Repository bersifat **publik**. Simpan kontrak, rekening, identitas, bukti bayar, dan data proyek nyata hanya di ruang privat yang disetujui; lihat [SECURITY.md](SECURITY.md).
 - Sistem ini **membantu persiapan, pemeriksaan, dan pelaporan internal**; bukan pemberi persetujuan resmi, konsultan hukum, atau pengganti e-RISPRO.
 
@@ -54,3 +54,7 @@ Kalkulator draft JSON dan uji sintetis tersedia di [Finance Validation Runbook](
 ## Finance Excel v0.4
 
 [Excel Output Contract](kits/dana-indonesiana/finance/EXCEL-OUTPUT.md) mendokumentasikan ekspor dua sheet LRA dan Arus Kas dari JSON draft (menggunakan Python artifact_tool). Hanya untuk data yang diizinkan, bukan integrasi bank/e-RISPRO ataupun laporan resmi yang sudah disahkan.
+
+## Koreksi invoice v0.5.1
+
+`invoiced_period` hanya total invoice dalam satu periode; tidak membuktikan invoice belum dilunasi. Status pelunasan membutuhkan pencocokan dengan pembayaran dan bukti yang sah.

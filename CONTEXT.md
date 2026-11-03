@@ -1,20 +1,20 @@
 # Context — M-DanaIndonesiana
 
 - **Repo:** OpenITStudios/M-DanaIndonesiana.
-- **Status produk:** Foundation v0.1; pedoman sistem saja, belum aplikasi produksi.
+- **Status produk:** Skill System v0.5.1 pada `develop`: pedoman modular, kalkulator JSON dan eksportir Excel prototipe; belum aplikasi produksi.
 - **Tujuan:** membantu proyek pendanaan kebudayaan 2025–2026 dalam pengelolaan karya, RAB, administrasi, transaksi, bukti, dan pelaporan.
 - **Branch:** develop (development), Local (reviewed integration), main (stable).
 - **Model:** reusable public system + data proyek sebenarnya di tempat privat terotorisasi.
 - **Sumber eksternal:** regulasi dan pedoman resmi dicatat sebagai kandidat sampai kontrak/kategori diverifikasi.
 - **Validasi:** pemeriksaan struktur/sumber tidak membuktikan transaksi nyata, persetujuan PMO, status e-RISPRO, atau kepatuhan final.
 
-## Masih UNKNOWN
+## Data proyek privat
 
-Nama dan identitas penerima manfaat, kategori program, isi perjanjian, tanggal berlaku, termin, RAB final, indikator, perubahan yang disetujui, serta format laporan spesifik proyek. Jangan mengisi dari memory atau pengalaman proyek sebelumnya.
+Nama penerima, identitas pribadi, perjanjian, RAB, indikator, termin, dan keputusan spesifik proyek tidak disimpan pada repo publik. Fakta dari sumber privat boleh dipakai untuk analisis dalam izin pengguna, namun tidak boleh dipersistenkan jika pengguna meminta hanya dipelajari.
 
 ## Fokus lanjutan
 
-Setelah pemilik menjelaskan proyek atau memberikan dokumen sah, lakukan Project Intake, matriks sumber berlaku, dan baseline yang dapat ditelusuri. Tidak membuat aplikasi/fitur finansial sebelum kebutuhan dan bentuk data teruji.
+Untuk pekerjaan proyek nyata, gunakan Project Intake dan sumber berizin; prototipe hanya memakai fixture sintetis di Git publik. Data dan ketentuan spesifik tetap harus diverifikasi sebelum digunakan sebagai dasar laporan.
 
 ## Pemisahan sumber
 
