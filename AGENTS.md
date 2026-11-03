@@ -85,3 +85,7 @@ Untuk pekerjaan paket pencairan atau laporan, mulai dari [Package Workflow](kits
 ## Bukti pengeluaran dan pengadaan (v0.7)
 
 Saat diminta memeriksa bukti, pilih [Claim-to-Evidence](kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) dan, bila jenis belanja relevan, [Expenditure Evidence](kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md). Untuk pemilihan dan penyerahan barang/jasa, gunakan [Procurement Contract](kits/dana-indonesiana/procurement/CONTRACT.md). **Tidak ada agen baru atau persetujuan eksternal otomatis.** Pengujian tetap ditunda.
+
+## Dissemination & Rights v0.9
+
+Untuk pameran dan lokakarya, gunakan [Event & Dissemination](kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md); untuk izin materi, [Rights Clearance](kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md); untuk merek atau event Minecraft, [Minecraft Platform](kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md); untuk logo pemerintah dan publikasi, [Branding & Publication](kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md); untuk pencatatan ciptaan, [DJKI Recordation](kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Tetap satu skill dan tidak ada publikasi/pengajuan otomatis.

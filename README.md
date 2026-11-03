@@ -6,7 +6,7 @@ Repository ini menyiapkan aturan kerja, struktur pengetahuan, prosedur produksi 
 
 ## Status saat ini
 
-- Tahap: **Skill System v0.5.1 di `develop`** — tujuh skill, kalkulator JSON deterministik, dan ekspor XLSX draf dua lembar; belum ada aplikasi produksi, integrasi e-RISPRO, kalkulator pajak, atau pengesahan otomatis.
+- Tahap: **Skill System v0.9 di `develop`** — tujuh skill, kalkulator JSON deterministik, dan ekspor XLSX draf dua lembar; belum ada aplikasi produksi, integrasi e-RISPRO, kalkulator pajak, atau pengesahan otomatis.
 - RAB, indikator, aturan keberlakuan, termin, dan identitas proyek **tidak dipersistenkan dalam repo publik**; pemeriksaan spesifik menggunakan sumber yang diizinkan.
 - Repository bersifat **publik**. Simpan kontrak, rekening, identitas, bukti bayar, dan data proyek nyata hanya di ruang privat yang disetujui; lihat [SECURITY.md](SECURITY.md).
 - Sistem ini **membantu persiapan, pemeriksaan, dan pelaporan internal**; bukan pemberi persetujuan resmi, konsultan hukum, atau pengganti e-RISPRO.
@@ -84,3 +84,7 @@ Tetap tujuh skill; procurement adalah **modul prosedural**, bukan agen kedelapan
 ## Creative Production v0.8
 
 Terdapat lima kontrak produksi di [Production Workflow](kits/dana-indonesiana/production/WORKFLOW.md), mencakup indikator, kuratorial, serah-terima digital dan preservasi. Template kosong hanya digunakan saat diperlukan. **Tes dan QA ditunda.**
+
+## Dissemination & Rights v0.9
+
+Tersedia pedoman [Event & Dissemination](kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md), [Rights Clearance](kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md), [Minecraft Platform](kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md), [Branding & Publication](kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md), dan [DJKI Recordation](kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Empat template kosong mendukung catatan kegiatan, matriks izin, review publikasi dan persiapan pencatatan. Skill tetap prosedural; tidak ada tes, pengiriman, publikasi atau berkas rahasia yang dipindahkan.

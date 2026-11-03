@@ -43,3 +43,13 @@ Poster siap tetapi panduan logo tahun terkait belum dicek → NEEDS_REVIEW sebel
 ## Hak atas konten museum virtual v0.8
 
 [Curatorial Records](../production/CURATORIAL-RECORDS.md) mengidentifikasi sumber dan izin yang diperlukan; [Release & Archive](../production/RELEASE-ARCHIVE.md) menandai distribusi. Rights tetap memegang keputusan clearance termasuk ketentuan [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines). Kredit bukan pengganti izin reproduksi.
+
+## Prosedur domain v0.9
+
+- [Event & Dissemination](EVENT-DISSEMINATION.md): rencana acara, izin dokumentasi dan laporan kegiatan publik.
+- [Rights Clearance](RIGHTS-CLEARANCE.md): pencipta, pemegang hak, izin adaptasi/penayangan/arsip dan pihak ketiga.
+- [Minecraft Platform](MINECRAFT-PLATFORM.md): brand, event, server, footage, dan constructed promotion oleh organisasi/perusahaan.
+- [Branding & Publication](BRANDING-PUBLICATION.md): logo pemerintah, kredit, materi publikasi.
+- [DJKI Recordation](DJKI-RECORDATION.md): persyaratan dan status pencatatan ciptaan yang benar.
+
+Pilih pedoman sekecil mungkin. Semua berupa **workflow**, bukan izin legal, persetujuan Mojang, pengajuan DJKI, maupun pengesahan LPDP.

@@ -51,3 +51,7 @@ Format `SKILL.md` mencontoh standar Agent Skills dan root spesialis `M-PRD-Creat
 ## Aktivasi Creative Production v0.8
 
 Untuk tugas produksi, pilih satu owner: [Workflow](../../kits/dana-indonesiana/production/WORKFLOW.md) untuk pekerjaan, [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md) untuk capaian, [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) untuk isi museum, [Digital Deliverables](../../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md) untuk serah-terima, atau [Release & Archive](../../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md) untuk distribusi/preservasi. Tidak perlu memanggil semua skill.
+
+## Aktivasi Dissemination & Rights v0.9
+
+Pilih satu prosedur pada `dissemination-rights` sesuai tugas, **bukan lima agen terpisah**: [Event](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md), [Rights](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md), [Minecraft](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md), [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md), atau [DJKI](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Izin pihak ketiga dan merek/platform tidak otomatis diberikan oleh status penerima pendanaan.

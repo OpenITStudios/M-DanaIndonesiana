@@ -53,3 +53,11 @@ Aturan GitHub ada di [GITHUB_RULES.md](../GITHUB_RULES.md); pedoman keamanan di 
 ## Produksi Karya v0.8
 
 [Workflow](../kits/dana-indonesiana/production/WORKFLOW.md), [Indicator Mapping](../kits/dana-indonesiana/production/INDICATOR-MAPPING.md), [Curatorial Records](../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md), [Digital Deliverables](../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md), [Release & Archive](../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md).
+
+## Diseminasi dan Hak Karya v0.9
+
+- [Event & Dissemination](../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) — pameran, lokakarya, kegiatan publik.
+- [Rights Clearance](../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) — hak cipta, izin, lisensi pihak ketiga.
+- [Minecraft Platform](../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) — kebijakan brand, event, publikasi dan world.
+- [Branding & Publication](../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) — logo pendanaan, materi publikasi, clearance.
+- [DJKI Recordation](../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) — kesiapan pencatatan ciptaan dan pembuktian status.

@@ -1,7 +1,7 @@
 # Context — M-DanaIndonesiana
 
 - **Repo:** OpenITStudios/M-DanaIndonesiana.
-- **Status produk:** Skill System v0.5.1 pada `develop`: pedoman modular, kalkulator JSON dan eksportir Excel prototipe; belum aplikasi produksi.
+- **Status produk:** Skill System v0.9 pada `develop`: pedoman modular, kalkulator JSON dan eksportir Excel prototipe; belum aplikasi produksi.
 - **Tujuan:** membantu proyek pendanaan kebudayaan 2025–2026 dalam pengelolaan karya, RAB, administrasi, transaksi, bukti, dan pelaporan.
 - **Branch:** develop (development), Local (reviewed integration), main (stable).
 - **Model:** reusable public system + data proyek sebenarnya di tempat privat terotorisasi.
@@ -43,3 +43,7 @@ Pendalaman `grant-administration` dan `creative-documentation` ditambah sebagai 
 ## Routing produksi v0.8
 
 Skill `creative-production` sekarang memiliki lima pedoman di `kits/dana-indonesiana/production/`. Data dokumen proyek privat tetap tidak diabadikan pada GitHub. Tahap ini pengembangan dokumenter; tes/QA sengaja ditunda.
+
+## Dissemination & Rights v0.9
+
+Satu skill `dissemination-rights` kini memiliki lima pedoman domain: acara publik, hak karya, kebijakan Minecraft, identitas pendanaan, dan administrasi DJKI. Sumber regulasi/platform dipilih berdasarkan konteksnya. Tidak ada hak, izin, surat pencatatan atau kegiatan yang dinyatakan telah ada tanpa dokumen resmi; pengujian tetap ditunda.
