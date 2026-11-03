@@ -43,3 +43,7 @@ Surat dan RAB ada tetapi bukti submit portal tidak ada → READY_TO_SUBMIT/UNKNO
 ## Handoff finance v0.3
 
 Hasil perhitungan JSON adalah masukan DRAFT. Periksa masalah selisih, pos tak terpetakan, periode dan sumber bukti sebelum merancang checklist. Jangan menyimpulkan status e-RISPRO dari `status` kalkulator.
+
+ ## Finance handoff v0.5
+
+ Gunakan `tools/finance-handoff.mjs` untuk menerima ringkasan kuantitatif berlabel DRAFT. Kolom `calculation_consistent` berarti perhitungan internal tidak mempunyai temuan tingkat ERROR, **bukan** bukti laporan telah disetujui. Status pencairan dan penerimaan harus tetap dibuktikan sendiri melalui sumber portal/bank.

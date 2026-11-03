@@ -47,3 +47,7 @@ Gunakan [Validation Runbook](VALIDATION-RUNBOOK.md) dan kalkulator JSON jika ada
 ## Excel v0.4
 
 Untuk menghasilkan dua lembar Excel draf dari output JSON Finance v0.3, gunakan [Excel Output Contract](EXCEL-OUTPUT.md). Kalkulasi tetap milik finance engine; exporter tidak boleh menciptakan transaksi, satuan RAB, status disetujui, atau bukti.
+ 
+ ## Metadata RAB v0.5
+
+ Kolom rincian hanya boleh diisi dari data RAB yang memang tersedia dan memiliki status/versi jelas. Perbedaan `frekuensi × kuantitas × harga` terhadap nominal pos harus menjadi temuan, bukan koreksi otomatis. Gunakan [Excel Output](EXCEL-OUTPUT.md) untuk jalur penulisan terpisah.

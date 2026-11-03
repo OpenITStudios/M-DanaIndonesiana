@@ -41,3 +41,11 @@ Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otoris
 - [ ] Melengkapi metadata RAB resmi (satuan, volume, harga, data dukung) melalui input yang disetujui.
 - [ ] Review manual ekspor terhadap berkas contoh resmi yang masih mengandung sample, tanpa menyalinnya.
 - [ ] Uji kesiapan administrasi dan gaya naratif berdasarkan sumber yang berwenang.
+
+ ## Finance detail & cross-skill v0.5
+
+ - [x] Metadata volume, satuan, spesifikasi, kategori dan data dukung masuk pipeline JSON dan Excel ketika disediakan.
+ - [x] Pemeriksaan perbedaan perkalian rincian dengan pagu disediakan tanpa auto-revisi.
+ - [x] Handoff JSON finance → administration/writing mempertahankan status DRAFT.
+ - [ ] Uji pada Node dan artifact_tool dari checkout hasil commit; pemeriksaan V8 terpisah tidak menggantikan kedua runtime tersebut.
+ - [ ] Uji penerimaan manusia atas layout Excel dan kualitas naskah laporan sintetis.

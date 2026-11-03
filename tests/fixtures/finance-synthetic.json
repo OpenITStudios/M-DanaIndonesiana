@@ -14,7 +14,19 @@
       "label": "Jasa desain (sintetis)",
       "indicator_id": "IND-A",
       "approved_amount": "1500000",
-      "prior_realized": "0"
+      "prior_realized": "0",
+      "details": {
+        "cost_category": "Produksi",
+        "specification": "Paket desain visual sintetis",
+        "frequency": "1",
+        "frequency_unit": "Kegiatan",
+        "quantity": "3",
+        "quantity_unit": "Paket",
+        "unit_price": "500000",
+        "supporting_refs": [
+          "SYN-QUOTE-001"
+        ]
+      }
     },
     {
       "code": "A02",
@@ -61,7 +73,11 @@
       "recipient_ref": "SYN-PAYEE-01",
       "evidence_refs": [
         "SYN-TRANSFER-02"
-      ]
+      ],
+      "voucher_no": "SYN-VOUCHER-02",
+      "recipient_name": "Penyedia Sintetis",
+      "description": "Pekerjaan visual periode uji",
+      "support_url": "SYN-LINK-EVIDENCE-02"
     },
     {
       "id": "T03",

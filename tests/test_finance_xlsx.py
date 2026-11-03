@@ -98,5 +98,38 @@ class FinanceExportTest(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 module.export_report(copy.deepcopy(BASE),out)
 
+
+    def test_rab_details_carry_to_sheet(self):
+        d=copy.deepcopy(BASE)
+        d["lra"][0]["details"]={
+            "cost_category":"Produksi",
+            "specification":"Paket desain sintetis",
+            "frequency":"1","frequency_unit":"Kegiatan",
+            "quantity":"3","quantity_unit":"Paket",
+            "unit_price":"500000","supporting_refs":["SYN-QUOTE-001"]
+        }
+        d["lra"][0]["detail_computed_amount"]="1500000"
+        sheet=self.build(d).worksheets.get_item("Realisasi RAB")
+        self.assertEqual(sheet.get_range("C6").values[0][0],"Produksi")
+        self.assertEqual(sheet.get_range("E6").values[0][0],1)
+        self.assertEqual(sheet.get_range("G6").values[0][0],3)
+        self.assertEqual(sheet.get_range("I6").values[0][0],500000)
+
+    def test_corrupted_detail_product_rejected(self):
+        d=copy.deepcopy(BASE)
+        d["lra"][0]["details"]={"frequency":"1","quantity":"3","unit_price":"500000"}
+        d["lra"][0]["detail_computed_amount"]="1"
+        with self.assertRaisesRegex(ValueError,"INCONSISTENT_RAB_DETAIL_COMPUTATION"):
+            self.build(d)
+
+    def test_cash_supporting_metadata_shown(self):
+        d=copy.deepcopy(BASE)
+        d["cash_flow"][1].update(indicator_id="IND-A",voucher_no="SYN-002",
+            recipient_name="Penyedia Sintetis",description="Pengeluaran simulasi",support_url="SYN-LOC")
+        sheet=self.build(d).worksheets.get_item("Arus Kas")
+        self.assertEqual(sheet.get_range("C7").values[0][0],"IND-A")
+        self.assertEqual(sheet.get_range("D7").values[0][0],"SYN-002")
+        self.assertEqual(sheet.get_range("E7").values[0][0],"Penyedia Sintetis")
+
 if __name__=="__main__":
     unittest.main()

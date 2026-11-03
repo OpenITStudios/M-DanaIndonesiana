@@ -18,3 +18,24 @@ test("numeric JSON floats rejected",()=>{const x=clone();x.transactions[1].amoun
 test("out-of-period transaction rejected",()=>{const x=clone();x.transactions[1].date="2026-02-01";assert.throws(()=>buildFinanceReport(x),/TRANSACTION_OUTSIDE_PERIOD/)});
 test("duplicate IDs rejected",()=>{const x=clone();x.transactions[1].id="T01";assert.throws(()=>buildFinanceReport(x),/DUPLICATE_TRANSACTION_ID/)});
 test("large integer precision",()=>{const x=clone();x.budget_lines[0].approved_amount="9007199254740993";x.funding_plan=[];assert.equal(buildFinanceReport(x).totals.approved_budget,"9007199255740993")});
+
+test("detail values preserved with exact product",()=>{
+ const x=clone();x.budget_lines[0].details={cost_category:"Produksi",specification:"Aset sintetis",frequency:"1",frequency_unit:"Kegiatan",quantity:"3",quantity_unit:"Paket",unit_price:"500000",supporting_refs:["SYN-QUOTE-01"]};
+ const r=buildFinanceReport(x);assert.equal(r.lra[0].details.quantity,"3");assert.equal(r.lra[0].detail_computed_amount,"1500000");assert.equal(r.lra[0].detail_amount_difference,"0");
+});
+test("RAB detail discrepancy is warned, not silently rewritten",()=>{
+ const x=clone();x.budget_lines[0].details={frequency:"1",quantity:"3",unit_price:"450000",supporting_refs:["SYN-Q"]};
+ const r=buildFinanceReport(x);assert.equal(r.lra[0].approved_amount,"1500000");assert.equal(r.lra[0].detail_amount_difference,"150000");assert.ok(has(r,"RAB_DETAIL_AMOUNT_DIFFERS"));
+});
+test("partial RAB detail is marked incomplete",()=>{
+ const x=clone();x.budget_lines[0].details={quantity:"3"};
+ const r=buildFinanceReport(x);assert.equal(r.lra[0].detail_computed_amount,null);assert.ok(has(r,"RAB_DETAIL_INCOMPLETE"));
+});
+test("cash memo and voucher are retained, not invented",()=>{
+ const x=clone();x.transactions[1].recipient_name="Penyedia Sintetis";x.transactions[1].description="Produksi simulasi";x.transactions[1].voucher_no="SYN-02";x.transactions[1].support_url="SYN-EVD";
+ const row=buildFinanceReport(x).cash_flow[1];assert.equal(row.recipient_name,"Penyedia Sintetis");assert.equal(row.voucher_no,"SYN-02");assert.equal(row.support_url,"SYN-EVD");
+ assert.equal(buildFinanceReport(clone()).cash_flow[0].recipient_name,null);
+});
+test("invalid RAB metadata rejects negative factors",()=>{
+ const x=clone();x.budget_lines[0].details={quantity:"-1"};assert.throws(()=>buildFinanceReport(x),/INVALID_IDR/);
+});

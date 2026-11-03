@@ -29,3 +29,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menolak laporan yang tidak konsisten dan mengosongkan data yang belum diketahui.
 - Menambah tes sintetis artifact_tool, menjaga tidak ada data privat di repo.
 - Bukan template pemerintah resmi, bukan penentuan pajak/approval e-RISPRO.
+
+ ## 0.5.0 — 2026-11-03
+
+ - Bawa rincian RAB yang tersedia ke LRA, tanpa mengarang kolom kosong.
+ - Tampilkan selisih perkalian rincian dan pagu sebagai temuan, bukan koreksi diam-diam.
+ - Bawa metadata transaksi ke Arus Kas dan buat handoff berlabel DRAFT untuk administrasi dan penulisan.
+ - Tambahkan regresi sintetis untuk metadata serta batas klaim.

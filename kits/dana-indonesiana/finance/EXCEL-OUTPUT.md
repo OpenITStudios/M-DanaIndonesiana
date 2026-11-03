@@ -31,3 +31,11 @@ Pastikan lingkungan mempunyai Node 22+ dan paket `artifact_tool`. Skrip Python m
 Generator **tidak** menyalin contoh kategori lain dari workbook template LPDP; tidak mengisi rincian RAB yang belum dimasukkan ke engine; tidak dapat memeriksa keabsahan bukti atau ketepatan perlakuan pajak. Dokumen yang dihasilkan belum dianggap laporan resmi sebelum cocok format yang berlaku, dokumen sumber dan persetujuan internal.
 
 Uji: `python -m unittest discover -s tests -p 'test_finance_xlsx.py'` dalam lingkungan dengan `artifact_tool`. Unit tests menggunakan input fiktif.
+ 
+ ## Metadata RAB dan bukti arus kas (v0.5)
+
+ `budget_lines[].details` dapat berisi `cost_category`, `specification`, `frequency` (string integer), `frequency_unit`, `quantity` (string integer), `quantity_unit`, `unit_price` (string integer), serta `supporting_refs` (array). Semua **opsional**; informasi yang hilang tetap kosong. Jika tiga angka tersedia, engine membandingkan hasil perkaliannya dengan pagu yang tercantum; selisih dilaporkan, tidak mengubah pagu sah.
+
+ `transactions[]` dapat berisi `indicator_id`, `voucher_no`, `recipient_name`, `description`, dan `support_url` untuk menyusun kolom Arus Kas. Semua itu data input yang belum terotentikasi; jangan masukkan PII atau bukti rahasia ke repo/fixture publik.
+
+ Handoff ke administrasi dan penulisan diberikan oleh `tools/finance-handoff.mjs`, yang menandai status selalu DRAFT dan memisahkan termin direncanakan dari dana diterima.

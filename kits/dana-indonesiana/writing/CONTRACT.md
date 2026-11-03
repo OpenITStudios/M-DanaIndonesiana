@@ -43,3 +43,7 @@ Belum dilaksanakan lokakarya → tulis sebagai rencana kegiatan, bukan laporan h
 ## Handoff laporan naratif
 
 Angka kalkulator Finance v0.3 hanya boleh dijadikan draf yang masih perlu pemeriksaan sumber. Jangan mengubah selisih atau menulis "sudah dicairkan", "sudah dibayar", atau "disetujui" berdasarkan rencana atau invoice.
+
+ ## Finance narrative handoff v0.5
+
+ Uraian laporan keuangan harus menggunakan klaim berlabel pada `finance_handoff_v0.5`, tanpa menghapus label `PLANNED_NOT_RECEIVED` atau `NOT_CASH_PAID`. Penulisan natural tidak berarti menghilangkan masalah atau menggunakan bahasa pencairan yang sudah pasti sebelum ada bukti.

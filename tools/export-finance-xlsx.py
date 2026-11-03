@@ -83,6 +83,21 @@ def verify(report):
                 raise ValueError("REMAINING_WITHOUT_CUMULATIVE")
         elif prior is None or cumulative != prior + this_period or remaining != ceiling - cumulative:
             raise ValueError("INCONSISTENT_LRA")
+        details = line.get("details") or {}
+        if not isinstance(details, dict):
+            raise ValueError("INVALID_RAB_DETAILS")
+        for key in ("frequency", "quantity", "unit_price"):
+            amount(details.get(key), key)
+        refs = details.get("supporting_refs") or []
+        if not isinstance(refs, list) or any(not isinstance(x, str) for x in refs):
+            raise ValueError("INVALID_SUPPORTING_REFS")
+        # Where all factors exist, the difference is reported by the calculator.
+        # It must not silently replace the approved budget amount.
+        qty = [details.get(k) for k in ("frequency","quantity","unit_price")]
+        if all(v is not None for v in qty):
+            expected = amount(qty[0],"frequency")*amount(qty[1],"quantity")*amount(qty[2],"unit_price")
+            if line.get("detail_computed_amount") != str(expected):
+                raise ValueError("INCONSISTENT_RAB_DETAIL_COMPUTATION")
         total_budget += ceiling
         total_mapped += this_period
     if total_budget != amount(totals["approved_budget"], "approved_budget"):
@@ -167,9 +182,15 @@ def write_lra(book, report):
         note = "Indikator " + str(b.get("indicator_id") or "belum diketahui")
         if b.get("realized_cumulative") is None:
             note += "; realisasi kumulatif belum diketahui"
+        detail = b.get("details") or {}
+        refs = detail.get("supporting_refs") or []
         data.append([text_cell(b["code"]), text_cell(b["label"]),
-            None, None, None, None, None, None, None,
-            amount(b["approved_amount"], "approved"), None, None,
+            text_cell(detail.get("cost_category")),text_cell(detail.get("specification")),
+            amount(detail.get("frequency"), "frequency"),text_cell(detail.get("frequency_unit")),
+            amount(detail.get("quantity"), "quantity"),text_cell(detail.get("quantity_unit")),
+            amount(detail.get("unit_price"), "unit_price"),
+            amount(b["approved_amount"], "approved"), None,
+            text_cell(", ".join(refs)) if refs else None,
             amount(b.get("realized_cumulative"), "cumulative"),
             None, text_cell(", ".join(map(str, evidence))), text_cell(note)])
     first, last = 6, 5 + len(data)
@@ -191,7 +212,7 @@ def write_lra(book, report):
     sheet.get_range(f"K{first}:K{last}").set_number_format("0.00%")
     widths(sheet, [13,35,19,28,12,13,12,13,17,20,16,25,20,20,26,52], summary + 4)
     sheet.merge_cells(f"A{summary+2}:P{summary+2}")
-    sheet.get_range(f"A{summary+2}").values = [["Kolom rincian RAB yang tidak tersedia di JSON sengaja kosong. Lengkapi dari RAB sah sebelum disampaikan."]]
+    sheet.get_range(f"A{summary+2}").values = [["Rincian RAB yang tersedia ditampilkan; kolom lain dibiarkan kosong. Lengkapi dari sumber sah sebelum disampaikan."]]
     sheet.get_range(f"A{summary+2}:P{summary+2}").format = {"font":{"color":NAVY,"size":9},"row_height":23}
     return sheet
 
@@ -214,7 +235,7 @@ def write_cash(book, report):
             raise ValueError("INVALID_EVIDENCE_REFS")
         data.append([index,date_cell(tx["date"]),
             text_cell(tx.get("indicator_id")),
-            text_cell(", ".join(map(str,evidence))) if evidence else None,
+            text_cell(tx.get("voucher_no") or (", ".join(map(str,evidence)) if evidence else None)),
             text_cell(tx.get("recipient_name")),
             text_cell(tx.get("description")) if tx.get("description") else ("Penerimaan kas" if tx["type"]=="RECEIPT" else "Pengeluaran kas"),
             amount(tx["inflow"],"inflow"),amount(tx["outflow"],"outflow"),None,
