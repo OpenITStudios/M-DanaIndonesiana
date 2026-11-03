@@ -34,3 +34,8 @@ Skill tersedia di `.agents/skills/`, kontrak pada `kits/dana-indonesiana/`, rute
 ## Skill pengelolaan pelaporan v0.6 (dokumenter)
 
 Pendalaman `grant-administration` dan `creative-documentation` ditambah sebagai kontrak dan template reusable. Router mengacu [docs/skills/README.md](docs/skills/README.md); tidak ada skill kedelapan, aplikasi submission, basis data baru, maupun pengujian yang dijalankan dalam tahap ini. Status spesifik proyek tetap tidak dipersistenkan.
+
+
+## Evidence & procurement v0.7 (pedoman sistem)
+
+`evidence-audit` diperkuat untuk pembuktian klaim dan bukti belanja. Domain procurement ditambahkan sebagai [kontrak modul](kits/dana-indonesiana/procurement/CONTRACT.md), bukan skill terpisah. Alur dan template tidak mengubah tujuh skill maupun sistem fakta tunggal. Tidak ada data proyek rahasia, pengadaan nyata, atau tes runtime yang diproses pada commit ini.

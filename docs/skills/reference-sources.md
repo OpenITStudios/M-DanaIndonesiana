@@ -25,3 +25,11 @@ Jangan menyalin nomor identitas, jumlah atau isi kontrak pribadi ke daftar ini. 
 - [LPDP — Information Corner](https://erispro-indonesiana.kemenkeu.go.id/information-corner): format terpisah laporan indikator publik/nonpublik, laporan kemajuan, penggunaan dana dan rencana penggunaan dana dua/tiga tahap. Pilih format berdasarkan kontrak yang berlaku; daftar portal bukan bukti penerimaan.
 - [ANRI — Arsip Dinamis](https://www.anri.go.id/sekitar-arsip/arsip-dinamis): klasifikasi, arsip aktif/inaktif, tata naskah, dan keamanan/akses. Digunakan sebagai **inspirasi desain**, bukan ketentuan kontrak pendanaan.
 - [ANRI — Layanan Jasa Kearsipan](https://anri.go.id/layanan-publik/jasa-kearsipan): komponen pedoman kearsipan berupa kebijakan, prosedur, tata naskah, klasifikasi, retensi serta akses. Retensi yang berlaku tidak boleh diinventariskan sendiri.
+
+
+## Evidence dan pengadaan (tambahan v0.7)
+
+- [LPDP — Pedoman Administrasi Dana Indonesiana 2025](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf), bagian C: jenis bukti pengeluaran; bagian pembelian barang/jasa mengatur pembanding harga pada kondisi tertentu. **Baca teks dan keberlakuannya untuk transaksi aktual**, jangan jadikan ambang global.
+- [LPDP — Information Corner](https://erispro-indonesiana.kemenkeu.go.id/information-corner): format laporan dan dokumen pendukung; isi dapat berubah sehingga pilih versi yang sesuai program.
+- [ANRI — Arsip Dinamis](https://www.anri.go.id/sekitar-arsip/arsip-dinamis): prinsip penciptaan, pemeliharaan, klasifikasi, keamanan akses, dan ketersediaan rekod sebagai bukti; **inspirasi desain**.
+- [JDIH LKPP — Perpres 46/2025](https://jdih.lkpp.go.id/regulation/peraturan-presiden/peraturan-presiden-nomor-46-tahun-2025) dan [Peraturan LKPP 3/2026](https://jdih.lkpp.go.id/regulation/peraturan-lkpp/peraturan-lkpp-nomor-3-tahun-2026): cara dan ruang lingkup pengadaan pemerintah. **Jangan asumsikan prosedur formalnya otomatis mengikat penerima manfaat non-K/L**.

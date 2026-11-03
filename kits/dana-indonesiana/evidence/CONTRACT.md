@@ -39,3 +39,12 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 ## Contoh uji dengan data sintetis
 
 Ada invoice tanpa transfer → nilai tagihan dapat dicatat, status paid tetap INCOMPLETE.
+
+
+## Pemilik pedoman rinci (v0.7)
+
+- [Claim-to-Evidence](CLAIM-TO-EVIDENCE.md): tangga pembuktian, hubungan klaim–bukti, integritas dan status.
+- [Expenditure Evidence](EXPENDITURE-EVIDENCE.md): jenis data dukung belanja menurut pedoman administrasi 2025, **bersyarat** pada perjanjian yang berlaku.
+- [Procurement](../procurement/CONTRACT.md): persiapan dan pemilihan penyedia, kontrak, serah terima. Evidence hanya memeriksa bukti, bukan menentukan kewenangan belanja atau pembayaran.
+
+Pilih jalur terdekat dengan tugas. Satu klaim dapat memiliki beberapa sumber bukti berbeda; jangan menjadikan tersedianya kuitansi sebagai kesimpulan seluruh pekerjaan diterima dan sah.

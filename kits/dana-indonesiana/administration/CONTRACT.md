@@ -55,3 +55,8 @@ Hasil perhitungan JSON adalah masukan DRAFT. Periksa masalah selisih, pos tak te
 - [Document Control](DOCUMENT-CONTROL.md) — folder fungsi, identitas versi dan pemisahan status internal/eksternal.
 
 Dua dokumen tersebut merupakan detail kerja dari skill **yang sama**, bukan database, tracker, atau agen kedua. Gunakan template kosong [Administrative Package](../../../templates/reporting/administrative-package.md) bila benar-benar diminta membuat dokumen.
+
+
+## Paket pengadaan sebagai lampiran pelaporan (v0.7)
+
+Administration hanya menyiapkan paket bukti yang **diwajibkan oleh pedoman/perjanjian yang berlaku**. Gunakan [Procurement Contract](../procurement/CONTRACT.md) dan [Evidence](../evidence/EXPENDITURE-EVIDENCE.md) untuk memeriksa jenis dokumen, bukan membuat kontrak/penawaran seolah asli atau mengesahkan pemilihan vendor. Status laporan eksternal tidak berubah karena checklist lengkap.

@@ -18,3 +18,8 @@ Periksa bukti dokumenter dan jejak audit Dana Indonesiana: kecocokan dokumen, tr
 5. STOP setelah tugas cukup selesai. Tidak membuat bukti, status, folder, atau data fiktif.
 
 Skill ini berupa prosedur, **belum engine otomatis** dan tidak memiliki kewenangan menyetujui laporan pemerintah.
+
+
+## Routing untuk audit transaksi dan pengadaan
+
+Untuk asal dan kecukupan bukti, baca [Claim-to-Evidence](../../../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md). Untuk lampiran belanja gunakan [Expenditure Evidence](../../../kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md). Jika pertanyaannya pemilihan vendor, harga atau serah terima, aktifkan kontrak **modul** [Procurement](../../../kits/dana-indonesiana/procurement/CONTRACT.md) tanpa menciptakan agen procurement baru.

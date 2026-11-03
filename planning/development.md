@@ -69,3 +69,14 @@ Jangan mengubah catatan ini menjadi jadwal otomatis, komitmen fitur, atau otoris
 - [ ] **Pengujian ditunda sesuai arahan pengguna**, termasuk Node, Python, acceptance dan penilaian naskah.
 
 Jangan menandai prosedur atau template sebagai PASS; pemeriksaan kualitas baru dilakukan saat fase QA diminta.
+
+
+## v0.7 — Evidence & Procurement (tanpa pengujian)
+
+- [x] Pedoman pemeriksaan klaim yang membedakan sumber harga, komitmen, hasil, pembayaran, dan keputusan resmi.
+- [x] Matriks rujukan bukti menurut kategori pengeluaran pada Pedoman Administrasi 2025 dengan syarat applicability.
+- [x] Modul procurement untuk kebutuhan, pemilihan penyedia, pembanding harga, serah terima, dan arsip.
+- [x] Pemeriksaan hak karya digital, hubungan kontrak–output, dan batas kompetensi peninjauan teknis.
+- [x] Empat template kosong; tanpa data privat, vendor fiktif, atau pembuatan folder kosong.
+- [ ] Review kebutuhan automasi ketika pekerjaan nyata dan data berizin tersedia.
+- [ ] **Pengujian tetap ditunda sesuai instruksi pengguna.** Tidak ada klaim PASS/QA end-to-end pada tahap ini.

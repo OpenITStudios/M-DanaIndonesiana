@@ -41,3 +41,11 @@ Aturan GitHub ada di [GITHUB_RULES.md](../GITHUB_RULES.md); pedoman keamanan di 
 - [Document Control](../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md) — metadata, versi dan status.
 - [Editorial Workflow](../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) — mutu tulisan manusiawi.
 - [Reporting Structures](../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md) — susunan isi tiap laporan.
+
+
+## Bukti pengeluaran dan pengadaan
+
+- [Evidence Workflow](../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) — pemeriksaan klaim, sumber, dan batas hasil.
+- [Bukti Belanja](../kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md) — jenis dokumen pendukung dari pedoman 2025.
+- [Procurement Contract](../kits/dana-indonesiana/procurement/CONTRACT.md) — pemilihan dan penerimaan jasa/barang.
+- [Price Comparison](../kits/dana-indonesiana/procurement/PRICE-COMPARISON.md) — referensi harga terstruktur.

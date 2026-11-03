@@ -80,3 +80,8 @@ Pilih satu spesialis dari [Skill Router](docs/skills/README.md). Baca [Shared Co
 ## Pengendalian pelaporan dan penulisan v0.6
 
 Untuk pekerjaan paket pencairan atau laporan, mulai dari [Package Workflow](kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md); untuk kendali versi lihat [Document Control](kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md). Untuk naskah karya dan laporan, gunakan [Editorial Workflow](kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md). Ini **pendalaman skill yang sudah ada**, bukan agen baru. Jangan jalankan pengujian pada fase pengembangan yang secara eksplisit ditunda pengguna.
+
+
+## Bukti pengeluaran dan pengadaan (v0.7)
+
+Saat diminta memeriksa bukti, pilih [Claim-to-Evidence](kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) dan, bila jenis belanja relevan, [Expenditure Evidence](kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md). Untuk pemilihan dan penyerahan barang/jasa, gunakan [Procurement Contract](kits/dana-indonesiana/procurement/CONTRACT.md). **Tidak ada agen baru atau persetujuan eksternal otomatis.** Pengujian tetap ditunda.

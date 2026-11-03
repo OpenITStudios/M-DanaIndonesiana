@@ -24,3 +24,8 @@ Gunakan ID/relasi sebagaimana [Traceability](../foundation/04-traceability.md). 
 ## Ekspansi
 
 Jangan membuat folder kode atau skema untuk setiap baris tabel sampai ada kebutuhan dan antarmuka yang jelas. Pertahankan satu model rekam kanonis dan satu jalur ekspor; jangan membuat sistem finance kedua hanya karena tersedia repo MIVUBI Finance. Reuse konsep/komponen setelah lisensi, dependensi, dan kontrak data ditinjau.
+
+
+## Owner domain Procurement (v0.7)
+
+[Procurement Contract](../../kits/dana-indonesiana/procurement/CONTRACT.md) memegang prosedur kebutuhan, pembanding, pemilihan, komitmen, dan serah terima. [Evidence](../../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) memeriksa bukti, Finance memegang transaksi, Regulatory memegang applicability, dan Rights memegang izin karya. **Tidak** ada agen, database atau approval engine baru.

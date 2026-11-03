@@ -51,3 +51,12 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Empat template kosong, satu peta pelaporan lintas skill, dan keputusan arsitektur.
 - Tetap tujuh skill; tidak ada agen atau database baru.
 - Tidak ada tes yang dijalankan pada tahap ini; tidak ada dokumen privat yang direplikasi.
+
+
+## 0.7.0 — 2026-11-03 (evidence & procurement guidance)
+
+- Memperluas Evidence & Audit melalui Claim-to-Evidence dan rujukan bukti pengeluaran.
+- Menambahkan domain Procurement sebagai modul logis (tanpa skill/agen ke-8), termasuk Price Comparison dan serah terima.
+- Menyediakan empat template kosong untuk bukti, pengadaan, pembanding, dan penerimaan hasil.
+- Membedakan aturan LPDP dan rujukan metode LKPP berdasarkan ruang lingkup serta keberlakuan.
+- Tidak menjalankan tes, tidak menambah fitur runtime, tidak mengunggah data proyek rahasia.

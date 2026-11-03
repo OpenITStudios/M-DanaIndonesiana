@@ -69,3 +69,14 @@ Kalkulator draft JSON dan uji sintetis tersedia di [Finance Validation Runbook](
 - [Template kosong pelaporan](templates/reporting/administrative-package.md): draft administrasi, indikator, narasi karya dan revisi.
 
 Dokumen proyek rahasia tidak dimasukkan ke repo; pengujian sengaja ditunda pada fase ini. Prosedur belum membuktikan status penerimaan e-RISPRO atau kesesuaian dokumen secara hukum.
+
+
+## Evidence & Procurement v0.7
+
+- [Audit bukti berdasarkan klaim](kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md): bedakan keberadaan dokumen, kesesuaian, substansi dan persetujuan.
+- [Persyaratan bukti per jenis belanja](kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md): rujukan pedoman 2025 dengan batas keberlakuan.
+- [Manajemen pengadaan dan jasa](kits/dana-indonesiana/procurement/CONTRACT.md): kebutuhan → pembanding → kontrak → serah-terima → pembayaran.
+- [Pembanding harga](kits/dana-indonesiana/procurement/PRICE-COMPARISON.md): bandingkan scope, sumber dan keterbatasan harga tanpa mengarang penawaran.
+- Template kosong tersedia untuk [telaah bukti](templates/evidence/evidence-review.md), [permintaan pengadaan](templates/procurement/requirement-and-selection.md), [perbandingan harga](templates/procurement/price-comparison.md), dan [penerimaan hasil](templates/procurement/deliverable-acceptance.md).
+
+Tetap tujuh skill; procurement adalah **modul prosedural**, bukan agen kedelapan. Tidak ada tes/QA yang dijalankan pada fase pengembangan ini. Semua dokumen proyek privat tetap di luar Git.

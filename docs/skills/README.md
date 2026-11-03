@@ -39,3 +39,11 @@ Format `SKILL.md` mencontoh standar Agent Skills dan root spesialis `M-PRD-Creat
 - **Administrasi lebih dalam:** `grant-administration` → [Package Workflow](../../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) dan [Document Control](../../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md).
 - **Tulisan lebih dalam:** `creative-documentation` → [Editorial Workflow](../../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) dan [Reporting Structures](../../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md).
 - **Laporan lintas skill:** [Reporting Workflow](reporting-workflow.md). Jangan menyalin angka dan status dari interpretasi skill lain; ikuti owner.
+
+
+## Aktivasi Evidence & Procurement v0.7
+
+- Pertanyaan **apakah klaim X didukung bukti?** → [evidence-audit](../../.agents/skills/evidence-audit/SKILL.md), rinci pada [Claim-to-Evidence](../../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md).
+- Pertanyaan **bukti apa untuk jenis biaya ini?** → Evidence + [Expenditure Evidence](../../kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md); Regulatory hanya bila keberlakuan sumber belum pasti.
+- Pertanyaan **bagaimana membandingkan vendor dan menerima pekerjaan?** → [Procurement Contract](../../kits/dana-indonesiana/procurement/CONTRACT.md), sebagai **modul**, bukan skill kedelapan. Untuk harga baca [Price Comparison](../../kits/dana-indonesiana/procurement/PRICE-COMPARISON.md).
+- Permintaan hanya menyusun/menata dokumen → Administration; permintaan menghitung atau mengakui pembayaran → Finance; uji mutu karya digital → Production. Aktivasi skill lain hanya jika benar-benar diperlukan.

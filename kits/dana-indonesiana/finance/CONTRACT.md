@@ -55,3 +55,8 @@ Untuk menghasilkan dua lembar Excel draf dari output JSON Finance v0.3, gunakan 
 ## Perbedaan invoice dan hutang
 
 `invoiced_period` tidak boleh diartikan sebagai saldo belum dibayar. Tanpa relasi invoice–payment yang didukung bukti, status pelunasannya UNKNOWN.
+
+
+## Hubungan dengan bukti procurement (v0.7)
+
+Finance memakai `TXN` dan bukti pembayaran nyata. [Procurement](../procurement/CONTRACT.md) memegang rekam pemilihan/kontrak/serah-terima; [Evidence](../evidence/CLAIM-TO-EVIDENCE.md) memeriksa dukungan bukti. Harga pasar dan invoice tetap **bukan** kas keluar, dan invoice tercatat bukan saldo belum dibayar tanpa rekonsiliasi. Hindari memindahkan PII vendor ke model laporan publik.
