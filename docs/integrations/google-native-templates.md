@@ -110,3 +110,7 @@ Atas umpan balik pengguna bahwa v1.1.0 masih seperti desain AI, dibuat master Go
 ### T2 — Aktivasi formal dan aturan editorial ilmiah
 
 Setelah pengguna menerima layout v1.2.0 dengan syarat italic tidak dekoratif, subjudul diubah menjadi Google Docs `HEADING_2` bold-tegak, status upright, dan seluruh text run terkait dipaksa Times New Roman agar tidak terkena fallback Arial. [QA terverifikasi](../qa/master01-scholarly-typography-2026-11-03.md) memuat uji contoh sintetis 1 halaman, uji panjang 3 halaman, zero italic dan font pada PDF render. **Master privat v1.2.0 = `READY` INTERNAL**, versi v1.1.0/v1.0.0 = `RETIRED`; semua status tetap terpisah dari persetujuan resmi. [Aturan italic dan laporan ilmiah](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md) digunakan oleh domain creative-documentation. Tidak ada auto italic kata asing tanpa validasi sumber.
+
+### T2 — RAB v2.1.0 sebagai kandidat native
+
+Master RAB Google Sheets native v2.1.0 telah dibuat pada file terpisah, dengan input C4/I4/C5/C6/I6 dan B11:I110 tetap kompatibel. REKAP menggunakan struktur vertikal; formula, total dan deteksi pos belum lengkap telah diuji melalui salinan sintetis. Master lama v2.0.0 diretirasi setelah diperbarui; v2.1.0 terdaftar NEEDS_REVIEW dalam Registry privat yang sama. Sumber data proyek dan nilai resmi tidak pernah dipakai sebagai fixture. Impor Excel lokal melalui konektor tidak tersedia pada sesi ini; master baru dibuat dari copy native Google Sheets. [QA rincian](../qa/master-rab-v2-1-2026-11-04.md).

@@ -28,8 +28,8 @@ function indicator(valuesOverride={}) {
       ...valuesOverride}}});
 }
 
-test('eleven versioned public catalog specifications validate',()=>{
-  assert.equal(validateTemplateCatalog(catalog).templates.length,11);
+test('twelve versioned public catalog specifications validate',()=>{
+  assert.equal(validateTemplateCatalog(catalog).templates.length,12);
 });
 test('private master mapping rejects invalid headers and duplicates',()=>{
   assert.throws(()=>parseTemplateMasters([['template_id']]),{code:'INVALID_TEMPLATE_MASTER_HEADER'});
@@ -134,4 +134,13 @@ test('RAB planner writes only input columns and preserves amount formulas',()=>{
       period:'Y',rab_ref:'Z'},tables:{line_items:[{stage:'Tahap 1',
       rab_code:'RAB-1',cost_category:'Operasional',description:'item',
       volume:'1',unit:'paket',unit_price:'1000'}]}}}),{code:'REQUIRED_VALUE_MISSING'});
+});
+
+test('RAB v2.1 preserves input contract and distinct version',()=>{
+  const base=catalog.templates.find(t=>t.id==='di.finance.rab-plan' && t.version==='1.0.0');
+  const next=catalog.templates.find(t=>t.id==='di.finance.rab-plan' && t.version==='2.1.0');
+  assert.ok(base && next);
+  assert.deepEqual(next.cell_bindings,base.cell_bindings);
+  assert.deepEqual(next.table_bindings,base.table_bindings);
+  assert.equal(next.design_profile,'rab-finance-vertical-recap-v2.1');
 });

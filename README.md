@@ -80,6 +80,8 @@ Untuk seluruh master Google-native, gunakan [Standar Mutu Dokumen Profesional](t
 3. Gunakan sumber proyek yang **diizinkan**, tandai versi serta ketentuan yang berlaku, hasilkan draf yang dapat ditelusuri, dan minta review manusia pada keputusan material.
 4. Untuk perubahan repo, ikuti [GITHUB_RULES.md](GITHUB_RULES.md). Pengembangan rutin di `develop`; promosi ke `Local` lalu `main` memerlukan review yang benar-benar dilakukan.
 
+**RAB Profesional v2.1.0:** kandidat Excel dan Google Sheets native baru mengikuti [spesifikasi RAB](templates/finance/rab-plan.md). REKAP disusun vertikal, 100 pos tetap tersedia, nilai kosong tidak diubah menjadi nol, dan tes empat pos sintetis cocok pada kedua media. [Bukti QA](docs/qa/master-rab-v2-1-2026-11-04.md). Status master Google Sheets masih NEEDS_REVIEW; bukan format pengajuan resmi.
+
 ## Referensi
 
 [Documentation Index](docs/README.md) · [Module Ownership](docs/modules/README.md) · [Source Authority](docs/foundation/02-source-authority.md) · [Privacy](SECURITY.md) · [Current Context](CONTEXT.md) · [Development Plan](planning/development.md) · [History](CHANGELOG.md)

@@ -50,6 +50,10 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 
 [Spesifikasi](../finance/rab-plan.md) · [QA](../../docs/qa/master-rab-planning-2026-11-04.md). RAB perencanaan anggaran memuat 3 tab dan **100 pos**. Status Google-native `di.finance.rab-plan@1.0.0` adalah `NEEDS_REVIEW` sebelum pemeriksaan visual browser dan cetak. Planner mengisi B11:I110 dan metadata; kolom J tetap formula, sedangkan sumber K dan catatan L masih diperiksa/diisi manual. Jangan menganggap versi Excel sebagai sumber asli yang dikonversi otomatis ke Google Sheets pada sesi ini.
 
+## Master RAB v2.1.0 — kandidat internal
+
+Template di.finance.rab-plan@2.1.0 kini tersedia sebagai Google Sheets native dalam folder master privat. Input dan 100 baris tetap kompatibel dengan kontrak versi 1.0.0; REKAP baru disusun vertikal, formula kosong-vs-nol dan pengecekan kelengkapan diuji melalui Excel dan salinan Google Sheets berdata sintetis. Status Registry: NEEDS_REVIEW sampai UI Google Sheets dan cetak diperiksa. Master versi sebelumnya tidak ditimpa. [QA v2.1](../../docs/qa/master-rab-v2-1-2026-11-04.md).
+
 ## Master maintenance
 
 For every change, retain a version and a reviewer trail. Actual Drive metadata must match the reviewed timestamp; otherwise planning halts. The public catalog does not carry Drive file IDs or actual project facts. The current planner requires an exact active master and deliberately blocks `OFFICIAL_FORMAT` until formal applicability review is implemented.

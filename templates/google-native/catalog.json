@@ -717,6 +717,109 @@
           ]
         }
       ]
+    },
+    {
+      "id": "di.finance.rab-plan",
+      "version": "2.1.0",
+      "kind": "GOOGLE_SHEETS",
+      "owner_skill": "finance-reporting",
+      "source_contract": "templates/finance/rab-plan.md",
+      "workflow": "budget-planning",
+      "fields": {
+        "project_name": {
+          "type": "text",
+          "required": true
+        },
+        "period": {
+          "type": "text",
+          "required": true
+        },
+        "rab_ref": {
+          "type": "text",
+          "required": true
+        },
+        "budget_basis": {
+          "type": "text",
+          "required": false
+        },
+        "reference_ceiling": {
+          "type": "money",
+          "required": false
+        }
+      },
+      "cell_bindings": {
+        "project_name": {
+          "sheet": "RAB",
+          "cell": "C4"
+        },
+        "period": {
+          "sheet": "RAB",
+          "cell": "I4"
+        },
+        "rab_ref": {
+          "sheet": "RAB",
+          "cell": "C5"
+        },
+        "budget_basis": {
+          "sheet": "RAB",
+          "cell": "C6"
+        },
+        "reference_ceiling": {
+          "sheet": "RAB",
+          "cell": "I6"
+        }
+      },
+      "table_bindings": [
+        {
+          "key": "line_items",
+          "sheet": "RAB",
+          "start_cell": "B11",
+          "max_rows": 100,
+          "columns": [
+            {
+              "key": "stage",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "rab_code",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "cost_category",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "volume",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "key": "unit",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "frequency",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "key": "unit_price",
+              "type": "money",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "design_profile": "rab-finance-vertical-recap-v2.1"
     }
   ]
 }

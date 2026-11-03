@@ -93,6 +93,11 @@
 - [x] Menyesuaikan formula Sheets locale Indonesia (separator `;`) dan menulis 100 formula dengan referensi baris eksplisit, memperbaiki ulang parsing error.
 - [ ] Review visual Google Sheets pada zoom 100%, pengujian hasil cetak, dan kesesuaian template RAB menurut pedoman tahun/kategori yang benar-benar berlaku. Status master native `NEEDS_REVIEW`.
 
+- [x] Merapikan Excel RAB v2.1 dengan nilai kosong-vs-nol yang konsisten, tanpa mengubah 100 pos; uji normal, frekuensi kosong, dan kategori tidak dikenal dilakukan dengan contoh sintetis.
+- [x] Membuat master RAB Google Sheets native v2.1 dari copy master lama, menyelaraskan rekap vertikal/rumus/panduan dan menguji empat pos serta kasus frekuensi belum diisi. [QA v2.1](../docs/qa/master-rab-v2-1-2026-11-04.md).
+- [x] Mendaftarkan RAB v2.1.0 sebagai NEEDS_REVIEW pada Registry privat yang sama; versi v2.0.0 historis RETIRED.
+- [ ] Periksa tampilan browser Google Sheets dan Print Preview RAB A3 landscape / REKAP A4; uji kesesuaian format resmi menurut tahun dan kategori sebelum mengesahkan template.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.

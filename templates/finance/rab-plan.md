@@ -47,3 +47,13 @@ Skenario sintetis: tahap 1 (2 x 1 x 1.200.000 = 2.400.000), tahap 2 (3 x 1 x 750
 Diuji pada Excel artifact_tool dan Google Sheets locale \`in_ID\`; pemisah fungsi Excel adalah koma, sedangkan formula Google Sheets locale Indonesia memakai titik koma. QA visual Excel telah dilakukan untuk detail dan rekap; **fit visual native Google Sheets dan cetak belum diverifikasi**. Status master native \`NEEDS_REVIEW\`, bukan siap diajukan.
 
 Rujukan: [finance contract](../../kits/dana-indonesiana/finance/CONTRACT.md), [pedoman dasar](../../docs/foundation/05-document-production-baseline.md), [standar spreadsheet](../google-native/SPREADSHEET-STYLE.md).
+
+## Perbaikan master RAB v2.1.0 — 4 November 2026
+
+Versi 2.1.0 adalah master internal yang **belum disetujui untuk format resmi**. Struktur input tetap sama dengan kontrak RAB lama: metadata C4, I4, C5, C6 dan I6; input B11:I110; sumber harga serta catatan pada K/L. Master Google Sheets dibuat sebagai **salinan master native lama**, lalu diperbarui agar setara dengan file Excel profesional yang diuji; bukan hasil konversi langsung dari file Excel.
+
+Perubahan yang ditinjau: REKAP disusun vertikal (tahap lalu kelompok biaya); PANDUAN ringkas; tampilan monokrom dengan aksen tipis; rumus kosong-vs-nol diperbaiki agar master kosong tidak menampilkan anggaran Rp0 seolah sudah ada perhitungan. Nominal 0 yang valid tetap ditampilkan ketika data diisi. Pemeriksaan selisih dalam Google Sheets memakai rupiah bulat; rumus sesuai locale Indonesia dengan pemisah argumen titik koma.
+
+Uji dengan empat pos fiktif menghasilkan Rp7.750.000, pagu fiktif Rp10.000.000, sisa Rp2.250.000, rekap tiga tahap Rp3.850.000 / Rp3.000.000 / Rp900.000. Menghapus frekuensi satu pos menurunkan total menjadi Rp6.850.000 dan memberi status PERLU PEMERIKSAAN; mengembalikan frekuensi mengembalikan total dan status SESUAI INPUT. Excel juga menandai kategori tak dikenal sebagai belum terpetakan. Tidak ada angka sintetis pada master.
+
+Seluruh laporan tetap draf sampai data sumber, versi RAB, aturan resmi dan pemilik keputusan diverifikasi. Pemeriksaan print preview Google Sheets dan kesesuaian format resmi belum dilakukan. [QA lengkap](../../docs/qa/master-rab-v2-1-2026-11-04.md).

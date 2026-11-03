@@ -243,3 +243,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Memperbaiki rumus Google Sheets locale `in_ID` memakai separator `;` dan mengganti repeatCell yang tidak menyesuaikan referensi baris dengan 100 formula eksplisit. Master native tidak mempunyai parse error setelah koreksi.
 - Menambahkan blueprint RAB dan kontrak planner B11:I110; sumber K/catatan L masih isi manual. Enam jenis template publik sebelumnya menjadi tujuh, dengan kontrak anggaran baru `di.finance.rab-plan@1.0.0` dalam status NEEDS_REVIEW di Registry privat.
 - Delapan tes planner sintetis lulus V8 harness; belum ada uji Node, tampilan browser Google Sheets, pengaturan cetak, atau sertifikasi format resmi.
+
+## 1.8.14-dev — 2026-11-04 (RAB v2.1.0 design and data integrity)
+
+- Merapikan Excel RAB v2.1: 100 pos, rekap vertikal, panduan, kondisi kosong-vs-nol, dan formula pengelompokan tahap serta kategori.
+- Membuat Master RAB v2.1 Google Sheets native dari salinan master asli, bukan impor Excel, lalu memperbarui desain dan formula sesuai locale Indonesia. Master lama tetap tersimpan.
+- QA sintetis 4 pos: total Rp7.750.000, pagu Rp10.000.000, sisa Rp2.250.000, tahap 1/2/3 Rp3.850.000/Rp3.000.000/Rp900.000. Tanpa frekuensi status PERLU PEMERIKSAAN, setelah dipulihkan SESUAI INPUT.
+- Memperbaiki rumus desimal yang tidak diparse locale Indonesia, menghindari frozenColumnCount yang berbenturan dengan judul merged dan menjaga zona input formula tetap terpisah.
+- Registry privat baru mencatat v2.1.0 NEEDS_REVIEW dan v2.0.0 RETIRED; UI browser, pengaturan cetak dan kesesuaian format resmi tetap belum diverifikasi. Tidak ada data privat ditambahkan ke Git.
