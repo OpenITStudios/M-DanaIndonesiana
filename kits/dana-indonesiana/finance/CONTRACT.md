@@ -40,27 +40,10 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 
 Dua angka berbeda pada LRA dan buku kas → laporkan selisih, transaksi yang perlu diperiksa, bukti yang hilang; jangan mengubah sumber.
 
-## Kalkulator deterministik v0.3
+## Referensi operasional
 
-Gunakan [Validation Runbook](VALIDATION-RUNBOOK.md) dan kalkulator JSON jika ada **data yang diizinkan**. Ini proyeksi DRAFT, bukan ekspor Excel resmi atau bukti persetujuan pemerintah. Realisasi kumulatif hanya dihitung dari prior yang diberikan eksplisit; tidak pernah disimpulkan sebagai nol.
+- [Finance Validation Runbook](VALIDATION-RUNBOOK.md) untuk input/output kalkulator JSON dan cakupan pemeriksaan.
+- [Excel Output](EXCEL-OUTPUT.md) untuk ekspor XLSX dua lembar yang masih berstatus DRAFT.
+- [Procurement](../procurement/CONTRACT.md) untuk kebutuhan/kontrak vendor; [Evidence](../evidence/CONTRACT.md) untuk bukti; [Regulatory](../regulatory/APPLICABILITY-MATRIX.md) untuk izin, tarif, SBM dan aturan menurut konteks.
 
-## Excel v0.4
-
-Untuk menghasilkan dua lembar Excel draf dari output JSON Finance v0.3, gunakan [Excel Output Contract](EXCEL-OUTPUT.md). Kalkulasi tetap milik finance engine; exporter tidak boleh menciptakan transaksi, satuan RAB, status disetujui, atau bukti.
- 
- ## Metadata RAB v0.5
-
- Kolom rincian hanya boleh diisi dari data RAB yang memang tersedia dan memiliki status/versi jelas. Perbedaan `frekuensi × kuantitas × harga` terhadap nominal pos harus menjadi temuan, bukan koreksi otomatis. Gunakan [Excel Output](EXCEL-OUTPUT.md) untuk jalur penulisan terpisah.
-
-## Perbedaan invoice dan hutang
-
-`invoiced_period` tidak boleh diartikan sebagai saldo belum dibayar. Tanpa relasi invoice–payment yang didukung bukti, status pelunasannya UNKNOWN.
-
-
-## Hubungan dengan bukti procurement (v0.7)
-
-Finance memakai `TXN` dan bukti pembayaran nyata. [Procurement](../procurement/CONTRACT.md) memegang rekam pemilihan/kontrak/serah-terima; [Evidence](../evidence/CLAIM-TO-EVIDENCE.md) memeriksa dukungan bukti. Harga pasar dan invoice tetap **bukan** kas keluar, dan invoice tercatat bukan saldo belum dibayar tanpa rekonsiliasi. Hindari memindahkan PII vendor ke model laporan publik.
-
-## Regulatory Handoff v1.0
-
-Finance tidak menetapkan sendiri tarif pajak, SBM, izin belanja atau tenggat. Minta hasil [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md) dan [Temporal Contract](../regulatory/TEMPORAL-CONTRACT.md) untuk jenis transaksi, tanggal, kategori dan sumber yang berlaku. Nilai yang belum diverifikasi tetap DRAFT/UNKNOWN; temuan aturan tidak mengubah RAB atau buku kas secara otomatis.
+**Arti nilai:** `invoiced_period` hanya nilai invoice tercatat, **bukan** saldo tagihan belum lunas. Rencana pencairan bukan penerimaan kas; pengeluaran bukan capaian karya. Data UNKNOWN tetap UNKNOWN. Tidak menulis bukti/angka privat ke repo publik.

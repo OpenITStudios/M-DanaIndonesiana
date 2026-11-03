@@ -40,10 +40,10 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 
 Game bisa dibuka belum membuktikan QA stabilitas multiuser; status hanya pada skenario yang sudah diuji.
 
-## Rute rinci v0.8
+## Referensi operasional
 
-[Workflow](WORKFLOW.md) untuk kerja; [Indicator Mapping](INDICATOR-MAPPING.md) untuk indikator; [Curatorial Records](CURATORIAL-RECORDS.md) untuk sumber konten; [Digital Deliverables](DIGITAL-DELIVERABLES.md) untuk handoff; [Release & Archive](RELEASE-ARCHIVE.md) untuk preservasi. Semua milik satu skill tanpa QA yang dijalankan saat ini.
+- [Production Workflow](WORKFLOW.md) untuk kegiatan; [Indicator Mapping](INDICATOR-MAPPING.md) untuk capaian.
+- [Curatorial Records](CURATORIAL-RECORDS.md) untuk sumber sejarah; [Digital Deliverables](DIGITAL-DELIVERABLES.md) untuk serah-terima; [Release & Archive](RELEASE-ARCHIVE.md) untuk rilis/arsip.
+- [Evidence](../evidence/CONTRACT.md) untuk bukti dan [Rights](../rights/CONTRACT.md) untuk izin.
 
-## Regulatory Handoff v1.0
-
-Output karya dan tahapan indikator harus berasal dari versi kontrak/lampiran sah, dengan penelusuran melalui [Temporal Contract](../regulatory/TEMPORAL-CONTRACT.md) dan [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md) bila ada perubahan. Persentase produksi contoh dari pedoman tidak otomatis menjadi indikator wajib. Hasil internal bukan persetujuan eksternal.
+Rencana dan milestone tim bukan capaian indikator pendanaan; hasil yang tersedia tidak otomatis berarti semua skenario QA lulus.

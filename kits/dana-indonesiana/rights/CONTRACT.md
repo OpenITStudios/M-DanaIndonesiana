@@ -40,20 +40,11 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 
 Poster siap tetapi panduan logo tahun terkait belum dicek → NEEDS_REVIEW sebelum publikasi.
 
-## Hak atas konten museum virtual v0.8
+## Referensi operasional
 
-[Curatorial Records](../production/CURATORIAL-RECORDS.md) mengidentifikasi sumber dan izin yang diperlukan; [Release & Archive](../production/RELEASE-ARCHIVE.md) menandai distribusi. Rights tetap memegang keputusan clearance termasuk ketentuan [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines). Kredit bukan pengganti izin reproduksi.
+- [Event & Dissemination](EVENT-DISSEMINATION.md) untuk acara publik dan bukti pelaksanaan.
+- [Rights Clearance](RIGHTS-CLEARANCE.md) untuk izin pemanfaatan; [Minecraft Platform](MINECRAFT-PLATFORM.md) untuk kebijakan penggunaan game/merek.
+- [Branding & Publication](BRANDING-PUBLICATION.md) untuk identitas program dan materi publikasi.
+- [DJKI Recordation](DJKI-RECORDATION.md) untuk persiapan pencatatan ciptaan; [Regulatory](../regulatory/APPLICABILITY-MATRIX.md) untuk keberlakuan aturan.
 
-## Prosedur domain v0.9
-
-- [Event & Dissemination](EVENT-DISSEMINATION.md): rencana acara, izin dokumentasi dan laporan kegiatan publik.
-- [Rights Clearance](RIGHTS-CLEARANCE.md): pencipta, pemegang hak, izin adaptasi/penayangan/arsip dan pihak ketiga.
-- [Minecraft Platform](MINECRAFT-PLATFORM.md): brand, event, server, footage, dan constructed promotion oleh organisasi/perusahaan.
-- [Branding & Publication](BRANDING-PUBLICATION.md): logo pemerintah, kredit, materi publikasi.
-- [DJKI Recordation](DJKI-RECORDATION.md): persyaratan dan status pencatatan ciptaan yang benar.
-
-Pilih pedoman sekecil mungkin. Semua berupa **workflow**, bukan izin legal, persetujuan Mojang, pengajuan DJKI, maupun pengesahan LPDP.
-
-## Regulatory Handoff v1.0
-
-Pisahkan hukum hak cipta, ketentuan program/kontrak, kebijakan platform Minecraft dan aturan branding; bandingkan ruang lingkup melalui [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md). [Conflict & Escalation](../regulatory/CONFLICT-ESCALATION.md) diperlukan bila pemanfaatan yang diwajibkan pendanaan tampak dibatasi pemegang hak/platform. Jangan mengira ketentuan logo pemerintah mengesampingkan lisensi karya.
+Pencipta, pemegang hak, lisensi penggunaan, hak cipta otomatis dan surat pencatatan DJKI tidak sama. Hak platform atau aset pihak ketiga tidak otomatis berasal dari pendanaan.

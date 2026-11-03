@@ -1,43 +1,30 @@
-# Module Boundaries
+# Module Ownership — Satu Pemilik Fakta
 
-Modul berikut adalah **batas domain logis**, bukan sembilan aplikasi, database, atau agen. Model data/implementasi hanya dibuat ketika bentuk kebutuhan proyek terverifikasi. Tiap domain memegang fakta asalnya; domain lain membaca atau membuat proyeksi, bukan menyalin sumber.
+**Tujuh skill AI, bukan sembilan aplikasi.** Domain bisnis boleh mencakup subproses seperti pengadaan dan kontrak; masing-masing tetap mempunyai **pemilik keputusan/fakta utama**. Modul lain mengonsumsi hasil, tidak membuat baseline paralel.
 
-| Domain | Canonical owner | Konsumen / batas |
-|---|---|---|
-| Regulatory & Sources | inventaris sumber, status keberlakuan, konflik | semua modul membaca; tidak mengeluarkan persetujuan resmi |
-| Grant & Contract | baseline perjanjian, addendum, termin, indikator | planning/finance/reporting; tidak mengubah kontrak |
-| Budget & RAB | pos, revisi yang disetujui, pagu, pemetaan | finance/procurement/reporting; tidak mengarang pagu |
-| Procurement | kebutuhan, pembanding, pilihan vendor, penerimaan | finance; tidak menganggap pembandingan = izin belanja |
-| Finance & Tax | transaksi, bukti pembayaran, kewajiban pajak, rekonsiliasi | reporting; bukan transfer/pemotongan otomatis |
-| Creative Production | pekerjaan, karya, milestone, hasil, dokumentasi | reporting; kualitas karya butuh review substansi |
-| Administration | surat, notula, respons PMO/LPDP, keputusan | memutakhirkan baseline jika sah; bukan approval buatan |
-| Reporting & Submission | proyeksi laporan dan status pengajuan | tidak membuat fakta baru atau mengklaim disetujui |
-| Audit & Risk | temuan lintas-domain, gap, eskalasi, tingkat bukti | memberi risiko, bukan sertifikasi kepatuhan final |
+| Fakta atau keputusan | Owner utama | Pengguna atau pendukung | Batas |
+|---|---|---|---|
+| Keberlakuan aturan, kategori, tahun | [Regulatory](../../kits/dana-indonesiana/regulatory/CONTRACT.md) | semua skill | `APPLICABLE` bukan sertifikat kepatuhan |
+| Perjanjian, addendum, versi pengajuan, termin dan status portal | [Administration](../../kits/dana-indonesiana/administration/CONTRACT.md) | Regulatory, Finance | tidak menciptakan keputusan PMO/LPDP |
+| Pagu dan RAB disetujui (sebagai dokumen sumber) | Administration menjaga versi; [Finance](../../kits/dana-indonesiana/finance/CONTRACT.md) memodelkan angka | Production, Procurement | draf RAB tidak mengganti baseline sah |
+| Kas, tagihan, pembayaran, LRA, rekonsiliasi | Finance | Evidence, Administration, Writing | rencana/invoice bukan bukti dana dibayar |
+| Asal dan kecukupan bukti, temuan audit | [Evidence](../../kits/dana-indonesiana/evidence/CONTRACT.md) | semua skill | bukti tersedia tidak sama dengan autentik/terima |
+| Kebutuhan, pembanding dan serah terima vendor | [Procurement](../../kits/dana-indonesiana/procurement/CONTRACT.md) sebagai **modul pendukung** | Administration, Finance, Evidence | bukan skill kedelapan dan bukan izin belanja |
+| Aktivitas, hasil digital, milestone dan progres internal | [Production](../../kits/dana-indonesiana/production/CONTRACT.md) | Evidence, Writing | progres tugas bukan capaian indikator resmi |
+| Naskah kuratorial, laporan dan publikasi sebagai tulisan | [Writing](../../kits/dana-indonesiana/writing/CONTRACT.md) | Production, Finance, Evidence | redaksi tidak membuat angka atau aktivitas baru |
+| Lisensi, logo, kegiatan publik dan pencatatan ciptaan | [Rights](../../kits/dana-indonesiana/rights/CONTRACT.md) | Writing, Production, Administration | izin material tidak otomatis berasal dari hibah |
 
-## Kontrak integrasi
+## Aturan integrasi
 
-    source/decision → baseline/activities/budget → transactions/evidence
-    → checks → derived reports → externally confirmed status (jika ada)
+```text
+sumber dan keputusan resmi
+  → baseline dan kewajiban yang berlaku
+  → ACT / IND / RAB / TXN / EVD sesuai owner
+  → pemeriksaan dengan batas yang dijelaskan
+  → laporan turunan untuk peninjauan manusia
+  → receipt/keputusan eksternal bila bukti ada
+```
 
-Gunakan ID/relasi sebagaimana [Traceability](../foundation/04-traceability.md). Aturan applicability ada di [Source Authority](../foundation/02-source-authority.md), dan kualitas bukti ada di [Proof & Approval](../foundation/03-proof-and-approval.md).
+Gunakan [Traceability](../foundation/04-traceability.md) untuk identitas data, [Source Authority](../foundation/02-source-authority.md) untuk aturan, dan [Proof & Approval](../foundation/03-proof-and-approval.md) untuk status.
 
-## Ekspansi
-
-Jangan membuat folder kode atau skema untuk setiap baris tabel sampai ada kebutuhan dan antarmuka yang jelas. Pertahankan satu model rekam kanonis dan satu jalur ekspor; jangan membuat sistem finance kedua hanya karena tersedia repo MIVUBI Finance. Reuse konsep/komponen setelah lisensi, dependensi, dan kontrak data ditinjau.
-
-
-## Owner domain Procurement (v0.7)
-
-[Procurement Contract](../../kits/dana-indonesiana/procurement/CONTRACT.md) memegang prosedur kebutuhan, pembanding, pemilihan, komitmen, dan serah terima. [Evidence](../../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) memeriksa bukti, Finance memegang transaksi, Regulatory memegang applicability, dan Rights memegang izin karya. **Tidak** ada agen, database atau approval engine baru.
-
-## Produksi Karya Digital v0.8
-
-[Production Workflow](../../kits/dana-indonesiana/production/WORKFLOW.md) memegang aktivitas dan keluaran; [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md) mengaitkan indikator; [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) membedakan sumber sejarah dan representasi. Bukti, izin, angka, naskah, dan administrasi tetap dimiliki domain masing-masing. Tidak ada database museum baru.
-
-## Rights & Dissemination Owner v0.9
-
-[Event](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) memegang kebutuhan perizinan/dokumentasi publik, [Rights Clearance](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) memegang penggunaan konten, [Minecraft Platform](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) memegang penilaian kebijakan platform, [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) memegang identitas publikasi, dan [DJKI](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) memegang persiapan pencatatan. Seluruhnya **satu skill**, bukan modul data terpisah; Evidence/Administration/Production tetap memegang fakta asalnya.
-
-## Regulatory Owner v1.0
-
-[Source Intake](../../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md) dan [Applicability Matrix](../../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) memegang identifikasi dan kecocokan aturan; [Temporal](../../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md) menangani masa/tahun; [Conflict](../../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md) menangani eskalasi. [Handoff](../../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md) meneruskan butir berlaku beserta batasnya ke pemilik domain yang relevan. Tidak ada basis hukum paralel di Finance atau Administration.
+**Perluasan:** tambahkan modul/alat hanya jika pekerjaan nyata tidak dapat diselesaikan oleh pemilik yang ada. Tidak perlu engine procurement, portal pengajuan, database hukum, atau katalog museum baru sebelum ada kebutuhan konkret.

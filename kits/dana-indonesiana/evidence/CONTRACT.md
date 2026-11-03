@@ -40,19 +40,11 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 
 Ada invoice tanpa transfer → nilai tagihan dapat dicatat, status paid tetap INCOMPLETE.
 
+## Referensi operasional
 
-## Pemilik pedoman rinci (v0.7)
+- [Claim-to-Evidence](CLAIM-TO-EVIDENCE.md) untuk jenis klaim, bukti dan cakupan audit.
+- [Expenditure Evidence](EXPENDITURE-EVIDENCE.md) untuk data dukung menurut jenis transaksi.
+- [Procurement](../procurement/CONTRACT.md) untuk pemilihan dan serah terima; [Digital Deliverables](../production/DIGITAL-DELIVERABLES.md) untuk hasil karya; [Indicator Mapping](../production/INDICATOR-MAPPING.md) untuk klaim capaian.
+- [Regulatory](../regulatory/APPLICABILITY-MATRIX.md) untuk memastikan suatu dokumen **memang disyaratkan** pada konteks dan sumber yang berlaku.
 
-- [Claim-to-Evidence](CLAIM-TO-EVIDENCE.md): tangga pembuktian, hubungan klaim–bukti, integritas dan status.
-- [Expenditure Evidence](EXPENDITURE-EVIDENCE.md): jenis data dukung belanja menurut pedoman administrasi 2025, **bersyarat** pada perjanjian yang berlaku.
-- [Procurement](../procurement/CONTRACT.md): persiapan dan pemilihan penyedia, kontrak, serah terima. Evidence hanya memeriksa bukti, bukan menentukan kewenangan belanja atau pembayaran.
-
-Pilih jalur terdekat dengan tugas. Satu klaim dapat memiliki beberapa sumber bukti berbeda; jangan menjadikan tersedianya kuitansi sebagai kesimpulan seluruh pekerjaan diterima dan sah.
-
-## Bukti karya digital v0.8
-
-Jika klaim menyatakan produksi selesai, rujuk [Digital Deliverables](../production/DIGITAL-DELIVERABLES.md) dan [Indicator Mapping](../production/INDICATOR-MAPPING.md). File world/screenshot hanya mendukung lingkup yang terlihat, tidak membuktikan seluruh mekanik telah diuji.
-
-## Regulatory Handoff v1.0
-
-Jenis bukti yang `MISSING` harus berasal dari aturan/pedoman yang benar-benar dinilai [APPLICABLE](../regulatory/APPLICABILITY-MATRIX.md) untuk transaksi/aktivitas tersebut. Contoh format historis dan berkas pembanding harga tidak otomatis menjadi kewajiban atau bukti. Gunakan [Compliance Handoff](../regulatory/COMPLIANCE-HANDOFF.md) untuk satu ketentuan, satu rujukan.
+Foto, invoice, pembayaran dan keputusan eksternal mempunyai fungsi bukti berbeda. Jangan menulis `CHECKED_INTERNAL` tanpa menyebut lingkup pemeriksaan yang dilakukan.

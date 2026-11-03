@@ -82,3 +82,12 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Perluasan source discovery: Kategori 2025, SBM 2025/2026/2027, dan kerangka hierarki hukum.
 - Handoff ke Finance, Administration, Procurement, Evidence, Production, Rights dan Writing.
 - Tidak menambah skill kedelapan, automatic compliance engine, data privat, atau hasil QA.
+ 
+## 1.1.0 — 2026-11-03 (documentation consolidation)
+
+- Merampingkan router utama, README, konteks, indeks dokumentasi dan matriks tujuh skill.
+- Memperjelas ownership tujuh skill vs procurement sebagai modul pendukung serta sumber persetujuan eksternal.
+- Menyatukan tambahan kronologis tujuh kontrak domain menjadi referensi current-state; pedoman rinci tetap pada lokasi lama.
+- Menghindari instruksi "QA tidak boleh" yang permanen; fase QA saat ini masih ditunda sesuai permintaan pengguna.
+- Mengonsolidasikan planning menjadi status/backlog saat ini; riwayat tetap di changelog.
+- Tidak menambah agen, modul, template, runtime feature, tes atau data proyek privat.

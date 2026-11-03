@@ -1,96 +1,39 @@
 # M-DanaIndonesiana
 
-**Sistem pedoman modular dan prototipe pelaporan pendanaan kebudayaan.**
+**Sistem modular untuk membantu pelaksanaan pendanaan kebudayaan:** produksi karya, pelaporan keuangan, administrasi, dokumentasi, bukti, pengadaan, hak dan penerapan aturan.
 
-Repository ini menyiapkan aturan kerja, struktur pengetahuan, prosedur produksi karya, pencatatan administrasi-keuangan, dan batas pembuktian untuk proyek Dana Indonesiana periode 2025–2026. **Belum ada data perjanjian, RAB, indikator, atau profil skema pendanaan proyek yang ditetapkan di repository ini.**
+Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, template kosong, kode prototipe, serta data uji sintetis. **Tidak ada dokumen proyek asli atau persetujuan pemerintah yang disimpan sebagai baseline di sini.**
 
-## Status saat ini
+## Kemampuan yang tersedia
 
-- Tahap: **Skill System v1.0 di `develop`** — tujuh skill, kalkulator JSON deterministik, dan ekspor XLSX draf dua lembar; belum ada aplikasi produksi, integrasi e-RISPRO, kalkulator pajak, atau pengesahan otomatis.
-- RAB, indikator, aturan keberlakuan, termin, dan identitas proyek **tidak dipersistenkan dalam repo publik**; pemeriksaan spesifik menggunakan sumber yang diizinkan.
-- Repository bersifat **publik**. Simpan kontrak, rekening, identitas, bukti bayar, dan data proyek nyata hanya di ruang privat yang disetujui; lihat [SECURITY.md](SECURITY.md).
-- Sistem ini **membantu persiapan, pemeriksaan, dan pelaporan internal**; bukan pemberi persetujuan resmi, konsultan hukum, atau pengganti e-RISPRO.
+| Kelompok pekerjaan | Skill |
+|---|---|
+| RAB, realisasi, arus kas dan rekonsiliasi | [Finance & Reporting](.agents/skills/finance-reporting/SKILL.md) |
+| Berkas pencairan, pengajuan, revisi, pelaporan | [Grant Administration](.agents/skills/grant-administration/SKILL.md) |
+| Narasi karya, kuratorial, laporan kegiatan | [Creative Documentation](.agents/skills/creative-documentation/SKILL.md) |
+| Validitas bukti, jenis lampiran dan audit internal | [Evidence & Audit](.agents/skills/evidence-audit/SKILL.md) |
+| Aturan menurut kategori, tahun, kontrak dan pengecualian | [Regulatory Applicability](.agents/skills/regulatory-applicability/SKILL.md) |
+| Milestone, indikator, hasil digital dan arsip karya | [Creative Production](.agents/skills/creative-production/SKILL.md) |
+| Pameran, publikasi, izin, Minecraft, pencatatan DJKI | [Dissemination & Rights](.agents/skills/dissemination-rights/SKILL.md) |
 
-## Alur kerja
+**Procurement** merupakan modul dalam [pengelolaan kebutuhan dan penyedia](kits/dana-indonesiana/procurement/CONTRACT.md), **bukan** agen kedelapan. [Skill Router](docs/skills/README.md) menentukan pemilik utama dan handoff jika tugas melintasi domain.
 
-    Project Setup → Source & Grant Intake → Project Baseline
-    → Work Planning → Execution & Evidence
-    → Verification → Reporting & Submission → Closeout
+## Status kemampuan
 
-Setiap tahap memakai sumber yang dapat dilacak. Tahap yang tidak terdampak tidak perlu diulang jika ada revisi terbatas. Keputusan penting tidak disimpulkan diam-diam oleh AI.
+- **Pedoman:** tujuh skill dengan kontrak rinci dan template, belum dinyatakan lulus uji penggunaan nyata.
+- **Finance prototype:** [perhitungan JSON](tools/finance-report.mjs) dan [ekspor XLSX dua lembar](tools/export-finance-xlsx.py). Hasil berstatus **DRAFT**, bukan laporan resmi yang telah diperiksa atau diterima e-RISPRO; lihat [runbook](kits/dana-indonesiana/finance/EXCEL-OUTPUT.md).
+- **Tidak tersedia:** penyaluran bank, penetapan pajak otomatis, approval PMO/LPDP, pengiriman e-RISPRO, pengujian karya otomatis, sertifikasi kepatuhan.
+- **Fase sekarang:** penyederhanaan arsitektur dokumentasi. Pengguna menunda QA sampai fase pengembangan dinyatakan cukup.
 
-## Navigasi
+## Mulai bekerja
 
-- [AGENTS.md](AGENTS.md) — router pekerjaan AI/operator, batas otoritas, mode, dan stop rule.
-- [CONTEXT.md](CONTEXT.md) — konteks stabil dan status fondasi.
-- [GITHUB_RULES.md](GITHUB_RULES.md) — disiplin branch, commit, dan pembuktian.
-- [docs/README.md](docs/README.md) — indeks seluruh pedoman.
-- [kits/dana-indonesiana/SKILL.md](kits/dana-indonesiana/SKILL.md) — prosedur produksi dokumen berbasis proyek.
-- [templates/project-intake.md](templates/project-intake.md) — daftar informasi yang perlu diisi nanti.
-- [workspace/README.md](workspace/README.md) — konvensi data proyek privat.
+1. Baca [AGENTS.md](AGENTS.md) untuk mode, keselamatan dan aturan kerja.
+2. Gunakan [Skill Router](docs/skills/README.md) untuk memilih **satu skill primer**. Baca referensi domain lain hanya jika tugas memerlukan.
+3. Gunakan sumber proyek yang **diizinkan**, tandai versi serta ketentuan yang berlaku, hasilkan draf yang dapat ditelusuri, dan minta review manusia pada keputusan material.
+4. Untuk perubahan repo, ikuti [GITHUB_RULES.md](GITHUB_RULES.md). Pengembangan rutin di `develop`; promosi ke `Local` lalu `main` memerlukan review yang benar-benar dilakukan.
 
-## Branch
+## Referensi
 
-    develop  : pengembangan aktif selanjutnya
-    Local    : baseline integrasi yang telah ditinjau
-    main     : fondasi/stabil yang disetujui
+[Documentation Index](docs/README.md) · [Module Ownership](docs/modules/README.md) · [Source Authority](docs/foundation/02-source-authority.md) · [Privacy](SECURITY.md) · [Current Context](CONTEXT.md) · [Development Plan](planning/development.md) · [History](CHANGELOG.md)
 
-Bootstrap awal dimulai dari repository kosong. Setelah fondasi terbentuk, perubahan rutin diarahkan ke **develop**; promosi mengikuti [GITHUB_RULES.md](GITHUB_RULES.md). Tidak ada klaim branch protection atau CI otomatis jika belum dikonfigurasi dan dibuktikan.
-
-## Cara melanjutkan
-
-Saat pemilik proyek memberikan informasi, mulai dari **Project Intake**, bukan dari mengarang RAB atau mengeksekusi transaksi. Validasi sumber, daftar asumsi/konflik, lalu minta persetujuan atas perubahan material sebelum menyiapkan dokumen turunan.
-
-Prinsip utama: **satu sumber fakta per domain, bukti dapat ditelusuri, status dilaporkan secara jujur, data sensitif tetap privat, dan tidak membangun komponen yang belum diperlukan.**
-
-## Skills v0.2
-
-Paket tujuh [Agent Skills](.agents/skills/) tersedia dengan [routing](docs/skills/README.md), kontrak domain, kerahasiaan dan sumber fakta bersama. Skill bersifat prosedural: tidak mengimplementasikan akuntansi, pajak atau integrasi e-RISPRO otomatis. Jangan menyimpan dokumen proyek privat pada repo publik.
-
-## Finance reporting v0.3
-
-Kalkulator draft JSON dan uji sintetis tersedia di [Finance Validation Runbook](kits/dana-indonesiana/finance/VALIDATION-RUNBOOK.md); tanpa menyimpan kontrak, RAB privat, atau bukti proyek di GitHub publik.
-
-## Finance Excel v0.4
-
-[Excel Output Contract](kits/dana-indonesiana/finance/EXCEL-OUTPUT.md) mendokumentasikan ekspor dua sheet LRA dan Arus Kas dari JSON draft (menggunakan Python artifact_tool). Hanya untuk data yang diizinkan, bukan integrasi bank/e-RISPRO ataupun laporan resmi yang sudah disahkan.
-
-## Koreksi invoice v0.5.1
-
-`invoiced_period` hanya total invoice dalam satu periode; tidak membuktikan invoice belum dilunasi. Status pelunasan membutuhkan pencocokan dengan pembayaran dan bukti yang sah.
-
-
-## Pelaporan administrasi dan tulisan karya v0.6
-
-- [Alur paket administratif](kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md): checklist pencairan/kemajuan/penutupan berbasis sumber, bukan contoh universal.
-- [Kendali dokumen](kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md): fungsi, versi dan status internal/eksternal dipisahkan.
-- [Editorial Workflow](kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md): tulisan Indonesia natural, spesifik, dan berdasarkan fakta.
-- [Struktur Laporan Karya](kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md): narasi indikator publik/nonpublik, kemajuan dan kuratorial.
-- [Template kosong pelaporan](templates/reporting/administrative-package.md): draft administrasi, indikator, narasi karya dan revisi.
-
-Dokumen proyek rahasia tidak dimasukkan ke repo; pengujian sengaja ditunda pada fase ini. Prosedur belum membuktikan status penerimaan e-RISPRO atau kesesuaian dokumen secara hukum.
-
-
-## Evidence & Procurement v0.7
-
-- [Audit bukti berdasarkan klaim](kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md): bedakan keberadaan dokumen, kesesuaian, substansi dan persetujuan.
-- [Persyaratan bukti per jenis belanja](kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md): rujukan pedoman 2025 dengan batas keberlakuan.
-- [Manajemen pengadaan dan jasa](kits/dana-indonesiana/procurement/CONTRACT.md): kebutuhan → pembanding → kontrak → serah-terima → pembayaran.
-- [Pembanding harga](kits/dana-indonesiana/procurement/PRICE-COMPARISON.md): bandingkan scope, sumber dan keterbatasan harga tanpa mengarang penawaran.
-- Template kosong tersedia untuk [telaah bukti](templates/evidence/evidence-review.md), [permintaan pengadaan](templates/procurement/requirement-and-selection.md), [perbandingan harga](templates/procurement/price-comparison.md), dan [penerimaan hasil](templates/procurement/deliverable-acceptance.md).
-
-Tetap tujuh skill; procurement adalah **modul prosedural**, bukan agen kedelapan. Tidak ada tes/QA yang dijalankan pada fase pengembangan ini. Semua dokumen proyek privat tetap di luar Git.
-
-## Creative Production v0.8
-
-Terdapat lima kontrak produksi di [Production Workflow](kits/dana-indonesiana/production/WORKFLOW.md), mencakup indikator, kuratorial, serah-terima digital dan preservasi. Template kosong hanya digunakan saat diperlukan. **Tes dan QA ditunda.**
-
-## Dissemination & Rights v0.9
-
-Tersedia pedoman [Event & Dissemination](kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md), [Rights Clearance](kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md), [Minecraft Platform](kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md), [Branding & Publication](kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md), dan [DJKI Recordation](kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Empat template kosong mendukung catatan kegiatan, matriks izin, review publikasi dan persiapan pencatatan. Skill tetap prosedural; tidak ada tes, pengiriman, publikasi atau berkas rahasia yang dipindahkan.
-
-## Regulatory Intelligence v1.0
-
-Skill [Regulatory Applicability](.agents/skills/regulatory-applicability/SKILL.md) sekarang memiliki [Source Intake](kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md), [Applicability Matrix](kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md), [Temporal & Contract Scope](kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md), [Conflict Escalation](kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md), dan [Compliance Handoff](kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md).
-
-Aturan baru **tidak otomatis** mengganti syarat perjanjian lama. Status `APPLICABLE` harus didukung sumber, subjek, tahun/tanggal, dasar kewenangan, kontrak dan pengecualian. Ini bukan *legal approval*, pengesahan LPDP/PMO, atau engine kepatuhan otomatis. Tes/QA tetap ditunda.
+**Kriteria kerja:** hasil yang berguna, bahasa Indonesia alami dan akurat, satu sumber fakta per domain, tidak membuat fitur atau dokumen kosong yang tidak diperlukan.

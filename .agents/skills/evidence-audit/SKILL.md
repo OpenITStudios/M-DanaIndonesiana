@@ -1,25 +1,15 @@
 ---
 name: evidence-audit
-description: "Periksa bukti dokumenter dan jejak audit Dana Indonesiana: kecocokan dokumen, transaksi, output karya, pengadaan, versi, dan status pengajuan tanpa menyatakan audit resmi."
+description: "Memeriksa bukti transaksi, kegiatan, hasil produksi, kontrak dan dokumen pengajuan; mengidentifikasi kekurangan serta kontradiksi."
 ---
 
 # evidence-audit
 
-## Kapan digunakan
+**Aktifkan ketika:** Memeriksa bukti transaksi, kegiatan, hasil produksi, kontrak dan dokumen pengajuan; mengidentifikasi kekurangan serta kontradiksi.
 
-Periksa bukti dokumenter dan jejak audit Dana Indonesiana: kecocokan dokumen, transaksi, output karya, pengadaan, versi, dan status pengajuan tanpa menyatakan audit resmi.
+1. Ikuti [Shared Operating Contract](../../../kits/dana-indonesiana/OPERATING-CONTRACT.md), lalu baca [evidence contract](../../../kits/dana-indonesiana/evidence/CONTRACT.md). Prosedur lebih rinci dipilih dari kontrak jika diperlukan.
+2. Tentukan klaim spesifik dan bukti yang relevan; bedakan keberadaan, keterbacaan, konsistensi, substansi dan konfirmasi resmi.
+3. Temuan harus menyebut pemeriksaan yang dilakukan; tidak menyatakan lulus audit pemerintah.
+4. Serahkan hanya sumber dan fakta minimum kepada skill pendukung menurut [Skill Router](../../../docs/skills/README.md). Tunjukkan output yang selesai, batas verifikasi, dan keputusan manusia bila diperlukan.
 
-## Cara kerja
-
-1. Baca [Shared Operating Contract](../../../kits/dana-indonesiana/OPERATING-CONTRACT.md) lalu [kontrak domain](../../../kits/dana-indonesiana/evidence/CONTRACT.md), tidak semua skill.
-2. Identifikasi sumber, izin membaca/menyimpan, jenis klaim dan status persetujuan yang benar.
-3. Kerjakan tugas domain ini; gunakan [Skill Router](../../../docs/skills/README.md) hanya untuk kepemilikan lintas domain.
-4. Hasilkan keluaran dan batas verifikasi; serahkan persoalan material yang memerlukan manusia.
-5. STOP setelah tugas cukup selesai. Tidak membuat bukti, status, folder, atau data fiktif.
-
-Skill ini berupa prosedur, **belum engine otomatis** dan tidak memiliki kewenangan menyetujui laporan pemerintah.
-
-
-## Routing untuk audit transaksi dan pengadaan
-
-Untuk asal dan kecukupan bukti, baca [Claim-to-Evidence](../../../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md). Untuk lampiran belanja gunakan [Expenditure Evidence](../../../kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md). Jika pertanyaannya pemilihan vendor, harga atau serah terima, aktifkan kontrak **modul** [Procurement](../../../kits/dana-indonesiana/procurement/CONTRACT.md) tanpa menciptakan agen procurement baru.
+Ini adalah skill prosedural, bukan otorisasi pembayaran, surat pemerintah, penilaian hukum final, atau bukti QA yang belum dilakukan.

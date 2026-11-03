@@ -1,49 +1,17 @@
 ---
 name: dana-indonesiana
-description: Router prosedur pengelolaan dokumen proyek pendanaan kebudayaan; panduan prosedural untuk program.
-version: 0.2.0
+description: "Compatibility entrypoint untuk petunjuk pengelolaan dokumen pendanaan kebudayaan; domain skill aktif dipilih melalui router tujuh skill."
+version: 1.1.0
 ---
 
-# Dana Indonesiana Production Kit
+# Dana Indonesiana — Production Kit Entry
 
-Berkas ini adalah **petunjuk operasional** untuk pekerjaan proyek di ChatGPT, bukan klaim bahwa sudah ada engine terpasang atau data proyek tersedia.
+Ini **entrypoint kompatibilitas**, bukan agen kedelapan. Skill yang dipilih dari `.agents/skills/` tetap mempunyai tanggung jawab spesifik.
 
-## Masukan dan pemilihan mode
+1. Baca [AGENTS.md](../../AGENTS.md) untuk mode dan batas kerja.
+2. Pilih satu spesialis dari [Skill Router](../../docs/skills/README.md).
+3. Ikuti [Shared Contract](OPERATING-CONTRACT.md) dan kontrak domain yang relevan.
+4. Gunakan [Production Flow](../../docs/foundation/01-production-flow.md) untuk konteks tahapan proyek dan [Validation](VALIDATION.md) hanya jika pemeriksaan diminta.
+5. Serahkan draf/temuan dengan sumber, versi, gap dan batas validasi yang jelas. Jangan membuat fakta atau persetujuan.
 
-- INSPECT: lihat status dan dokumen tanpa perubahan.
-- SYSTEM DEVELOPMENT: ubah aturan/arsitektur pada develop; jangan ubah data nyata.
-- PROJECT EXECUTION: susun dokumen atau update satu proyek yang ditentukan berdasarkan sumber privat resmi.
-- VALIDATION: uji dan laporkan ketidaksesuaian spesifik; tidak mengubah bukti.
-- MAINTENANCE: perbaiki cacat terbatas pada owner yang tepat.
-
-Sebelum pekerjaan proyek, baca [AGENTS.md](../../AGENTS.md), [Source Authority](../../docs/foundation/02-source-authority.md) dan [Production Flow](../../docs/foundation/01-production-flow.md).
-
-## Jalur minimum
-
-    brief + dokumen resmi
-    → source inventory (asal, versi, kategori, tanggal)
-    → baseline / UNKNOWN / konflik
-    → aktivitas dan relasi RAB
-    → pencatatan bukti asli
-    → pemeriksaan terpisah
-    → draf laporan / human review
-    → pengajuan resmi oleh pihak berwenang
-
-## Ketika pengguna belum menyediakan data proyek
-
-Tulis hanya template, daftar dokumen yang dibutuhkan, atau rancangan alternatif dengan label asumsi. Jangan mengisi nama proyek, angka pendanaan, termin, persetujuan, atau kewajiban spesifik dari dugaan.
-
-## Ketika menghasilkan dokumen
-
-1. Tentukan satu dokumen hasil dan penggunaan sebenarnya.
-2. Catat sumber, identitas revisi, bagian yang terverifikasi, dan hal yang belum diketahui.
-3. Pertahankan redaksi asli saat diperlukan; jangan memalsukan cap/tanda tangan.
-4. Tautkan klaim capaian, angka, atau biaya ke catatan kanonis.
-5. Jalankan pemeriksaan yang benar-benar mungkin sesuai [VALIDATION.md](VALIDATION.md).
-6. Tandai jelas **DRAFT / INTERNAL REVIEW / SUBMITTED / EXTERNALLY CONFIRMED** hanya bila kondisi terbukti.
-
-Jangan membuat schema dan registri paralel; isi spesialis finance, hukum, produksi, atau pelaporan diaktifkan sesuai kebutuhan nyata. Status mesin dan status penerimaan eksternal tidak boleh dicampur.
-
-## Skill yang tersedia
-
-Lihat [Skill Router](../../docs/skills/README.md) dan [Shared Operating Contract](OPERATING-CONTRACT.md). Gunakan satu skill primer, jangan melahirkan registry paralel; semua output tetap memiliki batas validasi yang jelas.
+Tidak ada sumber proyek privat yang otomatis tersedia melalui entrypoint ini. Izin membaca tidak memberi izin menyimpan atau menerbitkan. Prototipe Finance hanya menghasilkan **DRAFT**, bukan laporan yang disetujui LPDP/PMO.

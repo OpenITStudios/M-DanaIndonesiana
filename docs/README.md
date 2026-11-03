@@ -1,72 +1,41 @@
-# Documentation Router
+# Documentation Index
 
-Baca satu owner yang tepat, bukan semua dokumen sekaligus.
+Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **prosedur per pekerjaan** (how-to), dan **catatan referensi/keputusan**. Baca yang diperlukan saja.
 
-## Fondasi (kanonis)
+## Pilih pekerjaan
 
-| Pertanyaan | Owner |
+[Skill Router](skills/README.md) → satu `SKILL.md` → satu kontrak domain → prosedur rinci bila perlu. Untuk pekerjaan lintas domain gunakan [Cross-Skill Workflows](skills/cross-skill-workflows.md); untuk paket laporan lebih rinci gunakan [Reporting Workflow](skills/reporting-workflow.md).
+
+## Fondasi kanonis
+
+| Pertanyaan | Satu pemilik |
 |---|---|
-| Apa tujuan dan batas produk? | [Product Boundaries](foundation/00-product-boundaries.md) |
-| Bagaimana siklus pekerjaan? | [Production Flow](foundation/01-production-flow.md) |
-| Dokumen/aturan mana yang berlaku? | [Source Authority](foundation/02-source-authority.md) |
-| Apa yang boleh dinyatakan tervalidasi? | [Proof & Approval](foundation/03-proof-and-approval.md) |
-| Bagaimana melacak transaksi dan kegiatan? | [Traceability](foundation/04-traceability.md) |
+| Batas produk | [Product Boundaries](foundation/00-product-boundaries.md) |
+| Alur pekerjaan proyek | [Production Flow](foundation/01-production-flow.md) |
+| Aturan mana yang berlaku | [Source Authority](foundation/02-source-authority.md) |
+| Klaim dan status persetujuan | [Proof & Approval](foundation/03-proof-and-approval.md) |
+| Relasi fakta, aktivitas, transaksi, dan bukti | [Traceability](foundation/04-traceability.md) |
+| Pembagian tanggung jawab | [Module Ownership](modules/README.md) |
+| Privasi dan mutasi Git | [Security](../SECURITY.md) / [GitHub Rules](../GITHUB_RULES.md) |
 
-## Operasi dan pengetahuan
+## Detail spesialis
 
-- [Module Boundaries](modules/README.md): kewenangan tiap domain; bukan sembilan aplikasi.
-- [Regulatory Source Register](regulations/source-register.md): daftar referensi yang ditemukan, belum tentu berlaku.
-- [Foundation Decision](knowledge/decisions/0001-bootstrap.md): alasan desain yang tahan lama.
-- [Production Kit](../kits/dana-indonesiana/SKILL.md): prosedur untuk pekerjaan dokumen nyata.
-- [Validation Contract](../kits/dana-indonesiana/VALIDATION.md): pemeriksaan yang wajib dipisahkan dari klaim resmi.
-- [Planning](../planning/development.md): niat pengembangan berikutnya.
-- [Project Intake Template](../templates/project-intake.md): dipakai hanya pada workspace privat.
+| Domain | Prosedur utama |
+|---|---|
+| Finance | [Finance Contract](../kits/dana-indonesiana/finance/CONTRACT.md) |
+| Administration | [Administrative Package](../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) |
+| Writing | [Editorial Workflow](../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) |
+| Evidence & Procurement | [Claim-to-Evidence](../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) / [Procurement](../kits/dana-indonesiana/procurement/CONTRACT.md) |
+| Regulatory | [Applicability Matrix](../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) |
+| Production | [Production Workflow](../kits/dana-indonesiana/production/WORKFLOW.md) |
+| Rights | [Rights Clearance](../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) |
 
-Aturan GitHub ada di [GITHUB_RULES.md](../GITHUB_RULES.md); pedoman keamanan di [SECURITY.md](../SECURITY.md).
+## Referensi dan konteks
 
-**Kebijakan navigasi:** tiap prinsip memiliki satu owner; dokumen lain mengarah kepadanya. File review/hasil turunan bukan pengganti owner kanonis.
+- [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.
+- [Public Design Sources](skills/reference-sources.md): acuan penulisan dan pengembangan skill.
+- [Decision Records](knowledge/decisions/0002-modular-skills.md): alasan pemisahan tujuh skill.
+- [Planning](../planning/development.md): backlog yang belum dilakukan, bukan izin otomatis menjalankan tes.
+- [Templates](../templates/project-intake.md): berkas kosong hanya dibuat saat dibutuhkan di tempat berizin.
 
-## Skill modular
-
-- [Peta tujuh skill dan aktivasi](skills/README.md)
-- [Alur kerja lintas skill](skills/cross-skill-workflows.md)
-- [Sumber riset publik](skills/reference-sources.md)
-- [Kontrak bersama](../kits/dana-indonesiana/OPERATING-CONTRACT.md)
-
-
-## Pelaporan dan naskah karya
-
-- [Reporting Workflow](skills/reporting-workflow.md) — urutan transfer antarskill sesuai tugas.
-- [Paket Administrasi](../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) — satu paket dan satu tujuan.
-- [Document Control](../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md) — metadata, versi dan status.
-- [Editorial Workflow](../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) — mutu tulisan manusiawi.
-- [Reporting Structures](../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md) — susunan isi tiap laporan.
-
-
-## Bukti pengeluaran dan pengadaan
-
-- [Evidence Workflow](../kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) — pemeriksaan klaim, sumber, dan batas hasil.
-- [Bukti Belanja](../kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md) — jenis dokumen pendukung dari pedoman 2025.
-- [Procurement Contract](../kits/dana-indonesiana/procurement/CONTRACT.md) — pemilihan dan penerimaan jasa/barang.
-- [Price Comparison](../kits/dana-indonesiana/procurement/PRICE-COMPARISON.md) — referensi harga terstruktur.
-
-## Produksi Karya v0.8
-
-[Workflow](../kits/dana-indonesiana/production/WORKFLOW.md), [Indicator Mapping](../kits/dana-indonesiana/production/INDICATOR-MAPPING.md), [Curatorial Records](../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md), [Digital Deliverables](../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md), [Release & Archive](../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md).
-
-## Diseminasi dan Hak Karya v0.9
-
-- [Event & Dissemination](../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) — pameran, lokakarya, kegiatan publik.
-- [Rights Clearance](../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) — hak cipta, izin, lisensi pihak ketiga.
-- [Minecraft Platform](../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) — kebijakan brand, event, publikasi dan world.
-- [Branding & Publication](../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) — logo pendanaan, materi publikasi, clearance.
-- [DJKI Recordation](../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) — kesiapan pencatatan ciptaan dan pembuktian status.
-
-## Regulatory Intelligence v1.0
-
-- [Source Intake](../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md) — asal, versi dan metadata sumber.
-- [Applicability Matrix](../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) — enam gerbang keberlakuan.
-- [Temporal & Contract Scope](../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md) — tahun dan masa yang berbeda.
-- [Conflict Escalation](../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md) — penyelesaian dan permintaan klarifikasi.
-- [Compliance Handoff](../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md) — pengiriman aturan ke tujuh skill.
-- [Source Register](regulations/source-register.md) — daftar referensi publik, bukan keputusan kepatuhan.
+Catatan historis versi berada di [CHANGELOG](../CHANGELOG.md), tidak diduplikasi pada router.

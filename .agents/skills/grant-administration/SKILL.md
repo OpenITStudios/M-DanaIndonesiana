@@ -1,25 +1,15 @@
 ---
 name: grant-administration
-description: "Bantu administrasi program Dana Indonesiana: pemeriksaan dokumen pencairan, pengajuan dan perbaikan e-RISPRO, surat, perubahan RAB, termin, laporan dan kendali versi."
+description: "Menyiapkan paket administrasi pencairan, perbaikan e-RISPRO, surat, perubahan dokumen dan pelaporan Dana Indonesiana."
 ---
 
 # grant-administration
 
-## Kapan digunakan
+**Aktifkan ketika:** Menyiapkan paket administrasi pencairan, perbaikan e-RISPRO, surat, perubahan dokumen dan pelaporan Dana Indonesiana.
 
-Bantu administrasi program Dana Indonesiana: pemeriksaan dokumen pencairan, pengajuan dan perbaikan e-RISPRO, surat, perubahan RAB, termin, laporan dan kendali versi.
+1. Ikuti [Shared Operating Contract](../../../kits/dana-indonesiana/OPERATING-CONTRACT.md), lalu baca [administration contract](../../../kits/dana-indonesiana/administration/CONTRACT.md). Prosedur lebih rinci dipilih dari kontrak jika diperlukan.
+2. Tentukan dokumen/perjanjian dan versi yang berlaku; bentuk checklist paket yang benar-benar diperlukan.
+3. Pisahkan READY_TO_SUBMIT dari SUBMITTED/EXTERNAL_CONFIRMED; bukti status eksternal harus berasal dari kanal resmi.
+4. Serahkan hanya sumber dan fakta minimum kepada skill pendukung menurut [Skill Router](../../../docs/skills/README.md). Tunjukkan output yang selesai, batas verifikasi, dan keputusan manusia bila diperlukan.
 
-## Cara kerja
-
-1. Baca [Shared Operating Contract](../../../kits/dana-indonesiana/OPERATING-CONTRACT.md) lalu [kontrak domain](../../../kits/dana-indonesiana/administration/CONTRACT.md), tidak semua skill.
-2. Identifikasi sumber, izin membaca/menyimpan, jenis klaim dan status persetujuan yang benar.
-3. Kerjakan tugas domain ini; gunakan [Skill Router](../../../docs/skills/README.md) hanya untuk kepemilikan lintas domain.
-4. Hasilkan keluaran dan batas verifikasi; serahkan persoalan material yang memerlukan manusia.
-5. STOP setelah tugas cukup selesai. Tidak membuat bukti, status, folder, atau data fiktif.
-
-Skill ini berupa prosedur, **belum engine otomatis** dan tidak memiliki kewenangan menyetujui laporan pemerintah.
-
-
-## Rujukan ketika diminta produksi paket
-
-Gunakan [Package Workflow](../../../kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md) hanya untuk tugas pencairan/pelaporan atau perubahan yang nyata. Jika persoalannya penataan folder, versi atau surat yang telah diajukan, baca [Document Control](../../../kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md). Jangan membuat folder kosong, mengubah sumber, atau menaikkan status dokumen tanpa bukti.
+Ini adalah skill prosedural, bukan otorisasi pembayaran, surat pemerintah, penilaian hukum final, atau bukti QA yang belum dilakukan.

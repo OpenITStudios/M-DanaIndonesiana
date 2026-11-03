@@ -1,44 +1,18 @@
-# Cross-Skill Production Flows
+# Cross-Skill Workflows — Jalur Terpendek
 
-Urutan berikut bersifat *conditional*, tidak otomatis menjalankan semua skill. Tidak ada mesin orkestrasi pada fase ini.
+Ini **panduan pemilihan owner**, bukan mesin orkestrasi yang berjalan otomatis. Pilih menurut hasil yang diminta dan hentikan bila data cukup. Gunakan [Reporting Workflow](reporting-workflow.md) untuk prosedur paket laporan yang lebih detail.
 
-| Tujuan nyata | Jalur terpendek | Batas keluaran |
+| Permintaan | Jalur jika diperlukan | Batas kesimpulan |
 |---|---|---|
-| mengajukan pencairan | administration → regulatory bila syarat konflik → finance untuk nominal → evidence untuk dokumen | paket siap diperiksa manusia, bukan submit otomatis |
-| laporan penggunaan dana | finance → evidence → administration format resmi | LRA dan arus kas terverifikasi dalam lingkup data, bukan laporan disetujui |
-| laporan indikator kegiatan | production → evidence → writing → administration | capaian yang bisa ditelusuri, bukan persen dari jumlah tugas |
-| publikasi pameran | production → writing → dissemination-rights | materi siap-review, bukan izin publikasi otomatis |
-| perubahan jadwal/RAB | administration → regulatory → finance bila ada dampak uang → evidence persetujuan | usulan perubahan, bukan baseline baru |
-| audit sengketa sumber | regulatory → evidence → domain terimbas | ketidakpastian terlokalisasi, tidak menimpa sumber |
+| Periksa pencairan | Administration → Regulatory (syarat konflik) → Finance (angka) → Evidence (bukti) | paket untuk review, bukan dana cair |
+| Laporan keuangan | Finance → Evidence → Administration untuk format | buku kas dan LRA draf, bukan approval pemerintah |
+| Laporan indikator karya | Production → Evidence → Writing → Administration | capaian berdasarkan indikator dan bukti, bukan persentase task |
+| Perubahan RAB/linimasa | Administration → Regulatory → Finance/Production (dampak) → Evidence (keputusan) | proposal perubahan sampai disahkan |
+| Pengadaan jasa kreatif | Procurement (via Administration) → Regulatory bila perlu → Evidence/Finance/Production sesuai jenis pemeriksaan | harga pembanding, kontrak, serah-terima dan pembayaran berbeda |
+| Rilis/arsip karya | Production → Rights → Evidence → Writing untuk materi publik | izin dan publikasi perlu bukti masing-masing |
+| Pencatatan hak cipta | Rights → Administration untuk berkas → Evidence bila surat terbit | penciptaan hak, pengajuan dan surat pencatatan berbeda |
+| Konflik sumber | Regulatory → owner terdampak | UNKNOWN/CONFLICT hingga dasar/keputusan tersedia |
 
-## Handoff
+**Handoff:** transfer sumber/versi yang aman, fakta yang sudah diperiksa, cara cek, status dan gap. Jangan membuat registri fakta kedua atau mengaktifkan semua skill demi penampilan kompleks. Modul rights, procurement dan produksi mempunyai prosedur rincinya masing-masing di [Documentation Index](../README.md).
 
-Sampaikan minimum referensi sumber dan versi yang aman, output domain, metode verifikasi, UNKNOWN, dan pemilik keputusan. Output turunan tidak mengubah sumber kanonis. Tidak ada registry tambahan di setiap perpindahan.
-
-
-## Peta laporan v0.6
-
-Gunakan [Reporting Workflow](reporting-workflow.md) sebagai alur lengkap bila menghasilkan paket administrasi sekaligus naskah karya. Tidak seluruh skill harus diaktifkan. Fase pengembangan saat ini dokumenter; QA sengaja tidak dijalankan.
-
-## Jalur produksi museum digital v0.8
-
-- Riset sumber → [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) → Writing/Rights → Production.
-- Karya digital → [Digital Deliverables](../../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md) → Evidence → Administration.
-- Rilis/arsip → [Release](../../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md) → Rights → human review.
-- Laporan indikator → [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md); bukan hasil hitung tugas internal.
-
-## Diseminasi dan izin v0.9
-
-- Acara publik: Production (keluaran sah) → [Event & Dissemination](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) (izin dan dokumentasi) → Evidence (bukti) → Writing (narasi) → Administration (format pelaporan).
-- Materi seni rupa: [Rights Clearance](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) → Curatorial Records → Production; kredit tidak otomatis mengizinkan reproduksi.
-- Publikasi Minecraft dan pendanaan: [Minecraft Platform](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) + [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) → review manusia sebelum publikasi.
-- Pencatatan ciptaan: [DJKI Recordation](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) → Administration untuk dokumen → Evidence untuk surat pencatatan bila benar ada.
-
-Jangan menafsirkan dokumen `DRAFT` sebagai `PUBLISHED`, atau surat pencatatan sebagai izin untuk material pihak ketiga.
-
-## Regulatory routing v1.0
-
-- Bila syarat **berlaku atau tidak** belum jelas: [Source Intake](../../kits/dana-indonesiana/regulatory/SOURCE-INTAKE.md) → [Applicability Matrix](../../kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) → domain yang terdampak.
-- Bila ada **tahun/masa berbeda**: tambahkan [Temporal & Contract Scope](../../kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md); jangan mengubah aturan historis dari tanggal unggah.
-- Bila sumber **bertentangan**: [Conflict Escalation](../../kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md), hentikan hanya keputusan yang tergantung konflik, lalu dapatkan klarifikasi sah jika diperlukan.
-- Hasil yang diteruskan memakai [Compliance Handoff](../../kits/dana-indonesiana/regulatory/COMPLIANCE-HANDOFF.md), bukan status "lulus kepatuhan" universal. Output administratif dan narasi tetap DRAFT sampai sumber/otoritas memastikan klaimnya.
+Semua tindakan eksternal dan penyimpanan mengikuti izin pengguna; data yang hanya boleh dipelajari tidak dibuatkan artefak turunan.

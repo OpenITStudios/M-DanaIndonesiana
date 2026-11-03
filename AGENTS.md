@@ -1,95 +1,41 @@
-# M-DanaIndonesiana — Agent Routing
+# M-DanaIndonesiana — Agent Router
 
-Dokumen ini merupakan **router kanonis** bagi ChatGPT/agen dan operator pada repository ini. Patuhi instruksi pemilik saat ini dan sumber proyek yang terverifikasi; pedoman internal tidak dapat mengesampingkan hukum atau perjanjian yang sah.
+**Satu pintu masuk untuk AI dan operator.** Repository ini berisi pedoman sistem publik; data proyek, kontrak, rekening dan bukti pribadi bukan bagian dari Git.
 
-## Boot untuk setiap sesi
+## Mulai dari sini
 
-1. Pin repository, branch, dan HEAD aktual; jangan menyimpulkan status dari chat lama.
-2. Baca **AGENTS.md**, lalu **CONTEXT.md**, dan domain router di **docs/README.md**.
-3. Pilih **satu mode** sesuai hasil yang diminta, lalu baca owner terkecil yang relevan.
-4. Baca **GITHUB_RULES.md** sebelum mengubah repository atau riwayat Git.
-5. Laporkan temuan, bukti yang benar-benar diperiksa, dan batas verifikasi. STOP setelah permintaan selesai.
+1. **Pin** repository, branch dan HEAD saat ini. Ikuti [GitHub Rules](GITHUB_RULES.md) sebelum mutasi.
+2. **Pilih mode** sesuai permintaan dan batas izin sumber.
+3. **Pilih satu skill primer** dari [Skill Router](docs/skills/README.md). Baca `SKILL.md` primer → [Shared Contract](kits/dana-indonesiana/OPERATING-CONTRACT.md) → kontrak domain → satu prosedur rinci bila diperlukan. Jangan membaca semua modul.
+4. **Kerjakan lingkup nyata dan laporkan** sumber, hasil, pemeriksaan yang benar-benar dilakukan, UNKNOWN, dan keputusan manusia yang masih diperlukan. STOP.
 
 ## Mode kerja
 
-| Mode | Boleh | Tidak boleh otomatis |
+| Mode | Tujuan | Batas |
 |---|---|---|
-| INSPECT | membaca, mengaudit, merancang | mengubah repo/proyek |
-| SYSTEM DEVELOPMENT | memperbaiki pedoman, skema, aplikasi, pengujian di develop | mengganti data proyek nyata |
-| PROJECT EXECUTION | menyusun dan merevisi dokumen untuk satu proyek yang dipilih | mengubah pedoman sistem |
-| VALIDATION | memeriksa fakta, kelengkapan, dan bukti pada sumber yang ada | mengklaim persetujuan resmi |
-| MAINTENANCE | memperbaiki kesalahan terbatas pada owner asal | refactor/fitur melebar |
+| INSPECT | membaca, memetakan dan mengaudit sumber | tanpa perubahan data/repo |
+| SYSTEM DEVELOPMENT | mengubah sistem, panduan atau program di `develop` | tidak mengubah data proyek nyata |
+| PROJECT EXECUTION | membuat/mengedit keluaran proyek pada lokasi berizin | tidak mengubah pedoman sistem diam-diam |
+| VALIDATION | memeriksa klaim, hasil, bukti dan alat sesuai instruksi | tidak menciptakan persetujuan eksternal |
+| MAINTENANCE | perbaikan terbatas pada pemilik kesalahan | tidak otomatis memperluas scope |
 
-Jika pengguna berkata "lanjutkan", pertahankan topik dan mode kerja yang aktif; jangan memilih backlog lain. Jika data proyek yang penting belum ada, buat daftar UNKNOWN dan selesaikan pekerjaan independen.
+Permintaan "lanjutkan" mempertahankan topik dan mode yang sedang aktif. Instruksi pengguna terbaru tentang **pengujian, kerahasiaan dan ruang lingkup** berlaku untuk tugas saat ini; catatan lama bukan larangan atau izin permanen.
 
-## Sumber dan otoritas
+## Batas yang tidak boleh dilanggar
 
-- Instruksi pengguna menentukan **permintaan kerja**, bukan legalitas pengeluaran.
-- Untuk setiap klaim kepatuhan, periksa hukum relevan, pedoman/Juknis sesuai kategori, perjanjian dan addendum, RAB/indikator disetujui, serta keputusan resmi yang dapat dibuktikan.
-- Aturan antar tahun **tidak otomatis berlaku silang**. Catat tahun anggaran, kategori, versi, tanggal efektif, klausul, dan keputusan relevan.
-- Jika terjadi konflik material, beri status **UNKNOWN / NEEDS AUTHORITY REVIEW**; jangan memilih aturan hanya karena terbit paling baru.
-- Hierarki dan prosedur pemeriksaan: [source-authority](docs/foundation/02-source-authority.md).
+- **Sumber dan hukum:** perjanjian, addendum, Juknis, pedoman dan peraturan dinilai menurut kategori, lingkup, waktu, dan bukti keberlakuannya melalui [Source Authority](docs/foundation/02-source-authority.md). File bernama `final` atau `terbaru` bukan bukti sah.
+- **Klaim dan persetujuan:** `CHECKED_INTERNAL`, `SUBMITTED`, `EXTERNAL_CONFIRMED` berbeda; baca [Proof & Approval](docs/foundation/03-proof-and-approval.md). Tidak membuat surat, kuitansi, tanda tangan, transaksi, kegiatan, hasil QA atau keputusan palsu.
+- **Privasi:** `pelajari saja/jangan simpan` berarti **read-only**; jangan membuat salinan, upload, commit, fixture, atau output file yang berisi data tersebut. Klasifikasi lebih rinci ada di [SECURITY.md](SECURITY.md).
+- **Sumber fakta:** kontrak dan keputusan → baseline proyek berizin → aktivitas/keuangan/bukti → hasil pemeriksaan → laporan turunan. Jangan mengubah sumber asli berdasarkan laporan AI. Gunakan [Traceability](docs/foundation/04-traceability.md).
+- **Modularitas:** satu pemilik tiap fakta. Domain lain mengonsumsi hasil minimum, bukan membuat registri paralel. Tidak membuat aplikasi/agen baru hanya untuk menambah struktur.
 
-## Jalur kanonis
+## Navigasi
 
-    sumber asli + keputusan resmi
-    → baseline proyek yang disetujui
-    → catatan aktivitas / anggaran / transaksi / bukti
-    → pemeriksaan internal
-    → keluaran laporan turunan
-    → catatan pengajuan dan hasil persetujuan eksternal
+- [Skill Router](docs/skills/README.md): satu matriks tujuh skill dan batas kepemilikannya.
+- [Documentation Index](docs/README.md): fondasi dan prosedur spesialis.
+- [Module Ownership](docs/modules/README.md): pemilik data dan pemroses turunan.
+- [Production Flow](docs/foundation/01-production-flow.md): tahapan proyek dan batas masing-masing.
+- [Current Context](CONTEXT.md): status produk, bukan log sejarah.
+- [Changelog](CHANGELOG.md): riwayat versi.
 
-Keluaran Excel, PDF, HTML, ringkasan, atau dashboard **bukan** sumber untuk menimpa dokumen asli. Perbaiki pertama-tama sumber/owner yang salah lalu regenerasi output terdampak.
-
-## Ownership
-
-| Masalah | Mulai dari |
-|---|---|
-| lingkup proyek, apa yang bukan tugas sistem | docs/foundation/00-product-boundaries.md |
-| langkah kerja, approval, transisi | docs/foundation/01-production-flow.md |
-| dokumen resmi, konflik sumber | docs/foundation/02-source-authority.md |
-| bukti, kesiapan, batas klaim PASS | docs/foundation/03-proof-and-approval.md |
-| identitas/relasi anggaran-kegiatan-bukti | docs/foundation/04-traceability.md |
-| fungsi antarmodul | docs/modules/README.md |
-| sumber aturan yang diketahui | docs/regulations/source-register.md |
-| cara mengolah proyek | kits/dana-indonesiana/SKILL.md |
-| cara memeriksa hasil | kits/dana-indonesiana/VALIDATION.md |
-| GitHub/history/data protection | GITHUB_RULES.md dan SECURITY.md |
-
-Jangan menggandakan aturan di modul lain. Jika makna berubah, ubah owner kanonis dahulu; rujuk dari tempat lain.
-
-## Larangan operasional
-
-- Tidak membuat kuitansi, kontrak, persetujuan PMO, bukti setor, foto kegiatan, atau capaian fiktif.
-- Tidak mengeluarkan putusan "patuh pemerintah", "lulus audit", atau "disetujui LPDP/PMO" dari template, kalkulasi, ataupun pemeriksaan mekanis.
-- Tidak memindahkan data sensitif ke repository publik, issue, log, atau contoh.
-- Tidak mengasumsikan kategori Dana Indonesiana atau menerapkan aturan numerik tertentu sebelum sumber dan keberlakuannya ditentukan.
-- Tidak membuat aplikasi, registry paralel, agen tambahan, atau antarmuka kompleks semata-mata agar terlihat lengkap.
-
-## Continuity
-
-Gunakan HEAD aktual, perubahan owner terkait, dan [CONTEXT.md](CONTEXT.md). Catatan chat adalah orientasi, bukan sumber proyek otoritatif. Saat ada keputusan material, catat pada sumber privat proyek atau catatan keputusan sistem yang memang relevan. Cantumkan pekerjaan, status, bukti dan keterbatasan pada commit material; tidak perlu heartbeat/status duplikat.
-
-**STOP** saat keluaran yang diminta selesai dengan bukti cukup, atau saat batas data/akses dilaporkan secara spesifik.
-
-## Skill modular
-
-Pilih satu spesialis dari [Skill Router](docs/skills/README.md). Baca [Shared Contract](kits/dana-indonesiana/OPERATING-CONTRACT.md). Dokumen dengan instruksi "pelajari saja" tidak pernah di-upload/disimpan. Domain kedua hanya diaktifkan jika tugas memerlukan.
-
-
-## Pengendalian pelaporan dan penulisan v0.6
-
-Untuk pekerjaan paket pencairan atau laporan, mulai dari [Package Workflow](kits/dana-indonesiana/administration/PACKAGE-WORKFLOW.md); untuk kendali versi lihat [Document Control](kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md). Untuk naskah karya dan laporan, gunakan [Editorial Workflow](kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md). Ini **pendalaman skill yang sudah ada**, bukan agen baru. Jangan jalankan pengujian pada fase pengembangan yang secara eksplisit ditunda pengguna.
-
-
-## Bukti pengeluaran dan pengadaan (v0.7)
-
-Saat diminta memeriksa bukti, pilih [Claim-to-Evidence](kits/dana-indonesiana/evidence/CLAIM-TO-EVIDENCE.md) dan, bila jenis belanja relevan, [Expenditure Evidence](kits/dana-indonesiana/evidence/EXPENDITURE-EVIDENCE.md). Untuk pemilihan dan penyerahan barang/jasa, gunakan [Procurement Contract](kits/dana-indonesiana/procurement/CONTRACT.md). **Tidak ada agen baru atau persetujuan eksternal otomatis.** Pengujian tetap ditunda.
-
-## Dissemination & Rights v0.9
-
-Untuk pameran dan lokakarya, gunakan [Event & Dissemination](kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md); untuk izin materi, [Rights Clearance](kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md); untuk merek atau event Minecraft, [Minecraft Platform](kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md); untuk logo pemerintah dan publikasi, [Branding & Publication](kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md); untuk pencatatan ciptaan, [DJKI Recordation](kits/dana-indonesiana/rights/DJKI-RECORDATION.md). Tetap satu skill dan tidak ada publikasi/pengajuan otomatis.
-
-## Regulatory Intelligence v1.0
-
-Saat ada pertanyaan aturan, tentukan sumber/lingkup menggunakan [Applicability Matrix](kits/dana-indonesiana/regulatory/APPLICABILITY-MATRIX.md) dan pilih [Temporal](kits/dana-indonesiana/regulatory/TEMPORAL-CONTRACT.md) atau [Conflict](kits/dana-indonesiana/regulatory/CONFLICT-ESCALATION.md) bila relevan. Jangan membuat putusan kepatuhan final atau menjadikan dokumen terbaru sebagai pengganti perjanjian tanpa sumber. Tidak ada QA pada fase ini.
+**Aturan berhenti:** hasil selesai sesuai mandat; jika ada kekurangan material, sebut dengan tepat dan selesaikan pekerjaan independen yang aman. Jangan menutupnya dengan klaim PASS atau kepatuhan yang tidak didukung pemeriksaan.

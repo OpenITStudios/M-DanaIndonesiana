@@ -40,32 +40,10 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 
 Belum dilaksanakan lokakarya → tulis sebagai rencana kegiatan, bukan laporan hasil pelaksanaan.
 
-## Handoff laporan naratif
+## Referensi operasional
 
-Angka kalkulator Finance v0.3 hanya boleh dijadikan draf yang masih perlu pemeriksaan sumber. Jangan mengubah selisih atau menulis "sudah dicairkan", "sudah dibayar", atau "disetujui" berdasarkan rencana atau invoice.
+- [Editorial Workflow](EDITORIAL-WORKFLOW.md) untuk suara tulisan; [Reporting Structures](REPORTING-STRUCTURES.md) untuk laporan kemajuan, indikator dan tulisan karya.
+- [Production/Curatorial](../production/CURATORIAL-RECORDS.md) dan [Indicator Mapping](../production/INDICATOR-MAPPING.md) untuk fakta karya dan indikator.
+- [Finance](../finance/CONTRACT.md) untuk angka; [Rights/Publication](../rights/BRANDING-PUBLICATION.md) untuk kredit dan izin; [Regulatory Handoff](../regulatory/COMPLIANCE-HANDOFF.md) untuk istilah resmi.
 
- ## Finance narrative handoff v0.5
-
- Uraian laporan keuangan harus menggunakan klaim berlabel pada `finance_handoff_v0.5`, tanpa menghapus label `PLANNED_NOT_RECEIVED` atau `NOT_CASH_PAID`. Penulisan natural tidak berarti menghilangkan masalah atau menggunakan bahasa pencairan yang sudah pasti sebelum ada bukti.
-
-**Batas invoice:** jumlah invoice yang tercatat tidak membuktikan tagihan belum dibayar ataupun telah lunas. Gunakan redaksi netral sampai ada rekonsiliasi.
-
-
-## Cara kerja rinci v0.6
-
-- [Editorial Workflow](EDITORIAL-WORKFLOW.md) — pemilihan suara naskah, pemetaan fakta, revisi redaksional dan pemeliharaan makna.
-- [Reporting Structures](REPORTING-STRUCTURES.md) — isi laporan indikator publik/nonpublik, laporan kemajuan, kuratorial dan laporan akhir.
-
-Gunakan [template narasi](../../../templates/reporting/creative-narrative.md) atau [template indikator](../../../templates/reporting/indicator-report.md) seperlunya, tanpa mengaku telah mengikuti acara atau mengarang keberhasilan.
-
-## Narasi produksi dan kuratorial v0.8
-
-Gunakan [Curatorial Records](../production/CURATORIAL-RECORDS.md) untuk membedakan fakta sejarah/interpretasi dan [Indicator Mapping](../production/INDICATOR-MAPPING.md) untuk status capaian. Narasi alami tidak boleh mengubah rencana menjadi kegiatan yang telah berlangsung.
-
-## Bahasa publikasi dan hak v0.9
-
-Gunakan [Branding & Publication](../rights/BRANDING-PUBLICATION.md) untuk kredit pendanaan dan logo, serta [Event & Dissemination](../rights/EVENT-DISSEMINATION.md) untuk narasi kegiatan publik. Tulisan tetap alami, tetapi tidak boleh mengarang pengunjung, testimoni, persetujuan, afiliasi Minecraft/Mojang, atau tanggal kegiatan yang belum ada.
-
-## Regulatory Handoff v1.0
-
-Gunakan [Compliance Handoff](../regulatory/COMPLIANCE-HANDOFF.md) untuk istilah, periode, status dan ketentuan yang benar-benar berlaku. Jangan memperhalus konflik sumber menjadi kalimat pasti demi gaya manusiawi; `UNKNOWN` dan `NEEDS AUTHORITY REVIEW` tetap dilaporkan secara jelas dan tidak dramatis.
+Nilai invoice bukan otomatis hutang belum dibayar; rencana acara bukan hasil. Narasi manusiawi harus mengakui gap dan UNKNOWN tanpa membuat kesimpulan atau testimonial fiktif.

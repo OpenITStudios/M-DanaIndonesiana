@@ -40,31 +40,11 @@ Sertakan ruang lingkup dan periode, versi sumber/nomor referensi aman, metode ya
 
 Surat dan RAB ada tetapi bukti submit portal tidak ada → READY_TO_SUBMIT/UNKNOWN, bukan SUBMITTED.
 
-## Handoff finance v0.3
+## Referensi operasional
 
-Hasil perhitungan JSON adalah masukan DRAFT. Periksa masalah selisih, pos tak terpetakan, periode dan sumber bukti sebelum merancang checklist. Jangan menyimpulkan status e-RISPRO dari `status` kalkulator.
+- [Package Workflow](PACKAGE-WORKFLOW.md) untuk pencairan, laporan berkala/akhir dan perubahan.
+- [Document Control](DOCUMENT-CONTROL.md) untuk versi, fungsi folder dan status internal/eksternal.
+- [Finance](../finance/CONTRACT.md) hanya untuk angka; [Evidence](../evidence/CONTRACT.md) untuk bukti; [Regulatory](../regulatory/APPLICABILITY-MATRIX.md) untuk keberlakuan tenggat/format.
+- [Procurement](../procurement/CONTRACT.md), [Rights/DJKI](../rights/DJKI-RECORDATION.md) dan [Event](../rights/EVENT-DISSEMINATION.md) hanya jika paket memerlukan.
 
- ## Finance handoff v0.5
-
- Gunakan `tools/finance-handoff.mjs` untuk menerima ringkasan kuantitatif berlabel DRAFT. Kolom `calculation_consistent` berarti perhitungan internal tidak mempunyai temuan tingkat ERROR, **bukan** bukti laporan telah disetujui. Status pencairan dan penerimaan harus tetap dibuktikan sendiri melalui sumber portal/bank.
-
-
-## Cara kerja rinci v0.6
-
-- [Package Workflow](PACKAGE-WORKFLOW.md) — pelaksanaan satu paket pencairan, laporan indikator, perubahan, atau penutupan.
-- [Document Control](DOCUMENT-CONTROL.md) — folder fungsi, identitas versi dan pemisahan status internal/eksternal.
-
-Dua dokumen tersebut merupakan detail kerja dari skill **yang sama**, bukan database, tracker, atau agen kedua. Gunakan template kosong [Administrative Package](../../../templates/reporting/administrative-package.md) bila benar-benar diminta membuat dokumen.
-
-
-## Paket pengadaan sebagai lampiran pelaporan (v0.7)
-
-Administration hanya menyiapkan paket bukti yang **diwajibkan oleh pedoman/perjanjian yang berlaku**. Gunakan [Procurement Contract](../procurement/CONTRACT.md) dan [Evidence](../evidence/EXPENDITURE-EVIDENCE.md) untuk memeriksa jenis dokumen, bukan membuat kontrak/penawaran seolah asli atau mengesahkan pemilihan vendor. Status laporan eksternal tidak berubah karena checklist lengkap.
-
-## Handoff DJKI dan kegiatan publik v0.9
-
-[Recordation DJKI](../rights/DJKI-RECORDATION.md) menetapkan informasi/dokumen yang perlu dipersiapkan, bukan bukti permohonan telah diajukan. [Event & Dissemination](../rights/EVENT-DISSEMINATION.md) memberi bukti kegiatan publik; Administration memilih format laporan yang berlaku. Hak cipta lahir dan surat pencatatan merupakan status berbeda. Jangan meminta/menyimpan KTP atau NPWP dari pemilik tanpa dasar izin dan tempat yang disetujui.
-
-## Regulatory Handoff v1.0
-
-Sebelum menetapkan tenggat atau format pengajuan, gunakan [Temporal & Contract Scope](../regulatory/TEMPORAL-CONTRACT.md) dan [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md). Bila sumber perjanjian/Juknis/tampilan e-RISPRO bertentangan, gunakan [Conflict & Escalation](../regulatory/CONFLICT-ESCALATION.md); jangan mengubah status `SUBMITTED/EXTERNAL_CONFIRMED` tanpa bukti.
+Handoff angka tetap DRAFT. Pengajuan, verifikasi PMO/LPDP dan penerimaan bank tidak boleh disimpulkan dari nama file atau kelengkapan checklist.

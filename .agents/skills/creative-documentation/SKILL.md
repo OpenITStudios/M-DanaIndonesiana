@@ -1,25 +1,15 @@
 ---
 name: creative-documentation
-description: "Tulis dan perbaiki dokumen karya kebudayaan dengan bahasa Indonesia alami yang akurat: kuratorial, proposal, laporan indikator, kemajuan, dokumentasi, notula, publikasi dan laporan akhir."
+description: "Menyusun dan merevisi naskah kuratorial, laporan kegiatan, uraian karya, laporan indikator, kemajuan dan materi publikasi dengan bahasa Indonesia alami."
 ---
 
 # creative-documentation
 
-## Kapan digunakan
+**Aktifkan ketika:** Menyusun dan merevisi naskah kuratorial, laporan kegiatan, uraian karya, laporan indikator, kemajuan dan materi publikasi dengan bahasa Indonesia alami.
 
-Tulis dan perbaiki dokumen karya kebudayaan dengan bahasa Indonesia alami yang akurat: kuratorial, proposal, laporan indikator, kemajuan, dokumentasi, notula, publikasi dan laporan akhir.
+1. Ikuti [Shared Operating Contract](../../../kits/dana-indonesiana/OPERATING-CONTRACT.md), lalu baca [writing contract](../../../kits/dana-indonesiana/writing/CONTRACT.md). Prosedur lebih rinci dipilih dari kontrak jika diperlukan.
+2. Tentukan pembaca dan format; gunakan hanya fakta kegiatan, karya serta interpretasi yang jelas sumbernya.
+3. Tulisan alami tidak boleh menambah angka, kegiatan, kutipan atau hak yang belum dibuktikan.
+4. Serahkan hanya sumber dan fakta minimum kepada skill pendukung menurut [Skill Router](../../../docs/skills/README.md). Tunjukkan output yang selesai, batas verifikasi, dan keputusan manusia bila diperlukan.
 
-## Cara kerja
-
-1. Baca [Shared Operating Contract](../../../kits/dana-indonesiana/OPERATING-CONTRACT.md) lalu [kontrak domain](../../../kits/dana-indonesiana/writing/CONTRACT.md), tidak semua skill.
-2. Identifikasi sumber, izin membaca/menyimpan, jenis klaim dan status persetujuan yang benar.
-3. Kerjakan tugas domain ini; gunakan [Skill Router](../../../docs/skills/README.md) hanya untuk kepemilikan lintas domain.
-4. Hasilkan keluaran dan batas verifikasi; serahkan persoalan material yang memerlukan manusia.
-5. STOP setelah tugas cukup selesai. Tidak membuat bukti, status, folder, atau data fiktif.
-
-Skill ini berupa prosedur, **belum engine otomatis** dan tidak memiliki kewenangan menyetujui laporan pemerintah.
-
-
-## Rujukan ketika diminta menyusun tulisan
-
-Baca [Editorial Workflow](../../../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md) untuk kualitas bahasa dan [Reporting Structures](../../../kits/dana-indonesiana/writing/REPORTING-STRUCTURES.md) hanya ketika format laporan memerlukannya. Gunakan fakta kegiatan dan sumber kuratorial yang tersedia. Hasil alami bukan alasan untuk menambah detail fiktif.
+Ini adalah skill prosedural, bukan otorisasi pembayaran, surat pemerintah, penilaian hukum final, atau bukti QA yang belum dilakukan.
