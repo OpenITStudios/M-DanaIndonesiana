@@ -64,7 +64,7 @@ test("unknown source lineage stays unmapped, never fabricated",()=>{
 test("rejects report outside approved reporting folder even inside project",()=>{
   assert.throws(()=>prepareOutputIntake(registry(),remote(),{
     ...options(),ancestorIds:["synthetic_OtherFolder_2026",root]
-  }),/OUTPUT_OUTSIDE_APPROVED_PROJECT_REPORT_FOLDER/);
+  }),/OUTPUT_IMMEDIATE_PARENT_MISMATCH/);
   assert.throws(()=>prepareOutputIntake(registry(),remote(),{
     ...options(),ancestorIds:[allowed]
   }),/OUTPUT_OUTSIDE_APPROVED_PROJECT_REPORT_FOLDER/);
@@ -104,3 +104,17 @@ test("rejects duplicate or malformed source ID selections",()=>{
   assert.throws(()=>parseOutputSourceIds("DOC-SYNTHETIC-SOURCE,DOC-SYNTHETIC-SOURCE"),/DUPLICATE_OUTPUT_SOURCE_ID/);
   assert.throws(()=>parseOutputSourceIds("DOC-SYNTHETIC-SOURCE,../secret"),/INVALID_OUTPUT_SOURCE_ID/);
 });
+
+test("caller-provided ancestor sequence must start at the real parent and end at project root",()=>{
+  const metadata=remote();
+  assert.throws(()=>prepareOutputIntake(registry(),metadata,{
+    ...options(),ancestorIds:[root,allowed]
+  }),/OUTPUT_IMMEDIATE_PARENT_MISMATCH/);
+  assert.throws(()=>prepareOutputIntake(registry(),metadata,{
+    ...options(),ancestorIds:[allowed,root,"synthetic_UnrelatedRoot_2026"]
+  }),/OUTPUT_OUTSIDE_APPROVED_PROJECT_REPORT_FOLDER/);
+  assert.throws(()=>prepareOutputIntake(registry(),{
+    ...metadata, parents:["synthetic_UnexpectedFolder_2026"]
+  },options()),/OUTPUT_IMMEDIATE_PARENT_MISMATCH/);
+});
+

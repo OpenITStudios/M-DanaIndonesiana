@@ -47,16 +47,22 @@ export function parseReviewQueueRows(matrix) {
       [key, scalar(raw[header.indexOf(key)])]));
     const label = "row " + (index + 1);
     ensure(/^RQ-[A-F0-9]{20}$/.test(row.review_id), "INVALID_REVIEW_ID", label);
-    ensure(!ids.has(row.review_id), "DUPLICATE_REVIEW_ID", row.review_id);
-    ids.add(row.review_id);
     ensure(FINDING_TYPES.has(row.finding_type), "INVALID_FINDING_TYPE", label);
     ensure(row.document_id.length > 0, "MISSING_REVIEW_DOCUMENT", label);
     ensure(/^[a-f0-9]{64}$/.test(row.fingerprint), "INVALID_FINGERPRINT", label);
+    ensure(row.review_id === identify(row.finding_type, row.document_id, row.fingerprint),
+      "REVIEW_ID_FINGERPRINT_MISMATCH", label);
+    ensure(!ids.has(row.review_id), "DUPLICATE_REVIEW_ID", row.review_id);
+    ids.add(row.review_id);
     ensure(REVIEW_STATES.has(row.status), "INVALID_REVIEW_STATE", label);
     ensure(row.first_seen_at.length > 0 && row.last_seen_at.length > 0,
       "MISSING_REVIEW_TIMESTAMPS", label);
-    ensure(!Number.isNaN(Date.parse(row.first_seen_at)) &&
-      !Number.isNaN(Date.parse(row.last_seen_at)), "INVALID_REVIEW_TIMESTAMP", label);
+    const iso = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/;
+    ensure(iso.test(row.first_seen_at) && iso.test(row.last_seen_at) &&
+      Number.isFinite(Date.parse(row.first_seen_at)) &&
+      Number.isFinite(Date.parse(row.last_seen_at)), "INVALID_REVIEW_TIMESTAMP", label);
+    ensure(Date.parse(row.first_seen_at) <= Date.parse(row.last_seen_at),
+      "REVIEW_TIME_ORDER_INVALID", label);
     if (row.status === "RESOLVED" || row.status === "DISMISSED") {
       ensure(row.reviewer.length > 0 && row.decision_ref.length > 0,
         "REVIEW_CLOSURE_NEEDS_EVIDENCE", label);
@@ -186,6 +192,18 @@ export function reconcileReviewQueue(impact, existingQueueRows, seenAt) {
     },
     new_candidates, pending_existing, reviewed_existing, no_longer_detected,
     requires_human_review:true, canonical_queue_location:"PRIVATE_GOOGLE_SHEET_REVIEW_QUEUE_TAB",
+    coverage:{
+      registered_documents:impact.total_indexed,
+      metadata_match_only:impact.matched_metadata_only,
+      metadata_changed:impact.summary?.changed_count ?? null,
+      metadata_unverified:impact.summary?.uncertain_count ?? null,
+      registered_derived_outputs:impact.derived_outputs_registered,
+      derived_mapping_coverage:impact.derived_mapping_coverage,
+      folder_inventory_performed:impact.inventory_performed === true,
+      document_bodies_reviewed:false,
+      file_content_hashes_checked:false,
+      external_approval_checked:false
+    },
     auto_written:false, source_documents_modified:false,
     note:"This is a read-only preview. Register and resolve actual findings only after authorized human review; no auto-closure, no implicit e-RISPRO approval."
   };

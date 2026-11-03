@@ -11,7 +11,7 @@ Lokasi privat yang telah disiapkan: satu Google Sheet yang sama, tab `Documents`
 ## Aturan kelayakan
 
 1. Operator memilih **satu file yang benar-benar ada** dan lokasi folder pelaporan proyek yang diizinkan. Ambil metadata Drive aktual; telusuri seluruh parent melalui Drive API, bukan menebak berdasarkan nama.
-2. File harus berada **di bawah folder pelaporan yang diberikan**, dan folder pelaporan itu harus berada **di dalam root proyek yang diberikan**. Jika file berada di arsip, folder contoh/pedoman, folder akun lain atau di luar root, alat menolak. Google Drive shortcut, file folder dan MIME tak dikenal ditolak.
+2. File harus berada **di bawah folder pelaporan yang diberikan**, dan folder pelaporan itu harus berada **di dalam root proyek yang diberikan**. Pemeriksaan v1.7 juga mensyaratkan langkah pertama rantai parent sama dengan `remote.parents[0]` dan **root proyek adalah simpul terakhir** (tidak menerima root yang ditambahkan sebagai elemen palsu di tengah daftar). Jika file berada di arsip, folder contoh/pedoman, folder akun lain atau di luar root, alat menolak. Google Drive shortcut, file folder dan MIME tak dikenal ditolak.
 3. `document_id` dan `drive_file_id` tidak boleh sudah terdaftar. Tautan sumber harus dari Google Drive yang benar dan mengandung ID yang sama.
 4. `derived_from_ids` hanya diusulkan dari ID sumber **yang diberikan secara eksplisit** dan sudah ada di Registry. Tanpa sumber terkonfirmasi, keluaran `SOURCE_LINEAGE_NOT_MAPPED`; sistem tidak membuat dependensi.
 5. `source_role=DERIVED_OUTPUT` adalah *usulan*, bukan status yang langsung diaktifkan. `internal_status=UNVERIFIED`, `external_status=UNKNOWN`, `source_version` kosong, dan `last_reviewed_at` kosong.

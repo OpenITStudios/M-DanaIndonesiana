@@ -134,3 +134,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menambah [panduan P5](docs/integrations/report-onboarding.md) dan petunjuk pada Sheet privat yang sama, tanpa membuat database baru.
 - Folder pelaporan utama proyek masih kosong saat diperiksa; contoh laporan dan KOL di luar folder **tidak diimpor** atau diberi relasi yang tidak terbukti.
 - Skenario uji sintetis tersedia tetapi QA runtime dan OAuth CLI end-to-end **NOT EXECUTED** sesuai fase pengembangan. Branch `develop` saja; tidak mempromosikan ke `Local` atau `main`.
+
+## 1.7.0 — 2026-11-03 (P0–P5 safety and coverage hardening)
+
+- Review Queue now verifies that each existing `review_id` cryptographically matches its finding type, document ID and metadata fingerprint, preventing misattributed closed findings from suppressing current review candidates.
+- Review timestamps must be timezone-aware ISO values in chronological order; malformed or reversed entries fail closed.
+- The `review --mode summary` read-only output now includes safe coverage metrics: indexed documents, metadata checked, registered derived outputs, folder inventory status, and explicit limitations on content/approval checks. A zero-finding result is not presented as complete project verification.
+- P5 onboarding requires the supplied verified ancestry to start with the source file's actual immediate parent and terminate at the declared project root; forged or inconsistent ancestry is rejected.
+- Regression scenarios use synthetic test data only. No QA/runtime execution, live OAuth CLI acceptance, project-source modifications, scheduling changes, or branch promotion occurred.

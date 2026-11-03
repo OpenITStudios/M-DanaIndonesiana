@@ -81,10 +81,13 @@ export function prepareOutputIntake(records, remote, options) {
 
   check(Array.isArray(ancestorIds) && ancestorIds.length > 0 &&
     ancestorIds.every(id => VALID_DRIVE_ID.test(id)), "ANCESTRY_NOT_VERIFIED");
+  check(Array.isArray(remote.parents) && remote.parents.length === 1 &&
+    ancestorIds[0] === remote.parents[0], "OUTPUT_IMMEDIATE_PARENT_MISMATCH");
   check(new Set(ancestorIds).size === ancestorIds.length, "CYCLIC_FOLDER_ANCESTRY");
   const allowedIndex = ancestorIds.indexOf(allowedFolderId);
   const rootIndex = ancestorIds.indexOf(projectRootId);
-  check(allowedIndex >= 0 && rootIndex > allowedIndex,
+  check(allowedIndex >= 0 && rootIndex > allowedIndex &&
+    rootIndex === ancestorIds.length - 1,
     "OUTPUT_OUTSIDE_APPROVED_PROJECT_REPORT_FOLDER");
 
   check(!records.some(r => r.document_id === documentId),

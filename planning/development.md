@@ -1,4 +1,4 @@
-# Development Plan — Current State (v1.6)
+# Development Plan — Current State (v1.7)
 
 **Ini backlog kerja sistem, bukan izin otomatis untuk menjalankan semua item.** Riwayat implementasi v0.1–v1.0 berada di [CHANGELOG](../CHANGELOG.md).
 
@@ -19,6 +19,8 @@
 
 - [x] P5 `onboard-output` preview untuk laporan nyata: scope folder+root diperiksa, duplikasi dicegah, dependensi hanya dari ID eksplisit, hasil tetap `UNVERIFIED` sampai review. Petunjuk Registry privat dilengkapi.
 - [x] Pencarian laporan ulang di folder pelaporan: masih kosong; **tidak** membuat artefak atau hubungan sumber fiktif.
+
+- [x] v1.7: guard validasi Review Queue, scope parent P5 dan ringkasan cakupan baca; skenario regresi sintetis ditambahkan. **Belum dieksekusi** sesuai QA yang ditunda.
 
 ## Belum dapat dinyatakan selesai
 

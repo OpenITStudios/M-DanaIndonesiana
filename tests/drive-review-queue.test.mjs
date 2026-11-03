@@ -117,3 +117,42 @@ test("duplicate keys and invalid status fail closed",()=>{
   assert.throws(()=>parseReviewQueueRows(table(entry,entry)),/DUPLICATE_REVIEW_ID/);
   assert.throws(()=>parseReviewQueueRows(table({...entry,status:"APPROVED"})),/INVALID_REVIEW_STATE/);
 });
+
+test("a forged review ID must not be allowed to suppress a new finding",()=>{
+  const r=register(make("DOC-SYNTHETIC-RAB"));
+  const obs=observations(r);
+  obs["DOC-SYNTHETIC-RAB"].modifiedTime="2026-11-02T00:00:00Z";
+  const valid=buildReviewCandidates(assessChangeImpact(r,obs),NOW)[0];
+  assert.throws(()=>parseReviewQueueRows(table({
+    ...valid, fingerprint:"a".repeat(64), status:"RESOLVED",
+    reviewer:"Synthetic reviewer", decision_ref:"SYNTHETIC-CLOSURE"
+  })),/REVIEW_ID_FINGERPRINT_MISMATCH/);
+  assert.throws(()=>parseReviewQueueRows(table({
+    ...valid, document_id:"DOC-SYNTHETIC-OTHER"
+  })),/REVIEW_ID_FINGERPRINT_MISMATCH/);
+});
+
+test("review timestamps must be timezone-aware and chronologically consistent",()=>{
+  const r=register(make("DOC-SYNTHETIC-RAB"));
+  const obs=observations(r);
+  obs["DOC-SYNTHETIC-RAB"].modifiedTime="2026-11-02T00:00:00Z";
+  const valid=buildReviewCandidates(assessChangeImpact(r,obs),NOW)[0];
+  assert.throws(()=>parseReviewQueueRows(table({
+    ...valid, first_seen_at:"2026-11-03"
+  })),/INVALID_REVIEW_TIMESTAMP/);
+  assert.throws(()=>parseReviewQueueRows(table({
+    ...valid, last_seen_at:"2026-11-02T12:00:00.000Z"
+  })),/REVIEW_TIME_ORDER_INVALID/);
+});
+
+test("summary coverage distinguishes metadata observation from real source review",()=>{
+  const r=register(make("DOC-SYNTHETIC-RAB"));
+  const preview=reconcileReviewQueue(assessChangeImpact(r,observations(r)),table(),NOW);
+  assert.equal(preview.coverage.registered_documents,1);
+  assert.equal(preview.coverage.metadata_match_only,1);
+  assert.equal(preview.coverage.registered_derived_outputs,0);
+  assert.equal(preview.coverage.folder_inventory_performed,false);
+  assert.equal(preview.coverage.document_bodies_reviewed,false);
+  assert.equal(preview.coverage.external_approval_checked,false);
+});
+

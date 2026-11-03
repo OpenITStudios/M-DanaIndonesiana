@@ -34,6 +34,10 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 [P5 Report Onboarding](docs/integrations/report-onboarding.md) menyiapkan calon entri Registry dari file yang benar-benar ada **di dalam folder pelaporan proyek**, dengan pemeriksaan parent Drive, duplikasi file/ID, dan ID sumber yang dinyatakan eksplisit. Perintah `onboard-output` hanya membuat preview; tidak memasukkan laporan, tidak menentukan status persetujuan, dan tidak memakai contoh/arsip sebagai laporan nyata.
 
+## Penguatan integritas P0–P5 (v1.7)
+
+Validasi Review Queue kini menolak ID temuan yang tidak sesuai fingerprint, memeriksa urutan waktu review, dan menampilkan **cakupan pemeriksaan** di ringkasan agar hasil `0 temuan` tidak disalahartikan sebagai semua dokumen sudah diaudit. P5 juga memperketat validasi rantai parent file. Semua perubahan tetap read-only, memakai data sintetis untuk skenario tes, tanpa aktivasi QA runtime.
+
 ## Status kemampuan
 
 - **Pedoman:** tujuh skill dengan kontrak rinci dan template, belum dinyatakan lulus uji penggunaan nyata.

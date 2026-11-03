@@ -163,14 +163,14 @@ node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode s
 node tools/drive-source-resolver.mjs review --sheet-id PRIVATE_SHEET_ID --mode details --root-folder-id PRIVATE_FOLDER_ID
 ```
 
-- `summary` is the **default**. It prints safe aggregate counts only, suitable for private OS scheduler logs. `details` prints review IDs, private document IDs and candidate rows; never direct this into GitHub public artifacts or Actions logs.
+- `summary` is the **default**. It prints aggregate counts and **coverage flags** only: number of registered sources, matched/changed/unverified metadata, number of registered derived outputs, whether folder discovery ran, and explicit false flags for content and external-approval review. No file IDs are printed. `details` prints review IDs, private document IDs and candidate rows; never direct this into GitHub public artifacts or Actions logs.
 - `review` reads the registered documents, Drive metadata, optional bounded folder inventory and the same Sheet's `Review Queue` tab. Its calculations are in [tools/drive-review-queue.mjs](../../tools/drive-review-queue.mjs). It **does not write** queue rows or statuses.
 - Source signals have types `SOURCE_METADATA_CHANGE` and `SOURCE_METADATA_UNVERIFIED`. Registered derived documents can generate `DERIVED_OUTPUT_REVIEW`, and optional folder discovery can generate `UNINDEXED_FILE`.
 - Every review candidate is keyed deterministically by finding type + affected document ID + **metadata fingerprint** (SHA-256 of metadata attributes, not of file content). Repeated checks produce the same review ID; a subsequent distinct metadata version produces another ID.
 - Reconciliation compares candidate IDs with human-maintained rows in the private Review Queue: `new_candidates`, `pending_existing`, `reviewed_existing`, and `no_longer_detected`. A finding that disappears does **not** auto-close a task.
 - Status values: `OPEN`, `IN_REVIEW`, `RESOLVED`, `DISMISSED`. To close, a reviewer must record `reviewer` and actual `decision_ref` after inspecting evidence. A self-reported status/decision reference is not by itself official external approval.
 - The permitted process is: preview finding → review source content/metadata + decision evidence → **authorized human** records the queue row/status → review baseline if applicable. Never auto-change RAB, source file, report, registry approval status or e-RISPRO.
-- Invalid queue headers, IDs, duplicate rows, statuses or closed rows without reviewer and decision reference **fail closed**. Missing metadata access returns `INCOMPLETE_SOURCE_CHECK`.
+- Invalid queue headers, IDs, duplicate rows, statuses or closed rows without reviewer and decision reference **fail closed**. In v1.7, a review row's ID must also match the deterministic combination of finding type, document ID and fingerprint; a copied ID with a changed fingerprint cannot masquerade as a resolved finding. Review timestamps require explicit time zones and first-seen must not be after last-seen. Missing metadata access returns `INCOMPLETE_SOURCE_CHECK`.
 - A change in file modified-time/name and the metadata fingerprint is not proof a report actually changed. Only explicit `derived_from_ids` can indicate possible impact, and only for registered outputs.
 - The on-demand P4 command needs a real authorized Google token with `spreadsheets.readonly` and `drive.metadata.readonly`. A ChatGPT Drive connection is **not** an automatic OAuth token for a local program.
 
@@ -181,7 +181,7 @@ P4 provides a repeatable **single-command** check that an operator can call from
 - On a private Windows host, run `powershell -File tools/run-drive-review.ps1 -SheetId PRIVATE_SHEET_ID` from the repository directory after providing `GOOGLE_ACCESS_TOKEN` through the trusted runtime environment.
 - The wrapper runs `review --mode summary`; it does not embed tokens, store Drive content, change statuses or open browser sessions.
 - Tokens may expire; repeat runs require a valid access token provided by the authorized operator or a separate secure token-refresh mechanism. The wrapper does not pretend to maintain a perpetual Google session.
-- Review exit code 0 means no **new or pending queue candidates** based on the checked metadata/queue, not a clean financial, compliance or contents audit. Exit code 2 means review needed/incomplete; exit code 1 indicates an operational failure.
+- Review exit code 0 means no **new or pending queue candidates** based on the checked metadata/queue, not a clean financial, compliance or contents audit. In particular, `registered_derived_outputs=0` or `folder_inventory_performed=false` must never be presented as exhaustive project reporting coverage. Exit code 2 means review needed/incomplete; exit code 1 indicates an operational failure.
 - Do not log detailed source IDs on public CI or write output snapshots to GitHub. Do not make a new "periodic report" if no review tasks exist.
 
 ### Registering a real derived report

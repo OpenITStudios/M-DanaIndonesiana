@@ -283,10 +283,11 @@ async function main() {
     const preview = reconcileReviewQueue(report, queueRows, new Date().toISOString());
     if ((values.mode || "summary") === "summary") {
       output({
-        operation: "review", status: preview.status, summary: preview.summary,
+        operation: "review", status: preview.status,
+        summary: preview.summary, coverage: preview.coverage,
         queue_write_performed: false, document_write_performed: false,
         private_detail_available_with_mode: "details",
-        message: "Summary only; review candidates and private file IDs are not printed."
+        message: "Metadata-only check of indexed documents. A zero count is not proof that unregistered documents, report contents, or official approvals were reviewed. No private IDs are printed."
       });
     } else {
       output(preview);
