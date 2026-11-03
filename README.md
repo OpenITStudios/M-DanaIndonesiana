@@ -45,9 +45,9 @@ Validasi Review Queue kini menolak ID temuan yang tidak sesuai fingerprint, meme
 - **Tidak tersedia:** penyaluran bank, penetapan pajak otomatis, approval PMO/LPDP, pengiriman e-RISPRO, pengujian karya otomatis, sertifikasi kepatuhan.
 - **Fase sekarang:** penyederhanaan arsitektur dokumentasi. Pengguna menunda QA sampai fase pengembangan dinyatakan cukup.
 
-## Google-native Template Catalog — T1 (pengembangan)
+## Google-native Template Catalog — T2 (master bertahap)
 
-Pengguna memakai **Google Drive saja**: Google Docs untuk dokumen, Google Sheets untuk tabel/RAB dan Google Slides untuk presentasi bila diperlukan. PDF diekspor langsung dari Google-native file jika diminta. [Rancangan dan status T1](docs/integrations/google-native-templates.md) menyediakan katalog enam blueprint internal, pemetaan field dan planner API deterministik. Template master nyata, tab `Template Masters` privat, penulisan Google API otomatis, dan pemeriksaan end-to-end **belum dibuat/diaktifkan**. Export XLSX lama dipertahankan hanya sebagai prototipe historis, bukan jalur aktif Google-only.
+Pengguna memakai **Google Drive saja**: Google Docs untuk dokumen, Google Sheets untuk tabel/RAB dan Google Slides untuk presentasi bila diperlukan. PDF diekspor langsung dari Google-native file jika diminta. [Rancangan dan status T2](docs/integrations/google-native-templates.md) menyediakan katalog enam blueprint internal, pemetaan field dan planner deterministik. **Master Google Docs pertama** (`di.report.indicator@1.0.0`) sudah dibuat dan tercatat di tab `Template Masters` pada Registry privat yang sama. Pemeriksaan struktur dan metadata telah dilakukan; **belum ada executor generik, uji pengisian otomatis end-to-end, maupun approval format resmi**. Export XLSX lama dipertahankan hanya sebagai prototipe historis, bukan jalur aktif Google-only.
 
 ## Mulai bekerja
 

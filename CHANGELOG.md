@@ -149,3 +149,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menambah enam definisi katalog internal, kontrak tab `Template Masters` dalam Registry privat yang sama dan pure JavaScript planner untuk permintaan Docs/Sheets.
 - Menjaga master tetap read-only, memeriksa versi/metadata, memblokir template resmi yang belum direview dan menghasilkan DRAFT bukan approval.
 - Menambahkan tes sintetis untuk validasi katalog, input, keamanan Sheets, dan kapasitas grid. Kandidat diuji lokal; **tanpa** tes Google API, file master Drive, modifikasi sumber proyek, atau promosi branch.
+
+## 1.8.1-dev — 2026-11-03 (Google-native Master 01 / T2)
+
+- Dengan instruksi pengguna, membuat folder master Google-native di Drive privat proyek, menambahkan tab `Template Masters` ke Document Registry yang sama, serta mengisi satu baris master internal.
+- Membuat master Google Docs native `di.report.indicator@1.0.0` dengan format A4, heading dan sembilan placeholder tepat satu kali sesuai katalog.
+- Memeriksa pembacaan ulang Docs, parent/MIME/modifiedTime master, header dan data Registry serta dropdown status/authority. Status `READY` hanya berarti master **internal** tersedia untuk disalin; bukan approval dokumen atau format resmi.
+- Tanpa ID/file proyek privat di Git publik; tab lama tidak diubah, master lain belum dibuat. Uji copy-fill otomatis, PDF/visual dan pembatasan akses editor belum dijalankan.

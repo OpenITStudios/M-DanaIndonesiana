@@ -27,7 +27,7 @@ Untuk menyambungkan laporan dengan sumbernya, ikuti [P5 Report Onboarding](docs/
 
 ### Output dokumen Google-native
 
-Ketika pengguna memilih Google Drive sebagai satu-satunya workspace, gunakan [Google-native Template Generation](docs/integrations/google-native-templates.md). Pilih satu skill primer dan sumber P2 yang diizinkan, lalu template ID+versi tepat. Master Google Docs/Sheets/Slides berada dalam Drive privat; **salin master** untuk membuat draf, jangan mengedit master. Planner sistem berada di `tools/google-native-template-plan.mjs`; ia hanya menyusun rencana dan belum menulis ke Drive. PDF adalah ekspor opsional, bukan format sumber editable. XLSX exporter lama bukan jalur kerja pengguna ini. Catatan: belum ada master privat, executor, atau approval resmi yang disediakan oleh fase T1.
+Ketika pengguna memilih Google Drive sebagai satu-satunya workspace, gunakan [Google-native Template Generation](docs/integrations/google-native-templates.md). Pilih satu skill primer dan sumber P2 yang diizinkan, lalu template ID+versi tepat. Master Google Docs/Sheets/Slides berada dalam Drive privat; **salin master** untuk membuat draf, jangan mengedit master. Planner sistem berada di `tools/google-native-template-plan.mjs`; ia hanya menyusun rencana dan belum menulis ke Drive. PDF adalah ekspor opsional, bukan format sumber editable. XLSX exporter lama bukan jalur kerja pengguna ini. Status T2: satu master internal `di.report.indicator@1.0.0` telah dibuat di Drive privat dan didaftarkan pada tab `Template Masters` (tanpa ID privat di Git). Master ini lulus pemeriksaan struktur dan placeholder, **bukan** approval resmi; executor generik serta template resmi belum tersedia.
 
 ## Mode kerja
 

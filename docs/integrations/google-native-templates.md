@@ -2,11 +2,11 @@
 
 **Decision:** seluruh dokumen kerja berada di Google Drive dalam format **Google Docs, Google Sheets, dan (fase berikutnya) Google Slides**. PDF hanya hasil ekspor opsional; bukan sumber edit. Tidak memakai Microsoft Office, DOCX/XLSX/PPTX sebagai perantara, dashboard baru, atau skill kedelapan.
 
-**Status implementasi:** enam definisi katalog publik + perencana Google API murni + regresi sintetis. **Belum** tersedia file master Google-native, tab Registry privat baru, executor yang benar-benar menulis ke Drive, validasi OAuth, uji end-to-end Google, atau persetujuan format resmi. Prototipe ekspor XLSX lama tetap ada untuk sejarah tetapi bukan jalur target.
+**Status implementasi (T2 bertahap):** enam definisi katalog publik + perencana Google API murni + regresi sintetis. Master Google Docs **pertama** `di.report.indicator@1.0.0` telah dibuat dan dikaitkan ke tab `Template Masters` dalam Registry privat yang sama. Pemeriksaan struktur, sembilan placeholder dan metadata selesai; ini **bukan** pengujian fill/copy end-to-end atau persetujuan format resmi. Executor generik, master lain, adaptasi keuangan dan validasi OAuth belum selesai. Prototipe ekspor XLSX lama hanya historis.
 
 ## Satu Registry privat, bukan database baru
 
-Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Ketika operator memberi izin membuat konfigurasi, tambahkan **satu tab `Template Masters` di Google Sheet privat yang sama** (tidak dilakukan oleh kode T1). Urutan kolom yang wajib:
+Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Tab **`Template Masters` sudah ditambahkan di Google Sheet privat yang sama** pada T2 untuk mendaftarkan master bertahap. Master pertama tersimpan sebagai baris internal yang terverifikasi metadata. Urutan kolom yang wajib:
 
 ```text
 template_id,template_version,master_file_id,mime_type,master_status,authority,source_document_id,project_scope,observed_modified_time,reviewer_ref
@@ -20,6 +20,15 @@ template_id,template_version,master_file_id,mime_type,master_status,authority,so
 - `observed_modified_time`: waktu modifikasi Drive ketika master terakhir ditinjau. Ketidaksamaan metadata aktual memblokir planner, tetapi kecocokan metadata **bukan audit isi**.
 
 Master dibuat di folder Drive privat yang disetujui, dikelola sebagai dokumen Google-native dengan hak edit terbatas dan riwayat revisi. Repository publik hanya menyimpan katalog, prosedur, aturan field dan tes sintetis. Jangan meletakkan ID file privat, data RAB, identitas, token, kuitansi asli, rekening, atau tanda tangan di repo.
+
+## T2 — Master pertama yang benar-benar tersedia
+
+- **ID dan versi:** `di.report.indicator@1.0.0`; Google Docs native; master untuk laporan indikator internal, bukan format resmi program.
+- **Lokasi:** folder template internal khusus di Drive privat proyek; `master_file_id` hanya terdapat pada tab `Template Masters`, **tidak pernah** di repository publik.
+- **Registry:** `master_status=READY`, `authority=INTERNAL`, `project_scope=GLOBAL`, `source_document_id` kosong dan `reviewer_ref` kosong (tidak mengarang pemeriksa manusia). `observed_modified_time` cocok dengan metadata Google Drive pada pemeriksaan.
+- **Pemeriksaan yang dilakukan:** Google-native MIME, folder parent, A4 + margin, 4 heading bagian, sembilan placeholder katalog (masing-masing **tepat sekali**) dan header/dimensi/validasi nilai di tab `Template Masters`. Tabs lama tidak dihapus.
+- **Belum dilakukan:** uji copy-fill penuh memakai executor generik, ekspor/visual PDF, pemeriksaan hak edit khusus master, penilaian substansi laporan nyata, atau kelayakan untuk pengajuan resmi. Setiap salinan tetap `DRAFT` dan perlu review.
+- **Master berikutnya:** satu per satu mengikuti katalog; jangan mencatat baris `READY` untuk master yang belum dibuat.
 
 ## Alur AI ↔ Google Drive
 

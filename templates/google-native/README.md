@@ -1,6 +1,6 @@
 # Google-native Master Templates — Public Blueprint Only
 
-This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters must be created inside private Google Drive and registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. Do not assert that master files already exist.
+This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, **the first** internal Google Docs master (`di.report.indicator@1.0.0`) exists and passed structural/metadata readback. The other five catalog entries are blueprints, not created masters. No private Drive ID is stored here.
 
 Catalog: [catalog.json](catalog.json). System workflow: [Google-native templates](../../docs/integrations/google-native-templates.md).
 
