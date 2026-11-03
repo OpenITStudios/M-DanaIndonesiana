@@ -43,3 +43,7 @@ Game bisa dibuka belum membuktikan QA stabilitas multiuser; status hanya pada sk
 ## Rute rinci v0.8
 
 [Workflow](WORKFLOW.md) untuk kerja; [Indicator Mapping](INDICATOR-MAPPING.md) untuk indikator; [Curatorial Records](CURATORIAL-RECORDS.md) untuk sumber konten; [Digital Deliverables](DIGITAL-DELIVERABLES.md) untuk handoff; [Release & Archive](RELEASE-ARCHIVE.md) untuk preservasi. Semua milik satu skill tanpa QA yang dijalankan saat ini.
+
+## Regulatory Handoff v1.0
+
+Output karya dan tahapan indikator harus berasal dari versi kontrak/lampiran sah, dengan penelusuran melalui [Temporal Contract](../regulatory/TEMPORAL-CONTRACT.md) dan [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md) bila ada perubahan. Persentase produksi contoh dari pedoman tidak otomatis menjadi indikator wajib. Hasil internal bukan persetujuan eksternal.

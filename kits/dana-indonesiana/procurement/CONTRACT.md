@@ -42,3 +42,7 @@ Untuk pembelian barang/jasa yang menurut pedoman LPDP 2025 **di atas Rp50 juta**
 Untuk jasa aset 3D, game, website, musik/naskah, dan dokumentasi: tentukan format deliverable, versi, akses, kelengkapan berkas, kebutuhan lisensi, dan pengembalian/revisi jika tidak sesuai. `creative-production` menentukan mutu teknis; `dissemination-rights` memeriksa lisensi/hak cipta; Evidence memeriksa keberadaan dan dukungan dokumennya.
 
 Pakai [template permintaan](../../../templates/procurement/requirement-and-selection.md) dan [template serah-terima](../../../templates/procurement/deliverable-acceptance.md) jika pengguna benar-benar memerlukannya. **Jangan membuat folder atau dokumen kosong yang tidak dipakai.**
+
+## Regulatory Handoff v1.0
+
+Periksa izin jenis belanja dan kewajiban pembanding lewat [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md). Tidak setiap penerima bantuan otomatis menjadi pelaksana pengadaan K/L menurut prosedur LKPP. Ambang dan batas tahun hanya aktif setelah dasar dan konteksnya diverifikasi. Keputusan `APPLICABLE` bukan bukti pembelian, pembayaran, atau penunjukan vendor.

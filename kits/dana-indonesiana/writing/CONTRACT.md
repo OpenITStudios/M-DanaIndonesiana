@@ -65,3 +65,7 @@ Gunakan [Curatorial Records](../production/CURATORIAL-RECORDS.md) untuk membedak
 ## Bahasa publikasi dan hak v0.9
 
 Gunakan [Branding & Publication](../rights/BRANDING-PUBLICATION.md) untuk kredit pendanaan dan logo, serta [Event & Dissemination](../rights/EVENT-DISSEMINATION.md) untuk narasi kegiatan publik. Tulisan tetap alami, tetapi tidak boleh mengarang pengunjung, testimoni, persetujuan, afiliasi Minecraft/Mojang, atau tanggal kegiatan yang belum ada.
+
+## Regulatory Handoff v1.0
+
+Gunakan [Compliance Handoff](../regulatory/COMPLIANCE-HANDOFF.md) untuk istilah, periode, status dan ketentuan yang benar-benar berlaku. Jangan memperhalus konflik sumber menjadi kalimat pasti demi gaya manusiawi; `UNKNOWN` dan `NEEDS AUTHORITY REVIEW` tetap dilaporkan secara jelas dan tidak dramatis.

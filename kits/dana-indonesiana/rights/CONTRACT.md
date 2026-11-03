@@ -53,3 +53,7 @@ Poster siap tetapi panduan logo tahun terkait belum dicek → NEEDS_REVIEW sebel
 - [DJKI Recordation](DJKI-RECORDATION.md): persyaratan dan status pencatatan ciptaan yang benar.
 
 Pilih pedoman sekecil mungkin. Semua berupa **workflow**, bukan izin legal, persetujuan Mojang, pengajuan DJKI, maupun pengesahan LPDP.
+
+## Regulatory Handoff v1.0
+
+Pisahkan hukum hak cipta, ketentuan program/kontrak, kebijakan platform Minecraft dan aturan branding; bandingkan ruang lingkup melalui [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md). [Conflict & Escalation](../regulatory/CONFLICT-ESCALATION.md) diperlukan bila pemanfaatan yang diwajibkan pendanaan tampak dibatasi pemegang hak/platform. Jangan mengira ketentuan logo pemerintah mengesampingkan lisensi karya.

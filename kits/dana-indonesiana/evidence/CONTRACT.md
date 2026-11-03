@@ -52,3 +52,7 @@ Pilih jalur terdekat dengan tugas. Satu klaim dapat memiliki beberapa sumber buk
 ## Bukti karya digital v0.8
 
 Jika klaim menyatakan produksi selesai, rujuk [Digital Deliverables](../production/DIGITAL-DELIVERABLES.md) dan [Indicator Mapping](../production/INDICATOR-MAPPING.md). File world/screenshot hanya mendukung lingkup yang terlihat, tidak membuktikan seluruh mekanik telah diuji.
+
+## Regulatory Handoff v1.0
+
+Jenis bukti yang `MISSING` harus berasal dari aturan/pedoman yang benar-benar dinilai [APPLICABLE](../regulatory/APPLICABILITY-MATRIX.md) untuk transaksi/aktivitas tersebut. Contoh format historis dan berkas pembanding harga tidak otomatis menjadi kewajiban atau bukti. Gunakan [Compliance Handoff](../regulatory/COMPLIANCE-HANDOFF.md) untuk satu ketentuan, satu rujukan.

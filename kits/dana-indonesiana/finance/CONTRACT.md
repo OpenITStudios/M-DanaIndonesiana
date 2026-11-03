@@ -60,3 +60,7 @@ Untuk menghasilkan dua lembar Excel draf dari output JSON Finance v0.3, gunakan 
 ## Hubungan dengan bukti procurement (v0.7)
 
 Finance memakai `TXN` dan bukti pembayaran nyata. [Procurement](../procurement/CONTRACT.md) memegang rekam pemilihan/kontrak/serah-terima; [Evidence](../evidence/CLAIM-TO-EVIDENCE.md) memeriksa dukungan bukti. Harga pasar dan invoice tetap **bukan** kas keluar, dan invoice tercatat bukan saldo belum dibayar tanpa rekonsiliasi. Hindari memindahkan PII vendor ke model laporan publik.
+
+## Regulatory Handoff v1.0
+
+Finance tidak menetapkan sendiri tarif pajak, SBM, izin belanja atau tenggat. Minta hasil [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md) dan [Temporal Contract](../regulatory/TEMPORAL-CONTRACT.md) untuk jenis transaksi, tanggal, kategori dan sumber yang berlaku. Nilai yang belum diverifikasi tetap DRAFT/UNKNOWN; temuan aturan tidak mengubah RAB atau buku kas secara otomatis.

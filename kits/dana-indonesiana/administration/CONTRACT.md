@@ -64,3 +64,7 @@ Administration hanya menyiapkan paket bukti yang **diwajibkan oleh pedoman/perja
 ## Handoff DJKI dan kegiatan publik v0.9
 
 [Recordation DJKI](../rights/DJKI-RECORDATION.md) menetapkan informasi/dokumen yang perlu dipersiapkan, bukan bukti permohonan telah diajukan. [Event & Dissemination](../rights/EVENT-DISSEMINATION.md) memberi bukti kegiatan publik; Administration memilih format laporan yang berlaku. Hak cipta lahir dan surat pencatatan merupakan status berbeda. Jangan meminta/menyimpan KTP atau NPWP dari pemilik tanpa dasar izin dan tempat yang disetujui.
+
+## Regulatory Handoff v1.0
+
+Sebelum menetapkan tenggat atau format pengajuan, gunakan [Temporal & Contract Scope](../regulatory/TEMPORAL-CONTRACT.md) dan [Applicability Matrix](../regulatory/APPLICABILITY-MATRIX.md). Bila sumber perjanjian/Juknis/tampilan e-RISPRO bertentangan, gunakan [Conflict & Escalation](../regulatory/CONFLICT-ESCALATION.md); jangan mengubah status `SUBMITTED/EXTERNAL_CONFIRMED` tanpa bukti.
