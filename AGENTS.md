@@ -9,6 +9,10 @@
 3. **Pilih satu skill primer** dari [Skill Router](docs/skills/README.md). Baca `SKILL.md` primer → [Shared Contract](kits/dana-indonesiana/OPERATING-CONTRACT.md) → kontrak domain → satu prosedur rinci bila diperlukan. Jangan membaca semua modul.
 4. **Kerjakan lingkup nyata dan laporkan** sumber, hasil, pemeriksaan yang benar-benar dilakukan, UNKNOWN, dan keputusan manusia yang masih diperlukan. STOP.
 
+## Sumber proyek dari Drive (jika diizinkan)
+
+Saat pengguna mengizinkan penggunaan Document Registry privat, ikuti [Google Drive Integration](docs/integrations/google-drive.md) untuk menentukan ID dan versi dokumen sebelum analisis domain. Resolver hanya mengembalikan metadata/pointer; jangan menyimpulkan isi, keabsahan atau approval dari hasilnya. Jangan commit file ID, folder ID, link dokumen privat, metadata proyek, maupun token ke Git publik. Jika akses registry tidak ada, kembalikan kebutuhan sumber spesifik, bukan menebak.
+
 ## Mode kerja
 
 | Mode | Tujuan | Batas |

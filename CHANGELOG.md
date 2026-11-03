@@ -91,3 +91,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menghindari instruksi "QA tidak boleh" yang permanen; fase QA saat ini masih ditunda sesuai permintaan pengguna.
 - Mengonsolidasikan planning menjadi status/backlog saat ini; riwayat tetap di changelog.
 - Tidak menambah agen, modul, template, runtime feature, tes atau data proyek privat.
+
+## 1.2.0 — 2026-11-03 (Google Drive metadata bridge P0/P1)
+
+- Menambahkan Source Resolver read-only berbasis Google Sheets registry dan Drive metadata, dengan pemilihan ID yang ketat dan laporan perubahan metadata.
+- Menetapkan satu Document Registry privat sebagai indeks, tanpa menduplikasi berkas, anggaran atau bukti ke Git publik.
+- Menambahkan audit metadata dan penemuan file belum terindeks yang dibatasi folder serta batas item; tidak ada auto-sync atau modifikasi dokumen.
+- Menautkan instruksi penggunaan dan guardrail dari router, konteks, README, dan backlog.
+- Tes sintetis ditulis, tetapi **belum dijalankan** sesuai penundaan QA; integrasi autentikasi lokal memerlukan OAuth read-only dan belum dinyatakan lulus uji end-to-end.

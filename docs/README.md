@@ -30,6 +30,10 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 | Production | [Production Workflow](../kits/dana-indonesiana/production/WORKFLOW.md) |
 | Rights | [Rights Clearance](../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) |
 
+## Integrasi penyimpanan privat
+
+- [Google Drive — Source Resolver & Document Registry](integrations/google-drive.md): pemetaan ID dokumen dan deteksi perubahan metadata secara read-only. Tidak menyimpan sumber privat di Git.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

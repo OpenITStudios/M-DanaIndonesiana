@@ -10,6 +10,8 @@
 - [x] Template kosong dipakai hanya jika ada kebutuhan.
 - [x] v1.1: router, konteks, pemilik data dan dokumentasi navigasi diringkas.
 
+- [x] P0/P1 kode Source Resolver read-only dan kontrak registry; satu indeks privat proyek dibuat di Google Drive. Status pengujian: NOT EXECUTED; tidak otomatis menyinkronkan metadata.
+
 ## Belum dapat dinyatakan selesai
 
 - [ ] Pengujian Node dan Python pada checkout yang sama; pemeriksaan workbook nyata dan kesesuaian format unggah e-RISPRO.
