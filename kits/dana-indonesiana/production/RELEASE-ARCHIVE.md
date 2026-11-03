@@ -16,3 +16,7 @@ Prinsip referensi: [UNESCO Digital Heritage Charter](https://www.unesco.org/en/l
 Checksum menunjukkan kesamaan byte terhadap snapshot, bukan autentisitas pencipta atau izin. Hindari registry tambahan yang tidak menyelesaikan kegagalan konkret.
 
 [Template manifest](../../../templates/production/release-manifest.md) dipakai hanya untuk paket nyata; jangan unggah source proprietary atau data pengguna ke GitHub publik.
+
+## Gating rilis dan izin v0.9
+
+Sebelum pengumuman atau distribusi rilis, panggil [Rights Clearance](../rights/RIGHTS-CLEARANCE.md), [Minecraft Platform](../rights/MINECRAFT-PLATFORM.md), dan [Branding & Publication](../rights/BRANDING-PUBLICATION.md) hanya untuk bagian yang relevan. Tidak ada rilis otomatis karena manifest telah lengkap. `PUBLISHED_WITH_EVIDENCE` memerlukan sumber publikasi aktual.

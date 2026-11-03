@@ -33,3 +33,7 @@ Jangan membuat folder kode atau skema untuk setiap baris tabel sampai ada kebutu
 ## Produksi Karya Digital v0.8
 
 [Production Workflow](../../kits/dana-indonesiana/production/WORKFLOW.md) memegang aktivitas dan keluaran; [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md) mengaitkan indikator; [Curatorial Records](../../kits/dana-indonesiana/production/CURATORIAL-RECORDS.md) membedakan sumber sejarah dan representasi. Bukti, izin, angka, naskah, dan administrasi tetap dimiliki domain masing-masing. Tidak ada database museum baru.
+
+## Rights & Dissemination Owner v0.9
+
+[Event](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) memegang kebutuhan perizinan/dokumentasi publik, [Rights Clearance](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) memegang penggunaan konten, [Minecraft Platform](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) memegang penilaian kebijakan platform, [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) memegang identitas publikasi, dan [DJKI](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) memegang persiapan pencatatan. Seluruhnya **satu skill**, bukan modul data terpisah; Evidence/Administration/Production tetap memegang fakta asalnya.

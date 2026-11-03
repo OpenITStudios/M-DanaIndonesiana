@@ -26,3 +26,12 @@ Gunakan [Reporting Workflow](reporting-workflow.md) sebagai alur lengkap bila me
 - Karya digital → [Digital Deliverables](../../kits/dana-indonesiana/production/DIGITAL-DELIVERABLES.md) → Evidence → Administration.
 - Rilis/arsip → [Release](../../kits/dana-indonesiana/production/RELEASE-ARCHIVE.md) → Rights → human review.
 - Laporan indikator → [Indicator Mapping](../../kits/dana-indonesiana/production/INDICATOR-MAPPING.md); bukan hasil hitung tugas internal.
+
+## Diseminasi dan izin v0.9
+
+- Acara publik: Production (keluaran sah) → [Event & Dissemination](../../kits/dana-indonesiana/rights/EVENT-DISSEMINATION.md) (izin dan dokumentasi) → Evidence (bukti) → Writing (narasi) → Administration (format pelaporan).
+- Materi seni rupa: [Rights Clearance](../../kits/dana-indonesiana/rights/RIGHTS-CLEARANCE.md) → Curatorial Records → Production; kredit tidak otomatis mengizinkan reproduksi.
+- Publikasi Minecraft dan pendanaan: [Minecraft Platform](../../kits/dana-indonesiana/rights/MINECRAFT-PLATFORM.md) + [Branding](../../kits/dana-indonesiana/rights/BRANDING-PUBLICATION.md) → review manusia sebelum publikasi.
+- Pencatatan ciptaan: [DJKI Recordation](../../kits/dana-indonesiana/rights/DJKI-RECORDATION.md) → Administration untuk dokumen → Evidence untuk surat pencatatan bila benar ada.
+
+Jangan menafsirkan dokumen `DRAFT` sebagai `PUBLISHED`, atau surat pencatatan sebagai izin untuk material pihak ketiga.

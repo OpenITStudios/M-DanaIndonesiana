@@ -61,3 +61,7 @@ Gunakan [template narasi](../../../templates/reporting/creative-narrative.md) at
 ## Narasi produksi dan kuratorial v0.8
 
 Gunakan [Curatorial Records](../production/CURATORIAL-RECORDS.md) untuk membedakan fakta sejarah/interpretasi dan [Indicator Mapping](../production/INDICATOR-MAPPING.md) untuk status capaian. Narasi alami tidak boleh mengubah rencana menjadi kegiatan yang telah berlangsung.
+
+## Bahasa publikasi dan hak v0.9
+
+Gunakan [Branding & Publication](../rights/BRANDING-PUBLICATION.md) untuk kredit pendanaan dan logo, serta [Event & Dissemination](../rights/EVENT-DISSEMINATION.md) untuk narasi kegiatan publik. Tulisan tetap alami, tetapi tidak boleh mengarang pengunjung, testimoni, persetujuan, afiliasi Minecraft/Mojang, atau tanggal kegiatan yang belum ada.

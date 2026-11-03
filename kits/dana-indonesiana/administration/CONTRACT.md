@@ -60,3 +60,7 @@ Dua dokumen tersebut merupakan detail kerja dari skill **yang sama**, bukan data
 ## Paket pengadaan sebagai lampiran pelaporan (v0.7)
 
 Administration hanya menyiapkan paket bukti yang **diwajibkan oleh pedoman/perjanjian yang berlaku**. Gunakan [Procurement Contract](../procurement/CONTRACT.md) dan [Evidence](../evidence/EXPENDITURE-EVIDENCE.md) untuk memeriksa jenis dokumen, bukan membuat kontrak/penawaran seolah asli atau mengesahkan pemilihan vendor. Status laporan eksternal tidak berubah karena checklist lengkap.
+
+## Handoff DJKI dan kegiatan publik v0.9
+
+[Recordation DJKI](../rights/DJKI-RECORDATION.md) menetapkan informasi/dokumen yang perlu dipersiapkan, bukan bukti permohonan telah diajukan. [Event & Dissemination](../rights/EVENT-DISSEMINATION.md) memberi bukti kegiatan publik; Administration memilih format laporan yang berlaku. Hak cipta lahir dan surat pencatatan merupakan status berbeda. Jangan meminta/menyimpan KTP atau NPWP dari pemilik tanpa dasar izin dan tempat yang disetujui.

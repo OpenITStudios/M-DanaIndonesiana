@@ -25,3 +25,7 @@ Referensi ditemukan → sumber diperiksa → fakta/tafsir/UNKNOWN dipisahkan
 Perubahan faktual pada teks sejarah harus ditelusuri hingga label in-game, NPC, website dan artefak terkait; jangan memperbaiki cerita hanya di renderer. Materi budaya sensitif memerlukan konteks dan hak penggunaan yang sesuai. Kredit bukan pengganti izin.
 
 Writing memegang redaksi, Production implementasi, Rights izin, Evidence dukungan klaim. [Template konten](../../../templates/production/curatorial-entry.md) hanya dibuat ketika materi perlu dicatat.
+
+## Rekomendasi rujukan hak v0.9
+
+Saat mengadaptasi atau mereproduksi karya seni ke model 3D, audio, narasi, foto, website atau materi pameran, periksa [Rights Clearance](../rights/RIGHTS-CLEARANCE.md) per **jenis penggunaan**. Dokumentasi koleksi atau atribusi tidak otomatis memberikan izin reproduksi atau mengubah kepemilikan hak.

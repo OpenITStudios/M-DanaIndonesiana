@@ -41,3 +41,15 @@ Jangan menyalin nomor identitas, jumlah atau isi kontrak pribadi ke daftar ini. 
 - [UNESCO Charter on Digital Heritage](https://www.unesco.org/en/legal-affairs/charter-preservation-digital-heritage): keberlanjutan konten dan dokumentasi digital sebagai referensi.
 - [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/): aksesibilitas web; bukan sertifikasi konformansi.
 - [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines): aturan platform dan brand menurut jenis pemanfaatan.
+
+## Sumber dissemination & rights (v0.9)
+
+- [LPDP e-RISPRO — Information Corner](https://erispro-indonesiana.kemenkeu.go.id/information-corner): pedoman administrasi 2025, format publik/nonpublik dan **Panduan Penggunaan Logo** yang perlu dipilih menurut tahun/perjanjian.
+- [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines): nama/brand/aset, constructed promotion, event luring/daring, video, server, dan distribusi. Ketentuan untuk perusahaan/nonprofit harus diperiksa; proyek pendidikan tidak otomatis memberi pengecualian.
+- [DJKI — Hak Cipta dan Perlindungan](https://dgip.go.id/menu-utama/hak-cipta/pengenalan): hak cipta otomatis, pencipta vs pemegang hak, klasifikasi ciptaan.
+- [DJKI — Syarat & Prosedur](https://www.dgip.go.id/menu-utama/hak-cipta/syarat-prosedur): akun, dokumen dan proses pencatatan; data identitas disimpan secara privat.
+- [DJKI — Tarif](https://www.dgip.go.id/menu-utama/hak-cipta/biaya): biaya PNBP yang berlaku harus diperiksa menurut tanggal, jangan di-hardcode.
+- [UU No. 28 Tahun 2014 Hak Cipta](https://www.peraturan.go.id/files/uu28-2014bt.pdf): hak moral, hak ekonomi, lisensi dan ruang lingkup perlindungan.
+- [UU No. 27 Tahun 2022 PDP](https://peraturan.bpk.go.id/Home/Download/224884/UU%20Nomor%2027%20Tahun%202022.pdf): pertimbangan pemrosesan data pribadi, terutama anak pada Pasal 25.
+
+Daftar ini tidak berarti semua sumber otomatis mengikat satu kegiatan; pilih yang relevan terhadap perjanjian, kategori, status penyelenggara, media dan waktu publikasi.

@@ -66,3 +66,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Creative Production memperoleh lima kontrak domain, empat template dan keputusan desain.
 - Tidak menambah skill/agen, database museum, atau integrasi eksternal.
 - Data privat tidak disalin, tes tidak dijalankan.
+
+## 0.9.0 — 2026-11-03 (dissemination & rights)
+
+- Lima kontrak rights: kegiatan publik, izin karya, platform Minecraft, branding pendanaan dan DJKI.
+- Empat template kosong untuk kegiatan, matriks lisensi, review publikasi, dan pencatatan ciptaan.
+- Memisahkan hak cipta otomatis, pemegang hak, surat pencatatan serta izin pihak ketiga.
+- Menambahkan pemeriksaan risiko promosi oleh organisasi melalui Minecraft tanpa menyatakan izin otomatis.
+- Tetap tujuh skill; tidak ada data rahasia, uji runtime, QA, atau pengiriman eksternal.

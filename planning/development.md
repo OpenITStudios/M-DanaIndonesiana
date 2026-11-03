@@ -90,3 +90,14 @@ Jangan menandai prosedur atau template sebagai PASS; pemeriksaan kualitas baru d
 - [x] Rilis dan arsip dengan lisensi/platform sebagai review.
 - [x] Empat template kosong.
 - [ ] QA dan penerapan pada proyek nyata ditunda sesuai instruksi pengguna.
+
+## v0.9 — Dissemination & Rights (tanpa pengujian)
+
+- [x] Pedoman acara publik, dokumentasi pameran/lokakarya, dan perlindungan data peserta.
+- [x] Rights clearance untuk reproduksi, adaptasi, lisensi vendor dan pihak ketiga.
+- [x] Pemeriksaan khusus merek, promosi, event, server, footage dan distribusi Minecraft.
+- [x] Pengendalian logo pendanaan, atribusi, publikasi dan status rilis.
+- [x] Prosedur administrasi pencatatan ciptaan DJKI dan bukti statusnya.
+- [x] Empat template kosong, tanpa data proyek asli dan tanpa skill kedelapan.
+- [ ] Penilaian penerapan pada penggunaan nyata oleh pemilik/penasihat yang sesuai.
+- [ ] **Tes, QA, publikasi dan submission ditunda** sesuai arahan pengguna.
