@@ -235,3 +235,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Mencatat persetujuan sementara pengguna terhadap master harga referensi `di.procurement.price-comparison@1.2.0` dan menaikkan `Template Masters` privat menjadi `READY` untuk penggunaan internal, tanpa mengubah isi atau nama master.
 - v1.0.0 tetap `READY` sebagai fallback lama; v1.1.0 `RETIRED`. Pemilihan master tetap harus memakai ID dan versi eksplisit.
 - Pemeriksaan UI Google Sheets pada zoom 100%, print A4, dan kepatuhan pengadaan resmi masih NOT_EXECUTED; persetujuan ini bukan klaim PASS untuk semua gate.
+
+## 1.8.13-dev — 2026-11-04 (professional RAB template Excel and Google Sheets)
+
+- Menghasilkan template RAB Excel (.xlsx) profesional atas permintaan pengguna, berisi tiga tab RAB/REKAP/PANDUAN, 100 pos, input yang terpisah dari rumus, subtotal dan pemeriksaan pos belum lengkap. Tidak ada data proyek asli.
+- Membuat padanan Google Sheets native secara langsung di folder master privat dengan struktur, rumus dan warna yang selaras; tidak melakukan import XLSX sebagai perantara. Satu salinan QA sintetis menghasilkan total Rp5.150.000 dengan satu pos tidak lengkap dan rekap tahap/kategori yang benar.
+- Memperbaiki rumus Google Sheets locale `in_ID` memakai separator `;` dan mengganti repeatCell yang tidak menyesuaikan referensi baris dengan 100 formula eksplisit. Master native tidak mempunyai parse error setelah koreksi.
+- Menambahkan blueprint RAB dan kontrak planner B11:I110; sumber K/catatan L masih isi manual. Enam jenis template publik sebelumnya menjadi tujuh, dengan kontrak anggaran baru `di.finance.rab-plan@1.0.0` dalam status NEEDS_REVIEW di Registry privat.
+- Delapan tes planner sintetis lulus V8 harness; belum ada uji Node, tampilan browser Google Sheets, pengaturan cetak, atau sertifikasi format resmi.

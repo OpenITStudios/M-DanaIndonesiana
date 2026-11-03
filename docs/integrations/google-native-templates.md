@@ -22,6 +22,10 @@ Setelah pengguna menilai v1.0.0 belum cukup rapi, satu Google Sheets master baru
 
 Kandidat v1.2.0 dibuat pada file Google Sheets native baru (tanpa Office/perantara), dengan **nol merge**, header abu-biru ringan, tabel satu tingkat, lebar total 1.032 px, row height default 36 px, filter dan frozen header. [QA](../qa/master-sheets01-professional-v1.2-2026-11-03.md) memeriksa delapan harga numerik, tanggal serial, validasi, formula-injection literal, banding, lebar kolom dan tinggi baris contoh yang disesuaikan. Formulir internal ini **tidak** menggantikan format resmi peraturan dan tidak membuktikan perbandingan vendor sudah sah. Registry privat pada tab `Template Masters`: versi v1.2.0 `NEEDS_REVIEW`, v1.1.0 `RETIRED`, v1.0.0 `READY` hingga review UI.
 
+### Master RAB baru — rencana anggaran biaya
+
+`di.finance.rab-plan@1.0.0` menggunakan Google Sheets native tiga tab dan diregistrasi sebagai kandidat `NEEDS_REVIEW` pada **Registry privat yang sama**. [Blueprint](../../templates/finance/rab-plan.md) dan [QA dua media](../qa/master-rab-planning-2026-11-04.md) mendokumentasikan 100 pos input, formula A/J, rekap, sumber, kategori/tahap, serta konversi separator fungsi untuk locale Indonesia. File XLSX juga disediakan karena permintaan eksplisit pengguna; native Google Sheets dibangun langsung karena import dari snapshot tidak tersedia pada konektor sesi ini. Sumber K/L belum menjadi target planner otomatis. Tidak ada izin/claim bahwa RAB telah disahkan atau sesuai formulir resmi.
+
 ## Satu Registry privat, bukan database baru
 
 Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Tab **`Template Masters` sudah ditambahkan di Google Sheet privat yang sama** pada T2 untuk mendaftarkan master bertahap. Master pertama tersimpan sebagai baris internal yang terverifikasi metadata. Urutan kolom yang wajib:

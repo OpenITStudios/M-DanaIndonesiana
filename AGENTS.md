@@ -33,6 +33,10 @@ Untuk menyambungkan laporan dengan sumbernya, ikuti [P5 Report Onboarding](docs/
 
 Untuk laporan naratif, domain creative-documentation membaca [Pedoman Redaksi Laporan Ilmiah](kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md). Huruf miring berdasarkan EYD V dan gaya selingkung yang benar-benar diberlakukan, **bukan** penekanan dekoratif. Master internal laporan indikator saat ini `di.report.indicator@1.2.0` dengan font Times New Roman, heading tebal-tegak. Alasan italic harus jelas; [preflight scanner](tools/google-native-typography-qa.mjs) hanyalah pemeriksa teknis, bukan keputusan bahasa otomatis. Klaim dan sitasi laporan tetap menunggu pemeriksaan sumber proyek.
 
+### Master RAB rencana biaya (baru)
+
+Template RAB v1.0.0 tersedia sebagai artefak Excel yang diminta pengguna dan sebagai **Google Sheets native** privat untuk workflow proyek. Sebelum memakai, baca [kontrak RAB](templates/finance/rab-plan.md). Pastikan tidak mencampur anggaran rencana dengan realisasi/kas, gunakan volume, frekuensi dan harga satuan yang semuanya eksplisit, lalu cek `PERLU PEMERIKSAAN` pada rekap. Format resmi tetap mendahului desain ini. Master native saat ini `di.finance.rab-plan@1.0.0` **NEEDS_REVIEW**, bukan approved budget. [QA sintetis](docs/qa/master-rab-planning-2026-11-04.md).
+
 ### Pembuatan spreadsheet Google Sheets
 
 Untuk tabel/RAB/pengadaan/revisi/evidence, baca [Standar Spreadsheet Profesional](templates/google-native/SPREADSHEET-STYLE.md) setelah [Pedoman Dasar Produksi Dokumen](docs/foundation/05-document-production-baseline.md). Pengguna hanya memakai Google Sheets native, bukan XLSX/Excel sebagai perantara. Pilih profil fungsi data, satu record per baris, tanggal DATE dan nominal NUMBER, header jelas, formula hanya bila diperlukan, dan QA langsung pada salinan terisi. Jangan membuat dashboard dekoratif, mengisi angka/asumsi rekaan atau mengklaim data harga sebagai bukti pembayaran. Master Sheets 01 adalah `di.procurement.price-comparison@1.0.0` READY INTERNAL; hanya salin untuk pekerjaan.

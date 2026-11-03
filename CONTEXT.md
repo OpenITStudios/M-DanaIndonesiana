@@ -36,4 +36,7 @@
 
 - **Persetujuan sementara Master Sheets 01 (2026-11-04):** pengguna menerima layout `di.procurement.price-comparison@1.2.0` **untuk pemakaian internal sementara**. Registry privat sekarang `READY` untuk v1.2; versi v1.0 tetap `READY` sebagai fallback, v1.1 `RETIRED`. QA visual browser dan uji cetak A4 **belum dilakukan** dan bukan berarti format pengadaan telah disetujui. Riwayat kandidat masih ada di bagian konteks sebelumnya.
 
+- **Template RAB (2026-11-04):** tersedia output Excel (.xlsx) untuk pengguna dan master Google Sheets native `di.finance.rab-plan@1.0.0` pada folder master privat dengan tiga tab `RAB`/`REKAP`/`PANDUAN`. Input 100 pos, formula A/J, SUMIF per tahap/kategori, guard pos belum lengkap, sumber/catatan. Pengujian sintetis Rp5.150.000 + satu pos belum lengkap lulus di kedua media; native Sheets memakai pemisah fungsi `;` untuk locale Indonesia dan formula eksplisit per baris. Registry privat `NEEDS_REVIEW` sampai evaluasi visual native dan cetak. [Blueprint](templates/finance/rab-plan.md), [QA](docs/qa/master-rab-planning-2026-11-04.md). Tidak ada data anggaran proyek di template publik.
+
+
 **Batas pekerjaan berikut:** prioritaskan pemakaian praktis dan kejelasan owner. Tidak ada baseline proyek sebenarnya yang boleh ditebak dari dokumen contoh atau ingatan percakapan. Pengujian, promosi branch, ataupun tindakan eksternal memerlukan instruksi sesuai tugasnya.

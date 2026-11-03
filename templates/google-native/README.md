@@ -1,6 +1,6 @@
 # Google-native Master Templates — Public Blueprint Only
 
-This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. Four other distinct catalog entries remain blueprints, not created masters. No private Drive ID is stored here.
+This folder does **not** contain Google-native master files. It defines seven distinct blank internal template designs and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. Four other distinct catalog entries remain blueprints, not created masters. No private Drive ID is stored here.
 
 **Pedoman yang wajib dibaca lebih dahulu:** [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). Layout ditentukan fungsi dokumen, sedangkan setiap narasi baru menjalani human editorial pass. Profil formal berlaku untuk laporan naratif, bukan otomatis untuk Sheets atau Slides.
 
@@ -17,12 +17,13 @@ Use readable A4 layout, consistent headings, proper page breaks, and protected m
 
 **Master Google Sheets pertama tersedia:** `di.procurement.price-comparison@1.0.0`, tab `Perbandingan`, READY INTERNAL dan diuji dengan empat contoh sintetis. Ini hanya pembanding harga referensi, bukan keputusan pengadaan. Baca [Standar Spreadsheet](SPREADSHEET-STYLE.md) serta [QA Master Sheets 01](../../docs/qa/master-sheets01-price-comparison-2026-11-03.md) sebelum membuat atau memakai salinan. Dua master Sheets lainnya masih blueprint.
 
-## Google Sheets (3 designs)
+## Google Sheets (4 designs)
 
 Keep tab names and write-cell destinations **exactly** as specified. Write only into blank input regions; place protected formulas in separate cells and verify them after editing.
 
 | Catalog ID | Native tab | Scalar cells | Table begins | Preallocate at least |
 |---|---|---|---|---|
+| `di.finance.rab-plan` | `RAB` | C4, I4, C5, C6, I6 | B11 | 100 rows |
 | `di.procurement.price-comparison` | `Perbandingan` | B2, B3, B4 | A8 | 60 rows |
 | `di.reporting.revision-matrix` | `Revisi` | B2, B3, B4 | A9 | 80 rows |
 | `di.evidence.review` | `Bukti` | B2, B3 | A8 | 100 rows |
@@ -44,6 +45,10 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 ## Kandidat Master Sheets 01 v1.2.0
 
 [QA dan perbandingan v1.2.0](../../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md): lembar **minimal administratif** tanpa merged cells, lima kolom berukuran lebih proporsional, warna header sangat ringan, harga/tanggal native, baris ringkas, dan pengujian delapan contoh sintetis termasuk catatan sangat panjang. Kontrak input tetap B2:B4 dan A8:E67; tidak ada migrasi skema atau perubahan master lama. **v1.2.0 = READY INTERNAL (disetujui sementara 4 Nov 2026)**; **v1.1.0 = RETIRED**; **v1.0.0 = READY** (fallback lama). Inspeksi screenshot Google Sheets dan hasil cetak A4 belum dilaksanakan, sehingga belum final secara visual atau resmi.
+
+## Master RAB v1.0.0
+
+[Spesifikasi](../finance/rab-plan.md) · [QA](../../docs/qa/master-rab-planning-2026-11-04.md). RAB perencanaan anggaran memuat 3 tab dan **100 pos**. Status Google-native `di.finance.rab-plan@1.0.0` adalah `NEEDS_REVIEW` sebelum pemeriksaan visual browser dan cetak. Planner mengisi B11:I110 dan metadata; kolom J tetap formula, sedangkan sumber K dan catatan L masih diperiksa/diisi manual. Jangan menganggap versi Excel sebagai sumber asli yang dikonversi otomatis ke Google Sheets pada sesi ini.
 
 ## Master maintenance
 

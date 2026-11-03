@@ -72,6 +72,9 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [QA redesain profesional Master Sheets 01 v1.2.0](qa/master-sheets01-professional-v1.2-2026-11-03.md): audit struktur/format dan 8 penawaran sintetis, berikut batas visual browser/cetak.
 
+- [Blueprint RAB](../templates/finance/rab-plan.md): struktur kolom/sel, formula dan batas rencana biaya (Excel + Google Sheets native).
+- [QA Template RAB](qa/master-rab-planning-2026-11-04.md): uji RAB 3 tahap, salinan sintetis, perbedaan formula locale, dan batas visual/format resmi.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

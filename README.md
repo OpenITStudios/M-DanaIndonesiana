@@ -53,6 +53,10 @@ Validasi Review Queue kini menolak ID temuan yang tidak sesuai fingerprint, meme
 
 **Versi minimal administratif v1.2.0:** template `di.procurement.price-comparison` memiliki kandidat desain baru yang lebih sempit, tanpa merged cells, warna ringan, dan data harga/tanggal asli. [QA](docs/qa/master-sheets01-professional-v1.2-2026-11-03.md) merekam perubahan dan batas pemeriksaan. Status belum `READY`: inspeksi UI Google Sheets dan cetak belum dilakukan; master v1.0.0 tetap fallback.
 
+## Template RAB profesional — 3 lembar
+
+Template `di.finance.rab-plan@1.0.0` disediakan sebagai **Excel (.xlsx) yang dapat diunduh** sesuai permintaan, sekaligus master **Google Sheets native** di folder template privat. Tab `RAB` memiliki 100 baris rincian volume × frekuensi × harga satuan, `REKAP` merangkum tahap/kategori dan pos belum lengkap, `PANDUAN` berisi label contoh yang dapat diganti. Pengujian sintetis total Rp5.150.000 dan satu pos tidak lengkap berhasil pada kedua media. [Spesifikasi](templates/finance/rab-plan.md) · [QA](docs/qa/master-rab-planning-2026-11-04.md). **Master Sheets masih NEEDS_REVIEW** untuk visual native/cetak; bukan RAB sah atau laporan realisasi.
+
 ## Standar tabel dan spreadsheet
 
 [Standar Spreadsheet Profesional](templates/google-native/SPREADSHEET-STYLE.md) menjadi pedoman Google Sheets native: layout putih–hitam yang terbaca, header bermakna, angka dan tanggal asli, sumber/rumus dapat diperiksa, tanpa kartu AI atau dekorasi. Master Sheets pertama, **Perbandingan Harga Referensi 1.0.0**, sudah diuji dengan 4 penawaran sintetis dan tercatat `READY` INTERNAL di Document Registry privat yang sama. Ini bukan keputusan belanja atau bukti kesesuaian prosedur pengadaan. [QA aktual](docs/qa/master-sheets01-price-comparison-2026-11-03.md).

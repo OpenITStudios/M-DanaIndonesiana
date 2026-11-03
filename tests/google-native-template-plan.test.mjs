@@ -28,8 +28,8 @@ function indicator(valuesOverride={}) {
       ...valuesOverride}}});
 }
 
-test('ten versioned public catalog specifications validate',()=>{
-  assert.equal(validateTemplateCatalog(catalog).templates.length,10);
+test('eleven versioned public catalog specifications validate',()=>{
+  assert.equal(validateTemplateCatalog(catalog).templates.length,11);
 });
 test('private master mapping rejects invalid headers and duplicates',()=>{
   assert.throws(()=>parseTemplateMasters([['template_id']]),{code:'INVALID_TEMPLATE_MASTER_HEADER'});
@@ -108,4 +108,30 @@ test('no silent truncation; reject sheet capacity, precision and missing copy',(
     tables:{offers:[{...valid.tables.offers[0],price:'1000000000000000'}]}}}),
     {code:'INVALID_INTEGER'});
   assert.throws(()=>buildGoogleWritePlan(p,{copyMetadata:{id,mimeType:sheetMime}}),{code:'COPY_NOT_VERIFIED'});
+});
+test('RAB planner writes only input columns and preserves amount formulas',()=>{
+  const p=prepareTemplate({catalog,templateId:'di.finance.rab-plan',version:'1.0.0',
+    masterRows:rows(sheetMime,'di.finance.rab-plan'),projectScope:'SYNTHETIC',
+    masterMetadata:remote(sheetMime),values:{fields:{
+      project_name:'CONTOH SINTETIS',period:'2026',rab_ref:'DRAFT-SYN',
+      reference_ceiling:'5000000'
+    },tables:{line_items:[{stage:'Tahap 1',rab_code:'RAB-1',
+      cost_category:'Operasional',description:'Kertas contoh',volume:'2',unit:'paket',
+      frequency:'1',unit_price:'50000'}]}}});
+  const plan=buildGoogleWritePlan(p,{copyMetadata:{id:copyId,mimeType:sheetMime},
+    sheetMetadata:[{title:'RAB',sheetId:7,rowCount:116,columnCount:12}]});
+  assert.equal(plan.requests.length,6);
+  const line=plan.requests.at(-1).updateCells;
+  assert.equal(line.start.rowIndex,10);
+  assert.equal(line.start.columnIndex,1);
+  assert.equal(line.rows[0].values.length,8);
+  assert.deepEqual(line.rows[0].values[7].userEnteredValue,{numberValue:50000});
+  assert.deepEqual(line.rows[0].values[4].userEnteredValue,{numberValue:2});
+  assert.ok(plan.requests.every(x => x.updateCells.start.columnIndex !== 9));
+  assert.throws(()=>prepareTemplate({catalog,templateId:'di.finance.rab-plan',version:'1.0.0',
+    masterRows:rows(sheetMime,'di.finance.rab-plan'),projectScope:'SYNTHETIC',
+    masterMetadata:remote(sheetMime),values:{fields:{project_name:'X',
+      period:'Y',rab_ref:'Z'},tables:{line_items:[{stage:'Tahap 1',
+      rab_code:'RAB-1',cost_category:'Operasional',description:'item',
+      volume:'1',unit:'paket',unit_price:'1000'}]}}}),{code:'REQUIRED_VALUE_MISSING'});
 });

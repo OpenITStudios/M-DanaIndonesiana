@@ -88,6 +88,11 @@
 - [x] Pengguna menyetujui **sementara** v1.2.0 (4 November 2026); status `READY` berlaku untuk pemakaian **internal provisional**, v1.0 tetap fallback READY.
 - [ ] Tetap periksa tampilan native Sheets pada zoom 100% dan uji cetak A4 landscape sebelum persetujuan visual final; dua gate ini belum dijalankan.
 
+- [x] Membuat template RAB profesional tiga tab untuk Excel (.xlsx) dan Google Sheets native, dengan 100 baris input serta kalkulasi/rekap otomatis. [Blueprint](../templates/finance/rab-plan.md).
+- [x] Melakukan QA data sintetis dengan 3 pos lengkap + 1 pos frekuensi belum diisi; total Rp5.150.000 dan status `PERLU PEMERIKSAAN` cocok pada Excel dan native Sheets, tanpa input contoh pada master.
+- [x] Menyesuaikan formula Sheets locale Indonesia (separator `;`) dan menulis 100 formula dengan referensi baris eksplisit, memperbaiki ulang parsing error.
+- [ ] Review visual Google Sheets pada zoom 100%, pengujian hasil cetak, dan kesesuaian template RAB menurut pedoman tahun/kategori yang benar-benar berlaku. Status master native `NEEDS_REVIEW`.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.

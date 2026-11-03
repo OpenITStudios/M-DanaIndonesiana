@@ -1,6 +1,6 @@
 # Standar Spreadsheet Profesional — Google Sheets Native
 
-**Status:** \`CANONICAL_INTERNAL\` untuk membuat/edit spreadsheet M-DanaIndonesiana, di bawah [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). **Bukan** format resmi pemerintah dan **bukan** berkas Excel: output pengguna hanya Google Sheets native; PDF opsional jika benar-benar diperlukan.
+**Status:** \`CANONICAL_INTERNAL\` untuk membuat/edit spreadsheet M-DanaIndonesiana, di bawah [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). **Bukan** format resmi pemerintah. Google Sheets native adalah default workspace; **Excel (.xlsx) boleh diberikan ketika pengguna memintanya secara eksplisit**, tetapi tidak dipakai sebagai perantara konversi native secara diam-diam. PDF opsional bila diperlukan.
 
 **Tujuan:** hasil seperti lembar kerja administrasi/keuangan profesional yang disusun manual, bukan dashboard dekoratif hasil AI. Tabel harus akurat, dapat ditelusuri, mudah disaring, dan bisa dikembangkan tanpa merusak rumus atau format.
 
@@ -93,6 +93,12 @@ Setelah review lanjutan, kandidat v1.2.0 memperbaiki masalah v1.1.0 yang terlalu
 **Catatan sumber resmi:** [Pedoman Administrasi Dana Indonesiana 2025](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf) memuat kondisi survei/perbandingan harga untuk pengadaan di atas Rp50 juta dengan sekurangnya dua sumber. **Keberlakuannya harus diverifikasi terhadap tahun dan perjanjian proyek**. Ini tidak menjadikan template internal sebuah formulir resmi. Panduan [Section508 tentang spreadsheet](https://www.section508.gov/blog/accessibility-bytes/accessible-spreadsheets/) juga menekankan header, kontinuitas tabel, dan menghindari merged cells; merupakan rujukan struktur, bukan sertifikasi aksesibilitas.
 
 **Status terkini (4 November 2026):** pengguna menyetujui **sementara** v1.2.0 untuk pemakaian internal. Registry privat mencatat v1.2.0 `READY` (provisional), v1.1.0 `RETIRED`, dan v1.0.0 tetap `READY` sebagai fallback yang lebih lama. **Persetujuan sementara bukan bukti inspeksi browser Google Sheets, pengaturan cetak A4, atau kepatuhan format resmi.** Kedua pemeriksaan pertama tetap terbuka.
+
+## Master RAB — rencana biaya, bukan realisasi
+
+[Template RAB profesional](../finance/rab-plan.md) menggunakan tiga tab `RAB`, `REKAP`, dan `PANDUAN`. 100 pos pada RAB, sumber biaya dan identitas pos terpisah, rumus volume × frekuensi × harga satuan, serta rekap per tahap/kategori dan selisih yang belum terpetakan. **Volume/frekuensi/harga wajib eksplisit**; kosong tidak diubah menjadi 1/0. Format internal menggunakan tipografi bersih tanpa dashboard atau nilai fiktif.
+
+Dua keluaran telah disiapkan karena permintaan pengguna adalah "Excel": satu file XLSX pengguna dan satu Google Sheets native yang **dibangun langsung**, bukan hasil import XLSX. Pada Google Sheets locale `in_ID`, pemisah formula `;`, sedangkan Excel memakai `,`. Jangan mengirim rumus Excel mentah ke API locale Indonesia. [QA dua media](../../docs/qa/master-rab-planning-2026-11-04.md) telah memverifikasi perhitungan sintetis tetapi belum mengesahkan tampilan browser/cetak atau standar resmi yang berlaku.
 
 ## 6. Gerbang QA wajib
 
