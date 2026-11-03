@@ -25,6 +25,9 @@ Jika pengguna meminta review berulang, gunakan satu tab `Review Queue` pada Regi
 
 Untuk menyambungkan laporan dengan sumbernya, ikuti [P5 Report Onboarding](docs/integrations/report-onboarding.md). Periksa folder laporan benar-benar berada di root proyek, ID belum terdaftar, isi laporan sesuai tugas yang diizinkan dan dependensi `derived_from_ids` adalah sumber yang benar-benar dipakai. Preview CLI `onboard-output` bukan izin menyimpan atau persetujuan; hanya reviewer terotorisasi yang dapat memasukkan baris ke Registry privat. Jika folder belum memiliki laporan asli, keluarkan `NO_CONFIRMED_PROJECT_REPORT` dan hentikan pendaftaran.
 
+### Output dokumen Google-native
+
+Ketika pengguna memilih Google Drive sebagai satu-satunya workspace, gunakan [Google-native Template Generation](docs/integrations/google-native-templates.md). Pilih satu skill primer dan sumber P2 yang diizinkan, lalu template ID+versi tepat. Master Google Docs/Sheets/Slides berada dalam Drive privat; **salin master** untuk membuat draf, jangan mengedit master. Planner sistem berada di \`tools/google-native-template-plan.mjs\`; ia hanya menyusun rencana dan belum menulis ke Drive. PDF adalah ekspor opsional, bukan format sumber editable. XLSX exporter lama bukan jalur kerja pengguna ini. Catatan: belum ada master privat, executor, atau approval resmi yang disediakan oleh fase T1.
 ## Mode kerja
 
 | Mode | Tujuan | Batas |

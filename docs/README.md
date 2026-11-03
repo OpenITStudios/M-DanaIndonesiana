@@ -38,6 +38,10 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [P5 Report Onboarding](integrations/report-onboarding.md): cara aman menghubungkan laporan nyata dari folder proyek dengan dokumen sumber yang telah direview, tanpa auto-register.
 
+## Template Google-native
+
+- [Google-native Template Generation — T1](integrations/google-native-templates.md): satu Registry privat, katalog enam blueprint, planner read-only untuk Docs/Sheets, batas copy/edit/review/P5, serta pekerjaan yang belum diimplementasi.
+- [Master authoring guide](../templates/google-native/README.md): placeholder Google Docs, tab/cell Google Sheets dan aturan master privat.
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

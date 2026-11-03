@@ -212,3 +212,7 @@ A file from a historical/template/reference folder or unrelated Drive workspace 
 - Synthetic-only unit tests for P0–P5 are authored but deliberately not run while project QA remains deferred.
 
 Related: `AGENTS.md`, `SECURITY.md`, `docs/foundation/02-source-authority.md`, `docs/foundation/04-traceability.md`, `kits/dana-indonesiana/administration/DOCUMENT-CONTROL.md`.
+
+## Google-native output templates (T1)
+
+[Google-native Template Generation](google-native-templates.md) adalah rancangan tahap berikut untuk membuat salinan Google Docs/Sheets/Slides secara terkontrol. Skema tab `Template Masters` **baru diusulkan**, belum dibuat di Registry privat, sehingga `Documents` dan `Review Queue` P0–P5 tetap utuh. T1 hanya katalog dan pure planner; **bukan** write permission OAuth, sinkronisasi, eksekusi pembuatan file ataupun acceptance tes Google.

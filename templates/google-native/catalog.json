@@ -1,0 +1,361 @@
+{
+  "schema_version": "google-native-v1",
+  "templates": [
+    {
+      "id": "di.report.indicator",
+      "version": "1.0.0",
+      "kind": "GOOGLE_DOCS",
+      "owner_skill": "creative-documentation",
+      "source_contract": "templates/reporting/indicator-report.md",
+      "workflow": "progress-report",
+      "fields": {
+        "project_name": {
+          "type": "text",
+          "required": true
+        },
+        "period": {
+          "type": "text",
+          "required": true
+        },
+        "indicator": {
+          "type": "text",
+          "required": true
+        },
+        "planned_stages": {
+          "type": "text",
+          "required": true
+        },
+        "actual_activities": {
+          "type": "text",
+          "required": true
+        },
+        "verifiable_results": {
+          "type": "text",
+          "required": true
+        },
+        "obstacles": {
+          "type": "text",
+          "required": false
+        },
+        "next_actions": {
+          "type": "text",
+          "required": false
+        },
+        "evidence_refs": {
+          "type": "text",
+          "required": false
+        }
+      },
+      "text_bindings": {
+        "project_name": "{{PROJECT_NAME}}",
+        "period": "{{PERIOD}}",
+        "indicator": "{{INDICATOR}}",
+        "planned_stages": "{{PLANNED_STAGES}}",
+        "actual_activities": "{{ACTUAL_ACTIVITIES}}",
+        "verifiable_results": "{{VERIFIABLE_RESULTS}}",
+        "obstacles": "{{OBSTACLES}}",
+        "next_actions": "{{NEXT_ACTIONS}}",
+        "evidence_refs": "{{EVIDENCE_REFS}}"
+      }
+    },
+    {
+      "id": "di.report.creative-narrative",
+      "version": "1.0.0",
+      "kind": "GOOGLE_DOCS",
+      "owner_skill": "creative-documentation",
+      "source_contract": "templates/reporting/creative-narrative.md",
+      "workflow": "progress-report",
+      "fields": {
+        "work_title": {
+          "type": "text",
+          "required": true
+        },
+        "artistic_premise": {
+          "type": "text",
+          "required": true
+        },
+        "creative_method": {
+          "type": "text",
+          "required": true
+        },
+        "documented_process": {
+          "type": "text",
+          "required": true
+        },
+        "existing_outputs": {
+          "type": "text",
+          "required": true
+        },
+        "challenges": {
+          "type": "text",
+          "required": false
+        }
+      },
+      "text_bindings": {
+        "work_title": "{{WORK_TITLE}}",
+        "artistic_premise": "{{ARTISTIC_PREMISE}}",
+        "creative_method": "{{CREATIVE_METHOD}}",
+        "documented_process": "{{DOCUMENTED_PROCESS}}",
+        "existing_outputs": "{{EXISTING_OUTPUTS}}",
+        "challenges": "{{CHALLENGES}}"
+      }
+    },
+    {
+      "id": "di.admin.package",
+      "version": "1.0.0",
+      "kind": "GOOGLE_DOCS",
+      "owner_skill": "grant-administration",
+      "source_contract": "templates/reporting/administrative-package.md",
+      "workflow": "disbursement-readiness",
+      "fields": {
+        "project_name": {
+          "type": "text",
+          "required": true
+        },
+        "package_type": {
+          "type": "text",
+          "required": true
+        },
+        "reporting_period": {
+          "type": "text",
+          "required": true
+        },
+        "verified_requirements": {
+          "type": "text",
+          "required": true
+        },
+        "available_documents": {
+          "type": "text",
+          "required": false
+        },
+        "unresolved_gaps": {
+          "type": "text",
+          "required": false
+        },
+        "review_owner": {
+          "type": "text",
+          "required": false
+        }
+      },
+      "text_bindings": {
+        "project_name": "{{PROJECT_NAME}}",
+        "package_type": "{{PACKAGE_TYPE}}",
+        "reporting_period": "{{REPORTING_PERIOD}}",
+        "verified_requirements": "{{VERIFIED_REQUIREMENTS}}",
+        "available_documents": "{{AVAILABLE_DOCUMENTS}}",
+        "unresolved_gaps": "{{UNRESOLVED_GAPS}}",
+        "review_owner": "{{REVIEW_OWNER}}"
+      }
+    },
+    {
+      "id": "di.procurement.price-comparison",
+      "version": "1.0.0",
+      "kind": "GOOGLE_SHEETS",
+      "owner_skill": "grant-administration",
+      "source_contract": "templates/procurement/price-comparison.md",
+      "workflow": "disbursement-readiness",
+      "fields": {
+        "item_name": {
+          "type": "text",
+          "required": true
+        },
+        "rab_reference": {
+          "type": "text",
+          "required": true
+        },
+        "research_date": {
+          "type": "date",
+          "required": true
+        }
+      },
+      "cell_bindings": {
+        "item_name": {
+          "sheet": "Perbandingan",
+          "cell": "B2"
+        },
+        "rab_reference": {
+          "sheet": "Perbandingan",
+          "cell": "B3"
+        },
+        "research_date": {
+          "sheet": "Perbandingan",
+          "cell": "B4"
+        }
+      },
+      "table_bindings": [
+        {
+          "key": "offers",
+          "sheet": "Perbandingan",
+          "start_cell": "A8",
+          "max_rows": 60,
+          "columns": [
+            {
+              "key": "vendor",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "specification",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "price",
+              "type": "money",
+              "required": true
+            },
+            {
+              "key": "evidence_ref",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "notes",
+              "type": "text",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "di.reporting.revision-matrix",
+      "version": "1.0.0",
+      "kind": "GOOGLE_SHEETS",
+      "owner_skill": "grant-administration",
+      "source_contract": "templates/reporting/revision-decision.md",
+      "workflow": "change-package",
+      "fields": {
+        "document_name": {
+          "type": "text",
+          "required": true
+        },
+        "source_version": {
+          "type": "text",
+          "required": true
+        },
+        "change_reason": {
+          "type": "text",
+          "required": true
+        }
+      },
+      "cell_bindings": {
+        "document_name": {
+          "sheet": "Revisi",
+          "cell": "B2"
+        },
+        "source_version": {
+          "sheet": "Revisi",
+          "cell": "B3"
+        },
+        "change_reason": {
+          "sheet": "Revisi",
+          "cell": "B4"
+        }
+      },
+      "table_bindings": [
+        {
+          "key": "changes",
+          "sheet": "Revisi",
+          "start_cell": "A9",
+          "max_rows": 80,
+          "columns": [
+            {
+              "key": "component",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "before",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "after",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "impact",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "decision_ref",
+              "type": "text",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "di.evidence.review",
+      "version": "1.0.0",
+      "kind": "GOOGLE_SHEETS",
+      "owner_skill": "evidence-audit",
+      "source_contract": "templates/evidence-checklist.md",
+      "workflow": "evidence-review",
+      "fields": {
+        "project_name": {
+          "type": "text",
+          "required": true
+        },
+        "report_period": {
+          "type": "text",
+          "required": true
+        }
+      },
+      "cell_bindings": {
+        "project_name": {
+          "sheet": "Bukti",
+          "cell": "B2"
+        },
+        "report_period": {
+          "sheet": "Bukti",
+          "cell": "B3"
+        }
+      },
+      "table_bindings": [
+        {
+          "key": "items",
+          "sheet": "Bukti",
+          "start_cell": "A8",
+          "max_rows": 100,
+          "columns": [
+            {
+              "key": "claim_id",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "rab_reference",
+              "type": "text",
+              "required": false
+            },
+            {
+              "key": "evidence_type",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "evidence_ref",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "review_state",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "notes",
+              "type": "text",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

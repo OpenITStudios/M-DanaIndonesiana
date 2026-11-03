@@ -142,3 +142,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - The `review --mode summary` read-only output now includes safe coverage metrics: indexed documents, metadata checked, registered derived outputs, folder inventory status, and explicit limitations on content/approval checks. A zero-finding result is not presented as complete project verification.
 - P5 onboarding requires the supplied verified ancestry to start with the source file's actual immediate parent and terminate at the declared project root; forged or inconsistent ancestry is rejected.
 - Regression scenarios use synthetic test data only. No QA/runtime execution, live OAuth CLI acceptance, project-source modifications, scheduling changes, or branch promotion occurred.
+
+## 1.8.0-dev — 2026-11-03 (Google-native template foundation T1)
+
+- Menetapkan Google Drive, Docs, Sheets dan Slides sebagai satu-satunya jalur dokumen editable; PDF ekspor opsional, tanpa Microsoft Office.
+- Menambah enam definisi katalog internal, kontrak tab `Template Masters` dalam Registry privat yang sama dan pure JavaScript planner untuk permintaan Docs/Sheets.
+- Menjaga master tetap read-only, memeriksa versi/metadata, memblokir template resmi yang belum direview dan menghasilkan DRAFT bukan approval.
+- Menambahkan tes sintetis untuk validasi katalog, input, keamanan Sheets, dan kapasitas grid. Kandidat diuji lokal; **tanpa** tes Google API, file master Drive, modifikasi sumber proyek, atau promosi branch.
