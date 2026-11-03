@@ -51,3 +51,7 @@ Pengujian sintetis perencana: `node --test tests/google-native-template-plan.tes
 **Roadmap:** T2 membuat dan mereview master Google-native di folder privat berizin; T3 executor konektor dengan verifikasi salinan + readback; T4 adapter Finance → Google Sheets dan audit formula; T5 PDF/Slides dan kelayakan format resmi. Belum ada mutasi Google Drive untuk T1.
 
 Sumber API: [Drive files.copy](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/copy), [Docs replaceAllText](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request), [Sheets batchUpdate](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate), [Drive files.export](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/export).
+
+### Bentuk metadata konektor
+
+Planner menerima baik metadata API mentah (`mimeType`, `modifiedTime`) maupun metadata konektor Google Drive (`mime_type`, `modified_time`). Untuk Sheets, argumen `sheetMetadata` menerima objek lengkap hasil `get_spreadsheet_metadata` (`sheets[].properties`) dari **salinan**, atau matriks flat sintetis dalam pengujian. Jangan menggunakan `sheetId` master untuk menulis ke salinan tanpa readback.

@@ -126,8 +126,9 @@ export function prepareTemplate({catalog, masterRows, templateId, version, proje
   if (master.master_status !== 'READY') fail('MASTER_NOT_READY');
   if (master.mime_type !== MIME[spec.kind]) fail('MASTER_MIME_MISMATCH');
   if (!object(masterMetadata) || masterMetadata.id !== master.master_file_id ||
-      masterMetadata.mimeType !== master.mime_type || masterMetadata.trashed ||
-      masterMetadata.modifiedTime !== master.observed_modified_time) fail('MASTER_METADATA_UNVERIFIED_OR_CHANGED');
+      (masterMetadata.mimeType ?? masterMetadata.mime_type) !== master.mime_type || masterMetadata.trashed ||
+      (masterMetadata.modifiedTime ?? masterMetadata.modified_time) !== master.observed_modified_time)
+    fail('MASTER_METADATA_UNVERIFIED_OR_CHANGED');
   if (master.authority === 'OFFICIAL_FORMAT') fail('OFFICIAL_FORMAT_REQUIRES_DOMAIN_REVIEW');
   if (!object(values) || !object(values.fields)) fail('INVALID_TEMPLATE_INPUT');
   if (!Array.isArray(sourceDocumentIds) || sourceDocumentIds.some(id => typeof id !== 'string' || !/^[A-Z][A-Z0-9-]{2,90}$/.test(id)))
@@ -181,8 +182,17 @@ export function buildGoogleWritePlan(prepared, {copyMetadata, sheetMetadata = []
     return {kind:prepared.kind, target_file_id:copyMetadata.id, requests,
       checks:['REPLACE_COUNTS', 'UNRESOLVED_PLACEHOLDERS', 'SOURCE_AND_STATUS_REVIEW']};
   }
-  if (!Array.isArray(sheetMetadata)) fail('SHEET_METADATA_REQUIRED');
-  const indexed = new Map(sheetMetadata.map(s => [s.title,s]));
+  // The Google Drive connector returns native sheet properties under sheets[].properties.
+  // A flat synthetic test matrix is also accepted; metadata must describe the COPY.
+  const sheets = Array.isArray(sheetMetadata) ? sheetMetadata :
+    Array.isArray(sheetMetadata?.sheets) ? sheetMetadata.sheets.map(s => ({
+      title:s.properties?.title,sheetId:s.properties?.sheetId,
+      rowCount:s.properties?.gridProperties?.rowCount,
+      columnCount:s.properties?.gridProperties?.columnCount
+    })) : null;
+  if (!sheets || new Set(sheets.map(s => s.title)).size !== sheets.length)
+    fail('SHEET_METADATA_REQUIRED');
+  const indexed = new Map(sheets.map(s => [s.title,s]));
   const requests = [];
   function writeAt(sheetTitle, a1, rows, colTypes) {
     const sheet = indexed.get(sheetTitle);

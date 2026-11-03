@@ -43,7 +43,7 @@
 - [x] Menetapkan Google Docs/Sheets/Slides sebagai master dan output editable, PDF hanya ekspor opsional; tidak memakai Office sebagai perantara.
 - [x] Menyusun enam definisi template internal dan planner murni untuk field/versi/Google API requests.
 - [x] Menulis tes sintetis T1; eksekusi lokal pada kandidat dilakukan, **bukan** QA Google API atau OAuth end-to-end.
-- [ ] Mendapatkan persetujuan lokasi master privat serta menambahkan tab \`Template Masters\` **pada satu Registry yang sama**.
+- [ ] Mendapatkan persetujuan lokasi master privat serta menambahkan tab `Template Masters` **pada satu Registry yang sama**.
 - [ ] Membuat dan memeriksa master Google Docs/Sheets yang sesuai seluruh token/range katalog.
 - [ ] Menyiapkan executor Google Drive connector dengan preflight, copy-only, readback, bukti hasil dan status DRAFT.
 - [ ] Menghubungkan kalkulator Finance JSON ke master Google Sheets dengan formula + QA tanpa converter XLSX.

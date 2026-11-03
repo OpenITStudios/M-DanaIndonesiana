@@ -47,6 +47,12 @@ test('Google Docs replacement plan targets native copy and retains DRAFT status'
 });
 test('required missing data, template injection tokens and stale masters fail closed',()=>{
   assert.throws(()=>indicator({indicator:''}),{code:'REQUIRED_VALUE_MISSING'});
+  const copy=prepareTemplate({catalog,templateId:'di.report.indicator',version:'1.0.0',
+    masterRows:rows(docMime,'di.report.indicator'),projectScope:'SYNTHETIC',
+    masterMetadata:{id,mime_type:docMime,modified_time:stamp},
+    values:{fields:{project_name:'P',period:'T',indicator:'X',planned_stages:'A',
+      actual_activities:'B',verifiable_results:'C'}}});
+  assert.equal(copy.status,'DRAFT_PREFLIGHT');
   assert.throws(()=>indicator({indicator:'{{UNSAFE_TOKEN}}'}),{code:'UNSAFE_OR_INVALID_FIELD_VALUE'});
   assert.throws(()=>prepareTemplate({catalog,templateId:'di.report.indicator',version:'1.0.0',
     masterRows:rows(docMime,'di.report.indicator'),projectScope:'SYNTHETIC',
@@ -67,6 +73,10 @@ test('Google Sheets writes numerical money and formula-like text literally',()=>
     {stringValue:'=HYPERLINK("https://invalid.test")'});
   assert.deepEqual(out.requests.at(-1).updateCells.rows[0].values[2].userEnteredValue,{numberValue:125000});
   assert.equal(out.requests.at(-1).updateCells.start.sheetId,22);
+  const nested=buildGoogleWritePlan(p,{copyMetadata:{id:copyId,mimeType:sheetMime},
+    sheetMetadata:{sheets:[{properties:{title:'Perbandingan',sheetId:22,
+      gridProperties:{rowCount:100,columnCount:12}}}]}});
+  assert.deepEqual(nested.requests,out.requests);
 });
 test('no silent truncation; reject sheet capacity, precision and missing copy',()=>{
   const config={catalog,templateId:'di.procurement.price-comparison',version:'1.0.0',
