@@ -81,3 +81,5 @@ Untuk seluruh master Google-native, gunakan [Standar Mutu Dokumen Profesional](t
 [Documentation Index](docs/README.md) · [Module Ownership](docs/modules/README.md) · [Source Authority](docs/foundation/02-source-authority.md) · [Privacy](SECURITY.md) · [Current Context](CONTEXT.md) · [Development Plan](planning/development.md) · [History](CHANGELOG.md)
 
 **Kriteria kerja:** hasil yang berguna, bahasa Indonesia alami dan akurat, satu sumber fakta per domain, tidak membuat fitur atau dokumen kosong yang tidak diperlukan.
+
+**Pembaruan 4 November 2026:** kandidat v1.2.0 telah disetujui sementara untuk penggunaan internal dan tercatat `READY` pada Registry privat. v1.0 tetap READY sebagai fallback, v1.1 RETIRED. **Belum** ada inspeksi screenshot Google Sheets atau validasi cetak A4; format ini bukan approval pengadaan resmi.

@@ -34,4 +34,6 @@
 - **Desain profesional Sheets v1.2.0 (2026-11-03):** versi baru `di.procurement.price-comparison@1.2.0` berstatus `NEEDS_REVIEW` pada satu Registry privat. Tidak ada merged cell, lebar 1.032 px, header pucat dan body ringkas 36 px; 8 baris contoh fiktif telah diuji dengan tinggi baris adaptif, tanggal/harga tetap numerik. v1.1.0 `RETIRED`, v1.0.0 `READY` teknis sebagai fallback. [Bukti QA](docs/qa/master-sheets01-professional-v1.2-2026-11-03.md). Pemeriksaan browser Sheets dan hasil cetak belum dijalankan; kewajiban administrasi bergantung pedoman/tahun proyek.
 
 
+- **Persetujuan sementara Master Sheets 01 (2026-11-04):** pengguna menerima layout `di.procurement.price-comparison@1.2.0` **untuk pemakaian internal sementara**. Registry privat sekarang `READY` untuk v1.2; versi v1.0 tetap `READY` sebagai fallback, v1.1 `RETIRED`. QA visual browser dan uji cetak A4 **belum dilakukan** dan bukan berarti format pengadaan telah disetujui. Riwayat kandidat masih ada di bagian konteks sebelumnya.
+
 **Batas pekerjaan berikut:** prioritaskan pemakaian praktis dan kejelasan owner. Tidak ada baseline proyek sebenarnya yang boleh ditebak dari dokumen contoh atau ingatan percakapan. Pengujian, promosi branch, ataupun tindakan eksternal memerlukan instruksi sesuai tugasnya.

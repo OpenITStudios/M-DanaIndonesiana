@@ -43,7 +43,7 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 
 ## Kandidat Master Sheets 01 v1.2.0
 
-[QA dan perbandingan v1.2.0](../../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md): lembar **minimal administratif** tanpa merged cells, lima kolom berukuran lebih proporsional, warna header sangat ringan, harga/tanggal native, baris ringkas, dan pengujian delapan contoh sintetis termasuk catatan sangat panjang. Kontrak input tetap B2:B4 dan A8:E67; tidak ada migrasi skema atau perubahan master lama. **v1.2.0 = NEEDS_REVIEW** (belum ada screenshot browser), **v1.1.0 = RETIRED**, **v1.0.0 = READY** (fallback lama).
+[QA dan perbandingan v1.2.0](../../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md): lembar **minimal administratif** tanpa merged cells, lima kolom berukuran lebih proporsional, warna header sangat ringan, harga/tanggal native, baris ringkas, dan pengujian delapan contoh sintetis termasuk catatan sangat panjang. Kontrak input tetap B2:B4 dan A8:E67; tidak ada migrasi skema atau perubahan master lama. **v1.2.0 = READY INTERNAL (disetujui sementara 4 Nov 2026)**; **v1.1.0 = RETIRED**; **v1.0.0 = READY** (fallback lama). Inspeksi screenshot Google Sheets dan hasil cetak A4 belum dilaksanakan, sehingga belum final secara visual atau resmi.
 
 ## Master maintenance
 

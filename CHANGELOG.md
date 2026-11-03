@@ -229,3 +229,9 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Menguji 8 penawaran sintetis di copy terpisah: semua harga numberValue dan tanggal DATE, literal berawalan `=` bukan formula, 0 error sel. Tinggi baris contoh diukur dan dibaca ulang dari rowMetadata.
 - Memeriksa dokumen publik 2025 untuk konteks survei/perbandingan harga; keberlakuan terhadap proyek tiap tahun tetap belum dipastikan.
 - Registry tetap tunggal: v1.2.0 `NEEDS_REVIEW`, v1.1.0 `RETIRED`, v1.0.0 `READY` lama. Screenshot native Sheets dan pengaturan print belum diuji, tidak ada klaim format resmi.
+
+## 1.8.12-dev — 2026-11-04 (provisional approval for Master Sheets 01)
+
+- Mencatat persetujuan sementara pengguna terhadap master harga referensi `di.procurement.price-comparison@1.2.0` dan menaikkan `Template Masters` privat menjadi `READY` untuk penggunaan internal, tanpa mengubah isi atau nama master.
+- v1.0.0 tetap `READY` sebagai fallback lama; v1.1.0 `RETIRED`. Pemilihan master tetap harus memakai ID dan versi eksplisit.
+- Pemeriksaan UI Google Sheets pada zoom 100%, print A4, dan kepatuhan pengadaan resmi masih NOT_EXECUTED; persetujuan ini bukan klaim PASS untuk semua gate.

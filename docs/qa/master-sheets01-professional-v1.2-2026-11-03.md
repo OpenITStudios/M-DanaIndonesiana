@@ -60,3 +60,7 @@ Teks selain judul/heading memakai Arial 10 pt, tegak tanpa italic dekoratif. Har
 ## Catatan produksi
 
 Saat mengisi salinan berikutnya, periksa tinggi baris terhadap panjang uraian/spesifikasi. \`autoResizeDimensions\` tidak boleh dianggap pasti memadai: pada QA terdahulu pernah mengecilkan baris panjang menjadi 21 px. Periksa hasil \`rowMetadata\` lalu tampilan UI jika dapat diakses. Kriteria untuk master setelah ini: **kejelasan sebelum dekorasi, tipe data sebelum font, sumber sebelum angka**.
+
+## Addendum status — 4 November 2026
+
+Pengguna telah memberi **persetujuan sementara** atas desain v1.2.0. Registry privat telah dinaikkan menjadi `READY` untuk **penggunaan internal yang bersifat provisional**; v1.0.0 tetap READY sebagai fallback lama dan v1.1.0 RETIRED. Ini merupakan keputusan penggunaan template, **bukan** penggantian hasil QA sejarah pada 3 November atau klaim bahwa screenshot native dan pengaturan cetak sudah diverifikasi. Dua pemeriksaan tersebut tetap `NOT_EXECUTED` dan diperlukan sebelum persetujuan desain final. Tidak ada perubahan materi proyek, data transaksi, atau approval pengadaan resmi.

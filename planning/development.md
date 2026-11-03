@@ -85,7 +85,8 @@
 
 - [x] Merevisi master Perbandingan Harga sebagai v1.2.0 Google Sheets native: 0 merge, 5 kolom lebih ringkas, header minimal, baris tidak berlebihan, 60 input tetap kompatibel. [QA](../docs/qa/master-sheets01-professional-v1.2-2026-11-03.md).
 - [x] Menguji salinan dengan 8 penawaran sintetis: tanggal/angka sebagai tipe asli, catatan `=...` literal, pembungkusan teks dan row heights terukur; master tetap kosong.
-- [ ] Review tampilan native Sheets pada zoom 100%, dan uji cetak A4 landscape; sebelum itu v1.2.0 tetap `NEEDS_REVIEW`, v1.0.0 fallback.
+- [x] Pengguna menyetujui **sementara** v1.2.0 (4 November 2026); status `READY` berlaku untuk pemakaian **internal provisional**, v1.0 tetap fallback READY.
+- [ ] Tetap periksa tampilan native Sheets pada zoom 100% dan uji cetak A4 landscape sebelum persetujuan visual final; dua gate ini belum dijalankan.
 
 ## Prioritas desain berikutnya
 

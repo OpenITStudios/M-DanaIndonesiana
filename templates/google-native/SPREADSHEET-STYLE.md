@@ -92,7 +92,7 @@ Setelah review lanjutan, kandidat v1.2.0 memperbaiki masalah v1.1.0 yang terlalu
 
 **Catatan sumber resmi:** [Pedoman Administrasi Dana Indonesiana 2025](https://erispro-indonesiana.kemenkeu.go.id/upload/DAKB_Pedoman_administrasi_penerima_2025.pdf) memuat kondisi survei/perbandingan harga untuk pengadaan di atas Rp50 juta dengan sekurangnya dua sumber. **Keberlakuannya harus diverifikasi terhadap tahun dan perjanjian proyek**. Ini tidak menjadikan template internal sebuah formulir resmi. Panduan [Section508 tentang spreadsheet](https://www.section508.gov/blog/accessibility-bytes/accessible-spreadsheets/) juga menekankan header, kontinuitas tabel, dan menghindari merged cells; merupakan rujukan struktur, bukan sertifikasi aksesibilitas.
 
-**Status:** v1.2.0 kandidat `NEEDS_REVIEW` karena UI Sheets 100% dan cetak A4 belum diperiksa. v1.1.0 `RETIRED` setelah penolakan desain; v1.0.0 `READY` sebagai fallback teknis yang lebih lama sampai v1.2 diterima.
+**Status terkini (4 November 2026):** pengguna menyetujui **sementara** v1.2.0 untuk pemakaian internal. Registry privat mencatat v1.2.0 `READY` (provisional), v1.1.0 `RETIRED`, dan v1.0.0 tetap `READY` sebagai fallback yang lebih lama. **Persetujuan sementara bukan bukti inspeksi browser Google Sheets, pengaturan cetak A4, atau kepatuhan format resmi.** Kedua pemeriksaan pertama tetap terbuka.
 
 ## 6. Gerbang QA wajib
 
