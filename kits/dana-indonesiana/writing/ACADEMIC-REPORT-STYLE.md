@@ -1,6 +1,9 @@
 # Pedoman Redaksi Laporan Ilmiah dan Penggunaan Huruf Miring
 
-**Status:** aturan editorial internal untuk laporan kegiatan, perkembangan proyek, dokumentasi karya, dan laporan yang ditujukan kepada pemeriksa. Owner: \`creative-documentation\`. **Bukan** instruksi untuk menyusun laporan fiktif seolah hasil penelitian, dan bukan pengganti format resmi, gaya selingkung lembaga, atau syarat akademik khusus.
+**Status:** aturan editorial internal untuk laporan kegiatan, perkembangan proyek, dokumentasi karya, dan laporan yang ditujukan kepada pemeriksa. Owner: `creative-documentation`. **Bukan** instruksi untuk menyusun laporan fiktif seolah hasil penelitian, dan bukan pengganti format resmi, gaya selingkung lembaga, atau syarat akademik khusus.
+
+**Acuan utama:** [Pedoman Dasar Produksi Dokumen](../../../docs/foundation/05-document-production-baseline.md). Gaya ilmiah harus objektif dan mudah dipahami seperti hasil kerja editor profesional. Jangan otomatis meniru struktur skripsi/jurnal pada laporan aktivitas ketika tidak relevan.
+
 
 ## Rujukan terverifikasi dan ruang lingkup
 
@@ -16,13 +19,13 @@ EYD V adalah rujukan ejaan utama untuk bahasa Indonesia. APA 7 digunakan **hanya
 
 | Kasus | Status default | Contoh/pembatasan |
 |---|---|---|
-| Kata/ungkapan bahasa asing atau daerah yang belum diserap | **Italic**, pada span istilahnya saja | \`walkthrough\` bila memang dikutip sebagai istilah asing; lebih baik gunakan padanan "penelusuran" ketika tepat |
-| Nama ilmiah Latin atau ungkapan spesifik bahasa asing | **Italic** | \`Garcinia mangostana\`; terutama relevan pada laporan ilmiah biologi |
+| Kata/ungkapan bahasa asing atau daerah yang belum diserap | **Italic**, pada span istilahnya saja | `walkthrough` bila memang dikutip sebagai istilah asing; lebih baik gunakan padanan "penelusuran" ketika tepat |
+| Nama ilmiah Latin atau ungkapan spesifik bahasa asing | **Italic** | `Garcinia mangostana`; terutama relevan pada laporan ilmiah biologi |
 | Judul buku, film, album, siniar, dan media massa dalam teks, sesuai EYD | **Italic pada judul** | Judul buku yang benar-benar dikutip; jangan mengarang judul sumber |
 | Penegasan unsur bahasa/kata yang sedang dianalisis | **Boleh italic**, jarang, setelah tinjauan | EYD mengizinkan, tetapi sistem tidak memakai italic untuk memberi nuansa dramatis pada hasil laporan |
-| Heading, subheading, label \`Rencana kerja\`, status \`Draf\`, kesimpulan, metadata | **Tegak**, heading **bold** | Heading harus memiliki style \`HEADING_1\`/\`HEADING_2\` native Google Docs |
-| Nama orang, organisasi, lembaga, produk, aplikasi, merek asing | **Tegak** | \`Google Docs\`, \`Minecraft\`, nama instansi, nama penulis |
-| Kata Indonesia yang sudah diserap dan baku | **Tegak** | \`validasi\`, \`evaluasi\`, \`implementasi\` sesuai pemakaian bahasa Indonesia |
+| Heading, subheading, label `Rencana kerja`, status `Draf`, kesimpulan, metadata | **Tegak**, heading **bold** | Heading harus memiliki style `HEADING_1`/`HEADING_2` native Google Docs |
+| Nama orang, organisasi, lembaga, produk, aplikasi, merek asing | **Tegak** | `Google Docs`, `Minecraft`, nama instansi, nama penulis |
+| Kata Indonesia yang sudah diserap dan baku | **Tegak** | `validasi`, `evaluasi`, `implementasi` sesuai pemakaian bahasa Indonesia |
 | Unsur statistik atau sitasi khusus gaya APA 7 | **Mengikuti jenis simbol/karya sesuai APA** | Jangan meng-italic-kan semua angka statistik; cek simbol dan format akademik secara tepat |
 
 **Larangan gaya internal:** italic untuk seluruh subjudul, seluruh paragraf abstrak, catatan status, angka capaian, istilah teknis yang sebenarnya sudah lazim berbahasa Indonesia, kata-kata "penting" yang dipilih AI, atau alasan dekoratif.
@@ -63,11 +66,11 @@ Judul subbagian mengikuti jenis laporan dan format resmi. Jangan otomatis menamb
 
 **LAYOUT_QA:** baca hasil Google Docs yang telah diisi dan PDF yang dirender; periksa section, paragraf terputus, halaman terakhir, font fallback, serta setiap istilah asing yang menjadi italic. Sebuah master kosong yang lulus struktur **tidak** menggantikan QA hasil terisi.
 
-Untuk pemeriksaan awal italic gunakan \`inspectItalicRuns\` pada [pure Docs QA helper](../../tools/google-native-doc-qa.mjs). Pemeriksa hanya menandai run yang belum mempunyai alasan terdaftar; ia **tidak** dapat memutuskan sendiri apakah sebuah kata sudah diserap, apakah sitasi benar, atau apakah sumber berwenang.
+Untuk pemeriksaan awal italic gunakan `inspectItalicRuns` pada [pure Docs QA helper](../../tools/google-native-doc-qa.mjs). Pemeriksa hanya menandai run yang belum mempunyai alasan terdaftar; ia **tidak** dapat memutuskan sendiri apakah sebuah kata sudah diserap, apakah sitasi benar, atau apakah sumber berwenang.
 
 ## 4. Master 01 dan contoh penerapan
 
-Pada master \`di.report.indicator@1.2.0\`, italic dekoratif pada tiga subjudul dan status draf telah dihilangkan; heading tersebut sekarang tegak, tebal, dan menggunakan Google Docs \`HEADING_2\`. Times New Roman diterapkan sampai ke text run agar pewarisan style Google Docs tidak berubah menjadi Arial.
+Pada master `di.report.indicator@1.2.0`, italic dekoratif pada tiga subjudul dan status draf telah dihilangkan; heading tersebut sekarang tegak, tebal, dan menggunakan Google Docs `HEADING_2`. Times New Roman diterapkan sampai ke text run agar pewarisan style Google Docs tidak berubah menjadi Arial.
 
 Satu contoh fiktif naratif dengan tujuan, prosedur, temuan, keterbatasan, dan rujukan sintetis dibuat untuk uji, dan tidak memuat italic karena **tidak terdapat istilah atau judul yang memerlukannya**. Ini penggunaan italic yang benar: **tidak memaksakan italic sama sekali** jika tidak relevan.
 

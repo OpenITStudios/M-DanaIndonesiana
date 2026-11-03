@@ -199,3 +199,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Satu salinan laporan ilmiah fiktif 1 halaman dan satu salinan konten panjang 3 halaman telah diisi serta diperiksa render PDF; sembilan placeholder terganti, tanpa italic dekoratif. Page break untuk konten panjang hanya pada salinan.
 - Membuat `tools/google-native-typography-qa.mjs` dan lima tes sintetis yang lulus dalam V8 test harness; Node runner belum dijalankan.
 - Registry privat kini memilih v1.2.0 = `READY` INTERNAL, v1.1.0/v1.0.0 = `RETIRED`; metadata Drive telah cocok saat diperiksa. Belum ada QA substantif laporan proyek, PDF/UA, atau persetujuan format resmi.
+
+## 1.8.8-dev — 2026-11-03 (approved document production baseline)
+
+- Menetapkan pedoman dasar yang disetujui sebagai kontrak kanonis internal untuk seluruh dokumen Google-native, dengan hierarki sumber resmi, kebutuhan pembaca, kebenaran fakta, lalu desain.
+- Membuat pedoman baca-manusia langsung di Google Docs privat proyek; render A4 dua halaman ditinjau, dengan Times New Roman, heading tebal-tegak, dan tanpa italic dekoratif.
+- Mengikat gerbang penyuntingan human writer yang operasional: substansi spesifik, alur wajar, tanpa filler, repetisi, konektor mekanis, atau klaim yang melampaui sumber.
+- Memperbarui AGENTS router, owner creative-documentation, standar Google-native, design tokens, README, indeks dan roadmap; tanpa skill/agen kedelapan.
+- Master 01 v1.2.0 tetap READY INTERNAL. Belum ada audit isi laporan proyek nyata, klaim format pemerintah atau executor editorial otomatis.

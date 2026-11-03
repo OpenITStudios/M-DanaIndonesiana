@@ -1,8 +1,11 @@
-# Standar Kualitas Dokumen Profesional — Google-native (usulan v2.0)
+# Standar Kualitas Dokumen Profesional — Google-native (aktif untuk internal)
 
 **Owner:** lintas-domain pada lapisan template, **bukan skill kedelapan**. **Ruang lingkup:** Google Docs, Google Sheets, Google Slides dan inspeksi PDF hasil ekspor. **Authority:** INTERNAL DESIGN DEFAULT. Format dan susunan resmi mengesampingkan default ini **hanya jika sumber, kategori, periode, dan keberlakuan telah ditinjau** menurut [Source Authority](../../docs/foundation/02-source-authority.md).
 
 **Sumber pertimbangan:** [riset dan matriks bukti](../../docs/research/google-native-document-design-2026.md). **Nilai default mesin:** [design-tokens.json](design-tokens.json). **Pemilihan struktur:** [DOCUMENT-PROFILES.md](DOCUMENT-PROFILES.md). Versi lama master yang sudah ada tidak otomatis dianggap memenuhi proposal ini; jangan mengubah/migrasi master tanpa review, versi dan metadata baru.
+
+**Aturan dasar yang mengikat semua output:** [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). Dokumen ini merupakan spesifikasi teknis turunannya. Untuk laporan naratif internal gunakan profil Times New Roman dan monokrom yang telah disetujui, bukan memaksakan Arial generik pada semua laporan. Jangan menganggap desain internal sebagai kepatuhan format resmi.
+
 
 ## 0. Definisi lulus
 

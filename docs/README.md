@@ -6,6 +6,11 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 [Skill Router](skills/README.md) → satu `SKILL.md` → satu kontrak domain → prosedur rinci bila perlu. Untuk pekerjaan lintas domain gunakan [Cross-Skill Workflows](skills/cross-skill-workflows.md); untuk paket laporan lebih rinci gunakan [Reporting Workflow](skills/reporting-workflow.md).
 
+## Pedoman dasar produksi dokumen — mulai dari sini
+
+- **[Pedoman Dasar Produksi Dokumen](foundation/05-document-production-baseline.md):** aturan internal utama yang telah disetujui untuk semua dokumen baru dan revisi. Mengatur kebutuhan pembaca, kualitas tulisan alami seperti hasil kerja editor, EYD/italic, layout, sumber, dan gerbang QA. Versi Google Docs ada di folder `90 - Pedoman dan Referensi` proyek; riset desain terdahulu merupakan referensi pendukung, bukan pedoman paralel.
+
+
 ## Fondasi kanonis
 
 | Pertanyaan | Satu pemilik |
@@ -54,7 +59,7 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 - [Master 01 Fill & Layout QA](qa/master01-fill-layout-2026-11-03.md): perbandingan v1.0.0 dan v1.1.0 menggunakan salinan sintetis Google Docs, metrik PDF, temuan serta batas klaim.
 - [Google-native Docs QA helper](../tools/google-native-doc-qa.mjs): struktur/placeholder dan perencanaan pagination salinan; bukan pemeriksaan aksesibilitas PDF otomatis.
 
-- [Profil desain laporan formal](../templates/google-native/FORMAL-REPORT-STYLE.md) dan [uji render Master 01 v1.2.0](qa/master01-human-layout-2026-11-03.md): alternatif lebih sederhana yang masih menunggu review pengguna.
+- [Profil desain laporan formal](../templates/google-native/FORMAL-REPORT-STYLE.md) dan [uji render Master 01 v1.2.0](qa/master01-human-layout-2026-11-03.md): profil formal yang telah disetujui untuk dokumen internal (QA tetap menggunakan data sintetis).
 
 - [Pedoman penulisan laporan ilmiah & italic](../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md): ketentuan EYD V, struktur argumentasi, format sitasi bersyarat, dan review sumber.
 - [Bukti QA tipografi Master 01 v1.2.0](qa/master01-scholarly-typography-2026-11-03.md): pemeriksaan Google Docs/PDF dengan contoh sintetis, font dan italic.

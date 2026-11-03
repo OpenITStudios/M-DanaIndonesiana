@@ -2,6 +2,9 @@
 
 **Owner:** `creative-documentation`. Tujuan: hasil naskah mudah dibaca, khusus pada karya yang dibahas, bernada manusiawi, dan tidak melampaui sumber atau memoles kekurangan menjadi capaian palsu.
 
+**Baseline lintas dokumen:** [Pedoman Dasar Produksi Dokumen](../../../docs/foundation/05-document-production-baseline.md). Domain `creative-documentation` adalah pemilik penyuntingan narasi. Setelah draft berbasis sumber selesai, lakukan human editorial pass sebelum memperbaiki layout; tidak boleh menyebut tulisan benar-benar dibuat manusia hanya berdasarkan gaya.
+
+
 ## Tentukan pembaca dan jenis dokumen
 
 | Jenis | Pembaca | Pusat perhatian dan tingkat bahasa |
@@ -45,6 +48,16 @@ Untuk laporan yang perlu tampak seperti karya tulis ilmiah, terapkan [Pedoman Re
 Jangan membuka semua tulisan dengan "Seiring berkembangnya teknologi...", "Dalam era digital...", atau "Program ini merupakan terobosan luar biasa..." bila tidak menjawab kebutuhan pembaca. Hindari "berhasil menjangkau banyak kalangan" tanpa data, "berjalan lancar" bila catatan memuat kendala, dan "mendapat respons positif" tanpa hasil evaluasi/sumber.
 
 **Pengganti yang lebih baik:** deskripsikan keputusan desain, tantangan yang nyata, proses penyusunan materi, fungsi bagian karya yang spesifik, dan hasil inspeksi/aktivitas yang benar-benar ada. Jangan membuat kutipan narasumber, impresi kunjungan lapangan, atau statistik untuk membuat tulisan lebih hidup.
+
+## Human editorial pass — wajib pada laporan terisi
+
+1. Baca dari posisi penerima; pastikan tiap paragraf menambah fakta, alasan atau keterbatasan yang relevan, bukan hanya memenuhi ruang.
+2. Periksa kalimat awal dan akhir: hilangkan pembuka umum, penutup seremonial, dan pengulangan kesimpulan tanpa tambahan informasi.
+3. Perbaiki alur gagasan dan variasi panjang kalimat **menurut isi**, bukan jumlah paragraf, bullet atau pola transisi yang seragam.
+4. Pastikan hasil, sebab, dampak, dan klaim keberhasilan tidak melampaui bukti; istilah teknis, objek, periode, dan versi konsisten.
+5. Tinjau EYD, italic, sitasi dan format resmi secara terpisah; istilah asing tidak dibuat-buat agar laporan terlihat ilmiah.
+6. Catat sumber yang belum cukup. Label `HUMAN_EDITORIAL_REVIEWED` hanya boleh dipakai setelah benar-benar menyunting naskah aktual; panduan/cek otomatis saja bukan PASS.
+
 
 ## Dua tahap review (bukan pengujian otomatis)
 

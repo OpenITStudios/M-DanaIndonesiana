@@ -1,6 +1,9 @@
 # Google-native Master Templates — Public Blueprint Only
 
-This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, internal Google Docs master `di.report.indicator@1.1.0` supersedes v1.0.0 after three synthetic Google Docs copy-fill/render scenarios. Version v1.0.0 is historical (pagination issue). The other five distinct catalog entries are blueprints, not created masters. No private Drive ID is stored here.
+This folder does **not** contain Google-native master files. It defines six blank internal templates and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. The other five distinct catalog entries are blueprints, not created masters. No private Drive ID is stored here.
+
+**Pedoman yang wajib dibaca lebih dahulu:** [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). Layout ditentukan fungsi dokumen, sedangkan setiap narasi baru menjalani human editorial pass. Profil formal berlaku untuk laporan naratif, bukan otomatis untuk Sheets atau Slides.
+
 
 Catalog: [catalog.json](catalog.json). [Master 01 QA evidence](../../docs/qa/master01-fill-layout-2026-11-03.md). System workflow: [Google-native templates](../../docs/integrations/google-native-templates.md). **Visual quality gate:** [Standar Mutu Dokumen](QUALITY-STANDARD.md), [Profil Jenis Dokumen](DOCUMENT-PROFILES.md), [Token Visual](design-tokens.json) dan [Bukti Riset](../../docs/research/google-native-document-design-2026.md).
 

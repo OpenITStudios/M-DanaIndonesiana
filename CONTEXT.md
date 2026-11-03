@@ -23,4 +23,7 @@
 
 - **Penyempurnaan redaksi ilmiah dan italic (2026-11-03):** berdasarkan persetujuan pengguna, Master 01 `di.report.indicator@1.2.0` aktif `READY` **INTERNAL**; versi 1.0/1.1 `RETIRED`. Italic dekoratif di status/tiga subjudul dihapus, subjudul menjadi `HEADING_2` tebal-tegak, dan Times New Roman ditegakkan sampai text run. Contoh ilmiah sintetis 1 halaman dan uji panjang 3 halaman diperiksa; tidak ditemukan italic/fallback font pada teks terlihat. [Pedoman ilmiah](kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md), [QA](docs/qa/master01-scholarly-typography-2026-11-03.md). Laporan nyata/format resmi/executor unattended belum divalidasi.
 
+- **Pedoman dasar aktif (2026-11-03):** [Standar Produksi Dokumen](docs/foundation/05-document-production-baseline.md) menjadi kontrak kanonis untuk seluruh output Google-native. Versi baca-manusia tersimpan sebagai Google Docs di folder privat `90 - Pedoman dan Referensi` dan render 2 halaman A4 telah diperiksa. Prinsip bahasa: naratif faktual, alami, seolah telah melewati suntingan profesional, tidak formulaik/berlebihan, EYD termasuk italic. Laporan naratif internal menggunakan Master 01 v1.2.0 READY; pemeriksaan output proyek nyata belum dilakukan dan tidak ada executor editorial otomatis.
+
+
 **Batas pekerjaan berikut:** prioritaskan pemakaian praktis dan kejelasan owner. Tidak ada baseline proyek sebenarnya yang boleh ditebak dari dokumen contoh atau ingatan percakapan. Pengujian, promosi branch, ataupun tindakan eksternal memerlukan instruksi sesuai tugasnya.

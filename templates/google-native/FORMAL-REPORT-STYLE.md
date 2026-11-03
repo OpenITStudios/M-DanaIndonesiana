@@ -38,6 +38,9 @@ Heading yang muncul di native Docs: `1. Pelaksanaan Kegiatan`, `2. Capaian dan E
 
 Ketentuan utama: **italic bukan dekorasi**. Subjudul dan status draf tegak; hanya istilah asing/daerah yang belum diserap, judul karya tertentu, atau kebutuhan ejaan/sitasi yang benar-benar diverifikasi yang menggunakan huruf miring. Pemeriksaannya ada di [Pedoman Redaksi Laporan Ilmiah](../../kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md) berdasarkan EYD V. Kata yang sudah menjadi serapan, nama lembaga, merek/aplikasi dan seluruh frasa untuk menonjolkan kesan akademik **tidak** otomatis miring. Hindari menciptakan abstrak, hipotesis, metode penelitian atau pustaka yang tidak relevan dengan laporan sebenarnya.
 
+**Syarat redaksi dasar:** [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). Tipografi sederhana saja tidak cukup untuk menciptakan tulisan alami. Laporan harus disunting dari sumber dan situasi spesifik: alur logis, istilah konsisten, hubungan sebab-akibat yang teruji, tanpa filler, klaim promosi, atau pola kalimat repetitif.
+
+
 ## Standar redaksi
 
 - Tulisan harus terasa seperti catatan kegiatan yang faktual: *apa yang direncanakan, apa yang dikerjakan, apa keluarannya, apa yang masih salah, dan apa langkah berikutnya*.

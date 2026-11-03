@@ -25,6 +25,10 @@ Jika pengguna meminta review berulang, gunakan satu tab `Review Queue` pada Regi
 
 Untuk menyambungkan laporan dengan sumbernya, ikuti [P5 Report Onboarding](docs/integrations/report-onboarding.md). Periksa folder laporan benar-benar berada di root proyek, ID belum terdaftar, isi laporan sesuai tugas yang diizinkan dan dependensi `derived_from_ids` adalah sumber yang benar-benar dipakai. Preview CLI `onboard-output` bukan izin menyimpan atau persetujuan; hanya reviewer terotorisasi yang dapat memasukkan baris ke Registry privat. Jika folder belum memiliki laporan asli, keluarkan `NO_CONFIRMED_PROJECT_REPORT` dan hentikan pendaftaran.
 
+### Pedoman dasar wajib untuk semua dokumen
+
+**Sebelum menghasilkan atau merevisi dokumen apa pun** (laporan, surat, RAB, checklist, atau presentasi), baca [Pedoman Dasar Produksi Dokumen](docs/foundation/05-document-production-baseline.md). Ini aturan **CANONICAL_INTERNAL / ACTIVE** yang disetujui pengguna; gunakan format resmi yang berlaku dan fakta sumber lebih dulu. Naskah harus melalui human editorial pass: jelas, faktual, alami seperti hasil suntingan penulis profesional, tanpa jargon generik, pengulangan, struktur mekanis, atau kesimpulan melebihi bukti. Untuk laporan naratif default pilih Master 01 v1.2.0 (Times New Roman, heading tebal-tegak, italic hanya bila EYD/sitasi memang membutuhkannya). Tetap lakukan QA sumber dan layout pada output yang sudah diisi. Ini bukan jaminan naskah ditulis manusia atau persetujuan instansi.
+
 ### Gaya laporan ilmiah dan italic
 
 Untuk laporan naratif, domain creative-documentation membaca [Pedoman Redaksi Laporan Ilmiah](kits/dana-indonesiana/writing/ACADEMIC-REPORT-STYLE.md). Huruf miring berdasarkan EYD V dan gaya selingkung yang benar-benar diberlakukan, **bukan** penekanan dekoratif. Master internal laporan indikator saat ini `di.report.indicator@1.2.0` dengan font Times New Roman, heading tebal-tegak. Alasan italic harus jelas; [preflight scanner](tools/google-native-typography-qa.mjs) hanyalah pemeriksa teknis, bukan keputusan bahasa otomatis. Klaim dan sitasi laporan tetap menunggu pemeriksaan sumber proyek.

@@ -4,6 +4,11 @@
 
 **Status implementasi (T2 bertahap):** enam definisi katalog publik + perencana Google API murni + regresi sintetis. Master Google Docs pertama telah melalui revisi v1.0.0 → **v1.1.0** setelah QA isi sintetis. Sembilan placeholder tetap sama; 3 skenario (pendek/normal/panjang) berhasil diisi melalui API Google dan dievaluasi melalui render PDF. v1.0.0 dipertahankan sebagai riwayat. Perbaikan page break untuk kasus normal dilakukan hanya pada **salinan output**; tidak ada executor generik tanpa supervisi atau persetujuan format resmi. Executor generik, master lain, adaptasi keuangan dan validasi OAuth belum selesai. Prototipe ekspor XLSX lama hanya historis.
 
+## Pedoman produksi dokumen yang aktif
+
+Sebelum semua pembuatan dan revisi Google-native, baca [Pedoman Dasar Produksi Dokumen](../foundation/05-document-production-baseline.md). Pemeriksaan sumber, redaksi alami yang disunting, EYD/italic, serta layout pada output terisi adalah bagian dari alur wajib. Master naratif internal terpilih `di.report.indicator@1.2.0` READY; v1.0/v1.1 RETIRED. Versi baca-manusia disimpan di Google Docs privat, sementara dokumen riset visual terdahulu menjadi referensi sejarah. Tidak ada klaim executor unattended.
+
+
 ## Satu Registry privat, bukan database baru
 
 Pertahankan tab `Documents`, `Petunjuk`, dan `Review Queue`. Tab **`Template Masters` sudah ditambahkan di Google Sheet privat yang sama** pada T2 untuk mendaftarkan master bertahap. Master pertama tersimpan sebagai baris internal yang terverifikasi metadata. Urutan kolom yang wajib:
@@ -32,7 +37,7 @@ Master dibuat di folder Drive privat yang disetujui, dikelola sebagai dokumen Go
 
 ### Standar kualitas dokumen — dasar riset 2026
 
-Pedoman baru: [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md), [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md) dan [design-tokens.json](../../templates/google-native/design-tokens.json); dasar dan batasnya ada di [riset 2026](../research/google-native-document-design-2026.md). Desain dimulai dari kebutuhan pembaca/jenis dokumen; tabel bukan dekorasi. Kontras teks memiliki target terukur. QA **master kosong** tidak membuktikan QA **output berisi data**, terutama panjang paragraf, page breaks dan formula. Master 01 sekarang memakai v1.1.0 setelah QA sintetis; pemeriksaan output nyata dan format resmi tetap terpisah. Format resmi yang diverifikasi mengesampingkan default internal.
+Pedoman baru: [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md), [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md) dan [design-tokens.json](../../templates/google-native/design-tokens.json); dasar dan batasnya ada di [riset 2026](../research/google-native-document-design-2026.md). Desain dimulai dari kebutuhan pembaca/jenis dokumen; tabel bukan dekorasi. Kontras teks memiliki target terukur. QA **master kosong** tidak membuktikan QA **output berisi data**, terutama panjang paragraf, page breaks dan formula. Master 01 sekarang memakai v1.2.0 READY internal setelah QA sintetis dan tipografi; pemeriksaan output nyata dan format resmi tetap terpisah. Format resmi yang diverifikasi mengesampingkan default internal.
 
 ### Standar visual wajib
 

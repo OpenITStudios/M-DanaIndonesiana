@@ -70,6 +70,10 @@
 - [x] Mengaktifkan `di.report.indicator@1.2.0` sebagai `READY` INTERNAL dalam Registry privat, mengarsipkan v1.1.0 dan v1.0.0 sebagai `RETIRED`.
 - [ ] Validasi pengisian laporan proyek nyata beserta sumber/format resmi, dan lakukan audit aksesibilitas jika diperlukan.
 
+- [x] Dengan persetujuan pengguna, menyimpan [Pedoman Dasar Produksi Dokumen](../docs/foundation/05-document-production-baseline.md) sebagai aturan aktif semua dokumen Google-native; versi manusia tersimpan di Google Docs privat dan render 2 halaman A4 diperiksa.
+- [x] Menghubungkan baseline + human editorial pass ke router, domain penulisan, katalog/profil template, design tokens dan indeks dokumentasi.
+- [ ] Uji penerapan pada dokumen proyek nyata menggunakan sumber yang sah; tidak menyamakan kebijakan tertulis dengan bukti kelulusan semua hasil.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.

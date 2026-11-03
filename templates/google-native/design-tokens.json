@@ -143,5 +143,15 @@
     ],
     "require_checked_source_ref": true,
     "automatic_detection_is_not_a_proof": true
+  },
+  "workflow_defaults": {
+    "canonical_document_baseline": "docs/foundation/05-document-production-baseline.md",
+    "narrative_report_master": "di.report.indicator@1.2.0",
+    "narrative_report_profile": "google_docs_formal_scholarly",
+    "generic_google_docs_profile": "google_docs_internal",
+    "human_editorial_review": "REQUIRED_FOR_FILLED_OUTPUT",
+    "verified_official_format_takes_precedence": true,
+    "native_google_only": true,
+    "note": "Configuration policy, not an automatic editorial or compliance certification."
   }
 }
