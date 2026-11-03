@@ -54,6 +54,8 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 - [Master 01 Fill & Layout QA](qa/master01-fill-layout-2026-11-03.md): perbandingan v1.0.0 dan v1.1.0 menggunakan salinan sintetis Google Docs, metrik PDF, temuan serta batas klaim.
 - [Google-native Docs QA helper](../tools/google-native-doc-qa.mjs): struktur/placeholder dan perencanaan pagination salinan; bukan pemeriksaan aksesibilitas PDF otomatis.
 
+- [Profil desain laporan formal](../templates/google-native/FORMAL-REPORT-STYLE.md) dan [uji render Master 01 v1.2.0](qa/master01-human-layout-2026-11-03.md): alternatif lebih sederhana yang masih menunggu review pengguna.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

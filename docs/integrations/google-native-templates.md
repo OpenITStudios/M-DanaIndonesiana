@@ -80,3 +80,7 @@ Ringkasan standar dalam Google Docs native tersedia di folder privat proyek `90 
 ### T2 — Pagination QA dan perbaikan pada salinan
 
 [Pure QA helper](../../tools/google-native-doc-qa.mjs) mengevaluasi heading/token/tabel Google-native serta geometri PDF yang disediakan renderer. Ambang trailing-page 30% hanyalah pemicu `NEEDS_VISUAL_REVIEW`, bukan kelulusan visual. [Uji perbandingan Master 01](../qa/master01-fill-layout-2026-11-03.md) menemukan v1.0.0 menghasilkan halaman akhir sangat jarang terisi. Master v1.1.0 menggunakan profil internal baru, dan salinan normal diberi page break pada awal bagian `Capaian` setelah dilihat hasil render. Jangan membuat page break permanen di master dan jangan mengklaim QA otomatis tanpa executor nyata.
+
+### T2 — Kandidat formal v1.2.0 menunggu review
+
+Atas umpan balik pengguna bahwa v1.1.0 masih seperti desain AI, dibuat master Google Docs baru dengan [profil formal Indonesia](../../templates/google-native/FORMAL-REPORT-STYLE.md), tetap memakai 9 placeholder/4 heading yang sama. [Laporan QA](../qa/master01-human-layout-2026-11-03.md) mendokumentasikan uji tiga tingkat panjang dan satu narasi contoh fiktif. Kasus normal dan panjang memerlukan penataan page break **pada salinan output**, bukan master. Registry: v1.2.0 `NEEDS_REVIEW`; v1.1.0 tetap `READY` dan v1.0.0 `RETIRED`. Penggunaan otomatis versi baru belum diaktifkan.

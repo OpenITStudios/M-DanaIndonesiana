@@ -64,6 +64,10 @@ Jangan mengisi "UNKNOWN" dengan fakta fiktif agar layout tampak penuh.
 | Bukti foto/model/grafik | Visual asli berizin + caption/alt text + sumber | Visual stok tak relevan, foto/angka AI yang tampak sebagai fakta |
 | Ringkasan paparan | Google Slides dengan satu pesan utama tiap slide | Memadatkan seluruh laporan Docs dalam satu slide |
 
+### Alternatif formal tanpa kesan template AI
+
+Untuk laporan internal yang memerlukan gaya konvensional Indonesia, gunakan [Profil Laporan Kerja Formal](FORMAL-REPORT-STYLE.md). Profil ini membuang eyebrow, kartu warna, tabel identitas dekoratif, dan heading berlebihan. Font Times New Roman serta halaman monokrom adalah opsi desain, **bukan** bukti bahwa AI menulis seperti manusia. Uji setelah diisi dan lakukan suntingan editorial berbasis data. [QA v1.2.0](../../docs/qa/master01-human-layout-2026-11-03.md).
+
 ## 4. Tata letak Google Docs
 
 Referensi nilai **default** pada [design-tokens.json](design-tokens.json); angka berikut adalah keputusan desain internal, bukan kewajiban pemerintah.

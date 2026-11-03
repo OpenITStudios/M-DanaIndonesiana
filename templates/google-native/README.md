@@ -24,6 +24,10 @@ Keep tab names and write-cell destinations **exactly** as specified. Write only 
 
 Use literal text for vendor names and evidence references. Numeric input is decimal integer string within 15 digits, then written as Sheets number. Listing prices are only quoted references; not transactions or accepted quotations.
 
+## Kandidat desain laporan formal (review)
+
+[Profil Laporan Kerja Formal](FORMAL-REPORT-STYLE.md) mendefinisikan v1.2.0: Times New Roman monokrom, judul tengah, metadata tanpa tabel, empat bagian naratif. [QA sintetis v1.2.0](../../docs/qa/master01-human-layout-2026-11-03.md) mencakup isi pendek/normal/panjang dan contoh fiktif yang lebih natural. **v1.2.0 = NEEDS_REVIEW**, sedangkan **v1.1.0 tetap READY** di Registry privat sampai disetujui pengguna.
+
 ## Master maintenance
 
 For every change, retain a version and a reviewer trail. Actual Drive metadata must match the reviewed timestamp; otherwise planning halts. The public catalog does not carry Drive file IDs or actual project facts. The current planner requires an exact active master and deliberately blocks `OFFICIAL_FORMAT` until formal applicability review is implemented.

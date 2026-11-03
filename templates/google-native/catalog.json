@@ -116,6 +116,64 @@
       }
     },
     {
+      "id": "di.report.indicator",
+      "version": "1.2.0",
+      "kind": "GOOGLE_DOCS",
+      "owner_skill": "creative-documentation",
+      "source_contract": "templates/reporting/indicator-report.md",
+      "workflow": "progress-report",
+      "fields": {
+        "project_name": {
+          "type": "text",
+          "required": true
+        },
+        "period": {
+          "type": "text",
+          "required": true
+        },
+        "indicator": {
+          "type": "text",
+          "required": true
+        },
+        "planned_stages": {
+          "type": "text",
+          "required": true
+        },
+        "actual_activities": {
+          "type": "text",
+          "required": true
+        },
+        "verifiable_results": {
+          "type": "text",
+          "required": true
+        },
+        "obstacles": {
+          "type": "text",
+          "required": false
+        },
+        "next_actions": {
+          "type": "text",
+          "required": false
+        },
+        "evidence_refs": {
+          "type": "text",
+          "required": false
+        }
+      },
+      "text_bindings": {
+        "project_name": "{{PROJECT_NAME}}",
+        "period": "{{PERIOD}}",
+        "indicator": "{{INDICATOR}}",
+        "planned_stages": "{{PLANNED_STAGES}}",
+        "actual_activities": "{{ACTUAL_ACTIVITIES}}",
+        "verifiable_results": "{{VERIFIABLE_RESULTS}}",
+        "obstacles": "{{OBSTACLES}}",
+        "next_actions": "{{NEXT_ACTIONS}}",
+        "evidence_refs": "{{EVIDENCE_REFS}}"
+      },
+      "design_profile": "formal-indonesian-report-v1"
+    },
+    {
       "id": "di.report.creative-narrative",
       "version": "1.0.0",
       "kind": "GOOGLE_DOCS",

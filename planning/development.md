@@ -62,6 +62,9 @@
 - [ ] Menyelesaikan executor copy-fill-QA yang dapat diulang tanpa supervisi langkah manual; helper pure Docs QA telah ditulis, unit tests masih perlu dieksekusi.
 - [ ] Terapkan profil pada Master 02 satu per satu dengan sumber dan hasil render yang benar-benar diperiksa; jangan melakukan batch generator produksi yang belum tervalidasi.
 
+- [x] Membuat master kandidat v1.2.0 untuk layout laporan formal Indonesia (Times New Roman, monokrom, identitas tiga baris); menguji salinan sintetis pendek/normal/panjang dan contoh narasi fiktif, memeriksa PDF dan mengatur page break pada salinan.
+- [ ] Pengguna memeriksa kandidat desain v1.2.0. Sampai ada keputusan, status `NEEDS_REVIEW` dan v1.1.0 tetap master `READY`.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.

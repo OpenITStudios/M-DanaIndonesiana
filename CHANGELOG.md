@@ -184,3 +184,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Mengisi tiga salinan v1.1.0 dengan konten sintetis **identik** dan memeriksa Google Docs serta ekspor PDF. Hasil: 1/2/3 halaman; coverage akhir 73,9% / 50,4% / 44,3%. Pada salinan normal, page break sebelum bagian `Capaian` diterapkan secara kondisional; tidak mengubah master.
 - Menambahkan helper QA murni dan tes sintetis untuk placeholder, heading, tabel, page-break aman, serta deteksi halaman akhir sangat kosong. **Unit test baru belum dieksekusi pada commit ini**; pemeriksaan Google Drive/PDF telah dilaksanakan.
 - Tidak ada data proyek privat, ID Drive, receipt resmi, atau PDF pengujian yang masuk repository publik. QA laporan proyek nyata, visual aksesibilitas, dan executor otomatis penuh belum selesai.
+
+## 1.8.6-dev — 2026-11-03 (formal Indonesian report candidate)
+
+- Membuat kandidat Google Docs `di.report.indicator@1.2.0` dengan Times New Roman, tata letak formal monokrom, judul tengah, identitas tanpa tabel dekoratif, empat heading, dan 9 placeholder yang sama.
+- Menguji 3 salinan sintetis dan 1 contoh narasi fiktif yang disunting; QA hasil render menemukan page break perlu diterapkan pada output normal/panjang saja. Contoh fiktif selesai satu halaman A4.
+- Kandidat `NEEDS_REVIEW` pada Registry privat; v1.1.0 tetap `READY`, v1.0.0 `RETIRED`.
+- Tidak ada ID Google Drive privat, data proyek asli, atau bukti palsu di GitHub publik. Tidak ada klaim kepatuhan format resmi ataupun executor end-to-end otomatis.

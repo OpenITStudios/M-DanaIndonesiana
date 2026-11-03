@@ -30,6 +30,8 @@ Profil menentukan **blok yang boleh digunakan**, bukan memaksa semua bagian sela
 
 **Master aktif yang diusulkan:** `di.report.indicator@1.1.0`. Sembilan placeholder tetap sama. Salinan sintetis pendek/normal/panjang telah diuji menggunakan Google Docs dan render PDF; untuk isi normal, page break disesuaikan pada output agar konten tersebar lebih baik. Master v1.0.0 disimpan sebagai riwayat, bukan pilihan rutin. QA tiap output nyata tetap wajib.
 
+**Alternatif B — Formal Indonesia (review):** Master `di.report.indicator@1.2.0` memakai [profil visual tersendiri](FORMAL-REPORT-STYLE.md); sederhana dan hitam-putih tanpa tabel metadata dekoratif. Saat ini tetap kandidat `NEEDS_REVIEW`, bukan pengganti aktif v1.1.0.
+
 ## 3. C — Finance / RAB / cash (Google Sheets)
 
 **Untuk:** RAB, realisasi, arus kas, rekonsiliasi, proyeksi dan audit nominal.
