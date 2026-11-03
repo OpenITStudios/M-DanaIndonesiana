@@ -2,7 +2,7 @@
 
 **Decision:** seluruh dokumen kerja berada di Google Drive dalam format **Google Docs, Google Sheets, dan (fase berikutnya) Google Slides**. PDF hanya hasil ekspor opsional; bukan sumber edit. Tidak memakai Microsoft Office, DOCX/XLSX/PPTX sebagai perantara, dashboard baru, atau skill kedelapan.
 
-**Status implementasi (T2 bertahap):** enam definisi katalog publik + perencana Google API murni + regresi sintetis. Master Google Docs **pertama** `di.report.indicator@1.0.0` telah dibuat dan dikaitkan ke tab `Template Masters` dalam Registry privat yang sama. Pemeriksaan struktur, sembilan placeholder dan metadata selesai; ini **bukan** pengujian fill/copy end-to-end atau persetujuan format resmi. Executor generik, master lain, adaptasi keuangan dan validasi OAuth belum selesai. Prototipe ekspor XLSX lama hanya historis.
+**Status implementasi (T2 bertahap):** enam definisi katalog publik + perencana Google API murni + regresi sintetis. Master Google Docs pertama telah melalui revisi v1.0.0 → **v1.1.0** setelah QA isi sintetis. Sembilan placeholder tetap sama; 3 skenario (pendek/normal/panjang) berhasil diisi melalui API Google dan dievaluasi melalui render PDF. v1.0.0 dipertahankan sebagai riwayat. Perbaikan page break untuk kasus normal dilakukan hanya pada **salinan output**; tidak ada executor generik tanpa supervisi atau persetujuan format resmi. Executor generik, master lain, adaptasi keuangan dan validasi OAuth belum selesai. Prototipe ekspor XLSX lama hanya historis.
 
 ## Satu Registry privat, bukan database baru
 
@@ -23,16 +23,16 @@ Master dibuat di folder Drive privat yang disetujui, dikelola sebagai dokumen Go
 
 ## T2 — Master pertama yang benar-benar tersedia
 
-- **ID dan versi:** `di.report.indicator@1.0.0`; Google Docs native; master untuk laporan indikator internal, bukan format resmi program.
+- **ID dan versi:** `di.report.indicator@1.1.0` menjadi master internal terpilih setelah QA sintetis; v1.0.0 adalah riwayat, bukan format resmi program.
 - **Lokasi:** folder template internal khusus di Drive privat proyek; `master_file_id` hanya terdapat pada tab `Template Masters`, **tidak pernah** di repository publik.
 - **Registry:** `master_status=READY`, `authority=INTERNAL`, `project_scope=GLOBAL`, `source_document_id` kosong dan `reviewer_ref` kosong (tidak mengarang pemeriksa manusia). `observed_modified_time` cocok dengan metadata Google Drive pada pemeriksaan.
-- **Pemeriksaan yang dilakukan:** Google-native MIME, folder parent, A4 + margin, 4 heading bagian, sembilan placeholder katalog (masing-masing **tepat sekali**) dan header/dimensi/validasi nilai di tab `Template Masters`. Tabs lama tidak dihapus.
-- **Belum dilakukan:** uji copy-fill penuh memakai executor generik, ekspor/visual PDF, pemeriksaan hak edit khusus master, penilaian substansi laporan nyata, atau kelayakan untuk pengajuan resmi. Setiap salinan tetap `DRAFT` dan perlu review.
+- **Pemeriksaan yang dilakukan:** native MIME, folder parent, A4, 4 heading bagian, tabel 3×2, sembilan placeholder (masing-masing tepat sekali), pengisian 3 salinan sintetis dengan metadata terpisah, PDF render setiap skenario, dan pagination balancing khusus salinan normal. Hasil rinci ada di [Master 01 QA](../qa/master01-fill-layout-2026-11-03.md).
+- **Belum dilakukan:** executor generik tanpa supervisi, audit PDF/UA, pemeriksaan hak edit khusus master, penilaian substansi laporan nyata, atau kelayakan format resmi. Pengisian dan ekspor PDF lewat konektor sudah dijalankan **untuk data sintetis**. Setiap salinan nyata tetap `DRAFT` sampai review.
 - **Master berikutnya:** satu per satu mengikuti katalog; jangan mencatat baris `READY` untuk master yang belum dibuat.
 
 ### Standar kualitas dokumen — dasar riset 2026
 
-Pedoman baru: [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md), [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md) dan [design-tokens.json](../../templates/google-native/design-tokens.json); dasar dan batasnya ada di [riset 2026](../research/google-native-document-design-2026.md). Desain dimulai dari kebutuhan pembaca/jenis dokumen; tabel bukan dekorasi. Kontras teks memiliki target terukur. QA **master kosong** tidak membuktikan QA **output berisi data**, terutama panjang paragraf, page breaks dan formula. Master 01 tetap versi sebelumnya sampai direview untuk migrasi; jangan mengklaim visual compliance baru tanpa QA. Format resmi yang diverifikasi mengesampingkan default internal.
+Pedoman baru: [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md), [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md) dan [design-tokens.json](../../templates/google-native/design-tokens.json); dasar dan batasnya ada di [riset 2026](../research/google-native-document-design-2026.md). Desain dimulai dari kebutuhan pembaca/jenis dokumen; tabel bukan dekorasi. Kontras teks memiliki target terukur. QA **master kosong** tidak membuktikan QA **output berisi data**, terutama panjang paragraf, page breaks dan formula. Master 01 sekarang memakai v1.1.0 setelah QA sintetis; pemeriksaan output nyata dan format resmi tetap terpisah. Format resmi yang diverifikasi mengesampingkan default internal.
 
 ### Standar visual wajib
 
@@ -76,3 +76,7 @@ Planner menerima baik metadata API mentah (`mimeType`, `modifiedTime`) maupun me
 ### Pedoman baca manusia di Google Drive
 
 Ringkasan standar dalam Google Docs native tersedia di folder privat proyek `90 - Pedoman dan Referensi` dengan judul `Pedoman Mutu Dokumen Google-native — Riset & Standar v2.0 [DRAF]`. Ini **bukan** master untuk disalin menjadi laporan maupun Registry `DERIVED_OUTPUT`, dan belum ada sinkronisasi dua arah GitHub–Google Docs. Definisi kanonis bagi AI tetap [Quality Standard](../../templates/google-native/QUALITY-STANDARD.md) dan [Document Profiles](../../templates/google-native/DOCUMENT-PROFILES.md); perubahan substantif harus menjaga keduanya konsisten. PDF yang diekspor hanya digunakan untuk memeriksa tampilan dokumen riset (3 halaman A4 setelah perbaikan orphan/blank page), bukan klaim PDF/UA atau aksesibilitas penuh.
+
+### T2 — Pagination QA dan perbaikan pada salinan
+
+[Pure QA helper](../../tools/google-native-doc-qa.mjs) mengevaluasi heading/token/tabel Google-native serta geometri PDF yang disediakan renderer. Ambang trailing-page 30% hanyalah pemicu `NEEDS_VISUAL_REVIEW`, bukan kelulusan visual. [Uji perbandingan Master 01](../qa/master01-fill-layout-2026-11-03.md) menemukan v1.0.0 menghasilkan halaman akhir sangat jarang terisi. Master v1.1.0 menggunakan profil internal baru, dan salinan normal diberi page break pada awal bagian `Capaian` setelah dilihat hasil render. Jangan membuat page break permanen di master dan jangan mengklaim QA otomatis tanpa executor nyata.

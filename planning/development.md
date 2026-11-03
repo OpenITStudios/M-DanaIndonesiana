@@ -57,7 +57,9 @@
 - [x] Membandingkan sumber primer ISO 24495, GOV.UK content design/accessibility, W3C WCAG/WAI, USWDS, Section508, Google Docs/Sheets API, EYD V, dan lingkup ANRI.
 - [x] Menyusun aturan wajib, profil Docs/Sheets/Slides, token visual berkontras cukup, pemisahan master QA dari filled-output QA dan kode temuan operasional.
 - [ ] Review keputusan desain bersama pengguna; aturan internal adalah default, bukan pengganti format resmi.
-- [ ] Lakukan revisi Master 01 **hanya setelah** keputusan versi dan pemeriksaan ulang master. Uji copy-fill teks pendek/normal/panjang, halaman, urutan baca dan keamanan.
+- [x] Merevisi Master 01 sebagai v1.1.0 tanpa menimpa v1.0.0; menyalin dan mengisi tiga contoh sintetis melalui Google Docs API, memeriksa struktur, export PDF dan perbaikan pagination per-output. [QA rinci](../docs/qa/master01-fill-layout-2026-11-03.md).
+- [ ] Menjalankan pengujian screen reader/PDF/UA dan pekerjaan nyata; uji sintetis bukan bukti kelayakan format resmi.
+- [ ] Menyelesaikan executor copy-fill-QA yang dapat diulang tanpa supervisi langkah manual; helper pure Docs QA telah ditulis, unit tests masih perlu dieksekusi.
 - [ ] Terapkan profil pada Master 02 satu per satu dengan sumber dan hasil render yang benar-benar diperiksa; jangan melakukan batch generator produksi yang belum tervalidasi.
 
 ## Prioritas desain berikutnya

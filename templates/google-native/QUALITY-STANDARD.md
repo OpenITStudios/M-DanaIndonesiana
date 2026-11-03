@@ -84,17 +84,17 @@ Referensi nilai **default** pada [design-tokens.json](design-tokens.json); angka
 | Perataan | Kiri | Kiri |
 
 **Aturan tidak boleh dikompromikan:**
-- Gunakan **named styles** Google Docs: \`TITLE\` untuk judul tampilan, \`HEADING_1\` untuk bagian utama, \`HEADING_2\` untuk subbagian. Heading semantik harus berurutan, tidak hanya dibold. Jika kebutuhan aksesibilitas khusus meminta H1 judul utama, ikuti struktur heading yang bisa diaudit; jangan menciptakan dua judul yang menyesatkan.
+- Gunakan **named styles** Google Docs: `TITLE` untuk judul tampilan, `HEADING_1` untuk bagian utama, `HEADING_2` untuk subbagian. Heading semantik harus berurutan, tidak hanya dibold. Jika kebutuhan aksesibilitas khusus meminta H1 judul utama, ikuti struktur heading yang bisa diaudit; jangan menciptakan dua judul yang menyesatkan.
 - Maksimal satu keluarga font aktif dalam body. Italic untuk istilah khusus, bukan paragraf panjang. Hindari huruf kapital semua untuk bagian besar.
-- Teks isi dan tabel left-aligned; jumlah/right-aligned untuk kolom angka. Jangan \`JUSTIFIED\` sebagai default.
+- Teks isi dan tabel left-aligned; jumlah/right-aligned untuk kolom angka. Jangan `JUSTIFIED` sebagai default.
 - Gunakan whitespace sebagai pengelompokan; **tidak menambahkan paragraf kosong berkali-kali** sebagai spacer.
-- Heading memakai \`keepWithNext\`; paragraf panjang mengutamakan \`avoidWidowAndOrphan\`; caption ditempatkan dekat gambar/tabel. Periksa apakah sifat tersebut berlaku pada lokasi Docs yang dipakai.
+- Heading memakai `keepWithNext`; paragraf panjang mengutamakan `avoidWidowAndOrphan`; caption ditempatkan dekat gambar/tabel. Periksa apakah sifat tersebut berlaku pada lokasi Docs yang dipakai.
 - Tidak ada **aturan wajib satu halaman**. Jika teks panjang, pemisahan halaman semestinya natural, tidak mengecilkan seluruh font atau menghapus bukti agar muat.
 - Header/footer hanya memuat informasi yang diperlukan (identitas, versi, halaman). Kode template internal, tautan raw dan petunjuk AI disimpan di metadata sistem, tidak harus muncul dalam isi penerima.
 
 ### Warna dan kontras
 
-Palet default: \`#1B3043\` (teks utama), \`#465D6E\` (sekunder), \`#286580\` (aksen), \`#FFFFFF\` (kertas), \`#F2F6F8\` (latar lembut), \`#D7E1E7\` (border). Nilai kontras hitungan terhadap putih: 13,54:1, 6,88:1 dan 6,44:1 untuk tiga warna teks. Target minimum **4,5:1 untuk semua teks**, warna/border tidak boleh satu-satunya pembawa status. Jangan gunakan palet ini jika dokumen resmi meminta warna berbeda; lakukan pemeriksaan kontras sendiri.
+Palet default: `#1B3043` (teks utama), `#465D6E` (sekunder), `#286580` (aksen), `#FFFFFF` (kertas), `#F2F6F8` (latar lembut), `#D7E1E7` (border). Nilai kontras hitungan terhadap putih: 13,54:1, 6,88:1 dan 6,44:1 untuk tiga warna teks. Target minimum **4,5:1 untuk semua teks**, warna/border tidak boleh satu-satunya pembawa status. Jangan gunakan palet ini jika dokumen resmi meminta warna berbeda; lakukan pemeriksaan kontras sendiri.
 
 **Batas penggunaan warna**: 1 warna aksen + teks netral; jangan membuat kotak warna untuk setiap bagian, gradient, badge atau dashboard card di laporan formal. Garis pemisah hanya ketika memperjelas struktur.
 
@@ -104,7 +104,7 @@ Palet default: \`#1B3043\` (teks utama), \`#465D6E\` (sekunder), \`#286580\` (ak
 - Gunakan **native table** dan header jelas untuk tabel data. Kolom diberi nama yang tidak ambigu; tidak membuat header dengan gambar.
 - 2–4 kolom ideal untuk teks; bila lebih dari 5 kolom atau perlu filter/kalkulasi, **pertimbangkan Google Sheets** lalu masukkan ringkasan singkat ke laporan.
 - Jangan merge/nest secara default; jangan memaksa baris tinggi berisi beberapa record.
-- Angka rata kanan, teks rata kiri, satuan dan periode terlihat. Semua nilai \`0\`, \`UNKNOWN\` dan \`NOT_APPLICABLE\` dibedakan.
+- Angka rata kanan, teks rata kiri, satuan dan periode terlihat. Semua nilai `0`, `UNKNOWN` dan `NOT_APPLICABLE` dibedakan.
 - Hindari tabel pecah tak bermakna melintasi halaman. Bila tabel harus panjang, berikan heading dan lakukan review page break serta hubungan header; fitur tampilan tidak membuktikan tagging aksesibilitas PDF.
 - Batasi penggunaan tabel untuk layout. **Tabel metadata key-value singkat di Master 01** adalah pengecualian yang perlu diperiksa sebagai data berpasangan, bukan aturan untuk membangun seluruh halaman memakai tabel.
 
@@ -116,12 +116,12 @@ Palet default: \`#1B3043\` (teks utama), \`#465D6E\` (sekunder), \`#286580\` (ak
 3. **Ringkasan hasil:** total/selisih/temuan dari **formula atau sumber perhitungan kanonis**, tidak diketik kedua kali.
 
 Aturan:
-- Satu tujuan per tab; nama tab deskriptif, bukan \`Sheet1\`/\`Final\`. Jangan membuat tab kosong untuk fungsi yang tidak diperlukan.
+- Satu tujuan per tab; nama tab deskriptif, bukan `Sheet1`/`Final`. Jangan membuat tab kosong untuk fungsi yang tidak diperlukan.
 - Header kolom lengkap, freeze baris bila daftar panjang, filter bila dibutuhkan; hindari merge dalam rentang data, warna berlebihan, row kosong dekoratif, dan border berat.
 - Kolom sumber input dan formula terpisah; **sel formula dilindungi bila memungkinkan** dan output generator tidak menimpa sel formula.
-- Nilai nominal disimpan sebagai angka asli (atau integer-string terverifikasi sebelum API write) dan ditampilkan dengan format IDR/locale yang benar, tanpa menggabungkan label \`Rp\` ke nilai numerik. Tampilkan periode dan unit di header.
-- Data kosong berarti tidak diketahui jika memang demikian; \`0\` hanya jika sumber menyatakan nol. Untuk pilihan enumerasi gunakan dropdown/validasi.
-- Ringkasan formula wajib mengatasi pembagi nol, tanggal tidak valid, kunci duplikat, \`#REF!\`, \`#DIV/0!\`, \`#VALUE!\` dan selisih sumber.
+- Nilai nominal disimpan sebagai angka asli (atau integer-string terverifikasi sebelum API write) dan ditampilkan dengan format IDR/locale yang benar, tanpa menggabungkan label `Rp` ke nilai numerik. Tampilkan periode dan unit di header.
+- Data kosong berarti tidak diketahui jika memang demikian; `0` hanya jika sumber menyatakan nol. Untuk pilihan enumerasi gunakan dropdown/validasi.
+- Ringkasan formula wajib mengatasi pembagi nol, tanggal tidak valid, kunci duplikat, `#REF!`, `#DIV/0!`, `#VALUE!` dan selisih sumber.
 - Beri catatan singkat tentang asumsi, revisi data, dan arti setiap status; jangan berikan tabel dengan angka tanpa konteks.
 
 ## 7. Google Slides
@@ -150,24 +150,26 @@ Perlu dua **jenis** QA berbeda: **master struktur** dan **output yang sudah diis
 ### Skenario beban isi (fixture sintetis)
 
 - **Docs:** pendek (1–2 kalimat), normal (± 2 paragraf), panjang (± 4–6 paragraf di satu slot); judul 90+ karakter; bullet; tautan; bukti yang memerlukan lampiran; potensi tabel pindah halaman.
-- **Sheets:** 0 / 1 / 25 / batas \`max_rows\` record; string panjang; nominal 0 dan batas presisi; formula sensitif; tanggal/tz; row hidden atau filter; tab berisi data lama.
+- **Sheets:** 0 / 1 / 25 / batas `max_rows` record; string panjang; nominal 0 dan batas presisi; formula sensitif; tanggal/tz; row hidden atau filter; tab berisi data lama.
 - **Slides:** headline panjang, grafik label banyak, caption sumber panjang, beragam rasio visual.
 
-Jumlah di atas **desain kasus uji internal**, bukan ketentuan ISO/Google. QA harus benar-benar dijalankan sebelum menyebut \`MASTER_READY\` atau \`FILLED_OUTPUT_VISUAL_CHECKED\`.
+Jumlah di atas **desain kasus uji internal**, bukan ketentuan ISO/Google. QA harus benar-benar dijalankan sebelum menyebut `MASTER_READY` atau `FILLED_OUTPUT_VISUAL_CHECKED`.
 
 ### Kode temuan yang dapat ditindak
 
-- \`SOURCE_UNVERIFIED\`: format/angka/klaim tidak punya sumber yang benar.
-- \`STRUCTURE_MISMATCH\`: heading, tabel, field, tab atau token rusak.
-- \`CONTENT_GENERIC\`: filler, klaim terlalu luas atau pengulangan.
-- \`VISUAL_CLIPPED\`: teks/grafik terpotong.
-- \`VISUAL_PAGINATION\`: heading sendirian, tabel kehilangan konteks, halaman kosong tidak wajar.
-- \`ACCESSIBILITY_UNVERIFIED\`: kontras/tag/urutan baca belum dapat dibuktikan.
-- \`FORMULA_MISMATCH\`: total, formula atau angka asal tidak cocok.
-- \`REGISTRY_STALE\`: timestamp master berbeda dengan Registry.
-- \`OUTPUT_NOT_REVIEWED\`: master valid tetapi salinan terisi belum diperiksa.
+- `SOURCE_UNVERIFIED`: format/angka/klaim tidak punya sumber yang benar.
+- `STRUCTURE_MISMATCH`: heading, tabel, field, tab atau token rusak.
+- `CONTENT_GENERIC`: filler, klaim terlalu luas atau pengulangan.
+- `VISUAL_CLIPPED`: teks/grafik terpotong.
+- `VISUAL_PAGINATION`: heading sendirian, tabel kehilangan konteks, halaman kosong tidak wajar.
+- `ACCESSIBILITY_UNVERIFIED`: kontras/tag/urutan baca belum dapat dibuktikan.
+- `FORMULA_MISMATCH`: total, formula atau angka asal tidak cocok.
+- `REGISTRY_STALE`: timestamp master berbeda dengan Registry.
+- `OUTPUT_NOT_REVIEWED`: master valid tetapi salinan terisi belum diperiksa.
 
-**Hard block**: sumber/versi resmi salah, bukti atau nominal dikarang, formula inti rusak, placeholder tertinggal di hasil, data RESTRICTED bocor, tab/file master ditimpa, atau klaim external-approval tanpa bukti. Untuk soal estetika minor, kembalikan \`NEEDS_DESIGN_REVIEW\`; jangan menyembunyikan isu hanya agar PASS.
+**Pagination signal:** bila halaman akhir pada dokumen multi-halaman hanya terisi sedikit, tandai `VISUAL_PAGINATION` untuk evaluasi; batas teknis **30% tinggi area teks** hanya sinyal review, bukan alasan otomatis merapikan dengan menghapus informasi. Pilih page break **per output terisi**, bukan permanen pada master. [Pure QA helper](../../tools/google-native-doc-qa.mjs) dapat menghasilkan permintaan Google Docs `pageBreakBefore` yang membutuhkan salinan dan revisi terverifikasi. Tetap wajib melihat hasil render.
+
+**Hard block**: sumber/versi resmi salah, bukti atau nominal dikarang, formula inti rusak, placeholder tertinggal di hasil, data RESTRICTED bocor, tab/file master ditimpa, atau klaim external-approval tanpa bukti. Untuk soal estetika minor, kembalikan `NEEDS_DESIGN_REVIEW`; jangan menyembunyikan isu hanya agar PASS.
 
 ## 9. Kaidah redaksi anti-AI-slop
 
@@ -198,5 +200,5 @@ Jumlah di atas **desain kasus uji internal**, bukan ketentuan ISO/Google. QA har
 ## 11. Keterbatasan dan status
 
 - Ini **rancangan standar internal v2.0** berdasarkan sumber publik; belum menjadi standar hukum/penilaian pemerintah dan belum diuji pada semua jenis dokumen.
-- Master Google Docs \`di.report.indicator@1.0.0\` telah diperiksa secara struktural dan render placeholder, tetapi **belum diuji dengan pengisian panjang** serta belum dinyatakan sepenuhnya memenuhi profil baru. Jangan diam-diam memindahkan status Registry atau membuat v1.1 tanpa perubahan nyata.
+- Master Google Docs `di.report.indicator@1.0.0` pernah gagal QA pagination pada isi normal dan panjang; versi tersebut dipertahankan sebagai riwayat. Master baru `di.report.indicator@1.1.0` memakai body 11,5 pt, margin profil v2, tabel identitas 3×2, sembilan token yang sama, dan menghapus catatan internal penutup. Tiga salinan sintetis (pendek, normal, panjang) telah diisi via Google Docs API dan diperiksa melalui PDF render. Kasus normal memerlukan `pageBreakBefore` **hanya pada salinan**, bukan master. [Bukti dan batas pemeriksaan](../../docs/qa/master01-fill-layout-2026-11-03.md).
 - Kontrol rendering tidak menjamin tag PDF, screen-reader correctness, validitas narasi atau persetujuan eksternal. Laporkan keterbatasan tes dengan jelas.

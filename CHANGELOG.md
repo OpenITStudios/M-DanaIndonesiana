@@ -176,3 +176,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Membuat ringkasan pedoman v2.0 sebagai **Google Docs native DRAF** dalam folder privat pedoman proyek (bukan master laporan dan bukan format resmi).
 - Memeriksa heading semantik, tautan sumber dan lokasi folder; melakukan ekspor PDF untuk inspeksi layout. Temuan halaman keempat yang hanya berisi tautan dihapus; hasil akhir 3 halaman A4 tanpa halaman kosong ekstra.
 - Detail machine-readable dan sumber rujukan tetap di GitHub. Tidak membuat sinkronisasi otomatis, tidak menyalin dokumen proyek, tidak menjalankan QA output proyek nyata atau audit PDF/UA.
+
+## 1.8.5-dev — 2026-11-03 (Master 01 long-content validation)
+
+- Menjalankan QA pengisian master Google Docs v1.0.0 dengan data sintetis pendek/normal/panjang, menemukan halaman akhir 14,7% dan 8,6% pada output multi-halaman.
+- Membuat master v1.1.0 sebagai file baru (v1.0.0 tetap sebagai riwayat), menyesuaikan font isi 11,5 pt, jarak baris, margin, lebar tabel, serta menghilangkan footer instruksi internal.
+- Mengisi tiga salinan v1.1.0 dengan konten sintetis **identik** dan memeriksa Google Docs serta ekspor PDF. Hasil: 1/2/3 halaman; coverage akhir 73,9% / 50,4% / 44,3%. Pada salinan normal, page break sebelum bagian `Capaian` diterapkan secara kondisional; tidak mengubah master.
+- Menambahkan helper QA murni dan tes sintetis untuk placeholder, heading, tabel, page-break aman, serta deteksi halaman akhir sangat kosong. **Unit test baru belum dieksekusi pada commit ini**; pemeriksaan Google Drive/PDF telah dilaksanakan.
+- Tidak ada data proyek privat, ID Drive, receipt resmi, atau PDF pengujian yang masuk repository publik. QA laporan proyek nyata, visual aksesibilitas, dan executor otomatis penuh belum selesai.
