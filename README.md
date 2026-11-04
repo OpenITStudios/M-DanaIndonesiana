@@ -86,6 +86,8 @@ Untuk seluruh master Google-native, gunakan [Standar Mutu Dokumen Profesional](t
 
 **Master Checklist Bukti dan Matriks Revisi v1.0:** tersedia sebagai Google Sheets native dan Excel, dengan desain administrasi sederhana dan pengujian contoh sintetis pada salinan terpisah. Katalog dan Registry mempertahankan binding dan versi yang sudah disepakati. [QA](docs/qa/master-evidence-revision-2026-11-04.md). Status kedua master `NEEDS_REVIEW` sampai pemeriksaan tampilan native dan sumber/format resmi.
 
+**Master Google-native katalog kini tersedia untuk semua delapan jenis:** dua yang terakhir adalah Uraian Konsep/Proses Karya dan Kendali Paket Administrasi. Keduanya Google Docs native dengan naskah formal yang tidak generik dan QA sintetis normal/panjang. Status keduanya NEEDS_REVIEW, bukan klaim bahwa semua format hibah resmi telah diperiksa. [QA](docs/qa/master-docs02-03-2026-11-04.md).
+
 ## Referensi
 
 [Documentation Index](docs/README.md) · [Module Ownership](docs/modules/README.md) · [Source Authority](docs/foundation/02-source-authority.md) · [Privacy](SECURITY.md) · [Current Context](CONTEXT.md) · [Development Plan](planning/development.md) · [History](CHANGELOG.md)

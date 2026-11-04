@@ -124,3 +124,9 @@ Untuk pelaporan penggunaan dana, dibuat pasangan Google Sheets native dengan LRA
 Dua master Google Sheets native baru dibuat di folder master privat, masing-masing sesuai kontrak binding yang telah ada di katalog (tidak mengubah skema): tab `Bukti` dengan 100 baris A8:F107, dan tab `Revisi` dengan 80 baris A9:E88. Masing-masing mempunyai tab PANDUAN, header datar, filter, baris beku, input tekstual, dan tanpa dashboard dekoratif. Checklist memakai dropdown status ketat, sementara kolom keputusan pada Revisi tetap opsional dan tidak disamakan dengan persetujuan.
 
 Dua berkas Excel (.xlsx) juga disusun terpisah dengan struktur ekuivalen. Import XLSX lokal ke konektor Google Drive tidak berhasil; oleh karena itu Google Sheets dibuat native langsung, bukan salinan byte-identik dari Excel. Uji dengan tiga record fiktif pada masing-masing salinan QA tidak menyentuh master. Kedua baris master terdaftar `NEEDS_REVIEW` pada Registry privat yang sama. [Catatan QA](../qa/master-evidence-revision-2026-11-04.md).
+
+### T2 — Google Docs Master Kreatif dan Administrasi
+
+Dua master Google Docs native terakhir telah dibuat di folder master privat: `di.report.creative-narrative@1.0.0` (6 placeholder) dan `di.admin.package@1.0.0` (7 placeholder). Masing-masing A4, Times New Roman, lima heading semantik tebal-tegak, tanpa tabel identitas dan italic dekoratif. Keduanya mengacu pada pedoman dasar dan editorial penulisan yang alami; data nyata atau approval tidak boleh dikarang.
+
+Salinan sintetis normal menghasilkan satu halaman A4; uji isi panjang dua halaman untuk keduanya. Paragraf terminal kosong yang mendorong halaman tambahan telah dihapus dari master dan salinan. Pagination panjang diperbaiki pada **output saja**. Registry privat yang sama mencatat keduanya NEEDS_REVIEW. QA sumber nyata, format resmi, PDF/UA dan screen reader belum dilakukan. [Bukti QA](../qa/master-docs02-03-2026-11-04.md).

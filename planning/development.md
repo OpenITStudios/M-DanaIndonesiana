@@ -103,7 +103,8 @@
 - [ ] Pemeriksaan browser Google Sheets dan cetak, referensi sumber RAB yang benar-benar disetujui, serta persyaratan format laporan tahun/kategori program sebelum digunakan untuk pelaporan nyata.
 - [x] Master Checklist Pemeriksaan Bukti v1.0.0 dan Matriks Revisi Dokumen v1.0.0 dibuat sebagai Google Sheets native dan Excel, dengan dua tab per master, validasi status Bukti, contoh sintetis pada salinan terpisah dan Registry NEEDS_REVIEW. [QA](../docs/qa/master-evidence-revision-2026-11-04.md).
 - [ ] Evaluasi visual Google Sheets/hasil cetak dan persyaratan bukti/perubahan menurut tahun/kategori sebelum promosi READY.
-- [ ] Dua blueprint yang tersisa: Laporan Konsep/Proses Kreatif dan Paket Administrasi (Google Docs native); kerjakan menurut kebutuhan.
+- [x] Mewujudkan dua blueprint tersisa sebagai Google Docs native: `di.report.creative-narrative@1.0.0` dan `di.admin.package@1.0.0`. Uji token katalog, PDF A4 1 halaman master, salinan normal 1 halaman dan panjang 2 halaman. [QA](../docs/qa/master-docs02-03-2026-11-04.md).
+- [ ] Tinjau isi dan layout dari data proyek nyata serta format resmi menurut perjanjian/kategori/tahun sebelum mengubah status master baru dari NEEDS_REVIEW.
 
 ## Prioritas desain berikutnya
 

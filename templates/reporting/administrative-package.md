@@ -37,3 +37,9 @@
 - Bukti unggah/keputusan eksternal: [kosong sampai terbukti]
 
 **DRAFT TIDAK SAMA DENGAN SUBMITTED/APPROVED.**
+
+## Implementasi Google Docs Master v1.0.0
+
+Master `di.admin.package@1.0.0` menyusun tujuh placeholder katalog dalam lima bagian: persyaratan, dokumen tersedia, kekurangan, penanggung jawab, dan kedudukan dokumen. Formatnya **ringkasan kendali naratif**; apabila ada banyak persyaratan per-butir, gunakan checklist rinci dari sumber resmi secara terpisah.
+
+Jangan menyamakan daftar berkas dengan pengajuan, penerimaan, tanda tangan atau approval. Field opsional dapat tetap kosong sampai ada fakta asli; pemeriksa harus berwenang dan dapat dibuktikan. [QA Master 02/03](../../docs/qa/master-docs02-03-2026-11-04.md); status NEEDS_REVIEW.

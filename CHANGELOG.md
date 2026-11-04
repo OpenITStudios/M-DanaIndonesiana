@@ -266,3 +266,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Checklist memakai dropdown ketat `INCOMPLETE`, `NEEDS_REVIEW`, `CHECKED_INTERNAL`, `NOT_EXECUTED`; matriks perubahan membiarkan kolom referensi keputusan kosong bila belum ada persetujuan.
 - Menguji tiga baris sintetis pada salinan terpisah, memeriksa metadata, MIME, format/header dan tidak ada data fiktif pada master. Import Excel ke Google Sheets tidak tersedia; master native ditulis langsung.
 - Registry privat menambahkan kedua versi sebagai NEEDS_REVIEW, bukan approval final. Screenshot Google Sheets/print, kelayakan format resmi, dan isi bukti/keputusan nyata belum diverifikasi. [QA](docs/qa/master-evidence-revision-2026-11-04.md).
+
+## 1.8.17-dev — 2026-11-04 (creative and administrative Google Docs masters)
+
+- Menyelesaikan dua master Google Docs native: `di.report.creative-narrative@1.0.0` dan `di.admin.package@1.0.0`, dengan 6 dan 7 placeholder katalog tetap utuh.
+- Mengikuti pedoman penulisan formal: A4, Times New Roman, lima heading semantik, status draf tegak, tanpa tabel/italic dekoratif. Naskah contoh bersifat spesifik tetapi sepenuhnya sintetis.
+- QA Docs readback dan PDF: master 1 halaman, isi normal 1 halaman, isi panjang 2 halaman pada masing-masing. Halaman tambahan kosong dari paragraf terminal dikoreksi; page break pada uji panjang dibuat hanya pada salinan output.
+- Kedua master terdaftar NEEDS_REVIEW dalam Registry privat yang sama. Semua delapan jenis template katalog telah diwujudkan sebagai master native, tetapi tidak seluruhnya READY; data nyata, aturan resmi, PDF/UA dan screen reader belum diverifikasi. [QA](docs/qa/master-docs02-03-2026-11-04.md).

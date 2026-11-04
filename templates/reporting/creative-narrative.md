@@ -32,3 +32,9 @@ Status: DRAFT
 - Bagian yang harus tetap sesuai redaksi resmi:
 
 Pedoman gaya: [Editorial Workflow](../../kits/dana-indonesiana/writing/EDITORIAL-WORKFLOW.md).
+
+## Implementasi Google Docs Master v1.0.0
+
+Master `di.report.creative-narrative@1.0.0` mempunyai enam placeholder katalog dan lima bagian bernomor: pokok gagasan, pertimbangan artistik/metode, proses pengerjaan, hasil karya serta kendala/pengembangan. Tipografi A4/Times New Roman monokrom, tanpa komponen dekoratif dan tanpa format hipotesis atau abstrak yang tidak diperlukan.
+
+Isi yang belum mempunyai sumber tetap ditandai untuk review, bukan diisi kalimat promosi. Field kendala bersifat opsional dan bagian kosong ditinjau pada output, bukan dipaksa dengan teks generik. [QA Master 02/03](../../docs/qa/master-docs02-03-2026-11-04.md); status NEEDS_REVIEW.

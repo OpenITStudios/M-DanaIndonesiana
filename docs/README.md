@@ -82,6 +82,8 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 
 - [QA Master Checklist Bukti dan Matriks Revisi](qa/master-evidence-revision-2026-11-04.md): pembuatan dua Google Sheets native dan Excel, kontrak metadata/kolom, dropdown status, contoh tiga record sintetis, serta batas validasi format resmi.
 
+- [QA Google Docs Master 02 dan 03](qa/master-docs02-03-2026-11-04.md): pemeriksaan dua master kreatif/administrasi, token 6/7, tipografi, contoh sintetis normal/panjang dan batas keabsahan.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.
