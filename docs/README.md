@@ -80,6 +80,8 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 - [QA Master LRA dan Arus Kas v1.0](qa/master-lra-cash-2026-11-04.md): cakupan 100 pos dan 150 transaksi, pemeriksaan saldo, bukti duplikat, kode RAB, serta batas format resmi.
 - [Spesifikasi LRA dan Arus Kas](../templates/finance/lra-cash.md): definisi tab, input, rumus dan pemisahan RAB disetujui versus kas aktual.
 
+- [QA Master Checklist Bukti dan Matriks Revisi](qa/master-evidence-revision-2026-11-04.md): pembuatan dua Google Sheets native dan Excel, kontrak metadata/kolom, dropdown status, contoh tiga record sintetis, serta batas validasi format resmi.
+
 ## Referensi dan konteks
 
 - [Regulatory Source Register](regulations/source-register.md): kandidat publik, **bukan ketentuan otomatis yang berlaku**.

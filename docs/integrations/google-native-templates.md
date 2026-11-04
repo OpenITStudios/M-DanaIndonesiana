@@ -118,3 +118,9 @@ Master RAB Google Sheets native v2.1.0 telah dibuat pada file terpisah, dengan i
 ### Master LRA dan Arus Kas v1.0
 
 Untuk pelaporan penggunaan dana, dibuat pasangan Google Sheets native dengan LRA sebagai sheet pertama, Arus Kas kedua, dan PANDUAN sebagai sheet internal. Pedoman Administrasi 2025 menjadi acuan susunan, bukan klaim patuh seluruh tahun/kategori. [QA](../qa/master-lra-cash-2026-11-04.md) memakai data sintetis untuk memverifikasi realisasi yang diperiksa, saldo kas, kode tak cocok, bukti duplikat dan perlakuan nol/blank. Master privat status `NEEDS_REVIEW` sampai pemeriksaan tampilan native/cetak serta pemastian sumber resmi. Workbook Excel `.xlsx` dibuat langsung dengan artifact_tool, native Sheets dibangun terpisah setelah konversi unggah tidak tersedia; jangan menyatakan keduanya byte-identik.
+
+### T2 — Master Checklist Bukti dan Matriks Revisi v1.0.0
+
+Dua master Google Sheets native baru dibuat di folder master privat, masing-masing sesuai kontrak binding yang telah ada di katalog (tidak mengubah skema): tab `Bukti` dengan 100 baris A8:F107, dan tab `Revisi` dengan 80 baris A9:E88. Masing-masing mempunyai tab PANDUAN, header datar, filter, baris beku, input tekstual, dan tanpa dashboard dekoratif. Checklist memakai dropdown status ketat, sementara kolom keputusan pada Revisi tetap opsional dan tidak disamakan dengan persetujuan.
+
+Dua berkas Excel (.xlsx) juga disusun terpisah dengan struktur ekuivalen. Import XLSX lokal ke konektor Google Drive tidak berhasil; oleh karena itu Google Sheets dibuat native langsung, bukan salinan byte-identik dari Excel. Uji dengan tiga record fiktif pada masing-masing salinan QA tidak menyentuh master. Kedua baris master terdaftar `NEEDS_REVIEW` pada Registry privat yang sama. [Catatan QA](../qa/master-evidence-revision-2026-11-04.md).

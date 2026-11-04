@@ -1,6 +1,6 @@
 # Google-native Master Templates — Public Blueprint Only
 
-This folder does **not** contain Google-native master files. It defines seven distinct blank internal template designs and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. Four other distinct catalog entries remain blueprints, not created masters. No private Drive ID is stored here.
+This folder does **not** contain Google-native master files. It defines eight distinct blank internal template designs and a strict input contract. Authorized native Google Docs/Sheets masters live inside private Google Drive and are registered by ID/version in the *same* private Document Registry Google Sheet, tab `Template Masters`. At T2, approved internal Google Docs master `di.report.indicator@1.2.0` is READY. Versions v1.0.0 and v1.1.0 are RETIRED historical revisions after native copy-fill/render and typography QA. Two other distinct catalog entries remain blueprints (narrative karya dan paket administrasi), not created native masters. No private Drive ID is stored here.
 
 **Pedoman yang wajib dibaca lebih dahulu:** [Pedoman Dasar Produksi Dokumen](../../docs/foundation/05-document-production-baseline.md). Layout ditentukan fungsi dokumen, sedangkan setiap narasi baru menjalani human editorial pass. Profil formal berlaku untuk laporan naratif, bukan otomatis untuk Sheets atau Slides.
 
@@ -57,6 +57,12 @@ Template di.finance.rab-plan@2.1.0 kini tersedia sebagai Google Sheets native da
 ## Master LRA dan Arus Kas v1.0 — kandidat internal
 
 Master native `di.finance.lra-cash@1.0.0` tersedia pada Drive privat, dengan **LRA** (100 pos), **ARUS KAS** (150 transaksi), dan **PANDUAN**. Header LRA dan sembilan kolom pertama arus kas mengacu pada lampiran Pedoman Administrasi Dana Indonesiana 2025 (keberlakuan untuk proyek saat ini belum dipastikan). Rumus hanya memasukkan pengeluaran yang sudah ditandai `DIPERIKSA` dan lolos pemeriksaan kode/bukti; status draf ditahan. [Spesifikasi](../finance/lra-cash.md) · [QA](../../docs/qa/master-lra-cash-2026-11-04.md). **Status Registry: NEEDS_REVIEW**. Jangan menyalin data proyek riil ke GitHub.
+
+## Master Checklist Bukti dan Matriks Revisi (v1.0.0)
+
+- **di.evidence.review@1.0.0** — Google Sheets native, tab `Bukti` (B2 program, B3 periode, A7:F7 header, A8:F107 untuk 100 item), satu tab PANDUAN. Status pemeriksaan dibatasi pada `INCOMPLETE`, `NEEDS_REVIEW`, `CHECKED_INTERNAL`, atau `NOT_EXECUTED`, tanpa menganggap pemeriksaan internal sebagai persetujuan eksternal.
+- **di.reporting.revision-matrix@1.0.0** — Google Sheets native, tab `Revisi` (B2 nama, B3 versi, B4 alasan, A8:E8 header, A9:E88 untuk 80 perubahan), satu tab PANDUAN. Referensi keputusan boleh kosong dan tidak boleh direkayasa.
+- Keduanya memiliki file Excel terpisah dengan tabel dan header yang selaras. Sampel sintetis diperiksa pada salinan privat, bukan master. [Laporan QA](../../docs/qa/master-evidence-revision-2026-11-04.md). **Status Registry: NEEDS_REVIEW** sampai visual native dan format resmi yang berlaku benar-benar diperiksa.
 
 ## Master maintenance
 

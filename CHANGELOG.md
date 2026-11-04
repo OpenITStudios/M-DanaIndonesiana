@@ -258,3 +258,11 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - Pengeluaran yang masuk LRA harus berkode RAB cocok, berstatus DIPERIKSA dan tanpa kesalahan bukti; transaksi DRAF dan referensi bermasalah ditahan. Saldo kas awal 0 yang eksplisit dipisah dari tidak ada data.
 - QA sintetis pada kedua media: pagu Rp4.000.000, realisasi Rp1.300.000, sisa Rp2.700.000, kas masuk Rp3.000.000, kas keluar Rp1.400.000, saldo akhir Rp1.600.000; voucher duplikat dan kode tidak dikenal diuji.
 - Registry privat menandai master baru NEEDS_REVIEW. Tidak ada real transaction/vendor/bank data ditambahkan ke repo; browser/print resmi belum diuji. Referensi pedoman pemerintah 2025 hanya untuk struktur, dengan keberlakuan tahun/kategori kondisional.
+
+## 1.8.16-dev — 2026-11-04 (evidence and change-control masters)
+
+- Membuat master Checklist Pemeriksaan Bukti dan Matriks Revisi Dokumen v1.0.0 sebagai Google Sheets native, masing-masing dengan tab data utama dan PANDUAN; 100/80 baris dan alamat binding sama dengan katalog.
+- Menyediakan padanan Excel (.xlsx) secara terpisah. UI dibuat sederhana, satu header, baris selang-seling ringan, freeze/filter dan nilai referensi sebagai teks.
+- Checklist memakai dropdown ketat `INCOMPLETE`, `NEEDS_REVIEW`, `CHECKED_INTERNAL`, `NOT_EXECUTED`; matriks perubahan membiarkan kolom referensi keputusan kosong bila belum ada persetujuan.
+- Menguji tiga baris sintetis pada salinan terpisah, memeriksa metadata, MIME, format/header dan tidak ada data fiktif pada master. Import Excel ke Google Sheets tidak tersedia; master native ditulis langsung.
+- Registry privat menambahkan kedua versi sebagai NEEDS_REVIEW, bukan approval final. Screenshot Google Sheets/print, kelayakan format resmi, dan isi bukti/keputusan nyata belum diverifikasi. [QA](docs/qa/master-evidence-revision-2026-11-04.md).

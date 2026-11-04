@@ -101,7 +101,9 @@
 - [x] Membuat master LRA dan Arus Kas internal v1.0 di Excel serta native Google Sheets, dengan satu workbook yang memisahkan pagu RAB disetujui dan transaksi kas; [QA](../docs/qa/master-lra-cash-2026-11-04.md).
 - [x] Menguji empat transaksi sintetis, status DRAF tidak masuk LRA, saldo awal Rp0 valid, kode yang tidak ada dan bukti ganda ditahan; Registry privat mencatat master NEEDS_REVIEW.
 - [ ] Pemeriksaan browser Google Sheets dan cetak, referensi sumber RAB yang benar-benar disetujui, serta persyaratan format laporan tahun/kategori program sebelum digunakan untuk pelaporan nyata.
-- [ ] Master berikutnya: Checklist Pemeriksaan Bukti dan Matriks Revisi Dokumen, satu per satu, berdasarkan kebutuhan operasional.
+- [x] Master Checklist Pemeriksaan Bukti v1.0.0 dan Matriks Revisi Dokumen v1.0.0 dibuat sebagai Google Sheets native dan Excel, dengan dua tab per master, validasi status Bukti, contoh sintetis pada salinan terpisah dan Registry NEEDS_REVIEW. [QA](../docs/qa/master-evidence-revision-2026-11-04.md).
+- [ ] Evaluasi visual Google Sheets/hasil cetak dan persyaratan bukti/perubahan menurut tahun/kategori sebelum promosi READY.
+- [ ] Dua blueprint yang tersisa: Laporan Konsep/Proses Kreatif dan Paket Administrasi (Google Docs native); kerjakan menurut kebutuhan.
 
 ## Prioritas desain berikutnya
 

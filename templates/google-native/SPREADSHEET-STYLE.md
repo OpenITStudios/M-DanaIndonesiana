@@ -100,6 +100,14 @@ Setelah review lanjutan, kandidat v1.2.0 memperbaiki masalah v1.1.0 yang terlalu
 
 Dua keluaran telah disiapkan karena permintaan pengguna adalah "Excel": satu file XLSX pengguna dan satu Google Sheets native yang **dibangun langsung**, bukan hasil import XLSX. Pada Google Sheets locale `in_ID`, pemisah formula `;`, sedangkan Excel memakai `,`. Jangan mengirim rumus Excel mentah ke API locale Indonesia. [QA dua media](../../docs/qa/master-rab-planning-2026-11-04.md) telah memverifikasi perhitungan sintetis tetapi belum mengesahkan tampilan browser/cetak atau standar resmi yang berlaku.
 
+### Template kendali bukti dan revisi — profil administratif minimal
+
+Checklist bukti (`di.evidence.review`) dan matriks revisi (`di.reporting.revision-matrix`) menggunakan satu tabel per fungsi, tanpa KPI atau rangkaian status warna yang dekoratif. Heading/header hanya sekali di bagian atas; dua jenis dokumen ini memakai kolom ID/versi/sumber sebagai teks literal agar referensi tidak berubah menjadi formula atau angka.
+
+- Checklist bukti harus membedakan **belum lengkap, perlu review, diperiksa internal, dan belum dilakukan**. Status `CHECKED_INTERNAL` mensyaratkan catatan metode/ruang lingkup nyata dan tidak berarti sertifikasi pemerintah.
+- Matriks revisi harus menjaga **sebelum → sesudah (usulan) → dampak → referensi keputusan**. Kolom keputusan kosong bila belum ada dasar; versi sumber lama tidak pernah ditimpa hanya karena matriks ditulis.
+- Keduanya mengikuti [kontrak sumber](../evidence-checklist.md) dan [matriks revisi](../reporting/revision-decision.md), serta [QA sintetis](../../docs/qa/master-evidence-revision-2026-11-04.md). Format resmi tiap periode tetap perlu verifikasi.
+
 ## 6. Gerbang QA wajib
 
 | Gate | Pemeriksaan |

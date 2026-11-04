@@ -84,6 +84,8 @@ Untuk seluruh master Google-native, gunakan [Standar Mutu Dokumen Profesional](t
 
 **Master keuangan baru:** [LRA dan Arus Kas](templates/finance/lra-cash.md) dengan tab LRA (100 pos) dan Arus Kas (150 transaksi). Tersedia dalam Excel dan Google Sheets native; transaksi draf tidak dihitung sebagai realisasi. [QA sintetis](docs/qa/master-lra-cash-2026-11-04.md). Belum dapat diklaim sebagai format resmi/e-RISPRO sebelum verifikasi program dan pemeriksaan cetak.
 
+**Master Checklist Bukti dan Matriks Revisi v1.0:** tersedia sebagai Google Sheets native dan Excel, dengan desain administrasi sederhana dan pengujian contoh sintetis pada salinan terpisah. Katalog dan Registry mempertahankan binding dan versi yang sudah disepakati. [QA](docs/qa/master-evidence-revision-2026-11-04.md). Status kedua master `NEEDS_REVIEW` sampai pemeriksaan tampilan native dan sumber/format resmi.
+
 ## Referensi
 
 [Documentation Index](docs/README.md) · [Module Ownership](docs/modules/README.md) · [Source Authority](docs/foundation/02-source-authority.md) · [Privacy](SECURITY.md) · [Current Context](CONTEXT.md) · [Development Plan](planning/development.md) · [History](CHANGELOG.md)
