@@ -98,6 +98,11 @@
 - [x] Mendaftarkan RAB v2.1.0 sebagai NEEDS_REVIEW pada Registry privat yang sama; versi v2.0.0 historis RETIRED.
 - [ ] Periksa tampilan browser Google Sheets dan Print Preview RAB A3 landscape / REKAP A4; uji kesesuaian format resmi menurut tahun dan kategori sebelum mengesahkan template.
 
+- [x] Membuat master LRA dan Arus Kas internal v1.0 di Excel serta native Google Sheets, dengan satu workbook yang memisahkan pagu RAB disetujui dan transaksi kas; [QA](../docs/qa/master-lra-cash-2026-11-04.md).
+- [x] Menguji empat transaksi sintetis, status DRAF tidak masuk LRA, saldo awal Rp0 valid, kode yang tidak ada dan bukti ganda ditahan; Registry privat mencatat master NEEDS_REVIEW.
+- [ ] Pemeriksaan browser Google Sheets dan cetak, referensi sumber RAB yang benar-benar disetujui, serta persyaratan format laporan tahun/kategori program sebelum digunakan untuk pelaporan nyata.
+- [ ] Master berikutnya: Checklist Pemeriksaan Bukti dan Matriks Revisi Dokumen, satu per satu, berdasarkan kebutuhan operasional.
+
 ## Prioritas desain berikutnya
 
 Gunakan hasil pekerjaan nyata untuk menentukan apakah perlu alat tambahan. Hindari registry paralel, dashboard, skema pajak universal, automation submit, atau agen kedelapan tanpa kegagalan konkret yang hendak diselesaikan.

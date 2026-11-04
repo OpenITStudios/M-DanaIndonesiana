@@ -114,3 +114,7 @@ Setelah pengguna menerima layout v1.2.0 dengan syarat italic tidak dekoratif, su
 ### T2 — RAB v2.1.0 sebagai kandidat native
 
 Master RAB Google Sheets native v2.1.0 telah dibuat pada file terpisah, dengan input C4/I4/C5/C6/I6 dan B11:I110 tetap kompatibel. REKAP menggunakan struktur vertikal; formula, total dan deteksi pos belum lengkap telah diuji melalui salinan sintetis. Master lama v2.0.0 diretirasi setelah diperbarui; v2.1.0 terdaftar NEEDS_REVIEW dalam Registry privat yang sama. Sumber data proyek dan nilai resmi tidak pernah dipakai sebagai fixture. Impor Excel lokal melalui konektor tidak tersedia pada sesi ini; master baru dibuat dari copy native Google Sheets. [QA rincian](../qa/master-rab-v2-1-2026-11-04.md).
+
+### Master LRA dan Arus Kas v1.0
+
+Untuk pelaporan penggunaan dana, dibuat pasangan Google Sheets native dengan LRA sebagai sheet pertama, Arus Kas kedua, dan PANDUAN sebagai sheet internal. Pedoman Administrasi 2025 menjadi acuan susunan, bukan klaim patuh seluruh tahun/kategori. [QA](../qa/master-lra-cash-2026-11-04.md) memakai data sintetis untuk memverifikasi realisasi yang diperiksa, saldo kas, kode tak cocok, bukti duplikat dan perlakuan nol/blank. Master privat status `NEEDS_REVIEW` sampai pemeriksaan tampilan native/cetak serta pemastian sumber resmi. Workbook Excel `.xlsx` dibuat langsung dengan artifact_tool, native Sheets dibangun terpisah setelah konversi unggah tidak tersedia; jangan menyatakan keduanya byte-identik.

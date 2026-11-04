@@ -54,6 +54,10 @@ Use literal text for vendor names and evidence references. Numeric input is deci
 
 Template di.finance.rab-plan@2.1.0 kini tersedia sebagai Google Sheets native dalam folder master privat. Input dan 100 baris tetap kompatibel dengan kontrak versi 1.0.0; REKAP baru disusun vertikal, formula kosong-vs-nol dan pengecekan kelengkapan diuji melalui Excel dan salinan Google Sheets berdata sintetis. Status Registry: NEEDS_REVIEW sampai UI Google Sheets dan cetak diperiksa. Master versi sebelumnya tidak ditimpa. [QA v2.1](../../docs/qa/master-rab-v2-1-2026-11-04.md).
 
+## Master LRA dan Arus Kas v1.0 — kandidat internal
+
+Master native `di.finance.lra-cash@1.0.0` tersedia pada Drive privat, dengan **LRA** (100 pos), **ARUS KAS** (150 transaksi), dan **PANDUAN**. Header LRA dan sembilan kolom pertama arus kas mengacu pada lampiran Pedoman Administrasi Dana Indonesiana 2025 (keberlakuan untuk proyek saat ini belum dipastikan). Rumus hanya memasukkan pengeluaran yang sudah ditandai `DIPERIKSA` dan lolos pemeriksaan kode/bukti; status draf ditahan. [Spesifikasi](../finance/lra-cash.md) · [QA](../../docs/qa/master-lra-cash-2026-11-04.md). **Status Registry: NEEDS_REVIEW**. Jangan menyalin data proyek riil ke GitHub.
+
 ## Master maintenance
 
 For every change, retain a version and a reviewer trail. Actual Drive metadata must match the reviewed timestamp; otherwise planning halts. The public catalog does not carry Drive file IDs or actual project facts. The current planner requires an exact active master and deliberately blocks `OFFICIAL_FORMAT` until formal applicability review is implemented.

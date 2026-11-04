@@ -41,4 +41,7 @@
 
 - **RAB v2.1.0 (4 November 2026):** format Excel profesional dengan RAB 100 pos, REKAP vertikal, PANDUAN dan rumus yang membedakan kosong dari nol sudah diuji sintetis. Master Google Sheets native juga dibuat terpisah dari versi lama; input C4/I4/C5/C6/I6 dan B11:I110 tetap kompatibel, rekap Excel/Sheets cocok untuk total Rp7.750.000. Uji frekuensi kosong memberikan PERLU PEMERIKSAAN. Registry privat: v2.1.0 NEEDS_REVIEW, v2.0.0 RETIRED. [QA](docs/qa/master-rab-v2-1-2026-11-04.md). UI/print dan format resmi belum diverifikasi.
 
+- **Master LRA dan Arus Kas (4 November 2026):** user menyetujui kelanjutan template; master `di.finance.lra-cash@1.0.0` dibuat untuk Excel dan Google Sheets native, dengan tiga tab LRA / ARUS KAS / PANDUAN. 100 pos dan 150 transaksi, realisasi hanya dari pengeluaran berstatus DIPERIKSA dengan kode/bukti sah. Uji sintetis: pagu Rp4.000.000, realisasi Rp1.300.000, sisa Rp2.700.000, cash ending Rp1.600.000 dengan opening Rp0 eksplisit. Master terdaftar NEEDS_REVIEW dalam Registry privat. [QA](docs/qa/master-lra-cash-2026-11-04.md), [spesifikasi](templates/finance/lra-cash.md). Browser/print/keberlakuan resmi belum diuji.
+
+
 **Batas pekerjaan berikut:** prioritaskan pemakaian praktis dan kejelasan owner. Tidak ada baseline proyek sebenarnya yang boleh ditebak dari dokumen contoh atau ingatan percakapan. Pengujian, promosi branch, ataupun tindakan eksternal memerlukan instruksi sesuai tugasnya.

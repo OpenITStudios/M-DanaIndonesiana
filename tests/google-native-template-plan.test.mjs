@@ -28,8 +28,8 @@ function indicator(valuesOverride={}) {
       ...valuesOverride}}});
 }
 
-test('twelve versioned public catalog specifications validate',()=>{
-  assert.equal(validateTemplateCatalog(catalog).templates.length,12);
+test('thirteen versioned public catalog specifications validate',()=>{
+  assert.equal(validateTemplateCatalog(catalog).templates.length,13);
 });
 test('private master mapping rejects invalid headers and duplicates',()=>{
   assert.throws(()=>parseTemplateMasters([['template_id']]),{code:'INVALID_TEMPLATE_MASTER_HEADER'});
@@ -143,4 +143,14 @@ test('RAB v2.1 preserves input contract and distinct version',()=>{
   assert.deepEqual(next.cell_bindings,base.cell_bindings);
   assert.deepEqual(next.table_bindings,base.table_bindings);
   assert.equal(next.design_profile,'rab-finance-vertical-recap-v2.1');
+});
+
+test('LRA-cash report fields and tab bindings do not overlap formula columns',()=>{
+  const spec=catalog.templates.find(x=>x.id==='di.finance.lra-cash'&&x.version==='1.0.0');
+  assert.ok(spec);
+  assert.equal(spec.table_bindings[0].start_cell,'A12');
+  assert.equal(spec.table_bindings[1].start_cell,'A12');
+  assert.equal(spec.table_bindings[0].columns.length,10);
+  assert.equal(spec.table_bindings[1].columns.length,7);
+  assert.equal(spec.cell_bindings.cash_opening.cell,'B4');
 });

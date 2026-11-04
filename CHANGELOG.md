@@ -251,3 +251,10 @@ Tidak ada engine, UI, integrasi e-RISPRO, kalkulator pajak, maupun klaim kelulus
 - QA sintetis 4 pos: total Rp7.750.000, pagu Rp10.000.000, sisa Rp2.250.000, tahap 1/2/3 Rp3.850.000/Rp3.000.000/Rp900.000. Tanpa frekuensi status PERLU PEMERIKSAAN, setelah dipulihkan SESUAI INPUT.
 - Memperbaiki rumus desimal yang tidak diparse locale Indonesia, menghindari frozenColumnCount yang berbenturan dengan judul merged dan menjaga zona input formula tetap terpisah.
 - Registry privat baru mencatat v2.1.0 NEEDS_REVIEW dan v2.0.0 RETIRED; UI browser, pengaturan cetak dan kesesuaian format resmi tetap belum diverifikasi. Tidak ada data privat ditambahkan ke Git.
+
+## 1.8.15-dev — 2026-11-04 (LRA & cash reporting template v1)
+
+- Menambah paket LRA/Arus Kas Google Sheets native dan workbook Excel `.xlsx` internal, dengan LRA sebagai sheet pertama, Arus Kas kedua dan Panduan ketiga. Masing-masing mempunyai 100 pos dan 150 transaksi.
+- Pengeluaran yang masuk LRA harus berkode RAB cocok, berstatus DIPERIKSA dan tanpa kesalahan bukti; transaksi DRAF dan referensi bermasalah ditahan. Saldo kas awal 0 yang eksplisit dipisah dari tidak ada data.
+- QA sintetis pada kedua media: pagu Rp4.000.000, realisasi Rp1.300.000, sisa Rp2.700.000, kas masuk Rp3.000.000, kas keluar Rp1.400.000, saldo akhir Rp1.600.000; voucher duplikat dan kode tidak dikenal diuji.
+- Registry privat menandai master baru NEEDS_REVIEW. Tidak ada real transaction/vendor/bank data ditambahkan ke repo; browser/print resmi belum diuji. Referensi pedoman pemerintah 2025 hanya untuk struktur, dengan keberlakuan tahun/kategori kondisional.

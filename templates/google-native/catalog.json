@@ -820,6 +820,169 @@
         }
       ],
       "design_profile": "rab-finance-vertical-recap-v2.1"
+    },
+    {
+      "id": "di.finance.lra-cash",
+      "version": "1.0.0",
+      "kind": "GOOGLE_SHEETS",
+      "owner_skill": "finance-reporting",
+      "source_contract": "templates/finance/lra-cash.md",
+      "workflow": "usage-report",
+      "fields": {
+        "recipient_name": {
+          "type": "text",
+          "required": true
+        },
+        "report_period": {
+          "type": "text",
+          "required": true
+        },
+        "rab_reference": {
+          "type": "text",
+          "required": true
+        },
+        "inspection_date": {
+          "type": "date",
+          "required": false
+        },
+        "cash_opening": {
+          "type": "money",
+          "required": false
+        },
+        "cash_recipient": {
+          "type": "text",
+          "required": false
+        }
+      },
+      "cell_bindings": {
+        "recipient_name": {
+          "sheet": "LRA",
+          "cell": "B4"
+        },
+        "report_period": {
+          "sheet": "LRA",
+          "cell": "I4"
+        },
+        "rab_reference": {
+          "sheet": "LRA",
+          "cell": "B5"
+        },
+        "inspection_date": {
+          "sheet": "LRA",
+          "cell": "I5"
+        },
+        "cash_opening": {
+          "sheet": "ARUS KAS",
+          "cell": "B4"
+        },
+        "cash_recipient": {
+          "sheet": "ARUS KAS",
+          "cell": "E4"
+        }
+      },
+      "table_bindings": [
+        {
+          "key": "budget_lines",
+          "sheet": "LRA",
+          "start_cell": "A12",
+          "max_rows": 100,
+          "columns": [
+            {
+              "key": "rab_code",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "cost_category",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "specification",
+              "type": "text",
+              "required": false
+            },
+            {
+              "key": "frequency",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "key": "frequency_unit",
+              "type": "text",
+              "required": false
+            },
+            {
+              "key": "quantity",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "key": "quantity_unit",
+              "type": "text",
+              "required": false
+            },
+            {
+              "key": "unit_price",
+              "type": "money",
+              "required": false
+            },
+            {
+              "key": "approved_ceiling",
+              "type": "money",
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "cash_rows",
+          "sheet": "ARUS KAS",
+          "start_cell": "A12",
+          "max_rows": 150,
+          "columns": [
+            {
+              "key": "transaction_date",
+              "type": "date",
+              "required": true
+            },
+            {
+              "key": "indicator",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "voucher_no",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "payee_name",
+              "type": "text",
+              "required": false
+            },
+            {
+              "key": "description",
+              "type": "text",
+              "required": true
+            },
+            {
+              "key": "cash_in",
+              "type": "money",
+              "required": false
+            },
+            {
+              "key": "cash_out",
+              "type": "money",
+              "required": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
