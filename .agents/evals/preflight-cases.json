@@ -1,0 +1,263 @@
+{
+  "schema": 1,
+  "purpose": "Synthetic decision table; an advisory tool cannot attest user consent",
+  "defaults": {
+    "repository": "OpenITStudios/M-DanaIndonesiana",
+    "branch": "develop",
+    "head_sha": "1111111111111111111111111111111111111111",
+    "mode": "INSPECT",
+    "action": "read_repo",
+    "path": "AGENTS.md",
+    "data_class": "PUBLIC_SYSTEM",
+    "user_authorized": false,
+    "source_authorized": false,
+    "persist_requested": false
+  },
+  "cases": [
+    {
+      "id": "P01-read",
+      "overrides": {},
+      "expected": {
+        "decision": "ALLOW",
+        "reason": "REPO_READ_ONLY"
+      }
+    },
+    {
+      "id": "P02-write",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "tools/finance-report.mjs",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "reason": "REPO_WRITE_CONDITIONAL"
+      }
+    },
+    {
+      "id": "P03-local",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "tools/finance-report.mjs",
+        "branch": "Local",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "WRITE_REQUIRES_DEVELOP"
+      }
+    },
+    {
+      "id": "P04-main",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "README.md",
+        "branch": "main",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "WRITE_REQUIRES_DEVELOP"
+      }
+    },
+    {
+      "id": "P05-traversal",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "../private/file",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "UNSAFE_OR_UNOWNED_PATH"
+      }
+    },
+    {
+      "id": "P06-absolute",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "/tmp/file",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "UNSAFE_OR_UNOWNED_PATH"
+      }
+    },
+    {
+      "id": "P07-restricted",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "tests/fixtures/bank.json",
+        "data_class": "RESTRICTED",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "NONPUBLIC_REPO_PAYLOAD"
+      }
+    },
+    {
+      "id": "P08-internal",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "README.md",
+        "data_class": "INTERNAL_PROJECT",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "NONPUBLIC_REPO_PAYLOAD"
+      }
+    },
+    {
+      "id": "P09-no-owner",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "private/accounts.json",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "UNSAFE_OR_UNOWNED_PATH"
+      }
+    },
+    {
+      "id": "P10-workflow",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": ".github/workflows/governance-verify.yml",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "reason": "REPO_WRITE_CONDITIONAL"
+      }
+    },
+    {
+      "id": "P11-no-consent",
+      "overrides": {
+        "mode": "SYSTEM_DEVELOPMENT",
+        "action": "write_repo",
+        "path": "docs/skills/README.md"
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "EXPLICIT_WRITE_SCOPE_REQUIRED"
+      }
+    },
+    {
+      "id": "P12-mode",
+      "overrides": {
+        "mode": "INSPECT",
+        "action": "write_repo",
+        "path": "AGENTS.md",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "WRITE_MODE_REQUIRED"
+      }
+    },
+    {
+      "id": "P13-submit",
+      "overrides": {
+        "mode": "PROJECT_EXECUTION",
+        "action": "external_submit",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "EXTERNAL_ACTION_OUTSIDE_SCOPE"
+      }
+    },
+    {
+      "id": "P14-private-no-access",
+      "overrides": {
+        "action": "read_private",
+        "data_class": "INTERNAL_PROJECT"
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "PRIVATE_READ_NOT_AUTHORIZED"
+      }
+    },
+    {
+      "id": "P15-private-read",
+      "overrides": {
+        "action": "read_private",
+        "data_class": "INTERNAL_PROJECT",
+        "source_authorized": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "reason": "PRIVATE_READ_ONLY_CONDITIONAL"
+      }
+    },
+    {
+      "id": "P16-private-persist",
+      "overrides": {
+        "action": "read_private",
+        "data_class": "RESTRICTED",
+        "source_authorized": true,
+        "persist_requested": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "PRIVATE_PERSISTENCE_FORBIDDEN"
+      }
+    },
+    {
+      "id": "P17-private-write",
+      "overrides": {
+        "mode": "PROJECT_EXECUTION",
+        "action": "write_private",
+        "data_class": "INTERNAL_PROJECT",
+        "user_authorized": true
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "PRIVATE_WRITE_REQUIRES_TRUSTED_TOOL"
+      }
+    },
+    {
+      "id": "P18-unknown",
+      "overrides": {
+        "action": "shell_execute"
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "UNKNOWN_ACTION"
+      }
+    },
+    {
+      "id": "P19-sha",
+      "overrides": {
+        "head_sha": "short"
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "INVALID_PINNED_HEAD"
+      }
+    },
+    {
+      "id": "P20-repo",
+      "overrides": {
+        "repository": "OpenITStudios/M-LazyDesigner"
+      },
+      "expected": {
+        "decision": "BLOCK",
+        "reason": "WRONG_REPOSITORY"
+      }
+    }
+  ]
+}

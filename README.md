@@ -18,6 +18,12 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 **Procurement** merupakan modul dalam [pengelolaan kebutuhan dan penyedia](kits/dana-indonesiana/procurement/CONTRACT.md), **bukan** agen kedelapan. [Skill Router](docs/skills/README.md) menentukan pemilik utama dan handoff jika tugas melintasi domain.
 
+## Governance dan verifikasi sintetis
+
+[Preflight advisory](tools/agent-preflight.mjs), [corpus evaluasi](.agents/evals/manifest.json), [verifikasi struktur](tools/verify-repository.mjs) dan [CI read-only](.github/workflows/governance-verify.yml) memperketat kontrol repository tanpa membuat skill kedelapan. Panduan: [Agent Quality Evaluation](docs/skills/agent-quality-evals.md).
+
+Jalankan node tools/verify-repository.mjs dan node --test tests/*.test.mjs untuk pemeriksaan offline. CI tidak menyentuh data proyek nyata, tidak menguji exporter Python yang bergantung artifact_tool, dan tidak mengirim ke portal atau membaca Drive privat. PASS baru dapat dilaporkan bila run benar-benar selesai; preflight bukan tool permission enforcement.
+
 ## Integrasi Google Drive — P0/P1/P2 (implementasi read-only)
 
 [Source Resolver + Document Registry + Workflow Bridge](docs/integrations/google-drive.md) menghubungkan kode GitHub dengan indeks privat Google Drive berdasarkan ID, status metadata dan peran dokumen. P2 menambahkan 9 rute kebutuhan nyata yang dipetakan ke **7 skill existing**; ia menghasilkan handoff sumber yang terstruktur, bukan audit isi, auto-approval atau sinkronisasi dua arah. CLI lokal memerlukan OAuth baca, dan pengujian runtime/end-to-end **belum dijalankan**. Data sumber tetap di penyimpanan privat berizin.

@@ -3,7 +3,8 @@
 - **Repo:** OpenITStudios/M-DanaIndonesiana
 - **Branch pengembangan:** `develop`; `Local` untuk integrasi ditinjau, `main` untuk baseline stabil.
 - **Status:** v1.7 *P0–P5 safety and coverage hardening*. Terdapat **7 Agent Skills**, kontrak domain dan template umum; Finance memiliki prototipe kalkulasi JSON serta ekspor XLSX draf. **Bukan** aplikasi manajemen proyek end-to-end atau integrasi e-RISPRO.
-- **Validasi:** pengguna sedang memprioritaskan pengembangan dan menunda tes/QA. Status itu berlaku pada fase sekarang, bukan aturan permanen. Jangan klaim Node/Python end-to-end, kelayakan hukum atau persetujuan LPDP.
+- **Validasi:** QA proyek nyata tetap ditunda. Pemeriksaan struktur dan unit test sintetis punya jalur offline/CI terpisah; statusnya harus berdasarkan hasil eksekusi. Jangan klaim uji Drive privat/OAuth, exporter Python end-to-end, legalitas atau persetujuan LPDP.
+- **Governance 2026-11-12:** sumber fixture evaluasi keputusan tujuh skill, preflight advisory berorientasi izin, structural verification dan CI read-only PR develop. Tidak ada klaim pengujian perilaku model, trusted tool interception atau otorisasi eksternal.
 - **Proyek privat:** kontrak, RAB, indikator, bukti, identitas, rekening dan dokumen yang hanya boleh dipelajari **tidak disimpan di Git publik atau tempat lain tanpa izin eksplisit**.
 - **Router:** [AGENTS.md](AGENTS.md) → [Skill Router](docs/skills/README.md) → `.agents/skills/<skill>/SKILL.md` → kontrak/prosedur domain yang diperlukan.
 - **Integrasi Drive (P0/P1/P2):** resolver metadata read-only, satu Document Registry privat dan pemilihan sumber per workflow ke tujuh skill telah disusun. ChatGPT memakai koneksi Drive untuk tugas berizin; CLI lokal memakai OAuth read-only sendiri. Hanya pemetaan pointer, **belum** verifikasi isi, otomatisasi submit, auto-sync atau acceptance QA.
