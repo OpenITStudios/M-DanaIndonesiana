@@ -10,7 +10,9 @@ const REQUIRED=["AGENTS.md","GITHUB_RULES.md","CONTEXT.md","README.md","SECURITY
   "kits/dana-indonesiana/VALIDATION.md",".agents/evals/manifest.json",
   ".agents/evals/decision-cases.json",".agents/evals/preflight-cases.json",
   "docs/skills/agent-quality-evals.md","tools/agent-preflight.mjs",
-  "tests/agent-preflight.test.mjs",".github/workflows/governance-verify.yml"];
+  "tests/agent-preflight.test.mjs","tests/agent-eval-score.test.mjs",
+  ".agents/evals/observed-receipt.schema.json","tools/agent-eval-score.mjs",
+  ".github/workflows/governance-verify.yml"];
 function json(root,path,errors){
   try{return JSON.parse(readFileSync(join(root,path),"utf8"))}
   catch{errors.push("INVALID_OR_MISSING_JSON:"+path);return null}
@@ -37,7 +39,9 @@ export function verifyRepository(root=ROOT){
     preflight_module:"tools/agent-preflight.mjs",
     structural_verifier:"tools/verify-repository.mjs",
     canonical_router:"docs/skills/README.md",
-    runbook:"docs/skills/agent-quality-evals.md"};
+    runbook:"docs/skills/agent-quality-evals.md",
+    observed_receipt_schema:".agents/evals/observed-receipt.schema.json",
+    observed_scorer:"tools/agent-eval-score.mjs"};
   if(manifest){
     if(manifest.schema!==1)errors.push("BAD_MANIFEST_SCHEMA");
     for(const [k,p] of Object.entries(bindings))

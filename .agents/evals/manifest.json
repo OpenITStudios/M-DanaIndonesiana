@@ -6,5 +6,7 @@
   "preflight_module": "tools/agent-preflight.mjs",
   "structural_verifier": "tools/verify-repository.mjs",
   "canonical_router": "docs/skills/README.md",
-  "runbook": "docs/skills/agent-quality-evals.md"
+  "runbook": "docs/skills/agent-quality-evals.md",
+  "observed_receipt_schema": ".agents/evals/observed-receipt.schema.json",
+  "observed_scorer": "tools/agent-eval-score.mjs"
 }

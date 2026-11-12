@@ -19,6 +19,18 @@ The [decision-case corpus](../../.agents/evals/decision-cases.json) is a set of 
 Offline commands:
 - node tools/verify-repository.mjs
 - node --test tests/*.test.mjs
+- node tools/agent-eval-score.mjs --fingerprint
+- node tools/agent-eval-score.mjs --export-prompts
+
+Blind prompt export contains only case requests and opaque aliases; it does **not** expose labels or proof boundaries. Use an isolated **decision-only, no-tools** agent environment. Reviewers may record outcomes outside the public repo in the format of [observed receipt schema](../../.agents/evals/observed-receipt.schema.json); the JavaScript scorer also performs strict input validation.
+
+After independent observations exist, run locally:
+- node tools/agent-eval-score.mjs --score /private/path/observed.json
+- node tools/agent-eval-score.mjs --compare /private/path/baseline.json /private/path/candidate.json
+
+Paired comparisons require a complete identical corpus, different pinned source SHAs, different agent-run IDs, different per-case traces, and matching model/settings. A new safety regression blocks suggested promotion; all other results still require human review. No evidence file, trace payload, client document, bank detail or private source content belongs in public GitHub.
+
+**Proof ceiling:** receipt metadata and trace references are caller assertions, not cryptographic attestation. The scorer does not retrieve transcripts, establish observer independence, or execute a model. A synthetic unit test never proves real agent behavior.
 
 A read-only pull-request CI runs these Node checks without project tokens or external access. The Python XLSX exporter depends on artifact_tool and is not included; neither are authenticated Google Drive or e-RISPRO tests. Source-authored tests are NOT_EXECUTED until actual output is observed.
 

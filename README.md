@@ -22,7 +22,7 @@ Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, templa
 
 [Preflight advisory](tools/agent-preflight.mjs), [corpus evaluasi](.agents/evals/manifest.json), [verifikasi struktur](tools/verify-repository.mjs) dan [CI read-only](.github/workflows/governance-verify.yml) memperketat kontrol repository tanpa membuat skill kedelapan. Panduan: [Agent Quality Evaluation](docs/skills/agent-quality-evals.md).
 
-Jalankan node tools/verify-repository.mjs dan node --test tests/*.test.mjs untuk pemeriksaan offline. CI tidak menyentuh data proyek nyata, tidak menguji exporter Python yang bergantung artifact_tool, dan tidak mengirim ke portal atau membaca Drive privat. PASS baru dapat dilaporkan bila run benar-benar selesai; preflight bukan tool permission enforcement.
+Jalankan node tools/verify-repository.mjs dan node --test tests/*.test.mjs untuk pemeriksaan offline. Evaluator observasi independen tersedia melalui node tools/agent-eval-score.mjs (--fingerprint, --export-prompts, --score, --compare), tetapi tidak menjalankan model atau memverifikasi transcript otomatis. CI tidak menyentuh data proyek nyata, tidak menguji exporter Python yang bergantung artifact_tool, dan tidak mengirim ke portal atau membaca Drive privat. PASS baru dapat dilaporkan bila run benar-benar selesai; preflight bukan tool permission enforcement.
 
 ## Integrasi Google Drive — P0/P1/P2 (implementasi read-only)
 
