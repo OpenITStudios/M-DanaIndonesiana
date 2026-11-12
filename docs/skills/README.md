@@ -16,6 +16,21 @@
 
 **Sumber dari Google Drive:** untuk dokumen proyek yang telah diizinkan, baca [P2 Workflow Bridge](../integrations/google-drive.md). Resolver memilih *source pointers*, bukan menjalankan otomatis tujuh skill atau memverifikasi isi/approval.
 
+
+## Pilih berdasarkan hasil akhir, bukan kata kunci
+
+| Deliverable diminta | Skill primer | Pendukung bila perlu | Batas kesimpulan |
+|---|---|---|---|
+| Analisis RAB, LRA, cash | Finance | Evidence untuk bukti; Admin untuk format dan baseline sah | perhitungan bukan pembayaran |
+| Paket pencairan, revisi, submit readiness | Administration | Regulatory untuk syarat; Finance untuk angka; Evidence untuk lampiran | paket bukan bukti terkirim |
+| Narasi kemajuan kegiatan/karya | Writing | Production untuk capaian; Evidence untuk klaim | redaksi tidak menciptakan fakta |
+| Pemeriksaan kuitansi dan bukti | Evidence | Finance untuk transaksi; Regulatory untuk aturan bukti | berkas ada tidak berarti sah |
+| Berlaku tidaknya klausul/juknis | Regulatory | Admin memasok perjanjian atau addendum | sumber baru belum tentu berlaku |
+| Milestone, indikator dan produksi | Production | Evidence jika capaian diklaim; Rights untuk rilis | task selesai bukan indikator tercapai |
+| Lisensi, publikasi dan DJKI | Rights | Production aset, Admin syarat dokumen | karya ada bukan izin publikasi |
+
+**Trigger pendukung:** satu ketidakpastian material teridentifikasi; pendukung memiliki fakta tersebut; hasilnya diperlukan untuk deliverable. Jika tidak, jangan memuat skill tambahan. Audit repository/Agent Rules tetap mode source, bukan domain skill.
+
 ## Ketika tugas melintasi domain
 
 | Hasil yang diminta | Pemilik hasil | Input pendukung bila benar-benar perlu |

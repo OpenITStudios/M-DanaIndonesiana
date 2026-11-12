@@ -69,6 +69,20 @@ Catat secara aman sumber, kategori/tahun, versi, dokumen yang berwenang, klausul
 
 Berikan hanya ID aman/rujukan, fakta yang dibutuhkan, status sumber, gap dan output. Keuangan memegang angka; administrasi memegang checklist/submit; creative-writing memegang redaksi; evidence memegang tingkat pembuktian; regulatory memegang applicability; production memegang capaian teknis; dissemination memegang izin/atribusi. Jangan membuat tujuh registry.
 
+
+### Handoff minimum saat perlu skill kedua
+
+~~~text
+Primary output / consumer:
+Source pointer + version/period (aman):
+Fact/claim + SOURCE_FACT | CALCULATED | INTERPRETATION | PROPOSAL | UNKNOWN:
+Method actually performed / proof boundary:
+Blocking gap:
+Next owner / intended limited use:
+~~~
+
+Handoff bukan approval, izin menyimpan, atau pendaftaran fakta kedua. Skill primer tetap bertanggung jawab atas hasil akhir. Jangan menyalin semua dokumen privat ketika hanya satu klaim yang dibutuhkan.
+
 ## Kriteria selesai
 
 `Scope; Source set; Output; Check actually performed; Limitations; Unknown material; Next owner (if any)`.

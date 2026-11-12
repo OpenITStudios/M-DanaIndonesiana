@@ -9,6 +9,8 @@
 - [x] Dokumentasi mendalam hanya untuk trigger: `docs/skills/agent-rules.md`; mapping sumber di `docs/research/agent-prompt-patterns-2026-11-12.md`.
 - [x] Menetapkan hanya develop untuk source mutation, tidak membuat branch baru atau PR antarbranch, tanpa Local/main.
 - [x] Mengubah CI menjadi manual-only selama hold agar tidak memicu tes otomatis.
+- [x] Merampingkan jalur wajib AGENTS, merumuskan context-selection dan owner berdasarkan deliverable, serta handoff minimum (source-only, tanpa test).
+- [ ] Mengukur kualitas/routing/biaya ke hasil yang diterima setelah tes diizinkan; tidak mengarang persentase peningkatan.
 - [ ] Efektivitas pada model/agent nyata: **NOT_EXECUTED / HOLD BY USER**. Jangan melakukan testing sampai ada izin baru.
 
 ## Sudah tersedia
