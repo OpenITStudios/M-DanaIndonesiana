@@ -49,7 +49,7 @@ export function verifyRepository(root=ROOT){
       errors.push("DECISION_CORPUS_INCOMPLETE");
     const ids=new Set(),skills=new Set(),outcomes=new Set();
     for(const c of d.cases||[]){
-      if(!/^D\d{2}-/.test(c.id||"")||ids.has(c.id))errors.push("BAD_DECISION_ID");
+      if(!/^D\d{2}$/.test(c.id||"")||ids.has(c.id))errors.push("BAD_DECISION_ID");
       ids.add(c.id);
       if(!PRIMARY_SKILLS.includes(c.expected_primary_skill))
         errors.push("BAD_PRIMARY_SKILL:"+c.id);
