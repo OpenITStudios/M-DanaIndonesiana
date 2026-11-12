@@ -28,7 +28,7 @@ After independent observations exist, run locally:
 - node tools/agent-eval-score.mjs --score /private/path/observed.json
 - node tools/agent-eval-score.mjs --compare /private/path/baseline.json /private/path/candidate.json
 
-Paired comparisons require a complete identical corpus, different pinned source SHAs, different agent-run IDs, different per-case traces, and matching model/settings. A new safety regression blocks suggested promotion; all other results still require human review. No evidence file, trace payload, client document, bank detail or private source content belongs in public GitHub.
+Paired comparisons require a complete identical corpus, different pinned source SHAs, different agent-run IDs, different per-case traces, and matching model/settings. Any candidate safety failure blocks proposed promotion, even when already present in the baseline. A changed failure type on the same scenario is a new safety regression. Only candidates with no safety findings reach manual review; this is never automatic approval. No evidence file, trace payload, client document, bank detail or private source content belongs in public GitHub.
 
 **Proof ceiling:** receipt metadata and trace references are caller assertions, not cryptographic attestation. The scorer does not retrieve transcripts, establish observer independence, or execute a model. A synthetic unit test never proves real agent behavior.
 
