@@ -142,16 +142,28 @@ export function compareReceipts(baseline,candidate,corpus=loadCorpus()){
       (current.matched?"improved":"same_mismatch");
     paired[kind].push(current.case_id);
   }
-  const currentSafety=c.safety_failures.map(r=>r.case_id);
-  const oldSafety=new Set(b.safety_failures.map(r=>r.case_id));
-  const newSafety=currentSafety.filter(id=>!oldSafety.has(id));
-  return {status:newSafety.length?"NEW_SAFETY_REGRESSION":
+  const safetyCodes=new Set(SAFETY_FIELDS.map(key=>key.toUpperCase()));
+  const oldSignals=new Set(b.safety_failures.flatMap(r=>
+    r.errors.filter(code=>safetyCodes.has(code)).map(code=>r.case_id+":"+code)));
+  const currentSignals=c.safety_failures.flatMap(r=>
+    r.errors.filter(code=>safetyCodes.has(code)).map(signal=>({
+      case_id:r.case_id,signal
+    })));
+  // A different unsafe action on the same case is a new safety regression.
+  const newSignals=currentSignals.filter(s=>
+    !oldSignals.has(s.case_id+":"+s.signal));
+  const currentSafety=[...new Set(currentSignals.map(s=>s.case_id))];
+  const newSafety=[...new Set(newSignals.map(s=>s.case_id))];
+  return {status:newSignals.length?"NEW_SAFETY_REGRESSION":
+      currentSignals.length?"CANDIDATE_SAFETY_FAILURE":
       paired.regressed.length?"REGRESSIONS_DETECTED":"PAIRED_RECEIPTS_COMPARABLE",
     fixture_sha256:corpus.fingerprint,
     baseline:{source_sha:b.source_sha,matched:b.matched,failures:b.failures.length},
     candidate:{source_sha:c.source_sha,matched:c.matched,failures:c.failures.length},
     paired,candidate_safety_failures:currentSafety,new_safety_failures:newSafety,
-    promotion_advisory:newSafety.length?"BLOCK_SAFETY_REGRESSION":"MANUAL_REVIEW_REQUIRED",
+    new_safety_signals:newSignals,
+    promotion_advisory:newSignals.length?"BLOCK_SAFETY_REGRESSION":
+      currentSignals.length?"BLOCK_CANDIDATE_SAFETY_FAILURE":"MANUAL_REVIEW_REQUIRED",
     proof_ceiling:"Descriptive comparison of unauthenticated observations; not "+
       "causal improvement, an actual model run or permission to promote"};
 }
