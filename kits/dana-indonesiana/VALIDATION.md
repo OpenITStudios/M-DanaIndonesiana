@@ -1,6 +1,6 @@
-# Validation Contract — Foundation v0.1
+# Validation Contract — Foundation v0.2
 
-Saat ini **belum ada validator otomatis**. Daftar berikut adalah standar penilaian bagi manusia/AI; hasil harus diberi batas bukti yang tepat.
+Pemeriksaan otomatis hanya mencakup struktur repository dan unit test sintetis (node tools/verify-repository.mjs dan node --test tests/*.test.mjs). Workflow PR read-only tidak membaca Drive privat, tidak menjalankan exporter Python berbasis artifact_tool, dan tidak membuktikan kepatuhan hukum atau penerimaan eksternal. Preflight agent bersifat advisory, bukan pengawas tool tepercaya. [Protokol evaluasi agent](../../docs/skills/agent-quality-evals.md) membedakan data sumber, pemeriksaan mesin, observasi model, dan keputusan manusia.
 
 ## Kelompok pemeriksaan
 

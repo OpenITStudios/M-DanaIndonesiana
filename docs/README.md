@@ -11,6 +11,10 @@ Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **p
 - **[Pedoman Dasar Produksi Dokumen](foundation/05-document-production-baseline.md):** aturan internal utama yang telah disetujui untuk semua dokumen baru dan revisi. Mengatur kebutuhan pembaca, kualitas tulisan alami seperti hasil kerja editor, EYD/italic, layout, sumber, dan gerbang QA. Versi Google Docs ada di folder `90 - Pedoman dan Referensi` proyek; riset desain terdahulu merupakan referensi pendukung, bukan pedoman paralel.
 
 
+## Evaluasi kualitas agent
+
+[Agent Quality Evaluation](skills/agent-quality-evals.md) memberi protokol untuk corpus keputusan, preflight advisory dan batas pembuktian tanpa membuat router, agen atau registry baru.
+
 ## Fondasi kanonis
 
 | Pertanyaan | Satu pemilik |

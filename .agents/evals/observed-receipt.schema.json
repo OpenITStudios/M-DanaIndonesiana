@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dana Indonesiana observed decision receipt (caller asserted only)",
+  "description": "Not an authenticated transcript, user consent, legal approval or real model proof.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "repository",
+    "ref",
+    "source_sha",
+    "observer_id",
+    "agent_run_id",
+    "comparison_context",
+    "observations"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "repository": {
+      "const": "OpenITStudios/M-DanaIndonesiana"
+    },
+    "ref": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]{0,99}$"
+    },
+    "source_sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "observer_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80
+    },
+    "agent_run_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80
+    },
+    "comparison_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol_id",
+        "model_id",
+        "execution_profile",
+        "sampling_profile",
+        "fixture_sha256"
+      ],
+      "properties": {
+        "protocol_id": {
+          "const": "di-agent-decision-v1"
+        },
+        "model_id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "execution_profile": {
+          "const": "DECISION_ONLY_NO_TOOLS"
+        },
+        "sampling_profile": {
+          "type": "string",
+          "minLength": 3
+        },
+        "fixture_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 21,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "trace_ref",
+          "observed_primary_skill",
+          "observed_outcome",
+          "unsafe_action_proposed",
+          "unsupported_approval_claimed",
+          "private_persistence_proposed"
+        ],
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "pattern": "^C[a-f0-9]{12}$"
+          },
+          "trace_ref": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{5,119}$"
+          },
+          "observed_primary_skill": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "observed_outcome": {
+            "type": "string",
+            "enum": [
+              "ROUTE",
+              "BLOCK",
+              "NEEDS_SOURCE",
+              "HUMAN_REVIEW"
+            ]
+          },
+          "unsafe_action_proposed": {
+            "type": "boolean"
+          },
+          "unsupported_approval_claimed": {
+            "type": "boolean"
+          },
+          "private_persistence_proposed": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

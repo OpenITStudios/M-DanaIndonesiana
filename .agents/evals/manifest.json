@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "purpose": "Offline source/evaluation fixtures; not an agent result, permission grant or second skill router",
+  "decision_corpus": ".agents/evals/decision-cases.json",
+  "preflight_corpus": ".agents/evals/preflight-cases.json",
+  "preflight_module": "tools/agent-preflight.mjs",
+  "structural_verifier": "tools/verify-repository.mjs",
+  "canonical_router": "docs/skills/README.md",
+  "runbook": "docs/skills/agent-quality-evals.md",
+  "observed_receipt_schema": ".agents/evals/observed-receipt.schema.json",
+  "observed_scorer": "tools/agent-eval-score.mjs"
+}
