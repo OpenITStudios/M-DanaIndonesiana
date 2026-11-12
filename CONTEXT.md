@@ -1,10 +1,11 @@
 # Current Context — M-DanaIndonesiana
 
 - **Repo:** OpenITStudios/M-DanaIndonesiana
-- **Branch pengembangan:** `develop`; `Local` untuk integrasi ditinjau, `main` untuk baseline stabil.
+- **Branch kerja aktif (2026-11-12):** hanya `develop` untuk sumber; jangan membuat branch baru, `Local` dan `main` tidak diubah. PR #1 governance sebelumnya sudah di-squash ke develop. PR develop→develop tidak dimungkinkan oleh GitHub.
 - **Status:** v1.7 *P0–P5 safety and coverage hardening*. Terdapat **7 Agent Skills**, kontrak domain dan template umum; Finance memiliki prototipe kalkulasi JSON serta ekspor XLSX draf. **Bukan** aplikasi manajemen proyek end-to-end atau integrasi e-RISPRO.
 - **Validasi:** QA proyek nyata tetap ditunda. Pemeriksaan struktur dan unit test sintetis punya jalur offline/CI terpisah; statusnya harus berdasarkan hasil eksekusi. Jangan klaim uji Drive privat/OAuth, exporter Python end-to-end, legalitas atau persetujuan LPDP.
 - **Governance 2026-11-12:** fixture keputusan tujuh skill, preflight advisory, struktur verifier dan CI read-only PR develop. Evaluator observasi menyediakan prompt buta dan paired scoring dengan trace yang diajukan reviewer, tanpa menguji model atau mengautentikasi transcript. Trusted tool interception dan otorisasi eksternal tidak tersedia.
+- **Agent Rules (2026-11-12):** root diperketat (goal-first, context budget, izin, satu skill primer, proof ceiling, STOP), detail di `docs/skills/agent-rules.md` dan riset perbandingan prompt publik di `docs/research/agent-prompt-patterns-2026-11-12.md`. Integrasi ini SOURCE-AUTHORED, perilaku model belum diuji. CI governance manual-only dan semua testing sedang ditunda; jangan jalankan atau klaim PASS terbaru.
 - **Proyek privat:** kontrak, RAB, indikator, bukti, identitas, rekening dan dokumen yang hanya boleh dipelajari **tidak disimpan di Git publik atau tempat lain tanpa izin eksplisit**.
 - **Router:** [AGENTS.md](AGENTS.md) → [Skill Router](docs/skills/README.md) → `.agents/skills/<skill>/SKILL.md` → kontrak/prosedur domain yang diperlukan.
 - **Integrasi Drive (P0/P1/P2):** resolver metadata read-only, satu Document Registry privat dan pemilihan sumber per workflow ke tujuh skill telah disusun. ChatGPT memakai koneksi Drive untuk tugas berizin; CLI lokal memakai OAuth read-only sendiri. Hanya pemetaan pointer, **belum** verifikasi isi, otomatisasi submit, auto-sync atau acceptance QA.

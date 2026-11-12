@@ -32,7 +32,7 @@ Paired comparisons require a complete identical corpus, different pinned source 
 
 **Proof ceiling:** receipt metadata and trace references are caller assertions, not cryptographic attestation. The scorer does not retrieve transcripts, establish observer independence, or execute a model. A synthetic unit test never proves real agent behavior.
 
-A read-only pull-request CI runs these Node checks without project tokens or external access. The Python XLSX exporter depends on artifact_tool and is not included; neither are authenticated Google Drive or e-RISPRO tests. Source-authored tests are NOT_EXECUTED until actual output is observed.
+A read-only, **manual-only** CI workflow is preserved for future explicit authorization; CI must not run automatically while the user has postponed all testing. No evaluation was executed for this Agent Rules update. The Python XLSX exporter depends on artifact_tool and is not included; neither are authenticated Google Drive or e-RISPRO tests. Source-authored tests are NOT_EXECUTED until actual output is observed.
 
 ## Independent observed-agent protocol
 

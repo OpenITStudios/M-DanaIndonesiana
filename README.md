@@ -4,6 +4,10 @@
 
 Repo ini bersifat **publik** dan hanya memuat prosedur, referensi publik, template kosong, kode prototipe, serta data uji sintetis. **Tidak ada dokumen proyek asli atau persetujuan pemerintah yang disimpan sebagai baseline di sini.**
 
+## Agent Rules — pembaruan 12 November 2026
+
+Satu root [AGENTS.md](AGENTS.md) mengatur goal-first planning, sumber/izin, context loading kondisional, routing tujuh skill dan batas bukti; pedoman metode ada pada [Agent Rules](docs/skills/agent-rules.md). Prinsipnya diadaptasi secara source-only dari [M-LazyDesigner dan sampel prompt publik](docs/research/agent-prompt-patterns-2026-11-12.md), **bukan** salinan prompt vendor atau penambahan agent baru. User memilih develop sebagai satu-satunya target kerja, tanpa branch baru. Testing sedang ditunda; workflow governance tersedia hanya untuk pemanggilan manual di masa mendatang.
+
 ## Kemampuan yang tersedia
 
 | Kelompok pekerjaan | Skill |

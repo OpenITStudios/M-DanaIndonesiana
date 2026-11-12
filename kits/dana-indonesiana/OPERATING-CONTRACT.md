@@ -2,6 +2,10 @@
 
 Dokumen ini adalah **pemilik tunggal** kebijakan lintas skill. Baca hanya bersama kontrak domain yang aktif. Jangan menyalin aturan ke tujuh spesialis.
 
+## Instruksi lintas-skill dan batas konteks
+
+[Root Agent Rules](../../AGENTS.md) menentukan mode kerja dan izin tindakan; [Agent Rules detail](../../docs/skills/agent-rules.md) digunakan **hanya ketika** metode engineering/kualitas prompt memengaruhi keputusan. Router tujuh skill dan kontrak domain tetap satu pemilik. Konteks yang diserahkan antarskill harus cukup untuk membuat keputusan (versi sumber, fakta dan UNKNOWN), tidak menyalin dokumen privat penuh atau memberikan ulang seluruh prompt.
+
 ## Jalur tunggal
 
 `TASK → SOURCE INVENTORY → APPLICABILITY → DOMAIN WORK → EVIDENCE/CHECK → HUMAN REVIEW → OUTPUT → STOP`

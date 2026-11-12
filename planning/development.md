@@ -2,6 +2,15 @@
 
 **Ini backlog kerja sistem, bukan izin otomatis untuk menjalankan semua item.** Riwayat implementasi v0.1–v1.0 berada di [CHANGELOG](../CHANGELOG.md).
 
+## Agent Rules 2026-11-12 — source-only, testing ditunda
+
+- [x] Mengadopsi disiplin prompt terpilih dari M-LazyDesigner dan sampel sistem prompt publik sebagai **metode**, bukan instruksi vendor.
+- [x] Menjadikan root AGENTS.md pemilik utama: goal-first, mode dan otoritas, tujuh skill, trust boundary, progressive context, proof ceiling, STOP.
+- [x] Dokumentasi mendalam hanya untuk trigger: `docs/skills/agent-rules.md`; mapping sumber di `docs/research/agent-prompt-patterns-2026-11-12.md`.
+- [x] Menetapkan hanya develop untuk source mutation, tidak membuat branch baru atau PR antarbranch, tanpa Local/main.
+- [x] Mengubah CI menjadi manual-only selama hold agar tidak memicu tes otomatis.
+- [ ] Efektivitas pada model/agent nyata: **NOT_EXECUTED / HOLD BY USER**. Jangan melakukan testing sampai ada izin baru.
+
 ## Sudah tersedia
 
 - [x] Tujuh skill dengan kontrak domain, aturan sumber, bukti, dan privasi.

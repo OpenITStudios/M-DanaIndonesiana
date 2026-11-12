@@ -2,6 +2,12 @@
 
 Gunakan standar sederhana yang konsisten dengan M-PRD-Creator, disesuaikan untuk repository baru. Dokumen ini mengatur **mutasi repository**, bukan hukum pengelolaan bantuan.
 
+## Scope branch dan pengujian saat ini (instruksi pengguna 2026-11-12)
+
+Pengembangan langsung pada **develop**. Jangan membuat branch/PR baru, memakai Local/main sebagai target, force-push, merge/release, atau otomatis melakukan promosi. Karena GitHub tidak dapat membuat PR dengan head dan base sama-sama develop, pekerjaan yang diizinkan dilakukan sebagai commit terarah langsung ke develop dengan SHA/conditional ref update. PR #1 yang sebelumnya menggunakan branch perbaikan sudah diintegrasikan ke develop; tidak ada PR baru untuk pekerjaan ini.
+
+**Hold pengujian:** jangan jalankan tests, localtest, Codex QA, workflow_dispatch, atau memicu CI otomatis. Workflow governance ditetapkan manual-only selama hold. Source review/penulisan regression cases tidak sama dengan pengujian yang dijalankan. Jangan klaim PASS pada perubahan yang belum diuji. Jika pengguna mengubah instruksi ini secara eksplisit, verifikasi lagi scope dan permission sebelum menjalankan.
+
 ## Urutan kerja
 
     PIN → READ MINIMUM → IDENTIFY OWNER → PREPARE
@@ -19,9 +25,9 @@ Gunakan standar sederhana yang konsisten dengan M-PRD-Creator, disesuaikan untuk
 
 | Branch | Tujuan | Aturan |
 |---|---|---|
-| develop | pengembangan aktif | commit terbatas setelah diperiksa |
-| Local | baseline integrasi | promosi dari develop setelah review; tidak untuk eksperimen |
-| main | riwayat stabil | promosi dari Local hanya setelah persetujuan eksplisit |
+| develop | **satu-satunya target kerja aktif** | commit terbatas dan conditional ref update; tanpa branch tambahan |
+| Local | baseline historis/integrasi | **jangan disentuh** saat scope develop-only aktif |
+| main | riwayat stabil | **jangan disentuh** saat scope develop-only aktif |
 
 Bootstrap repository kosong boleh menyiapkan fondasi awal pada main lalu membuat kedua branch dari baseline yang sama. Setelah itu perubahan rutin hanya pada develop. Jangan langsung melewati urutan promosi, force push, menghapus history, atau membuat tag/release otomatis. Jika belum ada CI atau perlindungan branch, **nyatakan belum ada**, bukan berpura-pura gate aktif. Ketentuan squash/merge detail untuk promosi ditetapkan ketika mekanisme PR/CI benar-benar dibangun.
 

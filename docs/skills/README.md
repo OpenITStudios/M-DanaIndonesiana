@@ -1,6 +1,6 @@
 # Skill Router — Pilih Satu Pemilik Utama
 
-**Cara pakai:** tentukan hasil yang diminta, bukan topik besar. Pilih satu skill primer → baca [Shared Operating Contract](../../kits/dana-indonesiana/OPERATING-CONTRACT.md) → kontrak domain → prosedur rinci **hanya jika perlu**. Skill lain dipanggil untuk data yang benar-benar dibutuhkan, bukan dijalankan semua.
+**Cara pakai:** ikuti [Root Agent Rules](../../AGENTS.md), lalu tentukan hasil yang diminta, bukan topik besar. Pilih satu skill primer → baca [Shared Operating Contract](../../kits/dana-indonesiana/OPERATING-CONTRACT.md) → kontrak domain → prosedur rinci **hanya jika perlu**. Skill lain dipanggil untuk data yang benar-benar dibutuhkan, bukan dijalankan semua.
 
 | Saya ingin… | Skill primer | Owner rinci |
 |---|---|---|
@@ -28,6 +28,10 @@
 | Konflik perjanjian dan pedoman | Regulatory | Administration menyediakan versi/keputusan yang ada |
 
 Rute lengkap hanya ketika dibutuhkan: [Cross-Skill Workflows](cross-skill-workflows.md) atau [Reporting Workflow](reporting-workflow.md).
+
+## Metode engineering agent (kondisional)
+
+[Agent Rules](agent-rules.md) mengatur prompt dan konteks kerja tanpa menjadi skill kedelapan; [Agent Quality Evaluation](agent-quality-evals.md) adalah rencana pemeriksaan yang belum berarti kualitas perilaku model telah diuji. Jangan memanggil semuanya untuk tugas domain yang sudah jelas.
 
 ## Prinsip singkat
 

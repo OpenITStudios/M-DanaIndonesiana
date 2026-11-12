@@ -2,6 +2,12 @@
 
 Dokumentasi menggunakan tiga jenis konten: **aturan inti** (otoritas/batas), **prosedur per pekerjaan** (how-to), dan **catatan referensi/keputusan**. Baca yang diperlukan saja.
 
+## Agent Rules dan kebijakan prompt
+
+- [Root Agent Rules](../AGENTS.md): mode, keamanan, routing tujuh skill dan batas tindakan; hanya berlaku jika host benar-benar memuat file.
+- [Agent Rules — metode dan konteks](skills/agent-rules.md): delapan lensa engineering bersyarat, progressive loading, provenance, sumber tak tepercaya, proof, dan stop.
+- [Pemetaan corpus prompt publik](research/agent-prompt-patterns-2026-11-12.md): perbandingan M-LazyDesigner + sampel asgeirtj/system_prompts_leaks, hanya referensi metode, bukan instruksi vendor aktif.
+
 ## Pilih pekerjaan
 
 [Skill Router](skills/README.md) → satu `SKILL.md` → satu kontrak domain → prosedur rinci bila perlu. Untuk pekerjaan lintas domain gunakan [Cross-Skill Workflows](skills/cross-skill-workflows.md); untuk paket laporan lebih rinci gunakan [Reporting Workflow](skills/reporting-workflow.md).
