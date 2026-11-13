@@ -3,7 +3,7 @@
 import {existsSync,readdirSync,readFileSync} from "node:fs";
 import {join,resolve} from "node:path";
 import {fileURLToPath} from "node:url";
-import {PRIMARY_SKILLS,assessAction} from "./agent-preflight.mjs";
+import {PRIMARY_SKILLS,SHARED_GOVERNANCE_SKILLS,assessAction} from "./agent-preflight.mjs";
 const ROOT=fileURLToPath(new URL("../",import.meta.url));
 const REQUIRED=["AGENTS.md","GITHUB_RULES.md","CONTEXT.md","README.md","SECURITY.md",
   "docs/skills/README.md","kits/dana-indonesiana/OPERATING-CONTRACT.md",
@@ -23,9 +23,10 @@ export function verifyRepository(root=ROOT){
   const dir=join(root,".agents/skills");
   if(existsSync(dir)){
     const names=readdirSync(dir,{withFileTypes:true}).filter(x=>x.isDirectory()).map(x=>x.name).sort();
-    if(JSON.stringify(names)!==JSON.stringify([...PRIMARY_SKILLS].sort()))
+    if(JSON.stringify(names)!==JSON.stringify([...PRIMARY_SKILLS,...SHARED_GOVERNANCE_SKILLS].sort()))
       errors.push("SKILL_OWNER_DRIFT");
-    for(const name of PRIMARY_SKILLS){
+    // Shared governance Skills are not additional primary grant-domain Skills.
+    for(const name of [...PRIMARY_SKILLS,...SHARED_GOVERNANCE_SKILLS]){
       const file=join(dir,name,"SKILL.md");
       if(!existsSync(file)){errors.push("MISSING_SKILL:"+name);continue}
       const head=readFileSync(file,"utf8").split("\n").slice(0,9);

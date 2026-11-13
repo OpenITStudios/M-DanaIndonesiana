@@ -3,6 +3,8 @@ export const REPOSITORY="OpenITStudios/M-DanaIndonesiana";
 export const PRIMARY_SKILLS=Object.freeze(["finance-reporting","grant-administration",
   "creative-documentation","evidence-audit","regulatory-applicability",
   "creative-production","dissemination-rights"]);
+export const SHARED_GOVERNANCE_SKILLS=Object.freeze([
+  "oits-agent-quality-review","oits-development-brief","oits-repository-audit"]);
 const MODES=new Set(["INSPECT","SYSTEM_DEVELOPMENT","PROJECT_EXECUTION","VALIDATION","MAINTENANCE"]);
 const ACTIONS=new Set(["read_repo","write_repo","read_private","write_private",
   "external_submit","approve_external","disburse","release"]);
@@ -12,7 +14,8 @@ const DOMAINS={finance:"finance-reporting",administration:"grant-administration"
   writing:"creative-documentation",evidence:"evidence-audit",
   procurement:"grant-administration",production:"creative-production",
   regulatory:"regulatory-applicability",rights:"dissemination-rights"};
-const PREFIXES=[[".github/","repository-governance"],[".agents/evals/","agent-evaluation"],
+const PREFIXES=[[".agent-standard/","repository-governance"],
+  [".github/","repository-governance"],[".agents/evals/","agent-evaluation"],
   ["docs/","documentation"],["templates/","templates"],["tools/","tooling"],
   ["tests/","validation"],["planning/","planning"]];
 export function safeRepoPath(p){
@@ -29,7 +32,8 @@ export function ownerForPath(p){
   const kit=/^kits\/dana-indonesiana\/([^/]+)\//.exec(p);
   if(kit)return DOMAINS[kit[1]]||null;
   const skill=/^\.agents\/skills\/([^/]+)\//.exec(p);
-  if(skill)return PRIMARY_SKILLS.includes(skill[1])?skill[1]:null;
+  if(skill)return PRIMARY_SKILLS.includes(skill[1])?skill[1]:
+    SHARED_GOVERNANCE_SKILLS.includes(skill[1])?"repository-governance":null;
   for(const [prefix,owner] of PREFIXES)if(p.startsWith(prefix))return owner;
   return null;
 }

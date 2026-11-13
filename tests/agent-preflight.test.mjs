@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {assessAction,ownerForPath,safeRepoPath} from "../tools/agent-preflight.mjs";
+import {assessAction,ownerForPath,safeRepoPath,SHARED_GOVERNANCE_SKILLS} from "../tools/agent-preflight.mjs";
 const f=JSON.parse(readFileSync(new URL("../.agents/evals/preflight-cases.json",import.meta.url),"utf8"));
 for(const c of f.cases)test("preflight "+c.id,()=>{
   const actual=assessAction({...f.defaults,...c.overrides});
@@ -23,4 +23,11 @@ test("private source identifiers are not echoed by preflight",()=>{
     data_class:"RESTRICTED",path:"private/very-sensitive-id"});
   assert.equal(a.decision,"BLOCK");
   assert.equal(JSON.stringify(a).includes("very-sensitive"),false);
+});
+
+test("shared AgentSkill source has governance ownership without replacing grant Skills",()=>{
+  assert.equal(SHARED_GOVERNANCE_SKILLS.length,3);
+  assert.equal(ownerForPath(".agent-standard/core/INDEX.md"),"repository-governance");
+  assert.equal(ownerForPath(".agents/skills/oits-repository-audit/SKILL.md"),"repository-governance");
+  assert.equal(ownerForPath(".agents/skills/unreviewed-meta-skill/SKILL.md"),null);
 });

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "repository": "OpenITStudios/M-DanaIndonesiana",
+  "activeBranch": "develop",
+  "branchPolicy": {
+    "writableBranches": [
+      "develop"
+    ],
+    "allowAutoBranch": false,
+    "allowAutoPromotion": false
+  },
+  "executionPolicy": {
+    "ci": "disabled",
+    "tests": "on_hold",
+    "nativeProof": "required_when_claimed"
+  },
+  "permissions": {
+    "crossRepoWrites": false,
+    "mutatingActionsRequireUserIntent": true,
+    "releaseRequiresExplicitApproval": true
+  },
+  "protectedPaths": [],
+  "holds": [
+    {
+      "id": "grant-test-ci-hold",
+      "reason": "User hold: no tests, Codex/native QA, CI dispatch or automation-triggering change until explicit authorization.",
+      "paths": [],
+      "blockedActions": [
+        "test",
+        "ci"
+      ],
+      "until": "Explicit permission and verified corresponding execution surface."
+    }
+  ],
+  "dataPolicy": "public-standards-only",
+  "note": "Read .agent-standard/project-policy.md after canonical root/profile; preserve original seven domain Skills and public-data-only boundaries. Historical root instructions are under .agent-standard/history.",
+  "workflowPolicy": {
+    "sourceSurface": "CHATGPT_GITHUB",
+    "localValidationSurface": "LOCAL_PC_AGENT",
+    "localTestDuringSourcePhase": false,
+    "requestLocaltestFromChatGPT": false,
+    "githubActionsOrCloudTestSubstitution": false,
+    "localValidationRequiresExplicitTransition": true
+  }
+}
